@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-12T09:01:05Z",
+  "updated": "2026-06-12T14:10:22Z",
   "group_results": {
     "Mexico|South Africa": {
       "home": "Mexico",
@@ -48,7 +48,8 @@
       "away": "South Africa",
       "gh": 2,
       "ga": 0,
-      "played": true
+      "played": true,
+      "date": "2026-06-11 21:00"
     },
     {
       "num": 2,
@@ -57,7 +58,8 @@
       "away": "Czechia",
       "gh": 2,
       "ga": 1,
-      "played": true
+      "played": true,
+      "date": "2026-06-12 4:00"
     },
     {
       "num": 3,
@@ -66,7 +68,8 @@
       "away": "Bosnia-Herzegovina",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-12 21:00"
     },
     {
       "num": 4,
@@ -75,34 +78,8 @@
       "away": "Paraguay",
       "gh": null,
       "ga": null,
-      "played": false
-    },
-    {
-      "num": 5,
-      "group": "C",
-      "home": "Haiti",
-      "away": "Scotland",
-      "gh": null,
-      "ga": null,
-      "played": false
-    },
-    {
-      "num": 6,
-      "group": "D",
-      "home": "Australia",
-      "away": "Turkiye",
-      "gh": null,
-      "ga": null,
-      "played": false
-    },
-    {
-      "num": 7,
-      "group": "C",
-      "home": "Brazil",
-      "away": "Morocco",
-      "gh": null,
-      "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-13 3:00"
     },
     {
       "num": 8,
@@ -111,16 +88,38 @@
       "away": "Switzerland",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-13 21:00"
     },
     {
-      "num": 9,
-      "group": "E",
-      "home": "Ivory Coast",
-      "away": "Ecuador",
+      "num": 7,
+      "group": "C",
+      "home": "Brazil",
+      "away": "Morocco",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-14 0:00"
+    },
+    {
+      "num": 5,
+      "group": "C",
+      "home": "Haiti",
+      "away": "Scotland",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "date": "2026-06-14 3:00"
+    },
+    {
+      "num": 6,
+      "group": "D",
+      "home": "Australia",
+      "away": "Turkiye",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "date": "2026-06-14 4:00"
     },
     {
       "num": 10,
@@ -129,7 +128,8 @@
       "away": "Curacao",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-14 19:00"
     },
     {
       "num": 11,
@@ -138,7 +138,18 @@
       "away": "Japan",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-14 22:00"
+    },
+    {
+      "num": 9,
+      "group": "E",
+      "home": "Ivory Coast",
+      "away": "Ecuador",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "date": "2026-06-15 1:00"
     },
     {
       "num": 12,
@@ -147,16 +158,8 @@
       "away": "Tunisia",
       "gh": null,
       "ga": null,
-      "played": false
-    },
-    {
-      "num": 13,
-      "group": "H",
-      "home": "Saudi Arabia",
-      "away": "Uruguay",
-      "gh": null,
-      "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-15 4:00"
     },
     {
       "num": 14,
@@ -165,16 +168,8 @@
       "away": "Cape Verde",
       "gh": null,
       "ga": null,
-      "played": false
-    },
-    {
-      "num": 15,
-      "group": "G",
-      "home": "Iran",
-      "away": "New Zealand",
-      "gh": null,
-      "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-15 18:00"
     },
     {
       "num": 16,
@@ -183,7 +178,28 @@
       "away": "Egypt",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-15 21:00"
+    },
+    {
+      "num": 13,
+      "group": "H",
+      "home": "Saudi Arabia",
+      "away": "Uruguay",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "date": "2026-06-16 0:00"
+    },
+    {
+      "num": 15,
+      "group": "G",
+      "home": "Iran",
+      "away": "New Zealand",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "date": "2026-06-16 3:00"
     },
     {
       "num": 17,
@@ -192,7 +208,8 @@
       "away": "Senegal",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-16 21:00"
     },
     {
       "num": 18,
@@ -201,7 +218,8 @@
       "away": "Norway",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-17 0:00"
     },
     {
       "num": 19,
@@ -210,7 +228,8 @@
       "away": "Algeria",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-17 3:00"
     },
     {
       "num": 20,
@@ -219,25 +238,8 @@
       "away": "Jordan",
       "gh": null,
       "ga": null,
-      "played": false
-    },
-    {
-      "num": 21,
-      "group": "L",
-      "home": "Ghana",
-      "away": "Panama",
-      "gh": null,
-      "ga": null,
-      "played": false
-    },
-    {
-      "num": 22,
-      "group": "L",
-      "home": "England",
-      "away": "Croatia",
-      "gh": null,
-      "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-17 6:00"
     },
     {
       "num": 23,
@@ -246,7 +248,28 @@
       "away": "DR Congo",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-17 19:00"
+    },
+    {
+      "num": 22,
+      "group": "L",
+      "home": "England",
+      "away": "Croatia",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "date": "2026-06-17 22:00"
+    },
+    {
+      "num": 21,
+      "group": "L",
+      "home": "Ghana",
+      "away": "Panama",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "date": "2026-06-18 1:00"
     },
     {
       "num": 24,
@@ -255,7 +278,8 @@
       "away": "Colombia",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-18 4:00"
     },
     {
       "num": 25,
@@ -264,7 +288,8 @@
       "away": "South Africa",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-18 18:00"
     },
     {
       "num": 26,
@@ -273,7 +298,8 @@
       "away": "Bosnia-Herzegovina",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-18 21:00"
     },
     {
       "num": 27,
@@ -282,7 +308,8 @@
       "away": "Qatar",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-19 0:00"
     },
     {
       "num": 28,
@@ -291,34 +318,8 @@
       "away": "South Korea",
       "gh": null,
       "ga": null,
-      "played": false
-    },
-    {
-      "num": 29,
-      "group": "C",
-      "home": "Brazil",
-      "away": "Haiti",
-      "gh": null,
-      "ga": null,
-      "played": false
-    },
-    {
-      "num": 30,
-      "group": "C",
-      "home": "Scotland",
-      "away": "Morocco",
-      "gh": null,
-      "ga": null,
-      "played": false
-    },
-    {
-      "num": 31,
-      "group": "D",
-      "home": "Turkiye",
-      "away": "Paraguay",
-      "gh": null,
-      "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-19 3:00"
     },
     {
       "num": 32,
@@ -327,25 +328,38 @@
       "away": "Australia",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-19 21:00"
     },
     {
-      "num": 33,
-      "group": "E",
-      "home": "Germany",
-      "away": "Ivory Coast",
+      "num": 30,
+      "group": "C",
+      "home": "Scotland",
+      "away": "Morocco",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-20 0:00"
     },
     {
-      "num": 34,
-      "group": "E",
-      "home": "Ecuador",
-      "away": "Curacao",
+      "num": 29,
+      "group": "C",
+      "home": "Brazil",
+      "away": "Haiti",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-20 2:30"
+    },
+    {
+      "num": 31,
+      "group": "D",
+      "home": "Turkiye",
+      "away": "Paraguay",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "date": "2026-06-20 5:00"
     },
     {
       "num": 35,
@@ -354,7 +368,28 @@
       "away": "Sweden",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-20 19:00"
+    },
+    {
+      "num": 33,
+      "group": "E",
+      "home": "Germany",
+      "away": "Ivory Coast",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "date": "2026-06-20 22:00"
+    },
+    {
+      "num": 34,
+      "group": "E",
+      "home": "Ecuador",
+      "away": "Curacao",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "date": "2026-06-21 2:00"
     },
     {
       "num": 36,
@@ -363,16 +398,8 @@
       "away": "Japan",
       "gh": null,
       "ga": null,
-      "played": false
-    },
-    {
-      "num": 37,
-      "group": "H",
-      "home": "Uruguay",
-      "away": "Cape Verde",
-      "gh": null,
-      "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-21 6:00"
     },
     {
       "num": 38,
@@ -381,7 +408,8 @@
       "away": "Saudi Arabia",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-21 18:00"
     },
     {
       "num": 39,
@@ -390,7 +418,18 @@
       "away": "Iran",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-21 21:00"
+    },
+    {
+      "num": 37,
+      "group": "H",
+      "home": "Uruguay",
+      "away": "Cape Verde",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "date": "2026-06-22 0:00"
     },
     {
       "num": 40,
@@ -399,25 +438,8 @@
       "away": "Egypt",
       "gh": null,
       "ga": null,
-      "played": false
-    },
-    {
-      "num": 41,
-      "group": "I",
-      "home": "Norway",
-      "away": "Senegal",
-      "gh": null,
-      "ga": null,
-      "played": false
-    },
-    {
-      "num": 42,
-      "group": "I",
-      "home": "France",
-      "away": "Iraq",
-      "gh": null,
-      "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-22 3:00"
     },
     {
       "num": 43,
@@ -426,7 +448,28 @@
       "away": "Austria",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-22 19:00"
+    },
+    {
+      "num": 42,
+      "group": "I",
+      "home": "France",
+      "away": "Iraq",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "date": "2026-06-22 23:00"
+    },
+    {
+      "num": 41,
+      "group": "I",
+      "home": "Norway",
+      "away": "Senegal",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "date": "2026-06-23 2:00"
     },
     {
       "num": 44,
@@ -435,25 +478,8 @@
       "away": "Algeria",
       "gh": null,
       "ga": null,
-      "played": false
-    },
-    {
-      "num": 45,
-      "group": "L",
-      "home": "England",
-      "away": "Ghana",
-      "gh": null,
-      "ga": null,
-      "played": false
-    },
-    {
-      "num": 46,
-      "group": "L",
-      "home": "Panama",
-      "away": "Croatia",
-      "gh": null,
-      "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-23 5:00"
     },
     {
       "num": 47,
@@ -462,7 +488,28 @@
       "away": "Uzbekistan",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-23 19:00"
+    },
+    {
+      "num": 45,
+      "group": "L",
+      "home": "England",
+      "away": "Ghana",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "date": "2026-06-23 22:00"
+    },
+    {
+      "num": 46,
+      "group": "L",
+      "home": "Panama",
+      "away": "Croatia",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "date": "2026-06-24 1:00"
     },
     {
       "num": 48,
@@ -471,25 +518,8 @@
       "away": "DR Congo",
       "gh": null,
       "ga": null,
-      "played": false
-    },
-    {
-      "num": 49,
-      "group": "C",
-      "home": "Scotland",
-      "away": "Brazil",
-      "gh": null,
-      "ga": null,
-      "played": false
-    },
-    {
-      "num": 50,
-      "group": "C",
-      "home": "Morocco",
-      "away": "Haiti",
-      "gh": null,
-      "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-24 4:00"
     },
     {
       "num": 51,
@@ -498,7 +528,8 @@
       "away": "Canada",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-24 21:00"
     },
     {
       "num": 52,
@@ -507,7 +538,28 @@
       "away": "Qatar",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-24 21:00"
+    },
+    {
+      "num": 49,
+      "group": "C",
+      "home": "Scotland",
+      "away": "Brazil",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "date": "2026-06-25 0:00"
+    },
+    {
+      "num": 50,
+      "group": "C",
+      "home": "Morocco",
+      "away": "Haiti",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "date": "2026-06-25 0:00"
     },
     {
       "num": 53,
@@ -516,7 +568,8 @@
       "away": "Mexico",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-25 3:00"
     },
     {
       "num": 54,
@@ -525,7 +578,8 @@
       "away": "South Korea",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-25 3:00"
     },
     {
       "num": 55,
@@ -534,7 +588,8 @@
       "away": "Ivory Coast",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-25 22:00"
     },
     {
       "num": 56,
@@ -543,7 +598,8 @@
       "away": "Germany",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-25 22:00"
     },
     {
       "num": 57,
@@ -552,7 +608,8 @@
       "away": "Sweden",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-26 1:00"
     },
     {
       "num": 58,
@@ -561,7 +618,8 @@
       "away": "Netherlands",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-26 1:00"
     },
     {
       "num": 59,
@@ -570,7 +628,8 @@
       "away": "USA",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-26 4:00"
     },
     {
       "num": 60,
@@ -579,7 +638,8 @@
       "away": "Australia",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-26 4:00"
     },
     {
       "num": 61,
@@ -588,7 +648,8 @@
       "away": "France",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-26 21:00"
     },
     {
       "num": 62,
@@ -597,25 +658,8 @@
       "away": "Iraq",
       "gh": null,
       "ga": null,
-      "played": false
-    },
-    {
-      "num": 63,
-      "group": "G",
-      "home": "Egypt",
-      "away": "Iran",
-      "gh": null,
-      "ga": null,
-      "played": false
-    },
-    {
-      "num": 64,
-      "group": "G",
-      "home": "New Zealand",
-      "away": "Belgium",
-      "gh": null,
-      "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-26 21:00"
     },
     {
       "num": 65,
@@ -624,7 +668,8 @@
       "away": "Saudi Arabia",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-27 2:00"
     },
     {
       "num": 66,
@@ -633,7 +678,28 @@
       "away": "Spain",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-27 2:00"
+    },
+    {
+      "num": 63,
+      "group": "G",
+      "home": "Egypt",
+      "away": "Iran",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "date": "2026-06-27 5:00"
+    },
+    {
+      "num": 64,
+      "group": "G",
+      "home": "New Zealand",
+      "away": "Belgium",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "date": "2026-06-27 5:00"
     },
     {
       "num": 67,
@@ -642,7 +708,8 @@
       "away": "England",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-27 23:00"
     },
     {
       "num": 68,
@@ -651,25 +718,8 @@
       "away": "Ghana",
       "gh": null,
       "ga": null,
-      "played": false
-    },
-    {
-      "num": 69,
-      "group": "J",
-      "home": "Algeria",
-      "away": "Austria",
-      "gh": null,
-      "ga": null,
-      "played": false
-    },
-    {
-      "num": 70,
-      "group": "J",
-      "home": "Jordan",
-      "away": "Argentina",
-      "gh": null,
-      "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-27 23:00"
     },
     {
       "num": 71,
@@ -678,7 +728,8 @@
       "away": "Portugal",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-28 1:30"
     },
     {
       "num": 72,
@@ -687,7 +738,28 @@
       "away": "Uzbekistan",
       "gh": null,
       "ga": null,
-      "played": false
+      "played": false,
+      "date": "2026-06-28 1:30"
+    },
+    {
+      "num": 69,
+      "group": "J",
+      "home": "Algeria",
+      "away": "Austria",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "date": "2026-06-28 4:00"
+    },
+    {
+      "num": 70,
+      "group": "J",
+      "home": "Jordan",
+      "away": "Argentina",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "date": "2026-06-28 4:00"
     }
   ],
   "advanced": {

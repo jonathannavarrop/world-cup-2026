@@ -75,6 +75,20 @@ function ptsHtml(points) {
   return `<span class="${cls}">${sign}${points}pts</span>`;
 }
 
+const WEEKDAYS = ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"];
+const MONTHS = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
+
+// "2026-06-13 3:00" -> "sáb 13 jun · 03:00"
+function matchDateLabel(dateStr) {
+  if (!dateStr) return "";
+  const m = dateStr.match(/^(\d{4})-(\d{2})-(\d{2}) (\d{1,2}):(\d{2})$/);
+  if (!m) return "";
+  const [, y, mo, d, h, mi] = m.map(Number);
+  const date = new Date(y, mo - 1, d, h, mi);
+  const time = `${String(h).padStart(2, "0")}:${String(mi).padStart(2, "0")}`;
+  return `${WEEKDAYS[date.getDay()]} ${d} ${MONTHS[mo - 1]} · ${time}`;
+}
+
 async function fetchJSON(path) {
   const res = await fetch(`${path}?t=${Date.now()}`);
   if (!res.ok) throw new Error(`No se pudo cargar ${path}`);
@@ -91,8 +105,6 @@ function renderNav(active) {
   ];
   const navLinksBefore = links.map(l =>
     `<a class="nav-link ${active === l.key ? "active" : ""}" href="${l.href}">${l.label}</a>`).join("");
-  const playerLinks = PLAYERS.map(p =>
-    `<a class="nav-drop-item ${active === "jugador-" + p ? "active" : ""}" href="jugador.html?j=${p}">${p}</a>`).join("");
   el.innerHTML = `
     <div class="nav-inner">
       <a class="brand" href="index.html">
@@ -101,10 +113,7 @@ function renderNav(active) {
       </a>
       <div class="nav-links">
         ${navLinksBefore}
-        <div class="nav-drop">
-          <span class="nav-link ${active && active.startsWith("jugador") ? "active" : ""}">Mi porra ▾</span>
-          <div class="nav-drop-menu">${playerLinks}</div>
-        </div>
+        <a class="nav-link ${active && active.startsWith("jugador") ? "active" : ""}" href="jugador.html">Mi porra</a>
         <a class="nav-link ${active === "reglas" ? "active" : ""}" href="reglas.html">Reglas</a>
       </div>
     </div>`;

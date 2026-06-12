@@ -27,16 +27,11 @@
 <script>
 const params = new URLSearchParams(location.search);
 let player = params.get('j');
-if (!PLAYERS.includes(player)) player = PLAYERS[0];
-renderNav("jugador-" + player);
 
 if (params.get('from') === 'clasificacion') {
   document.getElementById('back').innerHTML =
     '<a class="back-link" href="index.html">← Volver a la clasificación</a>';
 }
-
-document.getElementById('tabs').innerHTML = PLAYERS.map(p =>
-  `<a href="jugador.html?j=${p}" class="${p===player?'active':''}">${p}</a>`).join('');
 
 function rowTag(m, pred){
   if (!m.played) return '<span class="tag pending">Pendiente</span>';
@@ -50,8 +45,22 @@ function rowTag(m, pred){
 async function load(){
   let d;
   try{ d = await fetchJSON('./data/standings.json'); }
-  catch(e){ document.getElementById('content').innerHTML =
-    '<div class="empty">Aún no hay datos publicados.</div>'; return; }
+  catch(e){
+    if (!PLAYERS.includes(player)) player = PLAYERS[0];
+    renderNav("jugador-" + player);
+    document.getElementById('tabs').innerHTML = PLAYERS.map(p =>
+      `<a href="jugador.html?j=${p}" class="${p===player?'active':''}">${p}</a>`).join('');
+    document.getElementById('content').innerHTML =
+      '<div class="empty">Aún no hay datos publicados.</div>'; return;
+  }
+
+  if (!PLAYERS.includes(player)) {
+    const sorted = (d.table||[]).slice().sort((a,b)=>(a.pos||999)-(b.pos||999));
+    player = (sorted[0] && sorted[0].player) || PLAYERS[0];
+  }
+  renderNav("jugador-" + player);
+  document.getElementById('tabs').innerHTML = PLAYERS.map(p =>
+    `<a href="jugador.html?j=${p}" class="${p===player?'active':''}">${p}</a>`).join('');
 
   const row = (d.table||[]).find(r => r.player === player) || {};
   document.getElementById('title').innerHTML = `${player} <span class="accent">· #${row.pos||'-'}</span>`;
@@ -63,7 +72,7 @@ async function load(){
     const real = m.played ? `${m.gh} - ${m.ga}` : '<span class="pts-na">pendiente</span>';
     return `<tr>
       <td class="num">${m.num}</td>
-      <td>${teamFlag(m.home)} ${teamES(m.home)} <span style="color:var(--muted)">vs</span> ${teamES(m.away)} ${teamFlag(m.away)}</td>
+      <td>${teamFlag(m.home)} ${teamES(m.home)} <span style="color:var(--muted)">vs</span> ${teamES(m.away)} ${teamFlag(m.away)}<div class="match-date">${matchDateLabel(m.date)}</div></td>
       <td class="pred">${pred.gh} - ${pred.ga}</td>
       <td class="score">${real}</td>
       <td>${rowTag(m, pred)}</td>

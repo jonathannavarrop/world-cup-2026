@@ -48,7 +48,6 @@ def build(rows):
         "advanced": {k: [] for k in ["R32", "R16", "QF", "SF", "Final", "Champion"]},
     }
     tables = {}  # grupo -> {equipo: [pts, gf, gc]}
-    group_num = 0
 
     for r in rows:
         ronda = (r.get("ronda") or "").strip()
@@ -67,10 +66,10 @@ def build(rows):
             continue
 
         # ----- fase de grupos -----
-        group_num += 1
         res["matches"].append({
-            "num": group_num, "group": ronda.upper(), "home": h, "away": a,
+            "num": num(r.get("num")), "group": ronda.upper(), "home": h, "away": a,
             "gh": gl, "ga": gv, "played": gl is not None and gv is not None,
+            "date": (r.get("fecha") or "").strip(),
         })
         if gl is None or gv is None:
             continue

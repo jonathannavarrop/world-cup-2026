@@ -146,7 +146,26 @@ h1.title .accent{color:var(--blue);text-shadow:0 0 24px rgba(47,125,255,.45)}
   padding:14px 18px;margin-bottom:10px;
 }
 .match-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.match-info{display:flex;flex-direction:column;gap:2px}
 .match-teams{font-family:'Anton',sans-serif;font-size:17px;text-transform:uppercase;letter-spacing:.02em;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.match-date{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+.match-date .match-group{color:var(--gold);margin-right:6px}
+
+/* ---------- controles de vista / filtro de grupo ---------- */
+.view-toggle{display:flex;gap:8px;margin:18px 0 10px;flex-wrap:wrap}
+.view-toggle button{
+  font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--muted);background:transparent;border:1px solid var(--line);border-radius:999px;
+  padding:7px 16px;cursor:pointer;
+}
+.view-toggle button.active{color:#fff;background:var(--blue);border-color:var(--blue)}
+.group-filter{display:flex;gap:6px;margin:0 0 18px;flex-wrap:wrap}
+.group-filter button{
+  font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--muted);background:transparent;border:1px solid var(--line);border-radius:999px;
+  padding:5px 12px;cursor:pointer;
+}
+.group-filter button.active{color:#0a0e1f;background:var(--gold);border-color:var(--gold)}
 .match-score{
   font-family:'Space Mono',monospace;font-weight:700;font-size:18px;
   background:rgba(255,255,255,.05);border-radius:8px;padding:4px 12px;min-width:64px;text-align:center;

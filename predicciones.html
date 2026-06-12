@@ -19,6 +19,8 @@
     <div class="meta" id="meta"></div>
   </header>
 
+  <div class="view-toggle" id="viewToggle"></div>
+  <div class="group-filter" id="groupFilter"></div>
   <div id="groups"><div class="empty">Cargando partidos…</div></div>
 </div>
 
@@ -26,51 +28,84 @@
 <script>
 renderNav("predicciones");
 
+let view = 'calendario'; // 'calendario' | 'grupos'
+let groupFilter = 'TODOS';
+let DATA = null;
+
+function matchCard(m, showGroupTag){
+  const score = m.played
+    ? `<div class="match-score">${m.gh} - ${m.ga}</div>`
+    : `<div class="match-score pending">vs</div>`;
+  const preds = PLAYERS.map(p=>{
+    const pr = (m.predictions||{})[p];
+    const predScore = pr ? `${pr.gh}-${pr.ga}` : '—';
+    return `<div class="pred-cell">
+      <span class="player">${p}</span>
+      <span class="pred-score">${predScore}</span>
+      ${pr ? ptsHtml(pr.points) : '<span class="pts-na">—</span>'}
+    </div>`;
+  }).join('');
+  const dateLabel = matchDateLabel(m.date);
+  const groupTag = showGroupTag ? `<span class="match-group">Grupo ${m.group}</span>` : '';
+  return `<div class="match-card">
+    <div class="match-head">
+      <div class="match-info">
+        <div class="match-teams">${teamFlag(m.home)} ${teamES(m.home)} <span style="color:var(--muted)">vs</span> ${teamES(m.away)} ${teamFlag(m.away)}</div>
+        ${(groupTag || dateLabel) ? `<div class="match-date">${groupTag}${dateLabel}</div>` : ''}
+      </div>
+      ${score}
+    </div>
+    <div class="preds-grid">${preds}</div>
+  </div>`;
+}
+
+function render(){
+  const matches = (DATA.matches||[]).filter(m => groupFilter === 'TODOS' || m.group === groupFilter);
+
+  let html;
+  if (view === 'calendario') {
+    const sorted = matches.slice().sort((a,b) => (a.date||'').localeCompare(b.date||'') || a.num - b.num);
+    html = sorted.map(m => matchCard(m, true)).join('');
+  } else {
+    const byGroup = {};
+    for (const m of matches) (byGroup[m.group] = byGroup[m.group] || []).push(m);
+    const groups = Object.keys(byGroup).sort();
+    html = groups.map(g => `<section class="group-section">
+      <div class="group-title">Grupo ${g}<span class="bar"></span></div>
+      ${byGroup[g].map(m => matchCard(m, false)).join('')}
+    </section>`).join('');
+  }
+  document.getElementById('groups').innerHTML = html || '<div class="empty">No hay partidos para este filtro.</div>';
+}
+
+function renderControls(){
+  document.getElementById('viewToggle').innerHTML = `
+    <button data-view="calendario" class="${view==='calendario'?'active':''}">📅 Calendario</button>
+    <button data-view="grupos" class="${view==='grupos'?'active':''}">Por grupos</button>`;
+  document.querySelectorAll('#viewToggle button').forEach(b =>
+    b.addEventListener('click', () => { view = b.dataset.view; renderControls(); render(); }));
+
+  const groups = Array.from(new Set((DATA.matches||[]).map(m => m.group))).sort();
+  const all = ['TODOS', ...groups];
+  document.getElementById('groupFilter').innerHTML = all.map(g =>
+    `<button data-group="${g}" class="${groupFilter===g?'active':''}">${g==='TODOS'?'Todos':'Grupo '+g}</button>`).join('');
+  document.querySelectorAll('#groupFilter button').forEach(b =>
+    b.addEventListener('click', () => { groupFilter = b.dataset.group; renderControls(); render(); }));
+}
+
 async function load(){
-  let d;
-  try{ d = await fetchJSON('./data/standings.json'); }
+  try{ DATA = await fetchJSON('./data/standings.json'); }
   catch(e){ document.getElementById('groups').innerHTML =
     '<div class="empty">Aún no hay datos publicados.</div>'; return; }
 
-  const upd = d.updated ? new Date(d.updated).toLocaleString('es-ES') : '—';
+  const upd = DATA.updated ? new Date(DATA.updated).toLocaleString('es-ES') : '—';
   document.getElementById('meta').innerHTML =
-    `<span><b>${(d.matches||[]).length}</b> partidos de grupos</span>
-     <span><b>${d.matches_played||0}</b> jugados</span>
+    `<span><b>${(DATA.matches||[]).length}</b> partidos de grupos</span>
+     <span><b>${DATA.matches_played||0}</b> jugados</span>
      <span>Actualizado: ${upd}</span>`;
 
-  const byGroup = {};
-  for (const m of (d.matches||[])) {
-    (byGroup[m.group] = byGroup[m.group] || []).push(m);
-  }
-  const groups = Object.keys(byGroup).sort();
-
-  document.getElementById('groups').innerHTML = groups.map(g=>{
-    const matches = byGroup[g].map(m=>{
-      const score = m.played
-        ? `<div class="match-score">${m.gh} - ${m.ga}</div>`
-        : `<div class="match-score pending">vs</div>`;
-      const preds = PLAYERS.map(p=>{
-        const pr = (m.predictions||{})[p];
-        const predScore = pr ? `${pr.gh}-${pr.ga}` : '—';
-        return `<div class="pred-cell">
-          <span class="player">${p}</span>
-          <span class="pred-score">${predScore}</span>
-          ${pr ? ptsHtml(pr.points) : '<span class="pts-na">—</span>'}
-        </div>`;
-      }).join('');
-      return `<div class="match-card">
-        <div class="match-head">
-          <div class="match-teams">${teamFlag(m.home)} ${teamES(m.home)} <span style="color:var(--muted)">vs</span> ${teamES(m.away)} ${teamFlag(m.away)}</div>
-          ${score}
-        </div>
-        <div class="preds-grid">${preds}</div>
-      </div>`;
-    }).join('');
-    return `<section class="group-section">
-      <div class="group-title">Grupo ${g}<span class="bar"></span></div>
-      ${matches}
-    </section>`;
-  }).join('');
+  renderControls();
+  render();
 }
 load();
 </script>
