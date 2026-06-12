@@ -15,7 +15,7 @@
   <header class="hero">
     <div class="eyebrow"><span class="flags">🇲🇽🇺🇸🇨🇦</span> Copa Mundial de la FIFA · México · Estados Unidos · Canadá</div>
     <h1 class="title">PORRA FANTASY <span class="accent">MUNDIAL DE LOS 2000</span></h1>
-    <div class="subtitle">Clasificación general de la porra. Toca cada jugador para ver, partido a partido, el resultado oficial y los puntos que se ha llevado.</div>
+    <div class="subtitle">Clasificación general de la porra. Toca cada jugador para ver su porra completa, partido a partido.</div>
     <div class="meta" id="meta"></div>
   </header>
 
@@ -45,27 +45,14 @@ async function load(){
   document.getElementById('refresh').textContent = 'Se actualiza solo al recargar la página.';
 
   document.getElementById('board').innerHTML = d.table.map((r,i)=>{
-    const playedMatches = (d.matches||[]).filter(m => m.played && m.predictions && m.predictions[r.player]);
-    const items = playedMatches.map(m=>{
-      const p = m.predictions[r.player];
-      return `<li>
-        <span class="teams">${teamFlag(m.home)} ${teamES(m.home)} - ${teamES(m.away)} ${teamFlag(m.away)}</span>
-        <span class="score">${m.gh}-${m.ga}</span>
-        ${ptsHtml(p.points)}
-      </li>`;
-    }).join('');
-    const detail = items
-      ? `<ul class="match-list">${items}</ul>`
-      : `<div class="empty" style="padding:14px 0">Todavía no hay partidos puntuados.</div>`;
-    return `<div class="row ${i===0?'lead':''}" onclick="this.classList.toggle('open')">
+    return `<a class="row ${i===0?'lead':''}" href="jugador.html?j=${r.player}">
        <div class="head-row">
          <div class="pos">${r.pos}</div>
          <div class="name">${r.player}</div>
          <div class="pts-total">${r.total}<small>PUNTOS</small></div>
          <div class="chev">▸</div>
        </div>
-       <div class="detail">${detail}</div>
-     </div>`;
+     </a>`;
   }).join('');
 }
 load();
