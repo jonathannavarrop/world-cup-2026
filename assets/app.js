@@ -95,7 +95,10 @@ function renderNav(active) {
     `<a class="nav-drop-item ${active === "jugador-" + p ? "active" : ""}" href="jugador.html?j=${p}">${p}</a>`).join("");
   el.innerHTML = `
     <div class="nav-inner">
-      <a class="brand" href="index.html"><span class="brand-porra">PORRA FANTASY</span><span class="brand-wc">MUNDIAL DE LOS 2000</span></a>
+      <a class="brand" href="index.html">
+        <span class="brand-ball">⚽</span>
+        <span class="brand-text"><span class="brand-porra">PORRA FANTASY</span><span class="brand-wc">MUNDIAL DE LOS 2000</span></span>
+      </a>
       <div class="nav-links">
         ${navLinks}
         <div class="nav-drop">
