@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PORRA FANTASY - MUNDIAL DE LOS 2000 · Reglas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div id="nav"></div>
+<div class="wrap">
+  <header class="hero">
+    <div class="eyebrow"><span class="flags">🇲🇽🇺🇸🇨🇦</span> Cómo se puntúa</div>
+    <h1 class="title">REGLAS <span class="accent">DE LA PORRA</span></h1>
+    <div class="subtitle">Resumen de la puntuación que se aplica en automático. De momento los premios especiales quedan excluidos.</div>
+  </header>
+
+  <div class="section-title">Fase de grupos</div>
+  <div class="match-card">
+    <p>Por cada partido de la fase de grupos (A-L) se compara tu pronóstico con el resultado oficial:</p>
+    <div class="advance-grid" style="margin-top:12px">
+      <div class="advance-pill"><span>Acertar el 1X2 (ganador o empate)</span><span class="pts-pos">+30pts</span></div>
+      <div class="advance-pill"><span>Marcador exacto (además del 1X2)</span><span class="pts-pos">+30pts</span></div>
+      <div class="advance-pill"><span>Por cada gol de diferencia respecto al resultado real</span><span class="pts-neg">-3pts</span></div>
+    </div>
+    <p class="subtitle" style="margin-top:12px">
+      El descuento por diferencia de goles se aplica siempre, sumando la diferencia en goles
+      locales y la diferencia en goles visitantes. Por ejemplo, si el resultado real es
+      <b style="color:var(--ink)">2-0</b> y pronosticaste <b style="color:var(--ink)">2-1</b>:
+      aciertas el 1X2 (+30) pero falla el marcador exacto, y restas 3 por el gol de
+      diferencia en el visitante → total <span class="pts-pos">+27pts</span>.
+    </p>
+  </div>
+
+  <div class="section-title">Fases finales</div>
+  <div class="match-card">
+    <p>Por cada equipo que pronosticaste que pasaría de ronda y efectivamente pasa, ganas
+      los puntos de esa ronda:</p>
+    <div class="advance-grid" style="margin-top:12px">
+      <div class="advance-pill"><span>Dieciseisavos (R32)</span><span class="pts-pos">+30pts</span></div>
+      <div class="advance-pill"><span>Octavos de final (R16)</span><span class="pts-pos">+50pts</span></div>
+      <div class="advance-pill"><span>Cuartos de final (QF)</span><span class="pts-pos">+80pts</span></div>
+      <div class="advance-pill"><span>Semifinales (SF)</span><span class="pts-pos">+120pts</span></div>
+      <div class="advance-pill"><span>Final</span><span class="pts-pos">+170pts</span></div>
+      <div class="advance-pill"><span>Campeón</span><span class="pts-pos">+250pts</span></div>
+    </div>
+    <p class="subtitle" style="margin-top:12px">
+      Bonus extra: si en dieciseisavos (R32) aciertas además la posición exacta de grupo
+      del equipo (1º o 2º), sumas <span class="pts-pos">+30pts</span> adicionales por ese equipo.
+    </p>
+  </div>
+
+  <div class="section-title">Premios especiales</div>
+  <div class="match-card">
+    <p class="subtitle">Los premios extra (Roberswingger, Champ, Paraguaya Chupona, Pinwis,
+      Lobby, Columna Churu) están <b style="color:var(--ink)">eliminados de momento</b> de la
+      clasificación. Si se reactivan más adelante, se añadirán aquí con su puntuación.</p>
+  </div>
+</div>
+
+<script src="assets/app.js"></script>
+<script>
+renderNav("reglas");
+</script>
+</body>
+</html>

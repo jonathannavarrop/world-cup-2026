@@ -88,6 +88,7 @@ function renderNav(active) {
   const links = [
     { href: "index.html", label: "Clasificación", key: "clasificacion" },
     { href: "predicciones.html", label: "Predicciones", key: "predicciones" },
+    { href: "reglas.html", label: "Reglas", key: "reglas" },
   ];
   const navLinks = links.map(l =>
     `<a class="nav-link ${active === l.key ? "active" : ""}" href="${l.href}">${l.label}</a>`).join("");
