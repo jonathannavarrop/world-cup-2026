@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>POFANTASY WORLDCUP 2026 · Predicciones</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div id="nav"></div>
+<div class="wrap">
+  <header class="hero">
+    <div class="eyebrow"><span class="flags">🇲🇽🇺🇸🇨🇦</span> Fase de grupos · Grupos A-L</div>
+    <h1 class="title">PREDICCIONES <span class="accent">POR GRUPO</span></h1>
+    <div class="subtitle">Todos los partidos de la fase de grupos, con el resultado oficial y, debajo, el pronóstico y los puntos de cada jugador.</div>
+    <div class="meta" id="meta"></div>
+  </header>
+
+  <div id="groups"><div class="empty">Cargando partidos…</div></div>
+</div>
+
+<script src="assets/app.js"></script>
+<script>
+renderNav("predicciones");
+
+async function load(){
+  let d;
+  try{ d = await fetchJSON('./data/standings.json'); }
+  catch(e){ document.getElementById('groups').innerHTML =
+    '<div class="empty">Aún no hay datos publicados.</div>'; return; }
+
+  const upd = d.updated ? new Date(d.updated).toLocaleString('es-ES') : '—';
+  document.getElementById('meta').innerHTML =
+    `<span><b>${(d.matches||[]).length}</b> partidos de grupos</span>
+     <span><b>${d.matches_played||0}</b> jugados</span>
+     <span>Actualizado: ${upd}</span>`;
+
+  const byGroup = {};
+  for (const m of (d.matches||[])) {
+    (byGroup[m.group] = byGroup[m.group] || []).push(m);
+  }
+  const groups = Object.keys(byGroup).sort();
+
+  document.getElementById('groups').innerHTML = groups.map(g=>{
+    const matches = byGroup[g].map(m=>{
+      const score = m.played
+        ? `<div class="match-score">${m.gh} - ${m.ga}</div>`
+        : `<div class="match-score pending">vs</div>`;
+      const preds = PLAYERS.map(p=>{
+        const pr = (m.predictions||{})[p];
+        const predScore = pr ? `${pr.gh}-${pr.ga}` : '—';
+        return `<div class="pred-cell">
+          <span class="player">${p}</span>
+          <span class="pred-score">${predScore}</span>
+          ${pr ? ptsHtml(pr.points) : '<span class="pts-na">—</span>'}
+        </div>`;
+      }).join('');
+      return `<div class="match-card">
+        <div class="match-head">
+          <div class="match-teams">${teamFlag(m.home)} ${teamES(m.home)} <span style="color:var(--muted)">vs</span> ${teamES(m.away)} ${teamFlag(m.away)}</div>
+          ${score}
+        </div>
+        <div class="preds-grid">${preds}</div>
+      </div>`;
+    }).join('');
+    return `<section class="group-section">
+      <div class="group-title">Grupo ${g}<span class="bar"></span></div>
+      ${matches}
+    </section>`;
+  }).join('');
+}
+load();
+</script>
+</body>
+</html>

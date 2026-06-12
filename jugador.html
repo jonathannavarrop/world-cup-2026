@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>POFANTASY WORLDCUP 2026 · Mi porra</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div id="nav"></div>
+<div class="wrap">
+  <header class="hero">
+    <div class="eyebrow"><span class="flags">🇲🇽🇺🇸🇨🇦</span> Mi porra · pronósticos y aciertos</div>
+    <h1 class="title" id="title">MI <span class="accent">PORRA</span></h1>
+    <div class="subtitle">Repaso de todos los pronósticos: el resultado que pusiste, el resultado oficial y los puntos que te ha dado cada partido.</div>
+  </header>
+
+  <div class="player-tabs" id="tabs"></div>
+  <div id="content"><div class="empty">Cargando…</div></div>
+</div>
+
+<script src="assets/app.js"></script>
+<script>
+const params = new URLSearchParams(location.search);
+let player = params.get('j');
+if (!PLAYERS.includes(player)) player = PLAYERS[0];
+renderNav("jugador-" + player);
+
+document.getElementById('tabs').innerHTML = PLAYERS.map(p =>
+  `<a href="jugador.html?j=${p}" class="${p===player?'active':''}">${p}</a>`).join('');
+
+function rowTag(m, pred){
+  if (!m.played) return '<span class="tag pending">Pendiente</span>';
+  const realSign = m.gh>m.ga ? '1' : (m.ga>m.gh ? '2' : 'X');
+  const predSign = pred.gh>pred.ga ? '1' : (pred.ga>pred.gh ? '2' : 'X');
+  if (realSign !== predSign) return '<span class="tag miss">Fallo</span>';
+  if (pred.gh===m.gh && pred.ga===m.ga) return '<span class="tag exact">Exacto</span>';
+  return '<span class="tag hit">1X2</span>';
+}
+
+async function load(){
+  let d;
+  try{ d = await fetchJSON('./data/standings.json'); }
+  catch(e){ document.getElementById('content').innerHTML =
+    '<div class="empty">Aún no hay datos publicados.</div>'; return; }
+
+  const row = (d.table||[]).find(r => r.player === player) || {};
+  document.getElementById('title').innerHTML = `${player} <span class="accent">· #${row.pos||'-'}</span>`;
+
+  const matches = (d.matches||[]).filter(m => m.predictions && m.predictions[player]);
+
+  const tableRows = matches.map(m=>{
+    const pred = m.predictions[player];
+    const real = m.played ? `${m.gh} - ${m.ga}` : '<span class="pts-na">pendiente</span>';
+    return `<tr>
+      <td class="num">${m.num}</td>
+      <td>${teamFlag(m.home)} ${teamES(m.home)} <span style="color:var(--muted)">vs</span> ${teamES(m.away)} ${teamFlag(m.away)}</td>
+      <td class="pred">${pred.gh} - ${pred.ga}</td>
+      <td class="score">${real}</td>
+      <td>${rowTag(m, pred)}</td>
+      <td>${ptsHtml(pred.points)}</td>
+    </tr>`;
+  }).join('');
+
+  const groupTotal = (row.breakdown && row.breakdown.grupos) ?? 0;
+  const finalTotal = (row.breakdown && row.breakdown.fases_finales) ?? 0;
+
+  // ---------- fases finales ----------
+  const advance = (d.advance && d.advance[player]) || {};
+  const actual = d.actual_advanced || {};
+  const champion = (advance.Champion || [])[0];
+  const championHit = champion && (actual.Champion||[]).includes(champion);
+  const r32 = advance.R32 || [];
+
+  const r32Pills = r32.map(team=>{
+    const hit = (actual.R32||[]).includes(team);
+    const pending = !(actual.R32||[]).length;
+    const cls = pending ? '' : (hit ? 'pts-pos' : 'pts-neg');
+    return `<div class="advance-pill"><span>${teamFlag(team)} ${teamES(team)}</span><span class="${cls}">${pending?'pendiente':(hit?'✔':'✘')}</span></div>`;
+  }).join('');
+
+  document.getElementById('content').innerHTML = `
+    <div class="player-header">
+      <div class="player-avatar">${player[0]}</div>
+      <div class="player-stats">
+        <div><b>${row.total ?? 0}</b>puntos totales</div>
+        <div><b>${groupTotal}</b>fase de grupos</div>
+        <div><b>${finalTotal}</b>fases finales</div>
+      </div>
+    </div>
+
+    <div class="section-title">Fase de grupos · ${matches.length} partidos</div>
+    <table class="pred-table">
+      <thead><tr><th>#</th><th>Partido</th><th>Tu pronóstico</th><th>Resultado</th><th>Acierto</th><th>Puntos</th></tr></thead>
+      <tbody>${tableRows}</tbody>
+    </table>
+
+    <div class="section-title">Fases finales</div>
+    <p class="subtitle" style="margin-bottom:10px">
+      Campeón elegido: <b style="color:var(--ink)">${champion ? teamFlag(champion)+' '+teamES(champion) : '—'}</b>
+      ${champion ? ((actual.Champion||[]).length ? ptsHtml(championHit?250:0) : '<span class="tag pending">Pendiente</span>') : ''}
+    </p>
+    <div class="advance-grid">${r32Pills || '<div class="empty">Sin selección de dieciseisavos.</div>'}</div>
+  `;
+}
+load();
+</script>
+</body>
+</html>

@@ -44,10 +44,11 @@ def num(x):
 def build(rows):
     res = {
         "updated": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "group_results": {}, "final_standings": {},
+        "group_results": {}, "final_standings": {}, "matches": [],
         "advanced": {k: [] for k in ["R32", "R16", "QF", "SF", "Final", "Champion"]},
     }
     tables = {}  # grupo -> {equipo: [pts, gf, gc]}
+    group_num = 0
 
     for r in rows:
         ronda = (r.get("ronda") or "").strip()
@@ -66,6 +67,11 @@ def build(rows):
             continue
 
         # ----- fase de grupos -----
+        group_num += 1
+        res["matches"].append({
+            "num": group_num, "group": ronda.upper(), "home": h, "away": a,
+            "gh": gl, "ga": gv, "played": gl is not None and gv is not None,
+        })
         if gl is None or gv is None:
             continue
         res["group_results"][f"{h}|{a}"] = {"home": h, "away": a, "gh": gl, "ga": gv}

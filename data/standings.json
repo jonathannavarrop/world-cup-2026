@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-12T08:16:40Z",
+  "updated": "2026-06-12T08:46:53Z",
   "matches_played": 2,
   "table": [
     {
@@ -7,13 +7,7 @@
       "total": 87,
       "breakdown": {
         "grupos": 87,
-        "fases_finales": 0,
-        "roberswingger": 0,
-        "champ": 0,
-        "paraguaya_chupona": 0,
-        "pinwis": 0,
-        "lobby": 0,
-        "columna_churu": 0
+        "fases_finales": 0
       },
       "pos": 1
     },
@@ -22,13 +16,7 @@
       "total": 84,
       "breakdown": {
         "grupos": 84,
-        "fases_finales": 0,
-        "roberswingger": 0,
-        "champ": 0,
-        "paraguaya_chupona": 0,
-        "pinwis": 0,
-        "lobby": 0,
-        "columna_churu": 0
+        "fases_finales": 0
       },
       "pos": 2
     },
@@ -37,13 +25,7 @@
       "total": 57,
       "breakdown": {
         "grupos": 57,
-        "fases_finales": 0,
-        "roberswingger": 0,
-        "champ": 0,
-        "paraguaya_chupona": 0,
-        "pinwis": 0,
-        "lobby": 0,
-        "columna_churu": 0
+        "fases_finales": 0
       },
       "pos": 3
     },
@@ -52,13 +34,7 @@
       "total": 54,
       "breakdown": {
         "grupos": 54,
-        "fases_finales": 0,
-        "roberswingger": 0,
-        "champ": 0,
-        "paraguaya_chupona": 0,
-        "pinwis": 0,
-        "lobby": 0,
-        "columna_churu": 0
+        "fases_finales": 0
       },
       "pos": 4
     },
@@ -67,15 +43,2962 @@
       "total": 24,
       "breakdown": {
         "grupos": 24,
-        "fases_finales": 0,
-        "roberswingger": 0,
-        "champ": 0,
-        "paraguaya_chupona": 0,
-        "pinwis": 0,
-        "lobby": 0,
-        "columna_churu": 0
+        "fases_finales": 0
       },
       "pos": 5
     }
-  ]
+  ],
+  "matches": [
+    {
+      "num": 1,
+      "group": "A",
+      "home": "Mexico",
+      "away": "South Africa",
+      "gh": 2,
+      "ga": 0,
+      "played": true,
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 1,
+          "points": 27
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 0,
+          "points": 60
+        },
+        "CHAMP": {
+          "gh": 3,
+          "ga": 0,
+          "points": 27
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 1,
+          "points": -6
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 0,
+          "points": 60
+        }
+      }
+    },
+    {
+      "num": 2,
+      "group": "A",
+      "home": "South Korea",
+      "away": "Czechia",
+      "gh": 2,
+      "ga": 1,
+      "played": true,
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": -3
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 0,
+          "points": 24
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 1,
+          "points": 60
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 1,
+          "points": 60
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 1,
+          "points": -3
+        }
+      }
+    },
+    {
+      "num": 3,
+      "group": "B",
+      "home": "Canada",
+      "away": "Bosnia-Herzegovina",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 0,
+          "points": null
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 3,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 4,
+      "group": "D",
+      "home": "USA",
+      "away": "Paraguay",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 2,
+          "points": null
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 3,
+          "ga": 1,
+          "points": null
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 2,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 5,
+      "group": "C",
+      "home": "Haiti",
+      "away": "Scotland",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 0,
+          "ga": 3,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 2,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 0,
+          "ga": 2,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 0,
+          "ga": 2,
+          "points": null
+        },
+        "PEP": {
+          "gh": 0,
+          "ga": 3,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 6,
+      "group": "D",
+      "home": "Australia",
+      "away": "Turkiye",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 3,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 1,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 3,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 2,
+          "points": null
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 3,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 7,
+      "group": "C",
+      "home": "Brazil",
+      "away": "Morocco",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 3,
+          "ga": 3,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 2,
+          "points": null
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 8,
+      "group": "B",
+      "home": "Qatar",
+      "away": "Switzerland",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 0,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 3,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 3,
+          "points": null
+        },
+        "PEP": {
+          "gh": 0,
+          "ga": 3,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 9,
+      "group": "E",
+      "home": "Ivory Coast",
+      "away": "Ecuador",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 1,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 2,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 0,
+          "ga": 2,
+          "points": null
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 3,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 10,
+      "group": "E",
+      "home": "Germany",
+      "away": "Curacao",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 5,
+          "ga": 0,
+          "points": null
+        },
+        "JONY": {
+          "gh": 5,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 5,
+          "ga": 0,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "PEP": {
+          "gh": 6,
+          "ga": 0,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 11,
+      "group": "F",
+      "home": "Netherlands",
+      "away": "Japan",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 2,
+          "points": null
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 2,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 2,
+          "points": null
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 12,
+      "group": "F",
+      "home": "Sweden",
+      "away": "Tunisia",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 2,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 13,
+      "group": "H",
+      "home": "Saudi Arabia",
+      "away": "Uruguay",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 2,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 1,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 2,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 0,
+          "ga": 2,
+          "points": null
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 14,
+      "group": "H",
+      "home": "Spain",
+      "away": "Cape Verde",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 4,
+          "ga": 0,
+          "points": null
+        },
+        "JONY": {
+          "gh": 5,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 5,
+          "ga": 0,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "PEP": {
+          "gh": 5,
+          "ga": 0,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 15,
+      "group": "G",
+      "home": "Iran",
+      "away": "New Zealand",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 0,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 16,
+      "group": "G",
+      "home": "Belgium",
+      "away": "Egypt",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 2,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 2,
+          "points": null
+        },
+        "PEP": {
+          "gh": 3,
+          "ga": 0,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 17,
+      "group": "I",
+      "home": "France",
+      "away": "Senegal",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 4,
+          "ga": 2,
+          "points": null
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "PEP": {
+          "gh": 3,
+          "ga": 1,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 18,
+      "group": "I",
+      "home": "Iraq",
+      "away": "Norway",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 3,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 1,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 2,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 2,
+          "points": null
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 3,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 19,
+      "group": "J",
+      "home": "Argentina",
+      "away": "Algeria",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 3,
+          "ga": 1,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 20,
+      "group": "J",
+      "home": "Austria",
+      "away": "Jordan",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "PEP": {
+          "gh": 3,
+          "ga": 0,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 21,
+      "group": "L",
+      "home": "Ghana",
+      "away": "Panama",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 3,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 0,
+          "ga": 1,
+          "points": null
+        },
+        "PEP": {
+          "gh": 3,
+          "ga": 1,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 22,
+      "group": "L",
+      "home": "England",
+      "away": "Croatia",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 2,
+          "points": null
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 23,
+      "group": "K",
+      "home": "Portugal",
+      "away": "DR Congo",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 3,
+          "ga": 0,
+          "points": null
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 5,
+          "ga": 1,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "PEP": {
+          "gh": 5,
+          "ga": 0,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 24,
+      "group": "K",
+      "home": "Uzbekistan",
+      "away": "Colombia",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 3,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 2,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 0,
+          "ga": 3,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 0,
+          "ga": 2,
+          "points": null
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 2,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 25,
+      "group": "A",
+      "home": "Czechia",
+      "away": "South Africa",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 2,
+          "points": null
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "PEP": {
+          "gh": 3,
+          "ga": 1,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 26,
+      "group": "B",
+      "home": "Switzerland",
+      "away": "Bosnia-Herzegovina",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 2,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 27,
+      "group": "B",
+      "home": "Canada",
+      "away": "Qatar",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 28,
+      "group": "A",
+      "home": "Mexico",
+      "away": "South Korea",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 2,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 2,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 29,
+      "group": "C",
+      "home": "Brazil",
+      "away": "Haiti",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 4,
+          "ga": 0,
+          "points": null
+        },
+        "JONY": {
+          "gh": 6,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 4,
+          "ga": 0,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 5,
+          "ga": 0,
+          "points": null
+        },
+        "PEP": {
+          "gh": 5,
+          "ga": 0,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 30,
+      "group": "C",
+      "home": "Scotland",
+      "away": "Morocco",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 2,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 2,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 3,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 2,
+          "points": null
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 2,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 31,
+      "group": "D",
+      "home": "Turkiye",
+      "away": "Paraguay",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "PEP": {
+          "gh": 0,
+          "ga": 2,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 32,
+      "group": "D",
+      "home": "USA",
+      "away": "Australia",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 33,
+      "group": "E",
+      "home": "Germany",
+      "away": "Ivory Coast",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 2,
+          "points": null
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 34,
+      "group": "E",
+      "home": "Ecuador",
+      "away": "Curacao",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 3,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 4,
+          "ga": 0,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 3,
+          "ga": 1,
+          "points": null
+        },
+        "PEP": {
+          "gh": 4,
+          "ga": 0,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 35,
+      "group": "F",
+      "home": "Netherlands",
+      "away": "Sweden",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 3,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 3,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "PEP": {
+          "gh": 3,
+          "ga": 1,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 36,
+      "group": "F",
+      "home": "Tunisia",
+      "away": "Japan",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 1,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 2,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 0,
+          "ga": 3,
+          "points": null
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 3,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 37,
+      "group": "H",
+      "home": "Uruguay",
+      "away": "Cape Verde",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 3,
+          "ga": 0,
+          "points": null
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 3,
+          "ga": 0,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "PEP": {
+          "gh": 3,
+          "ga": 0,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 38,
+      "group": "H",
+      "home": "Spain",
+      "away": "Saudi Arabia",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "JONY": {
+          "gh": 4,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 4,
+          "ga": 1,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 3,
+          "ga": 0,
+          "points": null
+        },
+        "PEP": {
+          "gh": 3,
+          "ga": 1,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 39,
+      "group": "G",
+      "home": "Belgium",
+      "away": "Iran",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 3,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        },
+        "PEP": {
+          "gh": 0,
+          "ga": 0,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 40,
+      "group": "G",
+      "home": "New Zealand",
+      "away": "Egypt",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 1,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 3,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 0,
+          "ga": 2,
+          "points": null
+        },
+        "PEP": {
+          "gh": 0,
+          "ga": 1,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 41,
+      "group": "I",
+      "home": "Norway",
+      "away": "Senegal",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 3,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 1,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 2,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 2,
+          "points": null
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 2,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 42,
+      "group": "I",
+      "home": "France",
+      "away": "Iraq",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 3,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 3,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 4,
+          "ga": 0,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 3,
+          "ga": 1,
+          "points": null
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 43,
+      "group": "J",
+      "home": "Argentina",
+      "away": "Austria",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 0,
+          "points": null
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 2,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 44,
+      "group": "J",
+      "home": "Jordan",
+      "away": "Algeria",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 0,
+          "ga": 0,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 2,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 3,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 0,
+          "ga": 2,
+          "points": null
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 3,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 45,
+      "group": "L",
+      "home": "England",
+      "away": "Ghana",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 0,
+          "points": null
+        },
+        "JONY": {
+          "gh": 3,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 3,
+          "ga": 1,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "PEP": {
+          "gh": 3,
+          "ga": 0,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 46,
+      "group": "L",
+      "home": "Panama",
+      "away": "Croatia",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 0,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 3,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 3,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 2,
+          "points": null
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 3,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 47,
+      "group": "K",
+      "home": "Portugal",
+      "away": "Uzbekistan",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 4,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 4,
+          "ga": 0,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 3,
+          "ga": 1,
+          "points": null
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 0,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 48,
+      "group": "K",
+      "home": "Colombia",
+      "away": "DR Congo",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 3,
+          "ga": 1,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "PEP": {
+          "gh": 3,
+          "ga": 0,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 49,
+      "group": "C",
+      "home": "Scotland",
+      "away": "Brazil",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 2,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 2,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 2,
+          "points": null
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 2,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 50,
+      "group": "C",
+      "home": "Morocco",
+      "away": "Haiti",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "JONY": {
+          "gh": 4,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 4,
+          "ga": 0,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 3,
+          "ga": 1,
+          "points": null
+        },
+        "PEP": {
+          "gh": 3,
+          "ga": 0,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 51,
+      "group": "B",
+      "home": "Switzerland",
+      "away": "Canada",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 3,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 3,
+          "ga": 2,
+          "points": null
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 0,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 52,
+      "group": "B",
+      "home": "Bosnia-Herzegovina",
+      "away": "Qatar",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 2,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 2,
+          "points": null
+        },
+        "PEP": {
+          "gh": 3,
+          "ga": 0,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 53,
+      "group": "A",
+      "home": "Czechia",
+      "away": "Mexico",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 1,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 3,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 2,
+          "points": null
+        },
+        "PEP": {
+          "gh": 0,
+          "ga": 0,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 54,
+      "group": "A",
+      "home": "South Africa",
+      "away": "South Korea",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 1,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 3,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 2,
+          "points": null
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 2,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 55,
+      "group": "E",
+      "home": "Curacao",
+      "away": "Ivory Coast",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 0,
+          "ga": 4,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 1,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 4,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 3,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 56,
+      "group": "E",
+      "home": "Ecuador",
+      "away": "Germany",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 1,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 2,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 2,
+          "points": null
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 57,
+      "group": "F",
+      "home": "Japan",
+      "away": "Sweden",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 2,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 2,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 58,
+      "group": "F",
+      "home": "Tunisia",
+      "away": "Netherlands",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 0,
+          "ga": 3,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 2,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 2,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 2,
+          "points": null
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 4,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 59,
+      "group": "D",
+      "home": "Turkiye",
+      "away": "USA",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 0,
+          "ga": 2,
+          "points": null
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 2,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 0,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 60,
+      "group": "D",
+      "home": "Paraguay",
+      "away": "Australia",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 2,
+          "points": null
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 61,
+      "group": "I",
+      "home": "Norway",
+      "away": "France",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 2,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 3,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 2,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 3,
+          "points": null
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 2,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 62,
+      "group": "I",
+      "home": "Senegal",
+      "away": "Iraq",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 3,
+          "ga": 2,
+          "points": null
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 3,
+          "ga": 1,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "PEP": {
+          "gh": 3,
+          "ga": 1,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 63,
+      "group": "G",
+      "home": "Egypt",
+      "away": "Iran",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 1,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 2,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 64,
+      "group": "G",
+      "home": "New Zealand",
+      "away": "Belgium",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 0,
+          "ga": 0,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 4,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 3,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 0,
+          "ga": 2,
+          "points": null
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 3,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 65,
+      "group": "H",
+      "home": "Cape Verde",
+      "away": "Saudi Arabia",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 0,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 1,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 3,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 66,
+      "group": "H",
+      "home": "Uruguay",
+      "away": "Spain",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 1,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 3,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 4,
+          "points": null
+        },
+        "PEP": {
+          "gh": 0,
+          "ga": 2,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 67,
+      "group": "L",
+      "home": "Panama",
+      "away": "England",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 0,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 3,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 4,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 0,
+          "ga": 2,
+          "points": null
+        },
+        "PEP": {
+          "gh": 0,
+          "ga": 4,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 68,
+      "group": "L",
+      "home": "Croatia",
+      "away": "Ghana",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 2,
+          "points": null
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 2,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 2,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 69,
+      "group": "J",
+      "home": "Algeria",
+      "away": "Austria",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 0,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 1,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 2,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 70,
+      "group": "J",
+      "home": "Jordan",
+      "away": "Argentina",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 4,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 0,
+          "ga": 4,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 0,
+          "ga": 3,
+          "points": null
+        },
+        "PEP": {
+          "gh": 0,
+          "ga": 3,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 71,
+      "group": "K",
+      "home": "Colombia",
+      "away": "Portugal",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 3,
+          "ga": 2,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 1,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 3,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 3,
+          "points": null
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 3,
+          "points": null
+        }
+      }
+    },
+    {
+      "num": 72,
+      "group": "K",
+      "home": "DR Congo",
+      "away": "Uzbekistan",
+      "gh": null,
+      "ga": null,
+      "played": false,
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 2,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 0,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 3,
+          "points": null
+        }
+      }
+    }
+  ],
+  "advance": {
+    "CHURU": {
+      "R32": [
+        "Argentina",
+        "Austria",
+        "Belgium",
+        "Brazil",
+        "Canada",
+        "Colombia",
+        "Croatia",
+        "Czechia",
+        "Ecuador",
+        "England",
+        "France",
+        "Germany",
+        "Ghana",
+        "Ivory Coast",
+        "Japan",
+        "Jordan",
+        "Mexico",
+        "Morocco",
+        "Netherlands",
+        "New Zealand",
+        "Norway",
+        "Paraguay",
+        "Portugal",
+        "Saudi Arabia",
+        "Scotland",
+        "Senegal",
+        "South Africa",
+        "Spain",
+        "Switzerland",
+        "Turkiye",
+        "USA",
+        "Uruguay"
+      ],
+      "R16": [],
+      "QF": [],
+      "SF": [],
+      "Final": [],
+      "Champion": []
+    },
+    "JONY": {
+      "R32": [
+        "Algeria",
+        "Argentina",
+        "Austria",
+        "Belgium",
+        "Bosnia-Herzegovina",
+        "Brazil",
+        "Canada",
+        "Colombia",
+        "Croatia",
+        "Czechia",
+        "Ecuador",
+        "Egypt",
+        "England",
+        "France",
+        "Germany",
+        "Iran",
+        "Ivory Coast",
+        "Japan",
+        "Mexico",
+        "Morocco",
+        "Netherlands",
+        "Norway",
+        "Portugal",
+        "Saudi Arabia",
+        "Scotland",
+        "Senegal",
+        "South Korea",
+        "Spain",
+        "Switzerland",
+        "Turkiye",
+        "USA",
+        "Uruguay"
+      ],
+      "R16": [
+        "Argentina",
+        "Belgium",
+        "Brazil",
+        "Colombia",
+        "England",
+        "France",
+        "Germany",
+        "Mexico",
+        "Netherlands",
+        "Portugal",
+        "Senegal",
+        "South Korea",
+        "Spain",
+        "Switzerland",
+        "Turkiye",
+        "USA"
+      ],
+      "QF": [
+        "Argentina",
+        "Belgium",
+        "Brazil",
+        "England",
+        "France",
+        "Netherlands",
+        "Portugal",
+        "Spain"
+      ],
+      "SF": [
+        "Argentina",
+        "England",
+        "France",
+        "Spain"
+      ],
+      "Final": [
+        "Argentina",
+        "Spain"
+      ],
+      "Champion": [
+        "Spain"
+      ]
+    },
+    "CHAMP": {
+      "R32": [
+        "Algeria",
+        "Argentina",
+        "Austria",
+        "Belgium",
+        "Brazil",
+        "Canada",
+        "Colombia",
+        "Croatia",
+        "Ecuador",
+        "Egypt",
+        "England",
+        "France",
+        "Germany",
+        "Ghana",
+        "Ivory Coast",
+        "Japan",
+        "Mexico",
+        "Morocco",
+        "Netherlands",
+        "Norway",
+        "Paraguay",
+        "Portugal",
+        "Qatar",
+        "Saudi Arabia",
+        "Scotland",
+        "Senegal",
+        "South Korea",
+        "Spain",
+        "Sweden",
+        "Turkiye",
+        "USA",
+        "Uruguay"
+      ],
+      "R16": [
+        "Argentina",
+        "Brazil",
+        "Canada",
+        "Colombia",
+        "Ecuador",
+        "Egypt",
+        "England",
+        "France",
+        "Germany",
+        "Mexico",
+        "Morocco",
+        "Portugal",
+        "South Korea",
+        "Spain",
+        "Turkiye",
+        "USA"
+      ],
+      "QF": [
+        "Argentina",
+        "Brazil",
+        "Ecuador",
+        "England",
+        "France",
+        "Portugal",
+        "Spain",
+        "Turkiye"
+      ],
+      "SF": [
+        "Ecuador",
+        "France",
+        "Portugal",
+        "Spain"
+      ],
+      "Final": [
+        "Portugal",
+        "Spain"
+      ],
+      "Champion": [
+        "Spain"
+      ]
+    },
+    "NEGREIRA": {
+      "R32": [
+        "Algeria",
+        "Argentina",
+        "Australia",
+        "Austria",
+        "Belgium",
+        "Brazil",
+        "Canada",
+        "Colombia",
+        "Croatia",
+        "Czechia",
+        "Ecuador",
+        "Egypt",
+        "England",
+        "France",
+        "Germany",
+        "Iran",
+        "Japan",
+        "Mexico",
+        "Morocco",
+        "Netherlands",
+        "Norway",
+        "Panama",
+        "Portugal",
+        "Scotland",
+        "Senegal",
+        "South Korea",
+        "Spain",
+        "Sweden",
+        "Switzerland",
+        "Turkiye",
+        "USA",
+        "Uruguay"
+      ],
+      "R16": [
+        "Argentina",
+        "Brazil",
+        "Canada",
+        "Colombia",
+        "Ecuador",
+        "Egypt",
+        "England",
+        "France",
+        "Germany",
+        "Mexico",
+        "Morocco",
+        "Portugal",
+        "Spain",
+        "Switzerland",
+        "Turkiye",
+        "USA"
+      ],
+      "QF": [
+        "Argentina",
+        "Brazil",
+        "England",
+        "France",
+        "Morocco",
+        "Portugal",
+        "Spain",
+        "Turkiye"
+      ],
+      "SF": [
+        "Argentina",
+        "Brazil",
+        "France",
+        "Spain"
+      ],
+      "Final": [
+        "Argentina",
+        "Spain"
+      ],
+      "Champion": [
+        "Spain"
+      ]
+    },
+    "PEP": {
+      "R32": [
+        "Argentina",
+        "Austria",
+        "Belgium",
+        "Bosnia-Herzegovina",
+        "Brazil",
+        "Colombia",
+        "Croatia",
+        "Czechia",
+        "Ecuador",
+        "Egypt",
+        "England",
+        "France",
+        "Germany",
+        "Ghana",
+        "Iran",
+        "Ivory Coast",
+        "Japan",
+        "Mexico",
+        "Morocco",
+        "Netherlands",
+        "Norway",
+        "Paraguay",
+        "Portugal",
+        "Scotland",
+        "Senegal",
+        "South Korea",
+        "Spain",
+        "Sweden",
+        "Switzerland",
+        "Turkiye",
+        "USA",
+        "Uruguay"
+      ],
+      "R16": [
+        "Argentina",
+        "Belgium",
+        "Brazil",
+        "Colombia",
+        "Ecuador",
+        "England",
+        "France",
+        "Ivory Coast",
+        "Mexico",
+        "Netherlands",
+        "Norway",
+        "Paraguay",
+        "Portugal",
+        "Scotland",
+        "Spain",
+        "Switzerland"
+      ],
+      "QF": [
+        "Argentina",
+        "Belgium",
+        "Brazil",
+        "England",
+        "France",
+        "Netherlands",
+        "Portugal",
+        "Spain"
+      ],
+      "SF": [
+        "Argentina",
+        "England",
+        "France",
+        "Spain"
+      ],
+      "Final": [
+        "England",
+        "Spain"
+      ],
+      "Champion": [
+        "Spain"
+      ]
+    }
+  },
+  "actual_advanced": {
+    "R32": [],
+    "R16": [],
+    "QF": [],
+    "SF": [],
+    "Final": [],
+    "Champion": []
+  }
 }

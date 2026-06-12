@@ -19,22 +19,18 @@ admin (a mano) ─► manual.json ────────┘
   la tabla. Nadie tiene que tocar nada en día de partido.
 - **Sin servidor que mantener** y los pronósticos quedan congelados en el repo.
 
-## Qué se puntúa solo y qué hay que meter a mano
+## Qué se puntúa (de momento)
 
-Ninguna API gratuita da TODO lo que piden las bases. Reparto realista:
+Por ahora solo se puntúan las dos categorías base, que se calculan en
+automático a partir de `data/resultados.csv`:
 
-| Categoría | Automático (API) | A mano (`manual.json`) |
-|---|---|---|
-| Marcadores de grupo, 1X2, diferencia de goles | ✅ | |
-| Equipos que pasan de ronda + bonus de posición | ✅ | |
-| Premio LOBBY (peor selección) | ✅ | |
-| Roberswingger: gol normal / penalti / penalti fallado / bota de oro | ✅ | falta vs olímpico (+30/+50) |
-| Paraguaya Chupona: amarillas, rojas, goles en propia | ✅ | (penaltis cometidos: revisa) |
-| Pinwis: amarilla / doble amarilla / roja | ✅ | |
-| Champ: mejor jugador del torneo / MVP del partido | | ✅ (la API gratis no da MVP) |
-| Columna Churu: MVP portero / penaltis parados | | ✅ |
+- **Fase de grupos**: 1X2, marcador exacto y diferencia de goles, partido a
+  partido.
+- **Fases finales**: equipos que pasan de ronda, bonus de posición y campeón.
 
-Lo manual son 4 cosas y se editan en `data/manual.json` tras cada jornada. Es poco.
+Los premios extra (Roberswingger, Champ, Paraguaya Chupona, Pinwis, Lobby,
+Columna Churu) están **eliminados de momento** de `engine/score.py` y de la
+web. `data/manual.json` se deja en el repo por si se reactivan más adelante.
 
 ## Fuente de datos
 
@@ -120,17 +116,22 @@ python engine/score.py                                    # -> standings.json + 
 Abre `index.html` y verás la clasificación. *(La vía con API, `fetch_results.py`, sigue
 disponible si algún día la quieres; necesita `APIFOOTBALL_KEY`.)*
 
+## Las 3 páginas
+
+- **`index.html`** — Clasificación general (POFANTASY WORLDCUP 2026). Cada jugador
+  es desplegable y muestra, partido a partido, el resultado oficial y los puntos
+  obtenidos (verde si son positivos, rojo si son negativos).
+- **`predicciones.html`** — Todos los partidos de la fase de grupos, agrupados de
+  A a L, con el resultado oficial y, debajo, el pronóstico y los puntos de cada
+  jugador.
+- **`jugador.html?j=ALIAS`** — Repaso individual: las 72 predicciones de grupos de
+  ese jugador (acierto 1X2 / exacto / fallo y puntos), más su pick de fases
+  finales.
+
 ## Puntuación implementada (de las bases)
 
 - Grupos: 1X2 **+30**, marcador exacto **+30** más, **−3** por cada gol de diferencia.
 - Fases finales (por equipo acertado): R32 **+30** (**+30** extra si aciertas la posición),
   octavos **+50**, cuartos **+80**, semis **+120**, final **+170**, campeón **+250**.
-- Roberswingger: normal +20, falta +30, olímpico +50, penalti +10, fallado −10, bota de oro +60.
-- Champ: mejor jugador del torneo +100, MVP de partido +25.
-- Paraguaya Chupona: amarilla +15, roja directa +60, doble amarilla +30 (2 amarillas),
-  gol en propia +100, penalti cometido +50.
-- Pinwis: amarilla +15, doble amarilla +50, roja directa +100.
-- Lobby: +100 (peor por pts → DG → GF).
-- Columna Churu: MVP +80, penalti parado +50.
 
-> Herramienta de apoyo. Verifica los datos sensibles (MVP, tipos de gol) a mano antes de pagar premios.
+> Herramienta de apoyo. Verifica los datos sensibles a mano antes de pagar premios.
