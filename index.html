@@ -45,7 +45,7 @@ async function load(){
   document.getElementById('refresh').textContent = 'Se actualiza solo al recargar la página.';
 
   document.getElementById('board').innerHTML = d.table.map((r,i)=>{
-    return `<a class="row ${i===0?'lead':''}" href="jugador.html?j=${r.player}">
+    return `<a class="row ${i===0?'lead':''}" href="jugador.html?j=${r.player}&from=clasificacion">
        <div class="head-row">
          <div class="pos">${r.pos}</div>
          <div class="name">${r.player}</div>

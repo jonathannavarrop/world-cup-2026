@@ -86,6 +86,11 @@ header.hero::after{
   color:var(--gold);font-weight:700;display:flex;align-items:center;gap:10px;
 }
 .eyebrow .flags{font-size:16px;letter-spacing:.05em}
+.back-link{
+  display:inline-block;margin-top:10px;font-family:'Space Mono',monospace;font-size:12px;
+  letter-spacing:.06em;color:var(--blue);text-decoration:none;
+}
+.back-link:hover{text-decoration:underline}
 h1.title{
   font-family:'Anton',sans-serif;font-size:clamp(22px,3.6vw,44px);line-height:1.1;
   text-transform:uppercase;margin:8px 0 6px;letter-spacing:0;
@@ -100,9 +105,9 @@ h1.title .accent{color:var(--blue);text-shadow:0 0 24px rgba(47,125,255,.45)}
 
 /* ---------- CARDS / BOARD ---------- */
 .board{margin:24px 0;display:flex;flex-direction:column;gap:10px}
-.row{
+.row, .row:link, .row:visited, .row:hover, .row:active{
   display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;
-  text-decoration:none;color:inherit;transition:border-color .15s,background .15s;
+  text-decoration:none;color:var(--ink);transition:border-color .15s,background .15s;
 }
 .row:hover{border-color:var(--blue);background:var(--card-2)}
 .row.lead{border-color:var(--blue);box-shadow:0 0 0 1px rgba(47,125,255,.3), 0 10px 30px rgba(47,125,255,.1)}
