@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Porra Mundial 2026 · Clasificación en vivo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F2EAD9; --paper-2:#EBE1CC; --ink:#1A1714; --stamp:#C5341E;
+    --pitch:#1F6E43; --muted:#8C8270; --line:#D6C9AC; --line-strong:#B9A983;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--paper);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;
+    line-height:1.5;background-image:radial-gradient(var(--line) 0.5px,transparent 0.5px);background-size:18px 18px}
+  .wrap{max-width:840px;margin:0 auto;padding:0 18px}
+  header{border-bottom:3px solid var(--ink);padding:30px 0 18px;margin-bottom:8px}
+  .eyebrow{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--stamp);font-weight:700}
+  h1{font-family:'Anton',sans-serif;font-size:clamp(40px,9vw,84px);line-height:.92;text-transform:uppercase;margin:6px 0 4px}
+  h1 .yr{color:var(--stamp)}
+  .meta{display:flex;flex-wrap:wrap;gap:6px 22px;margin-top:12px;font-family:'Space Mono',monospace;font-size:12px}
+  .meta b{color:var(--stamp)}
+
+  .board{border:3px solid var(--ink);background:var(--paper-2);margin:24px 0}
+  .row{border-bottom:1px solid var(--line)}
+  .row:last-child{border-bottom:none}
+  .row.lead{background:var(--paper)}
+  .head-row{display:grid;grid-template-columns:48px 1fr 92px 30px;align-items:center;
+    gap:10px;padding:13px 16px;cursor:pointer}
+  .pos{font-family:'Anton',sans-serif;font-size:26px;color:var(--stamp);text-align:center}
+  .row:first-child .pos{color:var(--pitch)}
+  .name{font-family:'Anton',sans-serif;font-size:22px;text-transform:uppercase;letter-spacing:.02em}
+  .pts{font-family:'Space Mono',monospace;font-weight:700;font-size:20px;text-align:right}
+  .pts small{display:block;font-size:9.5px;color:var(--muted);letter-spacing:.18em;font-weight:400}
+  .chev{font-family:'Space Mono',monospace;color:var(--muted);text-align:center;transition:transform .2s}
+  .row.open .chev{transform:rotate(90deg)}
+  .detail{display:none;padding:2px 16px 14px;border-top:1px dashed var(--line-strong)}
+  .row.open .detail{display:block}
+  .cats{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:4px 18px;
+    font-family:'Space Mono',monospace;font-size:12px;padding-top:10px}
+  .cats li{display:flex;justify-content:space-between;border-bottom:1px dotted var(--line);padding:3px 0}
+  .cats .k{color:var(--muted)}
+  .cats .v{font-weight:700}
+  .cats .v.neg{color:var(--stamp)}
+  .empty{padding:40px 16px;text-align:center;color:var(--muted);font-family:'Space Mono',monospace;font-size:13px}
+  footer{border-top:3px solid var(--ink);margin-top:36px;padding:18px 0 40px;font-size:12px;color:var(--muted)}
+  .refresh{font-family:'Space Mono',monospace;font-size:11px;color:var(--muted);margin-top:6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Clasificación en vivo · puntuación según las bases</div>
+    <h1>Porra Mundial <span class="yr">2026</span></h1>
+    <div class="meta" id="meta"></div>
+  </header>
+
+  <div class="board" id="board"><div class="empty">Cargando clasificación…</div></div>
+
+  <footer>
+    Puntos calculados automáticamente con los resultados oficiales. Toca cada jugador para ver el
+    desglose por categoría. <span class="refresh" id="refresh"></span>
+  </footer>
+</div>
+
+<script>
+const CATS = {
+  grupos:"Fase de grupos", fases_finales:"Fases finales", roberswingger:"Roberswingger",
+  champ:"Champ", paraguaya_chupona:"Paraguaya Chupona", pinwis:"Pinwis",
+  lobby:"Lobby", columna_churu:"Columna Churu"
+};
+
+async function load(){
+  let d;
+  try{ d = await (await fetch('./data/standings.json?t='+Date.now())).json(); }
+  catch(e){ document.getElementById('board').innerHTML =
+    '<div class="empty">Aún no hay clasificación publicada.</div>'; return; }
+
+  const upd = d.updated ? new Date(d.updated).toLocaleString('es-ES') : '—';
+  document.getElementById('meta').innerHTML =
+    `<span><b>${d.table.length}</b> participantes</span>
+     <span><b>${d.matches_played||0}</b> partidos computados</span>
+     <span>Actualizado: ${upd}</span>`;
+  document.getElementById('refresh').textContent = 'Se actualiza solo al recargar la página.';
+
+  document.getElementById('board').innerHTML = d.table.map((r,i)=>{
+    const cats = Object.entries(r.breakdown).map(([k,v])=>
+      `<li><span class="k">${CATS[k]||k}</span><span class="v ${v<0?'neg':''}">${v}</span></li>`).join('');
+    return `<div class="row ${i===0?'lead':''}" onclick="this.classList.toggle('open')">
+       <div class="head-row">
+         <div class="pos">${r.pos}</div>
+         <div class="name">${r.player}</div>
+         <div class="pts">${r.total}<small>PUNTOS</small></div>
+         <div class="chev">▸</div>
+       </div>
+       <div class="detail"><ul class="cats">${cats}</ul></div>
+     </div>`;
+  }).join('');
+}
+load();
+</script>
+</body>
+</html>
