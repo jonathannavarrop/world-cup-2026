@@ -20,7 +20,6 @@
   </header>
 
   <div class="view-toggle" id="viewToggle"></div>
-  <div class="group-filter" id="groupFilter"></div>
   <div id="groups"><div class="empty">Cargando partidos…</div></div>
 </div>
 
@@ -29,8 +28,15 @@
 renderNav("predicciones");
 
 let view = 'calendario'; // 'calendario' | 'grupos'
-let groupFilter = 'TODOS';
 let DATA = null;
+
+// "2026-06-13 3:00" -> timestamp for chronological sorting
+function matchDateKey(dateStr) {
+  const m = (dateStr||'').match(/^(\d{4})-(\d{2})-(\d{2}) (\d{1,2}):(\d{2})$/);
+  if (!m) return 0;
+  const [, y, mo, d, h, mi] = m.map(Number);
+  return new Date(y, mo - 1, d, h, mi).getTime();
+}
 
 function matchCard(m, showGroupTag){
   const score = m.played
@@ -60,11 +66,11 @@ function matchCard(m, showGroupTag){
 }
 
 function render(){
-  const matches = (DATA.matches||[]).filter(m => groupFilter === 'TODOS' || m.group === groupFilter);
+  const matches = DATA.matches||[];
 
   let html;
   if (view === 'calendario') {
-    const sorted = matches.slice().sort((a,b) => (a.date||'').localeCompare(b.date||'') || a.num - b.num);
+    const sorted = matches.slice().sort((a,b) => matchDateKey(a.date) - matchDateKey(b.date) || a.num - b.num);
     html = sorted.map(m => matchCard(m, true)).join('');
   } else {
     const byGroup = {};
@@ -84,13 +90,6 @@ function renderControls(){
     <button data-view="grupos" class="${view==='grupos'?'active':''}">Por grupos</button>`;
   document.querySelectorAll('#viewToggle button').forEach(b =>
     b.addEventListener('click', () => { view = b.dataset.view; renderControls(); render(); }));
-
-  const groups = Array.from(new Set((DATA.matches||[]).map(m => m.group))).sort();
-  const all = ['TODOS', ...groups];
-  document.getElementById('groupFilter').innerHTML = all.map(g =>
-    `<button data-group="${g}" class="${groupFilter===g?'active':''}">${g==='TODOS'?'Todos':'Grupo '+g}</button>`).join('');
-  document.querySelectorAll('#groupFilter button').forEach(b =>
-    b.addEventListener('click', () => { groupFilter = b.dataset.group; renderControls(); render(); }));
 }
 
 async function load(){
