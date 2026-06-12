@@ -1,4 +1,4 @@
-// POFANTASY WORLDCUP 2026 — helpers compartidos por todas las páginas.
+// PORRA FANTASY - MUNDIAL DE LOS 2000 — helpers compartidos por todas las páginas.
 
 const PLAYERS = ["CHAMP", "JONY", "PEP", "NEGREIRA", "CHURU"];
 
@@ -95,7 +95,7 @@ function renderNav(active) {
     `<a class="nav-drop-item ${active === "jugador-" + p ? "active" : ""}" href="jugador.html?j=${p}">${p}</a>`).join("");
   el.innerHTML = `
     <div class="nav-inner">
-      <a class="brand" href="index.html"><span class="brand-pofantasy">POFANTASY</span><span class="brand-wc">WORLDCUP 2026</span></a>
+      <a class="brand" href="index.html"><span class="brand-porra">PORRA FANTASY</span><span class="brand-wc">MUNDIAL DE LOS 2000</span></a>
       <div class="nav-links">
         ${navLinks}
         <div class="nav-drop">

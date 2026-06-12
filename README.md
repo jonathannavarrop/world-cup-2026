@@ -118,7 +118,7 @@ disponible si algún día la quieres; necesita `APIFOOTBALL_KEY`.)*
 
 ## Las 3 páginas
 
-- **`index.html`** — Clasificación general (POFANTASY WORLDCUP 2026). Cada jugador
+- **`index.html`** — Clasificación general (PORRA FANTASY - MUNDIAL DE LOS 2000). Cada jugador
   es desplegable y muestra, partido a partido, el resultado oficial y los puntos
   obtenidos (verde si son positivos, rojo si son negativos).
 - **`predicciones.html`** — Todos los partidos de la fase de grupos, agrupados de

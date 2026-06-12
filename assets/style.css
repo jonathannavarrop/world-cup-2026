@@ -1,4 +1,4 @@
-/* POFANTASY WORLDCUP 2026 — tema compartido, estilo FIFA Fantasy */
+/* PORRA FANTASY - MUNDIAL DE LOS 2000 — tema compartido, estilo FIFA Fantasy */
 
 :root{
   --bg:#0a0e1f;
@@ -42,7 +42,7 @@ body{
   display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
 }
 .brand{display:flex;flex-direction:column;line-height:1.1;text-decoration:none}
-.brand-pofantasy{
+.brand-porra{
   font-family:'Anton',sans-serif;font-size:22px;letter-spacing:.06em;
   color:var(--green);text-transform:uppercase;
 }
