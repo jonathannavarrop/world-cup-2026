@@ -1,0 +1,51 @@
+{
+  "updated": "2026-06-12T07:59:29Z",
+  "group_results": {
+    "Mexico|South Africa": {
+      "home": "Mexico",
+      "away": "South Africa",
+      "gh": 2,
+      "ga": 0
+    },
+    "South Korea|Czechia": {
+      "home": "South Korea",
+      "away": "Czechia",
+      "gh": 2,
+      "ga": 1
+    }
+  },
+  "final_standings": {
+    "1A": {
+      "team": "Mexico",
+      "pts": 3,
+      "gf": 2,
+      "gd": 2
+    },
+    "2A": {
+      "team": "South Korea",
+      "pts": 3,
+      "gf": 2,
+      "gd": 1
+    },
+    "3A": {
+      "team": "Czechia",
+      "pts": 0,
+      "gf": 1,
+      "gd": -1
+    },
+    "4A": {
+      "team": "South Africa",
+      "pts": 0,
+      "gf": 0,
+      "gd": -2
+    }
+  },
+  "advanced": {
+    "R32": [],
+    "R16": [],
+    "QF": [],
+    "SF": [],
+    "Final": [],
+    "Champion": []
+  }
+}

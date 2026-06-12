@@ -1,0 +1,81 @@
+{
+  "updated": "2026-06-12T07:59:20.228074Z",
+  "matches_played": 2,
+  "table": [
+    {
+      "player": "CHAMP",
+      "total": 87,
+      "breakdown": {
+        "grupos": 87,
+        "fases_finales": 0,
+        "roberswingger": 0,
+        "champ": 0,
+        "paraguaya_chupona": 0,
+        "pinwis": 0,
+        "lobby": 0,
+        "columna_churu": 0
+      },
+      "pos": 1
+    },
+    {
+      "player": "JONY",
+      "total": 84,
+      "breakdown": {
+        "grupos": 84,
+        "fases_finales": 0,
+        "roberswingger": 0,
+        "champ": 0,
+        "paraguaya_chupona": 0,
+        "pinwis": 0,
+        "lobby": 0,
+        "columna_churu": 0
+      },
+      "pos": 2
+    },
+    {
+      "player": "PEP",
+      "total": 57,
+      "breakdown": {
+        "grupos": 57,
+        "fases_finales": 0,
+        "roberswingger": 0,
+        "champ": 0,
+        "paraguaya_chupona": 0,
+        "pinwis": 0,
+        "lobby": 0,
+        "columna_churu": 0
+      },
+      "pos": 3
+    },
+    {
+      "player": "NEGREIRA",
+      "total": 54,
+      "breakdown": {
+        "grupos": 54,
+        "fases_finales": 0,
+        "roberswingger": 0,
+        "champ": 0,
+        "paraguaya_chupona": 0,
+        "pinwis": 0,
+        "lobby": 0,
+        "columna_churu": 0
+      },
+      "pos": 4
+    },
+    {
+      "player": "CHURU",
+      "total": 24,
+      "breakdown": {
+        "grupos": 24,
+        "fases_finales": 0,
+        "roberswingger": 0,
+        "champ": 0,
+        "paraguaya_chupona": 0,
+        "pinwis": 0,
+        "lobby": 0,
+        "columna_churu": 0
+      },
+      "pos": 5
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+name: Actualizar porra
+
+# Recalcula y publica la clasificación.
+# Vía MANUAL (por defecto): lee data/resultados.csv del repo.
+# Si prefieres un Google Sheet publicado, define la variable RESULTS_CSV_URL
+#   (repo > Settings > Secrets and variables > Actions > Variables).
+
+on:
+  workflow_dispatch: {}            # botón "Run workflow" para forzar a mano
+  push:
+    paths: ["data/resultados.csv", "data/manual.json"]   # al guardar, recalcula
+  schedule:
+    - cron: "0 */6 * * *"          # y cada 6 h (por si usas Google Sheet)
+
+permissions:
+  contents: write
+
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+
+      - name: Construir resultados (CSV local o Google Sheet)
+        env:
+          RESULTS_CSV_URL: ${{ vars.RESULTS_CSV_URL }}
+        run: python engine/build_results.py
+
+      - name: Calcular puntos
+        run: python engine/score.py
+
+      - name: Publicar clasificación
+        run: |
+          git config user.name  "porra-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/results.json data/standings.json
+          git commit -m "Actualiza clasificacion" || echo "sin cambios"
+          git push

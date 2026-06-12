@@ -1,0 +1,15 @@
+{
+  "_comment": "SOLO el admin edita esto. Son los datos que NINGUNA API gratuita da fiable. Lo que pongas aquí se fusiona ENCIMA de results.json al puntuar. Edítalo tras cada jornada/partido.",
+
+  "_best_player_": "Mejor Jugador del Torneo (lo anuncia la FIFA al final). Para el premio CHAMP.",
+  "best_player": null,
+
+  "_motm_": "Lista (con repetición) de los MVP de cada partido. Suma para CHAMP (+25) y Columna Churu (+80). Añade el nombre cada vez que se nombre MVP.",
+  "motm": [],
+
+  "_penalties_saved_": "Penaltis parados por portero (incluye penalti fallado/fuera con ese portero en puerta). Para Columna Churu (+50 c/u).",
+  "penalties_saved": {},
+
+  "_goal_type_fixups_": "La API no distingue gol de falta vs olímpico (los marca como 'normal'). Si tu goleador (Roberswingger) mete uno, corrígelo añadiendo aquí goles con type 'freekick' (+30) u 'olympic' (+50). Se SUMAN a results.goals.",
+  "goals": []
+}

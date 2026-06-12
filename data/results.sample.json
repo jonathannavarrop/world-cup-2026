@@ -1,0 +1,52 @@
+{
+  "updated": "2026-06-12T20:00:00Z",
+  "_comment": "Esquema que consume score.py. fetch_results.py rellena esto desde la API. Puedes editarlo a mano si falla la API. Aquí va un ejemplo parcial (primeros partidos jugados).",
+  "group_results": {
+    "Mexico|South Africa": {
+      "home": "Mexico",
+      "away": "South Africa",
+      "gh": 1,
+      "ga": 0
+    },
+    "South Korea|Czechia": {
+      "home": "South Korea",
+      "away": "Czechia",
+      "gh": 2,
+      "ga": 1
+    }
+  },
+  "final_standings": {
+    "_comment": "Se rellena al acabar la fase de grupos: posición real 1A..4L con pts/gf/gd."
+  },
+  "advanced": {
+    "R32": [],
+    "R16": [],
+    "QF": [],
+    "SF": [],
+    "Final": [],
+    "Champion": []
+  },
+  "goals": [
+    {
+      "player": "Hirving Lozano",
+      "team": "Mexico",
+      "type": "normal"
+    }
+  ],
+  "golden_boot": [],
+  "best_player": null,
+  "motm": [
+    "Hirving Lozano"
+  ],
+  "cards": [
+    {
+      "match": 1,
+      "player": "Edson Alvarez",
+      "team": "Mexico",
+      "type": "yellow"
+    }
+  ],
+  "own_goals_by_team": {},
+  "penalties_conceded_by_team": {},
+  "penalties_saved": {}
+}
