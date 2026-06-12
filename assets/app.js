@@ -88,9 +88,8 @@ function renderNav(active) {
   const links = [
     { href: "index.html", label: "Clasificación", key: "clasificacion" },
     { href: "predicciones.html", label: "Predicciones", key: "predicciones" },
-    { href: "reglas.html", label: "Reglas", key: "reglas" },
   ];
-  const navLinks = links.map(l =>
+  const navLinksBefore = links.map(l =>
     `<a class="nav-link ${active === l.key ? "active" : ""}" href="${l.href}">${l.label}</a>`).join("");
   const playerLinks = PLAYERS.map(p =>
     `<a class="nav-drop-item ${active === "jugador-" + p ? "active" : ""}" href="jugador.html?j=${p}">${p}</a>`).join("");
@@ -101,11 +100,12 @@ function renderNav(active) {
         <span class="brand-text"><span class="brand-porra">PORRA FANTASY</span><span class="brand-wc">MUNDIAL DE LOS 2000</span></span>
       </a>
       <div class="nav-links">
-        ${navLinks}
+        ${navLinksBefore}
         <div class="nav-drop">
           <span class="nav-link ${active && active.startsWith("jugador") ? "active" : ""}">Mi porra ▾</span>
           <div class="nav-drop-menu">${playerLinks}</div>
         </div>
+        <a class="nav-link ${active === "reglas" ? "active" : ""}" href="reglas.html">Reglas</a>
       </div>
     </div>`;
 }
