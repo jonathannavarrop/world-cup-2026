@@ -1,48 +1,48 @@
 {
-  "updated": "2026-06-13T02:38:40Z",
+  "updated": "2026-06-13T03:05:31Z",
   "matches_played": 4,
   "table": [
     {
       "player": "CHAMP",
-      "total": 108,
+      "total": 105,
       "breakdown": {
-        "grupos": 108,
+        "grupos": 105,
         "fases_finales": 0
       },
       "pos": 1
     },
     {
-      "player": "NEGREIRA",
-      "total": 108,
+      "player": "JONY",
+      "total": 99,
       "breakdown": {
-        "grupos": 108,
+        "grupos": 99,
         "fases_finales": 0
       },
       "pos": 2
     },
     {
-      "player": "JONY",
-      "total": 102,
+      "player": "NEGREIRA",
+      "total": 75,
       "breakdown": {
-        "grupos": 102,
+        "grupos": 75,
         "fases_finales": 0
       },
       "pos": 3
     },
     {
       "player": "PEP",
-      "total": 45,
+      "total": 42,
       "breakdown": {
-        "grupos": 45,
+        "grupos": 42,
         "fases_finales": 0
       },
       "pos": 4
     },
     {
       "player": "CHURU",
-      "total": 15,
+      "total": 12,
       "breakdown": {
-        "grupos": 15,
+        "grupos": 12,
         "fases_finales": 0
       },
       "pos": 5
@@ -165,7 +165,7 @@
       "group": "D",
       "home": "USA",
       "away": "Paraguay",
-      "gh": 3,
+      "gh": 4,
       "ga": 1,
       "played": true,
       "date": "2026-06-13 3:00",
@@ -173,27 +173,27 @@
         "CHURU": {
           "gh": 2,
           "ga": 2,
-          "points": -6
+          "points": -9
         },
         "JONY": {
           "gh": 1,
           "ga": 0,
-          "points": 21
+          "points": 18
         },
         "CHAMP": {
           "gh": 2,
           "ga": 1,
-          "points": 27
+          "points": 24
         },
         "NEGREIRA": {
           "gh": 3,
           "ga": 1,
-          "points": 60
+          "points": 27
         },
         "PEP": {
           "gh": 2,
           "ga": 2,
-          "points": -6
+          "points": -9
         }
       }
     },

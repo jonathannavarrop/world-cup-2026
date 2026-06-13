@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-13T02:38:40Z",
+  "updated": "2026-06-13T03:05:31Z",
   "group_results": {
     "Mexico|South Africa": {
       "home": "Mexico",
@@ -22,7 +22,7 @@
     "USA|Paraguay": {
       "home": "USA",
       "away": "Paraguay",
-      "gh": 3,
+      "gh": 4,
       "ga": 1
     }
   },
@@ -66,14 +66,14 @@
     "1D": {
       "team": "USA",
       "pts": 3,
-      "gf": 3,
-      "gd": 2
+      "gf": 4,
+      "gd": 3
     },
     "2D": {
       "team": "Paraguay",
       "pts": 0,
       "gf": 1,
-      "gd": -2
+      "gd": -3
     }
   },
   "matches": [
@@ -112,7 +112,7 @@
       "group": "D",
       "home": "USA",
       "away": "Paraguay",
-      "gh": 3,
+      "gh": 4,
       "ga": 1,
       "played": true,
       "date": "2026-06-13 3:00"
