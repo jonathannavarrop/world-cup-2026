@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T19:39:08Z",
+  "updated": "2026-06-14T22:01:57Z",
   "group_results": {
     "Mexico|South Africa": {
       "home": "Mexico",
@@ -54,6 +54,12 @@
       "away": "Curacao",
       "gh": 7,
       "ga": 1
+    },
+    "Netherlands|Japan": {
+      "home": "Netherlands",
+      "away": "Japan",
+      "gh": 2,
+      "ga": 2
     }
   },
   "final_standings": {
@@ -164,6 +170,18 @@
       "pts": 0,
       "gf": 1,
       "gd": -6
+    },
+    "1F": {
+      "team": "Netherlands",
+      "pts": 1,
+      "gf": 2,
+      "gd": 0
+    },
+    "2F": {
+      "team": "Japan",
+      "pts": 1,
+      "gf": 2,
+      "gd": 0
     }
   },
   "matches": [
@@ -262,9 +280,9 @@
       "group": "F",
       "home": "Netherlands",
       "away": "Japan",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 2,
+      "ga": 2,
+      "played": true,
       "date": "2026-06-14 22:00"
     },
     {

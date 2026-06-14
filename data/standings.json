@@ -1,48 +1,48 @@
 {
-  "updated": "2026-06-14T19:39:08Z",
-  "matches_played": 9,
+  "updated": "2026-06-14T22:01:57Z",
+  "matches_played": 10,
   "table": [
     {
       "player": "CHAMP",
-      "total": 156,
+      "total": 153,
       "breakdown": {
-        "grupos": 156,
+        "grupos": 153,
         "fases_finales": 0
       },
       "pos": 1
     },
     {
-      "player": "JONY",
-      "total": 126,
+      "player": "NEGREIRA",
+      "total": 120,
       "breakdown": {
-        "grupos": 126,
+        "grupos": 120,
         "fases_finales": 0
       },
       "pos": 2
     },
     {
-      "player": "NEGREIRA",
-      "total": 123,
+      "player": "JONY",
+      "total": 117,
       "breakdown": {
-        "grupos": 123,
+        "grupos": 117,
         "fases_finales": 0
       },
       "pos": 3
     },
     {
-      "player": "PEP",
-      "total": 66,
+      "player": "CHURU",
+      "total": 99,
       "breakdown": {
-        "grupos": 66,
+        "grupos": 99,
         "fases_finales": 0
       },
       "pos": 4
     },
     {
-      "player": "CHURU",
-      "total": 39,
+      "player": "PEP",
+      "total": 90,
       "breakdown": {
-        "grupos": 39,
+        "grupos": 90,
         "fases_finales": 0
       },
       "pos": 5
@@ -387,35 +387,35 @@
       "group": "F",
       "home": "Netherlands",
       "away": "Japan",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 2,
+      "ga": 2,
+      "played": true,
       "date": "2026-06-14 22:00",
       "predictions": {
         "CHURU": {
           "gh": 2,
           "ga": 2,
-          "points": null
+          "points": 60
         },
         "JONY": {
           "gh": 1,
           "ga": 0,
-          "points": null
+          "points": -9
         },
         "CHAMP": {
           "gh": 1,
           "ga": 2,
-          "points": null
+          "points": -3
         },
         "NEGREIRA": {
           "gh": 1,
           "ga": 2,
-          "points": null
+          "points": -3
         },
         "PEP": {
           "gh": 1,
           "ga": 1,
-          "points": null
+          "points": 24
         }
       }
     },
