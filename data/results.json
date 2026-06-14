@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T04:16:53Z",
+  "updated": "2026-06-14T06:49:37Z",
   "group_results": {
     "Mexico|South Africa": {
       "home": "Mexico",
@@ -30,6 +30,24 @@
       "away": "Switzerland",
       "gh": 1,
       "ga": 1
+    },
+    "Brazil|Morocco": {
+      "home": "Brazil",
+      "away": "Morocco",
+      "gh": 1,
+      "ga": 1
+    },
+    "Haiti|Scotland": {
+      "home": "Haiti",
+      "away": "Scotland",
+      "gh": 0,
+      "ga": 1
+    },
+    "Australia|Turkiye": {
+      "home": "Australia",
+      "away": "Turkiye",
+      "gh": 2,
+      "ga": 0
     }
   },
   "final_standings": {
@@ -88,10 +106,46 @@
       "gd": 3
     },
     "2D": {
+      "team": "Australia",
+      "pts": 3,
+      "gf": 2,
+      "gd": 2
+    },
+    "3D": {
+      "team": "Turkiye",
+      "pts": 0,
+      "gf": 0,
+      "gd": -2
+    },
+    "4D": {
       "team": "Paraguay",
       "pts": 0,
       "gf": 1,
       "gd": -3
+    },
+    "1C": {
+      "team": "Scotland",
+      "pts": 3,
+      "gf": 1,
+      "gd": 1
+    },
+    "2C": {
+      "team": "Brazil",
+      "pts": 1,
+      "gf": 1,
+      "gd": 0
+    },
+    "3C": {
+      "team": "Morocco",
+      "pts": 1,
+      "gf": 1,
+      "gd": 0
+    },
+    "4C": {
+      "team": "Haiti",
+      "pts": 0,
+      "gf": 0,
+      "gd": -1
     }
   },
   "matches": [
@@ -150,9 +204,9 @@
       "group": "C",
       "home": "Brazil",
       "away": "Morocco",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 1,
+      "ga": 1,
+      "played": true,
       "date": "2026-06-14 0:00"
     },
     {
@@ -160,9 +214,9 @@
       "group": "C",
       "home": "Haiti",
       "away": "Scotland",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 0,
+      "ga": 1,
+      "played": true,
       "date": "2026-06-14 3:00"
     },
     {
@@ -170,9 +224,9 @@
       "group": "D",
       "home": "Australia",
       "away": "Turkiye",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 2,
+      "ga": 0,
+      "played": true,
       "date": "2026-06-14 6:00"
     },
     {
