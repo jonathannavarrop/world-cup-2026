@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T14:07:17Z",
+  "updated": "2026-06-14T19:00:01Z",
   "group_results": {
     "Mexico|South Africa": {
       "home": "Mexico",
@@ -48,6 +48,12 @@
       "away": "Turkiye",
       "gh": 2,
       "ga": 0
+    },
+    "Germany|Curacao": {
+      "home": "Germany",
+      "away": "Curacao",
+      "gh": 7,
+      "ga": 1
     }
   },
   "final_standings": {
@@ -146,6 +152,18 @@
       "pts": 0,
       "gf": 0,
       "gd": -1
+    },
+    "1E": {
+      "team": "Germany",
+      "pts": 3,
+      "gf": 7,
+      "gd": 6
+    },
+    "2E": {
+      "team": "Curacao",
+      "pts": 0,
+      "gf": 1,
+      "gd": -6
     }
   },
   "matches": [
@@ -234,9 +252,9 @@
       "group": "E",
       "home": "Germany",
       "away": "Curacao",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 7,
+      "ga": 1,
+      "played": true,
       "date": "2026-06-14 19:00"
     },
     {
