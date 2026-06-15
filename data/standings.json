@@ -1,48 +1,48 @@
 {
-  "updated": "2026-06-15T20:57:23Z",
-  "matches_played": 13,
+  "updated": "2026-06-15T21:00:06Z",
+  "matches_played": 14,
   "table": [
     {
       "player": "CHAMP",
-      "total": 120,
+      "total": 117,
       "breakdown": {
-        "grupos": 120,
+        "grupos": 117,
         "fases_finales": 0
       },
       "pos": 1
     },
     {
       "player": "NEGREIRA",
-      "total": 93,
+      "total": 117,
       "breakdown": {
-        "grupos": 93,
+        "grupos": 117,
         "fases_finales": 0
       },
       "pos": 2
     },
     {
-      "player": "PEP",
-      "total": 87,
+      "player": "JONY",
+      "total": 81,
       "breakdown": {
-        "grupos": 87,
+        "grupos": 81,
         "fases_finales": 0
       },
       "pos": 3
     },
     {
-      "player": "JONY",
-      "total": 84,
+      "player": "PEP",
+      "total": 78,
       "breakdown": {
-        "grupos": 84,
+        "grupos": 78,
         "fases_finales": 0
       },
       "pos": 4
     },
     {
       "player": "CHURU",
-      "total": 72,
+      "total": 66,
       "breakdown": {
-        "grupos": 72,
+        "grupos": 66,
         "fases_finales": 0
       },
       "pos": 5
@@ -535,35 +535,35 @@
       "group": "G",
       "home": "Belgium",
       "away": "Egypt",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 1,
+      "ga": 1,
+      "played": true,
       "date": "2026-06-15 21:00",
       "predictions": {
         "CHURU": {
           "gh": 2,
           "ga": 0,
-          "points": null
+          "points": -6
         },
         "JONY": {
           "gh": 1,
           "ga": 0,
-          "points": null
+          "points": -3
         },
         "CHAMP": {
           "gh": 1,
           "ga": 2,
-          "points": null
+          "points": -3
         },
         "NEGREIRA": {
           "gh": 2,
           "ga": 2,
-          "points": null
+          "points": 24
         },
         "PEP": {
           "gh": 3,
           "ga": 0,
-          "points": null
+          "points": -9
         }
       }
     },
