@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-15T12:19:16Z",
+  "updated": "2026-06-15T18:36:39Z",
   "group_results": {
     "Mexico|South Africa": {
       "home": "Mexico",
@@ -72,6 +72,12 @@
       "away": "Tunisia",
       "gh": 5,
       "ga": 1
+    },
+    "Spain|Cape Verde": {
+      "home": "Spain",
+      "away": "Cape Verde",
+      "gh": 0,
+      "ga": 0
     }
   },
   "final_standings": {
@@ -218,6 +224,18 @@
       "pts": 0,
       "gf": 1,
       "gd": -4
+    },
+    "1H": {
+      "team": "Spain",
+      "pts": 1,
+      "gf": 0,
+      "gd": 0
+    },
+    "2H": {
+      "team": "Cape Verde",
+      "pts": 1,
+      "gf": 0,
+      "gd": 0
     }
   },
   "matches": [
@@ -346,9 +364,9 @@
       "group": "H",
       "home": "Spain",
       "away": "Cape Verde",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 0,
+      "ga": 0,
+      "played": true,
       "date": "2026-06-15 18:00"
     },
     {

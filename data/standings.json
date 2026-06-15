@@ -1,48 +1,48 @@
 {
-  "updated": "2026-06-15T12:19:16Z",
-  "matches_played": 12,
+  "updated": "2026-06-15T18:36:39Z",
+  "matches_played": 13,
   "table": [
     {
       "player": "CHAMP",
-      "total": 135,
+      "total": 120,
       "breakdown": {
-        "grupos": 135,
+        "grupos": 120,
         "fases_finales": 0
       },
       "pos": 1
     },
     {
-      "player": "PEP",
-      "total": 102,
+      "player": "NEGREIRA",
+      "total": 93,
       "breakdown": {
-        "grupos": 102,
+        "grupos": 93,
         "fases_finales": 0
       },
       "pos": 2
     },
     {
-      "player": "JONY",
-      "total": 99,
+      "player": "PEP",
+      "total": 87,
       "breakdown": {
-        "grupos": 99,
+        "grupos": 87,
         "fases_finales": 0
       },
       "pos": 3
     },
     {
-      "player": "NEGREIRA",
-      "total": 99,
+      "player": "JONY",
+      "total": 84,
       "breakdown": {
-        "grupos": 99,
+        "grupos": 84,
         "fases_finales": 0
       },
       "pos": 4
     },
     {
       "player": "CHURU",
-      "total": 84,
+      "total": 72,
       "breakdown": {
-        "grupos": 84,
+        "grupos": 72,
         "fases_finales": 0
       },
       "pos": 5
@@ -498,35 +498,35 @@
       "group": "H",
       "home": "Spain",
       "away": "Cape Verde",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 0,
+      "ga": 0,
+      "played": true,
       "date": "2026-06-15 18:00",
       "predictions": {
         "CHURU": {
           "gh": 4,
           "ga": 0,
-          "points": null
+          "points": -12
         },
         "JONY": {
           "gh": 5,
           "ga": 0,
-          "points": null
+          "points": -15
         },
         "CHAMP": {
           "gh": 5,
           "ga": 0,
-          "points": null
+          "points": -15
         },
         "NEGREIRA": {
           "gh": 2,
           "ga": 0,
-          "points": null
+          "points": -6
         },
         "PEP": {
           "gh": 5,
           "ga": 0,
-          "points": null
+          "points": -15
         }
       }
     },
