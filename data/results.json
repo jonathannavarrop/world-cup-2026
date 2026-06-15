@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T22:01:57Z",
+  "updated": "2026-06-15T04:17:38Z",
   "group_results": {
     "Mexico|South Africa": {
       "home": "Mexico",
@@ -60,6 +60,18 @@
       "away": "Japan",
       "gh": 2,
       "ga": 2
+    },
+    "Ivory Coast|Ecuador": {
+      "home": "Ivory Coast",
+      "away": "Ecuador",
+      "gh": 1,
+      "ga": 0
+    },
+    "Sweden|Tunisia": {
+      "home": "Sweden",
+      "away": "Tunisia",
+      "gh": 5,
+      "ga": 1
     }
   },
   "final_standings": {
@@ -166,22 +178,46 @@
       "gd": 6
     },
     "2E": {
+      "team": "Ivory Coast",
+      "pts": 3,
+      "gf": 1,
+      "gd": 1
+    },
+    "3E": {
+      "team": "Ecuador",
+      "pts": 0,
+      "gf": 0,
+      "gd": -1
+    },
+    "4E": {
       "team": "Curacao",
       "pts": 0,
       "gf": 1,
       "gd": -6
     },
     "1F": {
+      "team": "Sweden",
+      "pts": 3,
+      "gf": 5,
+      "gd": 4
+    },
+    "2F": {
       "team": "Netherlands",
       "pts": 1,
       "gf": 2,
       "gd": 0
     },
-    "2F": {
+    "3F": {
       "team": "Japan",
       "pts": 1,
       "gf": 2,
       "gd": 0
+    },
+    "4F": {
+      "team": "Tunisia",
+      "pts": 0,
+      "gf": 1,
+      "gd": -4
     }
   },
   "matches": [
@@ -290,9 +326,9 @@
       "group": "E",
       "home": "Ivory Coast",
       "away": "Ecuador",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 1,
+      "ga": 0,
+      "played": true,
       "date": "2026-06-15 1:00"
     },
     {
@@ -300,9 +336,9 @@
       "group": "F",
       "home": "Sweden",
       "away": "Tunisia",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 5,
+      "ga": 1,
+      "played": true,
       "date": "2026-06-15 4:00"
     },
     {

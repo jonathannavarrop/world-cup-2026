@@ -1,36 +1,36 @@
 {
-  "updated": "2026-06-14T22:01:57Z",
-  "matches_played": 10,
+  "updated": "2026-06-15T04:17:38Z",
+  "matches_played": 12,
   "table": [
     {
       "player": "CHAMP",
-      "total": 153,
+      "total": 135,
       "breakdown": {
-        "grupos": 153,
+        "grupos": 135,
         "fases_finales": 0
       },
       "pos": 1
     },
     {
-      "player": "NEGREIRA",
-      "total": 120,
+      "player": "PEP",
+      "total": 102,
       "breakdown": {
-        "grupos": 120,
+        "grupos": 102,
         "fases_finales": 0
       },
       "pos": 2
     },
     {
       "player": "JONY",
-      "total": 117,
+      "total": 99,
       "breakdown": {
-        "grupos": 117,
+        "grupos": 99,
         "fases_finales": 0
       },
       "pos": 3
     },
     {
-      "player": "CHURU",
+      "player": "NEGREIRA",
       "total": 99,
       "breakdown": {
         "grupos": 99,
@@ -39,10 +39,10 @@
       "pos": 4
     },
     {
-      "player": "PEP",
-      "total": 90,
+      "player": "CHURU",
+      "total": 84,
       "breakdown": {
-        "grupos": 90,
+        "grupos": 84,
         "fases_finales": 0
       },
       "pos": 5
@@ -424,35 +424,35 @@
       "group": "E",
       "home": "Ivory Coast",
       "away": "Ecuador",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 1,
+      "ga": 0,
+      "played": true,
       "date": "2026-06-15 1:00",
       "predictions": {
         "CHURU": {
           "gh": 1,
           "ga": 1,
-          "points": null
+          "points": -3
         },
         "JONY": {
           "gh": 0,
           "ga": 1,
-          "points": null
+          "points": -6
         },
         "CHAMP": {
           "gh": 1,
           "ga": 2,
-          "points": null
+          "points": -6
         },
         "NEGREIRA": {
           "gh": 0,
           "ga": 2,
-          "points": null
+          "points": -9
         },
         "PEP": {
           "gh": 1,
           "ga": 3,
-          "points": null
+          "points": -9
         }
       }
     },
@@ -461,35 +461,35 @@
       "group": "F",
       "home": "Sweden",
       "away": "Tunisia",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 5,
+      "ga": 1,
+      "played": true,
       "date": "2026-06-15 4:00",
       "predictions": {
         "CHURU": {
           "gh": 1,
           "ga": 1,
-          "points": null
+          "points": -12
         },
         "JONY": {
           "gh": 1,
           "ga": 1,
-          "points": null
+          "points": -12
         },
         "CHAMP": {
           "gh": 2,
           "ga": 2,
-          "points": null
+          "points": -12
         },
         "NEGREIRA": {
           "gh": 1,
           "ga": 1,
-          "points": null
+          "points": -12
         },
         "PEP": {
           "gh": 2,
           "ga": 1,
-          "points": null
+          "points": 21
         }
       }
     },
