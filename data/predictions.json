@@ -1088,7 +1088,7 @@
       "41": {
         "home": "Norway",
         "away": "Senegal",
-        "gh": 0,
+        "gh": 2,
         "ga": 1
       },
       "61": {
@@ -1142,8 +1142,8 @@
       "23": {
         "home": "Portugal",
         "away": "DR Congo",
-        "gh": 2,
-        "ga": 0
+        "gh": 3,
+        "ga": 1
       },
       "24": {
         "home": "Uzbekistan",
@@ -1178,8 +1178,8 @@
       "22": {
         "home": "England",
         "away": "Croatia",
-        "gh": 1,
-        "ga": 0
+        "gh": 2,
+        "ga": 1
       },
       "21": {
         "home": "Ghana",
