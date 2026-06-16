@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-16T23:23:31Z",
+  "updated": "2026-06-16T23:28:29Z",
   "matches_played": 17,
   "table": [
     {
@@ -1361,7 +1361,7 @@
         },
         "JONY": {
           "gh": 0,
-          "ga": 1,
+          "ga": 2,
           "points": null
         },
         "CHAMP": {
@@ -1397,7 +1397,7 @@
           "points": null
         },
         "JONY": {
-          "gh": 4,
+          "gh": 3,
           "ga": 0,
           "points": null
         },
@@ -1879,7 +1879,7 @@
         },
         "JONY": {
           "gh": 1,
-          "ga": 0,
+          "ga": 1,
           "points": null
         },
         "CHAMP": {
@@ -2100,8 +2100,8 @@
           "points": null
         },
         "JONY": {
-          "gh": 0,
-          "ga": 1,
+          "gh": 1,
+          "ga": 3,
           "points": null
         },
         "CHAMP": {
@@ -2285,8 +2285,8 @@
           "points": null
         },
         "JONY": {
-          "gh": 0,
-          "ga": 3,
+          "gh": 1,
+          "ga": 2,
           "points": null
         },
         "CHAMP": {
@@ -2359,7 +2359,7 @@
           "points": null
         },
         "JONY": {
-          "gh": 0,
+          "gh": 1,
           "ga": 1,
           "points": null
         },
