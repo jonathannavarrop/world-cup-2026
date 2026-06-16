@@ -1010,8 +1010,8 @@
       "39": {
         "home": "Belgium",
         "away": "Iran",
-        "gh": 1,
-        "ga": 0
+        "gh": 2,
+        "ga": 1
       },
       "40": {
         "home": "New Zealand",
@@ -1022,7 +1022,7 @@
       "63": {
         "home": "Egypt",
         "away": "Iran",
-        "gh": 0,
+        "gh": 2,
         "ga": 1
       },
       "64": {
@@ -1166,8 +1166,8 @@
       "71": {
         "home": "Colombia",
         "away": "Portugal",
-        "gh": 0,
-        "ga": 1
+        "gh": 1,
+        "ga": 2
       },
       "72": {
         "home": "DR Congo",
