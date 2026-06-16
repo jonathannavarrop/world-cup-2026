@@ -849,7 +849,7 @@
         "home": "Bosnia-Herzegovina",
         "away": "Qatar",
         "gh": 1,
-        "ga": 0
+        "ga": 1
       },
       "7": {
         "home": "Brazil",
@@ -956,8 +956,8 @@
       "56": {
         "home": "Ecuador",
         "away": "Germany",
-        "gh": 0,
-        "ga": 1
+        "gh": 1,
+        "ga": 3
       },
       "11": {
         "home": "Netherlands",
@@ -981,7 +981,7 @@
         "home": "Tunisia",
         "away": "Japan",
         "gh": 0,
-        "ga": 1
+        "ga": 2
       },
       "57": {
         "home": "Japan",
@@ -1046,7 +1046,7 @@
       "38": {
         "home": "Spain",
         "away": "Saudi Arabia",
-        "gh": 4,
+        "gh": 3,
         "ga": 0
       },
       "37": {
@@ -1058,7 +1058,7 @@
       "65": {
         "home": "Cape Verde",
         "away": "Saudi Arabia",
-        "gh": 0,
+        "gh": 1,
         "ga": 1
       },
       "66": {
@@ -1094,8 +1094,8 @@
       "61": {
         "home": "Norway",
         "away": "France",
-        "gh": 0,
-        "ga": 3
+        "gh": 1,
+        "ga": 2
       },
       "62": {
         "home": "Senegal",
