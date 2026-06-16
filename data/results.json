@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-16T20:54:02Z",
+  "updated": "2026-06-16T21:04:40Z",
   "group_results": {
     "Mexico|South Africa": {
       "home": "Mexico",
@@ -96,6 +96,12 @@
       "away": "New Zealand",
       "gh": 2,
       "ga": 2
+    },
+    "France|Senegal": {
+      "home": "France",
+      "away": "Senegal",
+      "gh": 3,
+      "ga": 1
     }
   },
   "final_standings": {
@@ -290,6 +296,18 @@
       "pts": 1,
       "gf": 1,
       "gd": 0
+    },
+    "1I": {
+      "team": "France",
+      "pts": 3,
+      "gf": 3,
+      "gd": 2
+    },
+    "2I": {
+      "team": "Senegal",
+      "pts": 0,
+      "gf": 1,
+      "gd": -2
     }
   },
   "matches": [
@@ -458,9 +476,9 @@
       "group": "I",
       "home": "France",
       "away": "Senegal",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 3,
+      "ga": 1,
+      "played": true,
       "date": "2026-06-16 21:00"
     },
     {
