@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-16T04:23:23Z",
+  "updated": "2026-06-16T06:43:46Z",
   "group_results": {
     "Mexico|South Africa": {
       "home": "Mexico",
@@ -82,6 +82,12 @@
     "Belgium|Egypt": {
       "home": "Belgium",
       "away": "Egypt",
+      "gh": 1,
+      "ga": 1
+    },
+    "Saudi Arabia|Uruguay": {
+      "home": "Saudi Arabia",
+      "away": "Uruguay",
       "gh": 1,
       "ga": 1
     }
@@ -232,12 +238,24 @@
       "gd": -4
     },
     "1H": {
+      "team": "Saudi Arabia",
+      "pts": 1,
+      "gf": 1,
+      "gd": 0
+    },
+    "2H": {
+      "team": "Uruguay",
+      "pts": 1,
+      "gf": 1,
+      "gd": 0
+    },
+    "3H": {
       "team": "Spain",
       "pts": 1,
       "gf": 0,
       "gd": 0
     },
-    "2H": {
+    "4H": {
       "team": "Cape Verde",
       "pts": 1,
       "gf": 0,
@@ -402,9 +420,9 @@
       "group": "H",
       "home": "Saudi Arabia",
       "away": "Uruguay",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 1,
+      "ga": 1,
+      "played": true,
       "date": "2026-06-16 0:00"
     },
     {

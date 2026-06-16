@@ -1,36 +1,36 @@
 {
-  "updated": "2026-06-16T04:23:23Z",
-  "matches_played": 14,
+  "updated": "2026-06-16T06:43:46Z",
+  "matches_played": 15,
   "table": [
     {
-      "player": "CHAMP",
-      "total": 117,
+      "player": "PEP",
+      "total": 138,
       "breakdown": {
-        "grupos": 117,
+        "grupos": 138,
         "fases_finales": 0
       },
       "pos": 1
     },
     {
-      "player": "NEGREIRA",
-      "total": 117,
+      "player": "CHAMP",
+      "total": 114,
       "breakdown": {
-        "grupos": 117,
+        "grupos": 114,
         "fases_finales": 0
       },
       "pos": 2
     },
     {
-      "player": "JONY",
-      "total": 81,
+      "player": "NEGREIRA",
+      "total": 111,
       "breakdown": {
-        "grupos": 81,
+        "grupos": 111,
         "fases_finales": 0
       },
       "pos": 3
     },
     {
-      "player": "PEP",
+      "player": "JONY",
       "total": 78,
       "breakdown": {
         "grupos": 78,
@@ -40,9 +40,9 @@
     },
     {
       "player": "CHURU",
-      "total": 66,
+      "total": 63,
       "breakdown": {
-        "grupos": 66,
+        "grupos": 63,
         "fases_finales": 0
       },
       "pos": 5
@@ -572,35 +572,35 @@
       "group": "H",
       "home": "Saudi Arabia",
       "away": "Uruguay",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 1,
+      "ga": 1,
+      "played": true,
       "date": "2026-06-16 0:00",
       "predictions": {
         "CHURU": {
           "gh": 1,
           "ga": 2,
-          "points": null
+          "points": -3
         },
         "JONY": {
           "gh": 0,
           "ga": 1,
-          "points": null
+          "points": -3
         },
         "CHAMP": {
           "gh": 1,
           "ga": 2,
-          "points": null
+          "points": -3
         },
         "NEGREIRA": {
           "gh": 0,
           "ga": 2,
-          "points": null
+          "points": -6
         },
         "PEP": {
           "gh": 1,
           "ga": 1,
-          "points": null
+          "points": 60
         }
       }
     },
