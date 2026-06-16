@@ -8,7 +8,7 @@ name: Actualizar porra
 on:
   workflow_dispatch: {}            # botón "Run workflow" para forzar a mano
   push:
-    paths: ["data/resultados.csv", "data/manual.json"]   # al guardar, recalcula
+    paths: ["data/resultados.csv", "data/manual.json", "data/predictions.json"]   # al guardar, recalcula
   schedule:
     - cron: "0 */6 * * *"          # y cada 6 h (por si usas Google Sheet)
 
