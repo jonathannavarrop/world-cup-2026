@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-16T06:43:46Z",
+  "updated": "2026-06-16T06:46:59Z",
   "group_results": {
     "Mexico|South Africa": {
       "home": "Mexico",
@@ -90,6 +90,12 @@
       "away": "Uruguay",
       "gh": 1,
       "ga": 1
+    },
+    "Iran|New Zealand": {
+      "home": "Iran",
+      "away": "New Zealand",
+      "gh": 2,
+      "ga": 2
     }
   },
   "final_standings": {
@@ -262,12 +268,24 @@
       "gd": 0
     },
     "1G": {
+      "team": "Iran",
+      "pts": 1,
+      "gf": 2,
+      "gd": 0
+    },
+    "2G": {
+      "team": "New Zealand",
+      "pts": 1,
+      "gf": 2,
+      "gd": 0
+    },
+    "3G": {
       "team": "Belgium",
       "pts": 1,
       "gf": 1,
       "gd": 0
     },
-    "2G": {
+    "4G": {
       "team": "Egypt",
       "pts": 1,
       "gf": 1,
@@ -430,9 +448,9 @@
       "group": "G",
       "home": "Iran",
       "away": "New Zealand",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 2,
+      "ga": 2,
+      "played": true,
       "date": "2026-06-16 3:00"
     },
     {

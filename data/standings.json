@@ -1,48 +1,48 @@
 {
-  "updated": "2026-06-16T06:43:46Z",
-  "matches_played": 15,
+  "updated": "2026-06-16T06:46:59Z",
+  "matches_played": 16,
   "table": [
     {
       "player": "PEP",
-      "total": 138,
+      "total": 135,
       "breakdown": {
-        "grupos": 138,
+        "grupos": 135,
         "fases_finales": 0
       },
       "pos": 1
     },
     {
       "player": "CHAMP",
-      "total": 114,
+      "total": 111,
       "breakdown": {
-        "grupos": 114,
+        "grupos": 111,
         "fases_finales": 0
       },
       "pos": 2
     },
     {
       "player": "NEGREIRA",
-      "total": 111,
+      "total": 105,
       "breakdown": {
-        "grupos": 111,
+        "grupos": 105,
         "fases_finales": 0
       },
       "pos": 3
     },
     {
       "player": "JONY",
-      "total": 78,
+      "total": 72,
       "breakdown": {
-        "grupos": 78,
+        "grupos": 72,
         "fases_finales": 0
       },
       "pos": 4
     },
     {
       "player": "CHURU",
-      "total": 63,
+      "total": 54,
       "breakdown": {
-        "grupos": 63,
+        "grupos": 54,
         "fases_finales": 0
       },
       "pos": 5
@@ -609,35 +609,35 @@
       "group": "G",
       "home": "Iran",
       "away": "New Zealand",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 2,
+      "ga": 2,
+      "played": true,
       "date": "2026-06-16 3:00",
       "predictions": {
         "CHURU": {
           "gh": 0,
           "ga": 1,
-          "points": null
+          "points": -9
         },
         "JONY": {
           "gh": 2,
           "ga": 0,
-          "points": null
+          "points": -6
         },
         "CHAMP": {
           "gh": 2,
           "ga": 1,
-          "points": null
+          "points": -3
         },
         "NEGREIRA": {
           "gh": 2,
           "ga": 0,
-          "points": null
+          "points": -6
         },
         "PEP": {
           "gh": 2,
           "ga": 1,
-          "points": null
+          "points": -3
         }
       }
     },
