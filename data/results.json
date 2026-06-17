@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-17T04:18:21Z",
+  "updated": "2026-06-17T06:47:21Z",
   "group_results": {
     "Mexico|South Africa": {
       "home": "Mexico",
@@ -100,6 +100,24 @@
     "France|Senegal": {
       "home": "France",
       "away": "Senegal",
+      "gh": 3,
+      "ga": 1
+    },
+    "Iraq|Norway": {
+      "home": "Iraq",
+      "away": "Norway",
+      "gh": 1,
+      "ga": 4
+    },
+    "Argentina|Algeria": {
+      "home": "Argentina",
+      "away": "Algeria",
+      "gh": 3,
+      "ga": 0
+    },
+    "Austria|Jordan": {
+      "home": "Austria",
+      "away": "Jordan",
       "gh": 3,
       "ga": 1
     }
@@ -298,16 +316,52 @@
       "gd": 0
     },
     "1I": {
+      "team": "Norway",
+      "pts": 3,
+      "gf": 4,
+      "gd": 3
+    },
+    "2I": {
       "team": "France",
       "pts": 3,
       "gf": 3,
       "gd": 2
     },
-    "2I": {
+    "3I": {
       "team": "Senegal",
       "pts": 0,
       "gf": 1,
       "gd": -2
+    },
+    "4I": {
+      "team": "Iraq",
+      "pts": 0,
+      "gf": 1,
+      "gd": -3
+    },
+    "1J": {
+      "team": "Argentina",
+      "pts": 3,
+      "gf": 3,
+      "gd": 3
+    },
+    "2J": {
+      "team": "Austria",
+      "pts": 3,
+      "gf": 3,
+      "gd": 2
+    },
+    "3J": {
+      "team": "Jordan",
+      "pts": 0,
+      "gf": 1,
+      "gd": -2
+    },
+    "4J": {
+      "team": "Algeria",
+      "pts": 0,
+      "gf": 0,
+      "gd": -3
     }
   },
   "matches": [
@@ -486,9 +540,9 @@
       "group": "I",
       "home": "Iraq",
       "away": "Norway",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 1,
+      "ga": 4,
+      "played": true,
       "date": "2026-06-17 0:00"
     },
     {
@@ -496,9 +550,9 @@
       "group": "J",
       "home": "Argentina",
       "away": "Algeria",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 3,
+      "ga": 0,
+      "played": true,
       "date": "2026-06-17 3:00"
     },
     {
@@ -506,9 +560,9 @@
       "group": "J",
       "home": "Austria",
       "away": "Jordan",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 3,
+      "ga": 1,
+      "played": true,
       "date": "2026-06-17 6:00"
     },
     {
