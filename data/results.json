@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T04:10:41Z",
+  "updated": "2026-06-18T08:12:55Z",
   "group_results": {
     "Mexico|South Africa": {
       "home": "Mexico",
@@ -126,6 +126,24 @@
       "away": "DR Congo",
       "gh": 1,
       "ga": 1
+    },
+    "England|Croatia": {
+      "home": "England",
+      "away": "Croatia",
+      "gh": 4,
+      "ga": 2
+    },
+    "Ghana|Panama": {
+      "home": "Ghana",
+      "away": "Panama",
+      "gh": 1,
+      "ga": 0
+    },
+    "Uzbekistan|Colombia": {
+      "home": "Uzbekistan",
+      "away": "Colombia",
+      "gh": 1,
+      "ga": 3
     }
   },
   "final_standings": {
@@ -370,16 +388,52 @@
       "gd": -3
     },
     "1K": {
+      "team": "Colombia",
+      "pts": 3,
+      "gf": 3,
+      "gd": 2
+    },
+    "2K": {
       "team": "Portugal",
       "pts": 1,
       "gf": 1,
       "gd": 0
     },
-    "2K": {
+    "3K": {
       "team": "DR Congo",
       "pts": 1,
       "gf": 1,
       "gd": 0
+    },
+    "4K": {
+      "team": "Uzbekistan",
+      "pts": 0,
+      "gf": 1,
+      "gd": -2
+    },
+    "1L": {
+      "team": "England",
+      "pts": 3,
+      "gf": 4,
+      "gd": 2
+    },
+    "2L": {
+      "team": "Ghana",
+      "pts": 3,
+      "gf": 1,
+      "gd": 1
+    },
+    "3L": {
+      "team": "Panama",
+      "pts": 0,
+      "gf": 0,
+      "gd": -1
+    },
+    "4L": {
+      "team": "Croatia",
+      "pts": 0,
+      "gf": 2,
+      "gd": -2
     }
   },
   "matches": [
@@ -598,9 +652,9 @@
       "group": "L",
       "home": "England",
       "away": "Croatia",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 4,
+      "ga": 2,
+      "played": true,
       "date": "2026-06-17 22:00"
     },
     {
@@ -608,9 +662,9 @@
       "group": "L",
       "home": "Ghana",
       "away": "Panama",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 1,
+      "ga": 0,
+      "played": true,
       "date": "2026-06-18 1:00"
     },
     {
@@ -618,9 +672,9 @@
       "group": "K",
       "home": "Uzbekistan",
       "away": "Colombia",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 1,
+      "ga": 3,
+      "played": true,
       "date": "2026-06-18 4:00"
     },
     {
