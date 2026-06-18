@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T15:29:21Z",
+  "updated": "2026-06-18T19:50:49Z",
   "group_results": {
     "Mexico|South Africa": {
       "home": "Mexico",
@@ -144,6 +144,12 @@
       "away": "Colombia",
       "gh": 1,
       "ga": 3
+    },
+    "Czechia|South Africa": {
+      "home": "Czechia",
+      "away": "South Africa",
+      "gh": 1,
+      "ga": 1
     }
   },
   "final_standings": {
@@ -161,14 +167,14 @@
     },
     "3A": {
       "team": "Czechia",
-      "pts": 0,
-      "gf": 1,
+      "pts": 1,
+      "gf": 2,
       "gd": -1
     },
     "4A": {
       "team": "South Africa",
-      "pts": 0,
-      "gf": 0,
+      "pts": 1,
+      "gf": 1,
       "gd": -2
     },
     "1B": {
@@ -682,9 +688,9 @@
       "group": "A",
       "home": "Czechia",
       "away": "South Africa",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 1,
+      "ga": 1,
+      "played": true,
       "date": "2026-06-18 18:00"
     },
     {

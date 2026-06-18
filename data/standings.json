@@ -1,45 +1,45 @@
 {
-  "updated": "2026-06-18T15:29:21Z",
-  "matches_played": 24,
+  "updated": "2026-06-18T19:50:49Z",
+  "matches_played": 25,
   "table": [
     {
-      "player": "PEP",
-      "total": 297,
+      "player": "CHAMP",
+      "total": 339,
       "breakdown": {
-        "grupos": 297,
+        "grupos": 339,
         "fases_finales": 0
       },
       "pos": 1
     },
     {
-      "player": "CHAMP",
-      "total": 279,
+      "player": "PEP",
+      "total": 291,
       "breakdown": {
-        "grupos": 279,
+        "grupos": 291,
         "fases_finales": 0
       },
       "pos": 2
     },
     {
       "player": "NEGREIRA",
-      "total": 237,
+      "total": 234,
       "breakdown": {
-        "grupos": 237,
+        "grupos": 234,
         "fases_finales": 0
       },
       "pos": 3
     },
     {
-      "player": "JONY",
-      "total": 195,
+      "player": "CHURU",
+      "total": 216,
       "breakdown": {
-        "grupos": 195,
+        "grupos": 216,
         "fases_finales": 0
       },
       "pos": 4
     },
     {
-      "player": "CHURU",
+      "player": "JONY",
       "total": 192,
       "breakdown": {
         "grupos": 192,
@@ -942,35 +942,35 @@
       "group": "A",
       "home": "Czechia",
       "away": "South Africa",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 1,
+      "ga": 1,
+      "played": true,
       "date": "2026-06-18 18:00",
       "predictions": {
         "CHURU": {
           "gh": 2,
           "ga": 2,
-          "points": null
+          "points": 24
         },
         "JONY": {
           "gh": 1,
           "ga": 0,
-          "points": null
+          "points": -3
         },
         "CHAMP": {
           "gh": 1,
           "ga": 1,
-          "points": null
+          "points": 60
         },
         "NEGREIRA": {
           "gh": 2,
           "ga": 1,
-          "points": null
+          "points": -3
         },
         "PEP": {
           "gh": 3,
           "ga": 1,
-          "points": null
+          "points": -6
         }
       }
     },
