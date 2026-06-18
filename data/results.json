@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T20:28:16Z",
+  "updated": "2026-06-18T20:57:51Z",
   "group_results": {
     "Mexico|South Africa": {
       "home": "Mexico",
@@ -150,6 +150,12 @@
       "away": "South Africa",
       "gh": 1,
       "ga": 1
+    },
+    "Switzerland|Bosnia-Herzegovina": {
+      "home": "Switzerland",
+      "away": "Bosnia-Herzegovina",
+      "gh": 4,
+      "ga": 1
     }
   },
   "final_standings": {
@@ -178,13 +184,13 @@
       "gd": -2
     },
     "1B": {
-      "team": "Canada",
-      "pts": 1,
-      "gf": 1,
-      "gd": 0
+      "team": "Switzerland",
+      "pts": 4,
+      "gf": 5,
+      "gd": 3
     },
     "2B": {
-      "team": "Bosnia-Herzegovina",
+      "team": "Canada",
       "pts": 1,
       "gf": 1,
       "gd": 0
@@ -196,10 +202,10 @@
       "gd": 0
     },
     "4B": {
-      "team": "Switzerland",
+      "team": "Bosnia-Herzegovina",
       "pts": 1,
-      "gf": 1,
-      "gd": 0
+      "gf": 2,
+      "gd": -3
     },
     "1D": {
       "team": "USA",
@@ -698,9 +704,9 @@
       "group": "B",
       "home": "Switzerland",
       "away": "Bosnia-Herzegovina",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 4,
+      "ga": 1,
+      "played": true,
       "date": "2026-06-18 21:00"
     },
     {

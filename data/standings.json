@@ -1,48 +1,48 @@
 {
-  "updated": "2026-06-18T20:28:16Z",
-  "matches_played": 25,
+  "updated": "2026-06-18T20:57:51Z",
+  "matches_played": 26,
   "table": [
     {
       "player": "CHAMP",
-      "total": 339,
+      "total": 330,
       "breakdown": {
-        "grupos": 339,
+        "grupos": 330,
         "fases_finales": 0
       },
       "pos": 1
     },
     {
       "player": "PEP",
-      "total": 291,
+      "total": 315,
       "breakdown": {
-        "grupos": 291,
+        "grupos": 315,
         "fases_finales": 0
       },
       "pos": 2
     },
     {
       "player": "NEGREIRA",
-      "total": 234,
+      "total": 258,
       "breakdown": {
-        "grupos": 234,
+        "grupos": 258,
         "fases_finales": 0
       },
       "pos": 3
     },
     {
-      "player": "CHURU",
-      "total": 216,
+      "player": "JONY",
+      "total": 213,
       "breakdown": {
-        "grupos": 216,
+        "grupos": 213,
         "fases_finales": 0
       },
       "pos": 4
     },
     {
-      "player": "JONY",
-      "total": 192,
+      "player": "CHURU",
+      "total": 207,
       "breakdown": {
-        "grupos": 192,
+        "grupos": 207,
         "fases_finales": 0
       },
       "pos": 5
@@ -979,35 +979,35 @@
       "group": "B",
       "home": "Switzerland",
       "away": "Bosnia-Herzegovina",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 4,
+      "ga": 1,
+      "played": true,
       "date": "2026-06-18 21:00",
       "predictions": {
         "CHURU": {
           "gh": 1,
           "ga": 1,
-          "points": null
+          "points": -9
         },
         "JONY": {
           "gh": 2,
           "ga": 0,
-          "points": null
+          "points": 21
         },
         "CHAMP": {
           "gh": 2,
           "ga": 2,
-          "points": null
+          "points": -9
         },
         "NEGREIRA": {
           "gh": 2,
           "ga": 1,
-          "points": null
+          "points": 24
         },
         "PEP": {
           "gh": 2,
           "ga": 1,
-          "points": null
+          "points": 24
         }
       }
     },
