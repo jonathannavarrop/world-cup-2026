@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T20:57:51Z",
+  "updated": "2026-06-18T23:40:58Z",
   "matches_played": 26,
   "table": [
     {
@@ -1065,7 +1065,7 @@
         },
         "JONY": {
           "gh": 1,
-          "ga": 0,
+          "ga": 1,
           "points": null
         },
         "CHAMP": {
