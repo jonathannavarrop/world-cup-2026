@@ -10,6 +10,6 @@
   "_penalties_saved_": "Penaltis parados por portero (incluye penalti fallado/fuera con ese portero en puerta). Para Columna Churu (+50 c/u).",
   "penalties_saved": {},
 
-  "_goal_type_fixups_": "La API no distingue gol de falta vs olímpico (los marca como 'normal'). Si tu goleador (Roberswingger) mete uno, corrígelo añadiendo aquí goles con type 'freekick' (+30) u 'olympic' (+50). Se SUMAN a results.goals.",
+  "_goal_type_fixups_": "La API no distingue gol de falta vs olímpico (los marca como 'normal'). Si tu goleador (Roberswingger) mete uno, corrígelo añadiendo aquí goles con type 'freekick' (+3 puntos) u 'owngoal' (-1).",
   "goals": []
 }
