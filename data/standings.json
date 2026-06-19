@@ -1,48 +1,48 @@
 {
-  "updated": "2026-06-19T20:12:44Z",
-  "matches_played": 28,
+  "updated": "2026-06-19T20:14:54Z",
+  "matches_played": 29,
   "table": [
     {
       "player": "CHAMP",
-      "total": 339,
+      "total": 399,
       "breakdown": {
-        "grupos": 339,
+        "grupos": 399,
         "fases_finales": 0
       },
       "pos": 1
     },
     {
       "player": "PEP",
-      "total": 321,
+      "total": 348,
       "breakdown": {
-        "grupos": 321,
+        "grupos": 348,
         "fases_finales": 0
       },
       "pos": 2
     },
     {
       "player": "NEGREIRA",
-      "total": 300,
+      "total": 294,
       "breakdown": {
-        "grupos": 300,
+        "grupos": 294,
         "fases_finales": 0
       },
       "pos": 3
     },
     {
       "player": "JONY",
-      "total": 228,
+      "total": 255,
       "breakdown": {
-        "grupos": 228,
+        "grupos": 255,
         "fases_finales": 0
       },
       "pos": 4
     },
     {
       "player": "CHURU",
-      "total": 216,
+      "total": 210,
       "breakdown": {
-        "grupos": 216,
+        "grupos": 210,
         "fases_finales": 0
       },
       "pos": 5
@@ -362,9 +362,9 @@
       "group": "D",
       "home": "USA",
       "away": "Australia",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 2,
+      "ga": 0,
+      "played": true,
       "date": "2026-06-19 21:00",
       "predictions": {}
     },
