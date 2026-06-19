@@ -48,7 +48,6 @@ def build(rows):
         "advanced": {k: [] for k in ["R32", "R16", "QF", "SF", "Final", "Champion"]},
     }
     tables = {}  # grupo -> {equipo: [pts, gf, gc]}
-    match_num = 1  # Auto-increment match number for group stage
 
     for r in rows:
         ronda = (r.get("ronda") or "").strip()
@@ -67,12 +66,12 @@ def build(rows):
             continue
 
         # ----- fase de grupos -----
+        match_num = num(r.get("lo num")) or num(r.get("num"))  # Use CSV's match number
         res["matches"].append({
             "num": match_num, "group": ronda.upper(), "home": h, "away": a,
             "gh": gl, "ga": gv, "played": gl is not None and gv is not None,
             "date": (r.get("fecha") or "").strip(),
         })
-        match_num += 1
         if gl is None or gv is None:
             continue
         res["group_results"][f"{h}|{a}"] = {"home": h, "away": a, "gh": gl, "ga": gv}
