@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-19T21:18:54Z",
+  "updated": "2026-06-19T21:22:18Z",
   "group_results": {
     "Mexico|South Africa": {
       "home": "Mexico",
@@ -172,7 +172,7 @@
     "USA|Australia": {
       "home": "USA",
       "away": "Australia",
-      "gh": 3,
+      "gh": 2,
       "ga": 0
     }
   },
@@ -228,14 +228,14 @@
     "1D": {
       "team": "USA",
       "pts": 6,
-      "gf": 7,
-      "gd": 6
+      "gf": 6,
+      "gd": 5
     },
     "2D": {
       "team": "Australia",
       "pts": 3,
       "gf": 2,
-      "gd": -1
+      "gd": 0
     },
     "3D": {
       "team": "Turkiye",
@@ -752,7 +752,7 @@
       "group": "D",
       "home": "USA",
       "away": "Australia",
-      "gh": 3,
+      "gh": 2,
       "ga": 0,
       "played": true,
       "date": "2026-06-19 21:00"
