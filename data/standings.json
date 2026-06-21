@@ -1,48 +1,48 @@
 {
-  "updated": "2026-06-21T14:15:18Z",
-  "matches_played": 36,
+  "updated": "2026-06-21T18:27:35Z",
+  "matches_played": 37,
   "table": [
     {
       "player": "CHAMP",
-      "total": 468,
+      "total": 495,
       "breakdown": {
-        "grupos": 468,
+        "grupos": 495,
         "fases_finales": 0
       },
       "pos": 1
     },
     {
       "player": "PEP",
-      "total": 456,
+      "total": 480,
       "breakdown": {
-        "grupos": 456,
+        "grupos": 480,
         "fases_finales": 0
       },
       "pos": 2
     },
     {
       "player": "NEGREIRA",
-      "total": 429,
+      "total": 456,
       "breakdown": {
-        "grupos": 429,
+        "grupos": 456,
         "fases_finales": 0
       },
       "pos": 3
     },
     {
       "player": "JONY",
-      "total": 333,
+      "total": 360,
       "breakdown": {
-        "grupos": 333,
+        "grupos": 360,
         "fases_finales": 0
       },
       "pos": 4
     },
     {
       "player": "CHURU",
-      "total": 252,
+      "total": 276,
       "breakdown": {
-        "grupos": 252,
+        "grupos": 276,
         "fases_finales": 0
       },
       "pos": 5
@@ -1386,35 +1386,35 @@
       "group": "H",
       "home": "Spain",
       "away": "Saudi Arabia",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 4,
+      "ga": 0,
+      "played": true,
       "date": "2026-06-21 18:00",
       "predictions": {
         "CHURU": {
           "gh": 2,
           "ga": 0,
-          "points": null
+          "points": 24
         },
         "JONY": {
           "gh": 3,
           "ga": 0,
-          "points": null
+          "points": 27
         },
         "CHAMP": {
           "gh": 4,
           "ga": 1,
-          "points": null
+          "points": 27
         },
         "NEGREIRA": {
           "gh": 3,
           "ga": 0,
-          "points": null
+          "points": 27
         },
         "PEP": {
           "gh": 3,
           "ga": 1,
-          "points": null
+          "points": 24
         }
       }
     },
