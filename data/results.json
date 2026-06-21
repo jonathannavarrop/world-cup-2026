@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-21T09:53:09Z",
+  "updated": "2026-06-21T10:48:57Z",
   "group_results": {
     "Mexico|South Africa": {
       "home": "Mexico",
@@ -192,6 +192,30 @@
       "away": "Paraguay",
       "gh": 0,
       "ga": 1
+    },
+    "Netherlands|Sweden": {
+      "home": "Netherlands",
+      "away": "Sweden",
+      "gh": 5,
+      "ga": 1
+    },
+    "Germany|Ivory Coast": {
+      "home": "Germany",
+      "away": "Ivory Coast",
+      "gh": 2,
+      "ga": 1
+    },
+    "Ecuador|Curacao": {
+      "home": "Ecuador",
+      "away": "Curacao",
+      "gh": 0,
+      "ga": 0
+    },
+    "Tunisia|Japan": {
+      "home": "Tunisia",
+      "away": "Japan",
+      "gh": 0,
+      "ga": 4
     }
   },
   "final_standings": {
@@ -293,51 +317,51 @@
     },
     "1E": {
       "team": "Germany",
-      "pts": 3,
-      "gf": 7,
-      "gd": 6
+      "pts": 6,
+      "gf": 9,
+      "gd": 7
     },
     "2E": {
       "team": "Ivory Coast",
       "pts": 3,
-      "gf": 1,
-      "gd": 1
+      "gf": 2,
+      "gd": 0
     },
     "3E": {
       "team": "Ecuador",
-      "pts": 0,
+      "pts": 1,
       "gf": 0,
       "gd": -1
     },
     "4E": {
       "team": "Curacao",
-      "pts": 0,
+      "pts": 1,
       "gf": 1,
       "gd": -6
     },
     "1F": {
-      "team": "Sweden",
-      "pts": 3,
-      "gf": 5,
+      "team": "Netherlands",
+      "pts": 4,
+      "gf": 7,
       "gd": 4
     },
     "2F": {
-      "team": "Netherlands",
-      "pts": 1,
-      "gf": 2,
-      "gd": 0
+      "team": "Japan",
+      "pts": 4,
+      "gf": 6,
+      "gd": 4
     },
     "3F": {
-      "team": "Japan",
-      "pts": 1,
-      "gf": 2,
+      "team": "Sweden",
+      "pts": 3,
+      "gf": 6,
       "gd": 0
     },
     "4F": {
       "team": "Tunisia",
       "pts": 0,
       "gf": 1,
-      "gd": -4
+      "gd": -8
     },
     "1H": {
       "team": "Saudi Arabia",
@@ -810,9 +834,9 @@
       "group": "F",
       "home": "Netherlands",
       "away": "Sweden",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 5,
+      "ga": 1,
+      "played": true,
       "date": "2026-06-20 19:00"
     },
     {
@@ -820,9 +844,9 @@
       "group": "E",
       "home": "Germany",
       "away": "Ivory Coast",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 2,
+      "ga": 1,
+      "played": true,
       "date": "2026-06-20 22:00"
     },
     {
@@ -830,9 +854,9 @@
       "group": "E",
       "home": "Ecuador",
       "away": "Curacao",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 0,
+      "ga": 0,
+      "played": true,
       "date": "2026-06-21 2:00"
     },
     {
@@ -840,9 +864,9 @@
       "group": "F",
       "home": "Tunisia",
       "away": "Japan",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 0,
+      "ga": 4,
+      "played": true,
       "date": "2026-06-21 6:00"
     },
     {
