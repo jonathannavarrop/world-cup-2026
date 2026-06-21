@@ -31,10 +31,10 @@ lo num,ronda,local,visitante,gl,gv,clasifica,fecha
 30,C,Scotland,Morocco,0,1,,2026-06-20 0:00
 29,C,Brazil,Haiti,3,0,,2026-06-20 2:30
 31,D,Turkiye,Paraguay,0,1,,2026-06-20 5:00
-35,F,Netherlands,Sweden,,,,2026-06-20 19:00
-33,E,Germany,Ivory Coast,,,,2026-06-20 22:00
-34,E,Ecuador,Curacao,,,,2026-06-21 2:00
-36,F,Tunisia,Japan,,,,2026-06-21 6:00
+35,F,Netherlands,Sweden,5,1,,2026-06-20 19:00
+33,E,Germany,Ivory Coast,2,1,,2026-06-20 22:00
+34,E,Ecuador,Curacao,0,0,,2026-06-21 2:00
+36,F,Tunisia,Japan,0,4,,2026-06-21 6:00
 38,H,Spain,Saudi Arabia,,,,2026-06-21 18:00
 39,G,Belgium,Iran,,,,2026-06-21 21:00
 37,H,Uruguay,Cape Verde,,,,2026-06-22 0:00
