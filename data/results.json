@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-22T04:26:33Z",
+  "updated": "2026-06-22T11:59:48Z",
   "group_results": {
     "Mexico|South Africa": {
       "home": "Mexico",
@@ -222,6 +222,24 @@
       "away": "Saudi Arabia",
       "gh": 4,
       "ga": 0
+    },
+    "Belgium|Iran": {
+      "home": "Belgium",
+      "away": "Iran",
+      "gh": 0,
+      "ga": 0
+    },
+    "Uruguay|Cape Verde": {
+      "home": "Uruguay",
+      "away": "Cape Verde",
+      "gh": 2,
+      "ga": 2
+    },
+    "New Zealand|Egypt": {
+      "home": "New Zealand",
+      "away": "Egypt",
+      "gh": 1,
+      "ga": 3
     }
   },
   "final_standings": {
@@ -377,14 +395,14 @@
     },
     "2H": {
       "team": "Uruguay",
-      "pts": 1,
-      "gf": 1,
+      "pts": 2,
+      "gf": 3,
       "gd": 0
     },
     "3H": {
       "team": "Cape Verde",
-      "pts": 1,
-      "gf": 0,
+      "pts": 2,
+      "gf": 2,
       "gd": 0
     },
     "4H": {
@@ -394,28 +412,28 @@
       "gd": -4
     },
     "1G": {
-      "team": "Iran",
-      "pts": 1,
-      "gf": 2,
-      "gd": 0
+      "team": "Egypt",
+      "pts": 4,
+      "gf": 4,
+      "gd": 2
     },
     "2G": {
-      "team": "New Zealand",
-      "pts": 1,
+      "team": "Iran",
+      "pts": 2,
       "gf": 2,
       "gd": 0
     },
     "3G": {
       "team": "Belgium",
-      "pts": 1,
+      "pts": 2,
       "gf": 1,
       "gd": 0
     },
     "4G": {
-      "team": "Egypt",
+      "team": "New Zealand",
       "pts": 1,
-      "gf": 1,
-      "gd": 0
+      "gf": 3,
+      "gd": -2
     },
     "1I": {
       "team": "Norway",
@@ -890,9 +908,9 @@
       "group": "G",
       "home": "Belgium",
       "away": "Iran",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 0,
+      "ga": 0,
+      "played": true,
       "date": "2026-06-21 21:00"
     },
     {
@@ -900,9 +918,9 @@
       "group": "H",
       "home": "Uruguay",
       "away": "Cape Verde",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 2,
+      "ga": 2,
+      "played": true,
       "date": "2026-06-22 0:00"
     },
     {
@@ -910,9 +928,9 @@
       "group": "G",
       "home": "New Zealand",
       "away": "Egypt",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 1,
+      "ga": 3,
+      "played": true,
       "date": "2026-06-22 3:00"
     },
     {
