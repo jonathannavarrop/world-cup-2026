@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-23T03:43:03Z",
+  "updated": "2026-06-23T05:16:31Z",
   "matches_played": 40,
   "table": [
     {
@@ -31,9 +31,9 @@
     },
     {
       "player": "JONY",
-      "total": 366,
+      "total": 399,
       "breakdown": {
-        "grupos": 366,
+        "grupos": 399,
         "fases_finales": 0
       },
       "pos": 4
@@ -1249,9 +1249,9 @@
           "points": 24
         },
         "JONY": {
-          "gh": 2,
-          "ga": 2,
-          "points": -12
+          "gh": 3,
+          "ga": 0,
+          "points": 21
         },
         "CHAMP": {
           "gh": 1,
