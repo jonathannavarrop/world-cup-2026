@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-23T05:16:31Z",
+  "updated": "2026-06-23T05:18:17Z",
   "group_results": {
     "Mexico|South Africa": {
       "home": "Mexico",
@@ -240,6 +240,30 @@
       "away": "Egypt",
       "gh": 1,
       "ga": 3
+    },
+    "Argentina|Austria": {
+      "home": "Argentina",
+      "away": "Austria",
+      "gh": 2,
+      "ga": 0
+    },
+    "France|Iraq": {
+      "home": "France",
+      "away": "Iraq",
+      "gh": 3,
+      "ga": 0
+    },
+    "Norway|Senegal": {
+      "home": "Norway",
+      "away": "Senegal",
+      "gh": 3,
+      "ga": 2
+    },
+    "Jordan|Algeria": {
+      "home": "Jordan",
+      "away": "Algeria",
+      "gh": 1,
+      "ga": 2
     }
   },
   "final_standings": {
@@ -436,51 +460,51 @@
       "gd": -2
     },
     "1I": {
-      "team": "Norway",
-      "pts": 3,
-      "gf": 4,
-      "gd": 3
+      "team": "France",
+      "pts": 6,
+      "gf": 6,
+      "gd": 5
     },
     "2I": {
-      "team": "France",
-      "pts": 3,
-      "gf": 3,
-      "gd": 2
+      "team": "Norway",
+      "pts": 6,
+      "gf": 7,
+      "gd": 4
     },
     "3I": {
       "team": "Senegal",
       "pts": 0,
-      "gf": 1,
-      "gd": -2
+      "gf": 3,
+      "gd": -3
     },
     "4I": {
       "team": "Iraq",
       "pts": 0,
       "gf": 1,
-      "gd": -3
+      "gd": -6
     },
     "1J": {
       "team": "Argentina",
-      "pts": 3,
-      "gf": 3,
-      "gd": 3
+      "pts": 6,
+      "gf": 5,
+      "gd": 5
     },
     "2J": {
       "team": "Austria",
       "pts": 3,
       "gf": 3,
-      "gd": 2
+      "gd": 0
     },
     "3J": {
-      "team": "Jordan",
-      "pts": 0,
-      "gf": 1,
+      "team": "Algeria",
+      "pts": 3,
+      "gf": 2,
       "gd": -2
     },
     "4J": {
-      "team": "Algeria",
+      "team": "Jordan",
       "pts": 0,
-      "gf": 0,
+      "gf": 2,
       "gd": -3
     },
     "1K": {
@@ -938,9 +962,9 @@
       "group": "J",
       "home": "Argentina",
       "away": "Austria",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 2,
+      "ga": 0,
+      "played": true,
       "date": "2026-06-22 19:00"
     },
     {
@@ -948,9 +972,9 @@
       "group": "I",
       "home": "France",
       "away": "Iraq",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 3,
+      "ga": 0,
+      "played": true,
       "date": "2026-06-22 23:00"
     },
     {
@@ -958,9 +982,9 @@
       "group": "I",
       "home": "Norway",
       "away": "Senegal",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 3,
+      "ga": 2,
+      "played": true,
       "date": "2026-06-23 2:00"
     },
     {
@@ -968,9 +992,9 @@
       "group": "J",
       "home": "Jordan",
       "away": "Algeria",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 1,
+      "ga": 2,
+      "played": true,
       "date": "2026-06-23 5:00"
     },
     {
