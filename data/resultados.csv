@@ -43,10 +43,10 @@ lo num,ronda,local,visitante,gl,gv,clasifica,fecha
 42,I,France,Iraq,3,0,,2026-06-22 23:00
 41,I,Norway,Senegal,3,2,,2026-06-23 2:00
 44,J,Jordan,Algeria,1,2,,2026-06-23 5:00
-47,K,Portugal,Uzbekistan,,,,2026-06-23 19:00
-45,L,England,Ghana,,,,2026-06-23 22:00
-46,L,Panama,Croatia,,,,2026-06-24 1:00
-48,K,Colombia,DR Congo,,,,2026-06-24 4:00
+47,K,Portugal,Uzbekistan,5,0,,2026-06-23 19:00
+45,L,England,Ghana,0,0,,2026-06-23 22:00
+46,L,Panama,Croatia,0,1,,2026-06-24 1:00
+48,K,Colombia,DR Congo,1,0,,2026-06-24 4:00
 51,B,Switzerland,Canada,,,,2026-06-24 21:00
 52,B,Bosnia-Herzegovina,Qatar,,,,2026-06-24 21:00
 49,C,Scotland,Brazil,,,,2026-06-25 0:00
