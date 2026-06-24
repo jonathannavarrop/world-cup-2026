@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24T09:33:50Z",
+  "updated": "2026-06-24T10:51:15Z",
   "group_results": {
     "Mexico|South Africa": {
       "home": "Mexico",
@@ -264,6 +264,30 @@
       "away": "Algeria",
       "gh": 1,
       "ga": 2
+    },
+    "Portugal|Uzbekistan": {
+      "home": "Portugal",
+      "away": "Uzbekistan",
+      "gh": 5,
+      "ga": 0
+    },
+    "England|Ghana": {
+      "home": "England",
+      "away": "Ghana",
+      "gh": 0,
+      "ga": 0
+    },
+    "Panama|Croatia": {
+      "home": "Panama",
+      "away": "Croatia",
+      "gh": 0,
+      "ga": 1
+    },
+    "Colombia|DR Congo": {
+      "home": "Colombia",
+      "away": "DR Congo",
+      "gh": 1,
+      "ga": 0
     }
   },
   "final_standings": {
@@ -509,50 +533,50 @@
     },
     "1K": {
       "team": "Colombia",
-      "pts": 3,
-      "gf": 3,
-      "gd": 2
+      "pts": 6,
+      "gf": 4,
+      "gd": 3
     },
     "2K": {
       "team": "Portugal",
-      "pts": 1,
-      "gf": 1,
-      "gd": 0
+      "pts": 4,
+      "gf": 6,
+      "gd": 5
     },
     "3K": {
       "team": "DR Congo",
       "pts": 1,
       "gf": 1,
-      "gd": 0
+      "gd": -1
     },
     "4K": {
       "team": "Uzbekistan",
       "pts": 0,
       "gf": 1,
-      "gd": -2
+      "gd": -7
     },
     "1L": {
       "team": "England",
-      "pts": 3,
+      "pts": 4,
       "gf": 4,
       "gd": 2
     },
     "2L": {
       "team": "Ghana",
-      "pts": 3,
+      "pts": 4,
       "gf": 1,
       "gd": 1
     },
     "3L": {
-      "team": "Panama",
-      "pts": 0,
-      "gf": 0,
+      "team": "Croatia",
+      "pts": 3,
+      "gf": 3,
       "gd": -1
     },
     "4L": {
-      "team": "Croatia",
+      "team": "Panama",
       "pts": 0,
-      "gf": 2,
+      "gf": 0,
       "gd": -2
     }
   },
@@ -1002,9 +1026,9 @@
       "group": "K",
       "home": "Portugal",
       "away": "Uzbekistan",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 5,
+      "ga": 0,
+      "played": true,
       "date": "2026-06-23 19:00"
     },
     {
@@ -1012,9 +1036,9 @@
       "group": "L",
       "home": "England",
       "away": "Ghana",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 0,
+      "ga": 0,
+      "played": true,
       "date": "2026-06-23 22:00"
     },
     {
@@ -1022,9 +1046,9 @@
       "group": "L",
       "home": "Panama",
       "away": "Croatia",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 0,
+      "ga": 1,
+      "played": true,
       "date": "2026-06-24 1:00"
     },
     {
@@ -1032,9 +1056,9 @@
       "group": "K",
       "home": "Colombia",
       "away": "DR Congo",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 1,
+      "ga": 0,
+      "played": true,
       "date": "2026-06-24 4:00"
     },
     {
