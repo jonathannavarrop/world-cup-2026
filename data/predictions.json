@@ -956,8 +956,8 @@
       "56": {
         "home": "Ecuador",
         "away": "Germany",
-        "gh": 1,
-        "ga": 3
+        "gh": 0,
+        "ga": 1
       },
       "11": {
         "home": "Netherlands",
@@ -1022,7 +1022,7 @@
       "63": {
         "home": "Egypt",
         "away": "Iran",
-        "gh": 2,
+        "gh": 0,
         "ga": 1
       },
       "64": {
@@ -1058,7 +1058,7 @@
       "65": {
         "home": "Cape Verde",
         "away": "Saudi Arabia",
-        "gh": 1,
+        "gh": 0,
         "ga": 1
       },
       "66": {
@@ -1094,8 +1094,8 @@
       "61": {
         "home": "Norway",
         "away": "France",
-        "gh": 1,
-        "ga": 2
+        "gh": 0,
+        "ga": 3
       },
       "62": {
         "home": "Senegal",
@@ -1166,8 +1166,8 @@
       "71": {
         "home": "Colombia",
         "away": "Portugal",
-        "gh": 1,
-        "ga": 2
+        "gh": 0,
+        "ga": 1
       },
       "72": {
         "home": "DR Congo",
