@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-25T19:17:37Z",
+  "updated": "2026-06-25T19:24:20Z",
   "matches_played": 54,
   "table": [
     {
@@ -12,19 +12,19 @@
       "pos": 1
     },
     {
-      "player": "NEGREIRA",
-      "total": 726,
+      "player": "JONY",
+      "total": 747,
       "breakdown": {
-        "grupos": 726,
+        "grupos": 747,
         "fases_finales": 0
       },
       "pos": 2
     },
     {
-      "player": "JONY",
-      "total": 720,
+      "player": "NEGREIRA",
+      "total": 726,
       "breakdown": {
-        "grupos": 720,
+        "grupos": 726,
         "fases_finales": 0
       },
       "pos": 3
@@ -1879,8 +1879,8 @@
         },
         "JONY": {
           "gh": 1,
-          "ga": 1,
-          "points": -6
+          "ga": 0,
+          "points": 21
         },
         "CHAMP": {
           "gh": 1,
