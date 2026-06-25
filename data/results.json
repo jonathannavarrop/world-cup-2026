@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-25T14:38:09Z",
+  "updated": "2026-06-25T19:17:37Z",
   "group_results": {
     "Mexico|South Africa": {
       "home": "Mexico",
@@ -288,56 +288,92 @@
       "away": "DR Congo",
       "gh": 1,
       "ga": 0
+    },
+    "Switzerland|Canada": {
+      "home": "Switzerland",
+      "away": "Canada",
+      "gh": 2,
+      "ga": 1
+    },
+    "Bosnia-Herzegovina|Qatar": {
+      "home": "Bosnia-Herzegovina",
+      "away": "Qatar",
+      "gh": 3,
+      "ga": 1
+    },
+    "Scotland|Brazil": {
+      "home": "Scotland",
+      "away": "Brazil",
+      "gh": 0,
+      "ga": 3
+    },
+    "Morocco|Haiti": {
+      "home": "Morocco",
+      "away": "Haiti",
+      "gh": 4,
+      "ga": 2
+    },
+    "Czechia|Mexico": {
+      "home": "Czechia",
+      "away": "Mexico",
+      "gh": 0,
+      "ga": 3
+    },
+    "South Africa|South Korea": {
+      "home": "South Africa",
+      "away": "South Korea",
+      "gh": 1,
+      "ga": 0
     }
   },
   "final_standings": {
     "1A": {
       "team": "Mexico",
-      "pts": 6,
-      "gf": 3,
-      "gd": 3
+      "pts": 9,
+      "gf": 6,
+      "gd": 6
     },
     "2A": {
-      "team": "South Korea",
-      "pts": 3,
+      "team": "South Africa",
+      "pts": 4,
       "gf": 2,
-      "gd": 0
+      "gd": -1
     },
     "3A": {
-      "team": "Czechia",
-      "pts": 1,
+      "team": "South Korea",
+      "pts": 3,
       "gf": 2,
       "gd": -1
     },
     "4A": {
-      "team": "South Africa",
+      "team": "Czechia",
       "pts": 1,
-      "gf": 1,
-      "gd": -2
+      "gf": 2,
+      "gd": -4
     },
     "1B": {
-      "team": "Canada",
-      "pts": 4,
+      "team": "Switzerland",
+      "pts": 7,
       "gf": 7,
-      "gd": 6
+      "gd": 4
     },
     "2B": {
-      "team": "Switzerland",
+      "team": "Canada",
       "pts": 4,
-      "gf": 5,
-      "gd": 3
+      "gf": 8,
+      "gd": 5
     },
     "3B": {
       "team": "Bosnia-Herzegovina",
-      "pts": 1,
-      "gf": 2,
-      "gd": -3
+      "pts": 4,
+      "gf": 5,
+      "gd": -1
     },
     "4B": {
       "team": "Qatar",
       "pts": 1,
-      "gf": 1,
-      "gd": -6
+      "gf": 2,
+      "gd": -8
     },
     "1D": {
       "team": "USA",
@@ -365,27 +401,27 @@
     },
     "1C": {
       "team": "Brazil",
-      "pts": 4,
-      "gf": 4,
-      "gd": 3
+      "pts": 7,
+      "gf": 7,
+      "gd": 6
     },
     "2C": {
       "team": "Morocco",
-      "pts": 4,
-      "gf": 2,
-      "gd": 1
+      "pts": 7,
+      "gf": 6,
+      "gd": 3
     },
     "3C": {
       "team": "Scotland",
       "pts": 3,
       "gf": 1,
-      "gd": 0
+      "gd": -3
     },
     "4C": {
       "team": "Haiti",
       "pts": 0,
-      "gf": 0,
-      "gd": -4
+      "gf": 2,
+      "gd": -6
     },
     "1E": {
       "team": "Germany",
@@ -1066,9 +1102,9 @@
       "group": "B",
       "home": "Switzerland",
       "away": "Canada",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 2,
+      "ga": 1,
+      "played": true,
       "date": "2026-06-24 21:00"
     },
     {
@@ -1076,9 +1112,9 @@
       "group": "B",
       "home": "Bosnia-Herzegovina",
       "away": "Qatar",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 3,
+      "ga": 1,
+      "played": true,
       "date": "2026-06-24 21:00"
     },
     {
@@ -1086,9 +1122,9 @@
       "group": "C",
       "home": "Scotland",
       "away": "Brazil",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 0,
+      "ga": 3,
+      "played": true,
       "date": "2026-06-25 0:00"
     },
     {
@@ -1096,9 +1132,9 @@
       "group": "C",
       "home": "Morocco",
       "away": "Haiti",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 4,
+      "ga": 2,
+      "played": true,
       "date": "2026-06-25 0:00"
     },
     {
@@ -1106,9 +1142,9 @@
       "group": "A",
       "home": "Czechia",
       "away": "Mexico",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 0,
+      "ga": 3,
+      "played": true,
       "date": "2026-06-25 3:00"
     },
     {
@@ -1116,9 +1152,9 @@
       "group": "A",
       "home": "South Africa",
       "away": "South Korea",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 1,
+      "ga": 0,
+      "played": true,
       "date": "2026-06-25 3:00"
     },
     {
