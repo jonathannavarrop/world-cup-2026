@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-26T06:59:08Z",
+  "updated": "2026-06-26T07:07:54Z",
   "group_results": {
     "Mexico|South Africa": {
       "home": "Mexico",
@@ -325,6 +325,12 @@
       "gh": 1,
       "ga": 0
     },
+    "Curacao|Ivory Coast": {
+      "home": "Curacao",
+      "away": "Ivory Coast",
+      "gh": 0,
+      "ga": 2
+    },
     "Ecuador|Germany": {
       "home": "Ecuador",
       "away": "Germany",
@@ -460,14 +466,14 @@
       "gd": 6
     },
     "2E": {
-      "team": "Ecuador",
-      "pts": 4,
-      "gf": 2,
-      "gd": 0
+      "team": "Ivory Coast",
+      "pts": 6,
+      "gf": 4,
+      "gd": 2
     },
     "3E": {
-      "team": "Ivory Coast",
-      "pts": 3,
+      "team": "Ecuador",
+      "pts": 4,
       "gf": 2,
       "gd": 0
     },
@@ -475,7 +481,7 @@
       "team": "Curacao",
       "pts": 1,
       "gf": 1,
-      "gd": -6
+      "gd": -8
     },
     "1F": {
       "team": "Netherlands",
@@ -1192,9 +1198,9 @@
       "group": "E",
       "home": "Curacao",
       "away": "Ivory Coast",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 0,
+      "ga": 2,
+      "played": true,
       "date": "2026-06-25 22:00"
     },
     {
