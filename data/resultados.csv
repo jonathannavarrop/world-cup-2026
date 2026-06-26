@@ -54,11 +54,11 @@ lo num,ronda,local,visitante,gl,gv,clasifica,fecha
 53,A,Czechia,Mexico,0,3,,2026-06-25 3:00
 54,A,South Africa,South Korea,1,0,,2026-06-25 3:00
 55,E,Curacao,Ivory Coast,,,,2026-06-25 22:00
-56,E,Ecuador,Germany,,,,2026-06-25 22:00
-57,F,Japan,Sweden,,,,2026-06-26 1:00
-58,F,Tunisia,Netherlands,,,,2026-06-26 1:00
-59,D,Turkiye,USA,,,,2026-06-26 4:00
-60,D,Paraguay,Australia,,,,2026-06-26 4:00
+56,E,Ecuador,Germany,2,1,,2026-06-25 22:00
+57,F,Japan,Sweden,1,1,,2026-06-26 1:00
+58,F,Tunisia,Netherlands,1,3,,2026-06-26 1:00
+59,D,Turkiye,USA,3,2,,2026-06-26 4:00
+60,D,Paraguay,Australia,0,0,,2026-06-26 4:00
 61,I,Norway,France,,,,2026-06-26 21:00
 62,I,Senegal,Iraq,,,,2026-06-26 21:00
 65,H,Cape Verde,Saudi Arabia,,,,2026-06-27 2:00
