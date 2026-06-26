@@ -66,10 +66,8 @@ def build(rows):
             continue
 
         # ----- fase de grupos -----
-        # Use match number from CSV ("lo num" column) to preserve correct ordering
-        match_num = num(r.get("lo num"))
         res["matches"].append({
-            "num": match_num, "group": ronda.upper(), "home": h, "away": a,
+            "num": num(r.get("num")), "group": ronda.upper(), "home": h, "away": a,
             "gh": gl, "ga": gv, "played": gl is not None and gv is not None,
             "date": (r.get("fecha") or "").strip(),
         })
