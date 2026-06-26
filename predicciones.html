@@ -165,11 +165,20 @@ function renderR32(advance, actual, finalSt, predSt) {
           bg = 'background:rgba(255,77,109,.05)';
         }
 
-        const bonusBadge = (posOk && hasPick && advances)
-          ? `<br><span style="font-size:10px;color:var(--green)">pos ✔ +30</span>` : '';
+        let ptsDisplay;
+        if (advances && hasPick) {
+          if (posOk) {
+            ptsDisplay = `<span class="pts-pos">+30pts</span><br><span class="pts-pos">+30pts</span><br><span style="font-size:10px;color:var(--muted)">avance + pos</span>`;
+          } else {
+            ptsDisplay = `<span class="pts-pos">+30pts</span><br><span style="font-size:10px;color:var(--muted)">avance</span>`;
+          }
+        } else {
+          ptsDisplay = `<span class="pts-neg">0pts</span>`;
+        }
 
-        return `<td style="text-align:center;padding:7px 8px;font-size:12px;line-height:1.5;${bg}">
-          <span class="${textCls}">${display}</span>${bonusBadge}
+        return `<td style="text-align:center;padding:7px 8px;font-size:12px;line-height:1.6;${bg}">
+          <span style="font-size:11px;display:block;margin-bottom:2px">${display}</span>
+          ${ptsDisplay}
         </td>`;
       }).join('');
 
