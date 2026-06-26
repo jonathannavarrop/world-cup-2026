@@ -116,6 +116,8 @@ def main():
         "matches": matches,
         "advance": advance,
         "actual_advanced": res.get("advanced", {}),
+        "final_standings": res.get("final_standings", {}),
+        "pred_standings": {alias: pred.get("standings", {}) for alias, pred in preds.items()},
     }
     with open(os.path.join(DATA, "standings.json"), "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=2)

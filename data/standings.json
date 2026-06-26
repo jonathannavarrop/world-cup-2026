@@ -3072,5 +3072,1747 @@
     "SF": [],
     "Final": [],
     "Champion": []
+  },
+  "final_standings": {
+    "1A": {
+      "team": "Mexico",
+      "pts": 9,
+      "gf": 6,
+      "gd": 6
+    },
+    "2A": {
+      "team": "South Africa",
+      "pts": 4,
+      "gf": 2,
+      "gd": -1
+    },
+    "3A": {
+      "team": "South Korea",
+      "pts": 3,
+      "gf": 2,
+      "gd": -1
+    },
+    "4A": {
+      "team": "Czechia",
+      "pts": 1,
+      "gf": 2,
+      "gd": -4
+    },
+    "1B": {
+      "team": "Switzerland",
+      "pts": 7,
+      "gf": 7,
+      "gd": 4
+    },
+    "2B": {
+      "team": "Canada",
+      "pts": 4,
+      "gf": 8,
+      "gd": 5
+    },
+    "3B": {
+      "team": "Bosnia-Herzegovina",
+      "pts": 4,
+      "gf": 5,
+      "gd": -1
+    },
+    "4B": {
+      "team": "Qatar",
+      "pts": 1,
+      "gf": 2,
+      "gd": -8
+    },
+    "1D": {
+      "team": "USA",
+      "pts": 6,
+      "gf": 8,
+      "gd": 4
+    },
+    "2D": {
+      "team": "Australia",
+      "pts": 4,
+      "gf": 2,
+      "gd": 0
+    },
+    "3D": {
+      "team": "Paraguay",
+      "pts": 4,
+      "gf": 2,
+      "gd": -2
+    },
+    "4D": {
+      "team": "Turkiye",
+      "pts": 3,
+      "gf": 3,
+      "gd": -2
+    },
+    "1C": {
+      "team": "Brazil",
+      "pts": 7,
+      "gf": 7,
+      "gd": 6
+    },
+    "2C": {
+      "team": "Morocco",
+      "pts": 7,
+      "gf": 6,
+      "gd": 3
+    },
+    "3C": {
+      "team": "Scotland",
+      "pts": 3,
+      "gf": 1,
+      "gd": -3
+    },
+    "4C": {
+      "team": "Haiti",
+      "pts": 0,
+      "gf": 2,
+      "gd": -6
+    },
+    "1E": {
+      "team": "Germany",
+      "pts": 6,
+      "gf": 10,
+      "gd": 6
+    },
+    "2E": {
+      "team": "Ivory Coast",
+      "pts": 6,
+      "gf": 4,
+      "gd": 2
+    },
+    "3E": {
+      "team": "Ecuador",
+      "pts": 4,
+      "gf": 2,
+      "gd": 0
+    },
+    "4E": {
+      "team": "Curacao",
+      "pts": 1,
+      "gf": 1,
+      "gd": -8
+    },
+    "1F": {
+      "team": "Netherlands",
+      "pts": 7,
+      "gf": 10,
+      "gd": 6
+    },
+    "2F": {
+      "team": "Japan",
+      "pts": 5,
+      "gf": 7,
+      "gd": 4
+    },
+    "3F": {
+      "team": "Sweden",
+      "pts": 4,
+      "gf": 7,
+      "gd": 0
+    },
+    "4F": {
+      "team": "Tunisia",
+      "pts": 0,
+      "gf": 2,
+      "gd": -10
+    },
+    "1H": {
+      "team": "Spain",
+      "pts": 4,
+      "gf": 4,
+      "gd": 4
+    },
+    "2H": {
+      "team": "Uruguay",
+      "pts": 2,
+      "gf": 3,
+      "gd": 0
+    },
+    "3H": {
+      "team": "Cape Verde",
+      "pts": 2,
+      "gf": 2,
+      "gd": 0
+    },
+    "4H": {
+      "team": "Saudi Arabia",
+      "pts": 1,
+      "gf": 1,
+      "gd": -4
+    },
+    "1G": {
+      "team": "Egypt",
+      "pts": 4,
+      "gf": 4,
+      "gd": 2
+    },
+    "2G": {
+      "team": "Iran",
+      "pts": 2,
+      "gf": 2,
+      "gd": 0
+    },
+    "3G": {
+      "team": "Belgium",
+      "pts": 2,
+      "gf": 1,
+      "gd": 0
+    },
+    "4G": {
+      "team": "New Zealand",
+      "pts": 1,
+      "gf": 3,
+      "gd": -2
+    },
+    "1I": {
+      "team": "France",
+      "pts": 6,
+      "gf": 6,
+      "gd": 5
+    },
+    "2I": {
+      "team": "Norway",
+      "pts": 6,
+      "gf": 7,
+      "gd": 4
+    },
+    "3I": {
+      "team": "Senegal",
+      "pts": 0,
+      "gf": 3,
+      "gd": -3
+    },
+    "4I": {
+      "team": "Iraq",
+      "pts": 0,
+      "gf": 1,
+      "gd": -6
+    },
+    "1J": {
+      "team": "Argentina",
+      "pts": 6,
+      "gf": 5,
+      "gd": 5
+    },
+    "2J": {
+      "team": "Austria",
+      "pts": 3,
+      "gf": 3,
+      "gd": 0
+    },
+    "3J": {
+      "team": "Algeria",
+      "pts": 3,
+      "gf": 2,
+      "gd": -2
+    },
+    "4J": {
+      "team": "Jordan",
+      "pts": 0,
+      "gf": 2,
+      "gd": -3
+    },
+    "1K": {
+      "team": "Colombia",
+      "pts": 6,
+      "gf": 4,
+      "gd": 3
+    },
+    "2K": {
+      "team": "Portugal",
+      "pts": 4,
+      "gf": 6,
+      "gd": 5
+    },
+    "3K": {
+      "team": "DR Congo",
+      "pts": 1,
+      "gf": 1,
+      "gd": -1
+    },
+    "4K": {
+      "team": "Uzbekistan",
+      "pts": 0,
+      "gf": 1,
+      "gd": -7
+    },
+    "1L": {
+      "team": "England",
+      "pts": 4,
+      "gf": 4,
+      "gd": 2
+    },
+    "2L": {
+      "team": "Ghana",
+      "pts": 4,
+      "gf": 1,
+      "gd": 1
+    },
+    "3L": {
+      "team": "Croatia",
+      "pts": 3,
+      "gf": 3,
+      "gd": -1
+    },
+    "4L": {
+      "team": "Panama",
+      "pts": 0,
+      "gf": 0,
+      "gd": -2
+    }
+  },
+  "pred_standings": {
+    "CHURU": {
+      "1A": {
+        "team": "Mexico",
+        "pts": 7,
+        "gf": 5,
+        "gd": 3
+      },
+      "2A": {
+        "team": "South Africa",
+        "pts": 4,
+        "gf": 5,
+        "gd": 0
+      },
+      "3A": {
+        "team": "Czechia",
+        "pts": 3,
+        "gf": 4,
+        "gd": 0
+      },
+      "4A": {
+        "team": "South Korea",
+        "pts": 1,
+        "gf": 2,
+        "gd": -3
+      },
+      "1B": {
+        "team": "Switzerland",
+        "pts": 7,
+        "gf": 4,
+        "gd": 2
+      },
+      "2B": {
+        "team": "Canada",
+        "pts": 4,
+        "gf": 3,
+        "gd": 0
+      },
+      "3B": {
+        "team": "Bosnia-Herzegovina",
+        "pts": 2,
+        "gf": 2,
+        "gd": -1
+      },
+      "4B": {
+        "team": "Qatar",
+        "pts": 2,
+        "gf": 2,
+        "gd": -1
+      },
+      "1C": {
+        "team": "Brazil",
+        "pts": 7,
+        "gf": 7,
+        "gd": 5
+      },
+      "2C": {
+        "team": "Morocco",
+        "pts": 6,
+        "gf": 5,
+        "gd": 2
+      },
+      "3C": {
+        "team": "Scotland",
+        "pts": 4,
+        "gf": 5,
+        "gd": 2
+      },
+      "4C": {
+        "team": "Haiti",
+        "pts": 0,
+        "gf": 0,
+        "gd": -9
+      },
+      "1D": {
+        "team": "Turkiye",
+        "pts": 6,
+        "gf": 5,
+        "gd": 1
+      },
+      "2D": {
+        "team": "USA",
+        "pts": 5,
+        "gf": 5,
+        "gd": 2
+      },
+      "3D": {
+        "team": "Paraguay",
+        "pts": 4,
+        "gf": 5,
+        "gd": 0
+      },
+      "4D": {
+        "team": "Australia",
+        "pts": 1,
+        "gf": 3,
+        "gd": -3
+      },
+      "1E": {
+        "team": "Germany",
+        "pts": 5,
+        "gf": 8,
+        "gd": 5
+      },
+      "2E": {
+        "team": "Ivory Coast",
+        "pts": 5,
+        "gf": 7,
+        "gd": 4
+      },
+      "3E": {
+        "team": "Ecuador",
+        "pts": 5,
+        "gf": 5,
+        "gd": 2
+      },
+      "4E": {
+        "team": "Curacao",
+        "pts": 0,
+        "gf": 1,
+        "gd": -11
+      },
+      "1F": {
+        "team": "Netherlands",
+        "pts": 7,
+        "gf": 8,
+        "gd": 5
+      },
+      "2F": {
+        "team": "Japan",
+        "pts": 5,
+        "gf": 5,
+        "gd": 2
+      },
+      "3F": {
+        "team": "Tunisia",
+        "pts": 2,
+        "gf": 2,
+        "gd": -3
+      },
+      "4F": {
+        "team": "Sweden",
+        "pts": 1,
+        "gf": 2,
+        "gd": -4
+      },
+      "1G": {
+        "team": "Belgium",
+        "pts": 7,
+        "gf": 5,
+        "gd": 4
+      },
+      "2G": {
+        "team": "New Zealand",
+        "pts": 5,
+        "gf": 2,
+        "gd": 1
+      },
+      "3G": {
+        "team": "Egypt",
+        "pts": 2,
+        "gf": 2,
+        "gd": -2
+      },
+      "4G": {
+        "team": "Iran",
+        "pts": 1,
+        "gf": 2,
+        "gd": -3
+      },
+      "1H": {
+        "team": "Spain",
+        "pts": 7,
+        "gf": 7,
+        "gd": 6
+      },
+      "2H": {
+        "team": "Uruguay",
+        "pts": 7,
+        "gf": 6,
+        "gd": 4
+      },
+      "3H": {
+        "team": "Saudi Arabia",
+        "pts": 3,
+        "gf": 2,
+        "gd": -2
+      },
+      "4H": {
+        "team": "Cape Verde",
+        "pts": 0,
+        "gf": 0,
+        "gd": -8
+      },
+      "1I": {
+        "team": "France",
+        "pts": 7,
+        "gf": 9,
+        "gd": 4
+      },
+      "2I": {
+        "team": "Norway",
+        "pts": 7,
+        "gf": 8,
+        "gd": 4
+      },
+      "3I": {
+        "team": "Senegal",
+        "pts": 3,
+        "gf": 6,
+        "gd": -3
+      },
+      "4I": {
+        "team": "Iraq",
+        "pts": 0,
+        "gf": 4,
+        "gd": -5
+      },
+      "1J": {
+        "team": "Argentina",
+        "pts": 7,
+        "gf": 4,
+        "gd": 3
+      },
+      "2J": {
+        "team": "Austria",
+        "pts": 4,
+        "gf": 2,
+        "gd": 0
+      },
+      "3J": {
+        "team": "Jordan",
+        "pts": 3,
+        "gf": 2,
+        "gd": 0
+      },
+      "4J": {
+        "team": "Algeria",
+        "pts": 1,
+        "gf": 0,
+        "gd": -3
+      },
+      "1K": {
+        "team": "Colombia",
+        "pts": 9,
+        "gf": 8,
+        "gd": 5
+      },
+      "2K": {
+        "team": "Portugal",
+        "pts": 6,
+        "gf": 9,
+        "gd": 5
+      },
+      "3K": {
+        "team": "Uzbekistan",
+        "pts": 3,
+        "gf": 4,
+        "gd": -4
+      },
+      "4K": {
+        "team": "DR Congo",
+        "pts": 0,
+        "gf": 1,
+        "gd": -6
+      },
+      "1L": {
+        "team": "England",
+        "pts": 7,
+        "gf": 4,
+        "gd": 2
+      },
+      "2L": {
+        "team": "Croatia",
+        "pts": 5,
+        "gf": 5,
+        "gd": 1
+      },
+      "3L": {
+        "team": "Ghana",
+        "pts": 4,
+        "gf": 5,
+        "gd": 1
+      },
+      "4L": {
+        "team": "Panama",
+        "pts": 0,
+        "gf": 1,
+        "gd": -4
+      }
+    },
+    "JONY": {
+      "1A": {
+        "team": "Mexico",
+        "pts": 9,
+        "gf": 4,
+        "gd": 4
+      },
+      "2A": {
+        "team": "South Korea",
+        "pts": 6,
+        "gf": 2,
+        "gd": 1
+      },
+      "3A": {
+        "team": "Czechia",
+        "pts": 3,
+        "gf": 1,
+        "gd": -1
+      },
+      "4A": {
+        "team": "South Africa",
+        "pts": 0,
+        "gf": 0,
+        "gd": -4
+      },
+      "1B": {
+        "team": "Switzerland",
+        "pts": 9,
+        "gf": 6,
+        "gd": 6
+      },
+      "2B": {
+        "team": "Canada",
+        "pts": 6,
+        "gf": 3,
+        "gd": 2
+      },
+      "3B": {
+        "team": "Bosnia-Herzegovina",
+        "pts": 3,
+        "gf": 1,
+        "gd": -2
+      },
+      "4B": {
+        "team": "Qatar",
+        "pts": 0,
+        "gf": 0,
+        "gd": -6
+      },
+      "1C": {
+        "team": "Brazil",
+        "pts": 9,
+        "gf": 9,
+        "gd": 9
+      },
+      "2C": {
+        "team": "Morocco",
+        "pts": 6,
+        "gf": 6,
+        "gd": 5
+      },
+      "3C": {
+        "team": "Scotland",
+        "pts": 3,
+        "gf": 2,
+        "gd": -2
+      },
+      "4C": {
+        "team": "Haiti",
+        "pts": 0,
+        "gf": 0,
+        "gd": -12
+      },
+      "1D": {
+        "team": "USA",
+        "pts": 9,
+        "gf": 4,
+        "gd": 3
+      },
+      "2D": {
+        "team": "Turkiye",
+        "pts": 6,
+        "gf": 3,
+        "gd": 1
+      },
+      "3D": {
+        "team": "Paraguay",
+        "pts": 1,
+        "gf": 0,
+        "gd": -2
+      },
+      "4D": {
+        "team": "Australia",
+        "pts": 1,
+        "gf": 0,
+        "gd": -2
+      },
+      "1E": {
+        "team": "Germany",
+        "pts": 9,
+        "gf": 8,
+        "gd": 8
+      },
+      "2E": {
+        "team": "Ecuador",
+        "pts": 6,
+        "gf": 3,
+        "gd": 2
+      },
+      "3E": {
+        "team": "Ivory Coast",
+        "pts": 3,
+        "gf": 1,
+        "gd": -2
+      },
+      "4E": {
+        "team": "Curacao",
+        "pts": 0,
+        "gf": 0,
+        "gd": -8
+      },
+      "1F": {
+        "team": "Netherlands",
+        "pts": 9,
+        "gf": 6,
+        "gd": 6
+      },
+      "2F": {
+        "team": "Japan",
+        "pts": 6,
+        "gf": 3,
+        "gd": 2
+      },
+      "3F": {
+        "team": "Tunisia",
+        "pts": 1,
+        "gf": 1,
+        "gd": -3
+      },
+      "4F": {
+        "team": "Sweden",
+        "pts": 1,
+        "gf": 1,
+        "gd": -5
+      },
+      "1G": {
+        "team": "Belgium",
+        "pts": 9,
+        "gf": 6,
+        "gd": 6
+      },
+      "2G": {
+        "team": "Iran",
+        "pts": 6,
+        "gf": 3,
+        "gd": 2
+      },
+      "3G": {
+        "team": "Egypt",
+        "pts": 3,
+        "gf": 1,
+        "gd": -1
+      },
+      "4G": {
+        "team": "New Zealand",
+        "pts": 0,
+        "gf": 0,
+        "gd": -7
+      },
+      "1H": {
+        "team": "Spain",
+        "pts": 9,
+        "gf": 10,
+        "gd": 10
+      },
+      "2H": {
+        "team": "Uruguay",
+        "pts": 6,
+        "gf": 3,
+        "gd": 2
+      },
+      "3H": {
+        "team": "Saudi Arabia",
+        "pts": 3,
+        "gf": 1,
+        "gd": -4
+      },
+      "4H": {
+        "team": "Cape Verde",
+        "pts": 0,
+        "gf": 0,
+        "gd": -8
+      },
+      "1I": {
+        "team": "France",
+        "pts": 9,
+        "gf": 7,
+        "gd": 7
+      },
+      "2I": {
+        "team": "Senegal",
+        "pts": 6,
+        "gf": 3,
+        "gd": 2
+      },
+      "3I": {
+        "team": "Norway",
+        "pts": 3,
+        "gf": 1,
+        "gd": -3
+      },
+      "4I": {
+        "team": "Iraq",
+        "pts": 0,
+        "gf": 0,
+        "gd": -6
+      },
+      "1J": {
+        "team": "Argentina",
+        "pts": 9,
+        "gf": 8,
+        "gd": 8
+      },
+      "2J": {
+        "team": "Austria",
+        "pts": 6,
+        "gf": 3,
+        "gd": 1
+      },
+      "3J": {
+        "team": "Algeria",
+        "pts": 3,
+        "gf": 2,
+        "gd": -1
+      },
+      "4J": {
+        "team": "Jordan",
+        "pts": 0,
+        "gf": 0,
+        "gd": -8
+      },
+      "1K": {
+        "team": "Portugal",
+        "pts": 9,
+        "gf": 5,
+        "gd": 5
+      },
+      "2K": {
+        "team": "Colombia",
+        "pts": 6,
+        "gf": 4,
+        "gd": 3
+      },
+      "3K": {
+        "team": "DR Congo",
+        "pts": 1,
+        "gf": 0,
+        "gd": -4
+      },
+      "4K": {
+        "team": "Uzbekistan",
+        "pts": 1,
+        "gf": 0,
+        "gd": -4
+      },
+      "1L": {
+        "team": "England",
+        "pts": 9,
+        "gf": 7,
+        "gd": 7
+      },
+      "2L": {
+        "team": "Croatia",
+        "pts": 6,
+        "gf": 5,
+        "gd": 4
+      },
+      "3L": {
+        "team": "Ghana",
+        "pts": 1,
+        "gf": 1,
+        "gd": -5
+      },
+      "4L": {
+        "team": "Panama",
+        "pts": 1,
+        "gf": 1,
+        "gd": -6
+      }
+    },
+    "CHAMP": {
+      "1A": {
+        "team": "South Korea",
+        "pts": 9,
+        "gf": 7,
+        "gd": 4
+      },
+      "2A": {
+        "team": "Mexico",
+        "pts": 6,
+        "gf": 7,
+        "gd": 4
+      },
+      "3A": {
+        "team": "Czechia",
+        "pts": 1,
+        "gf": 3,
+        "gd": -3
+      },
+      "4A": {
+        "team": "South Africa",
+        "pts": 1,
+        "gf": 2,
+        "gd": -5
+      },
+      "1B": {
+        "team": "Canada",
+        "pts": 9,
+        "gf": 7,
+        "gd": 5
+      },
+      "2B": {
+        "team": "Qatar",
+        "pts": 6,
+        "gf": 5,
+        "gd": 1
+      },
+      "3B": {
+        "team": "Switzerland",
+        "pts": 1,
+        "gf": 4,
+        "gd": -3
+      },
+      "4B": {
+        "team": "Bosnia-Herzegovina",
+        "pts": 1,
+        "gf": 3,
+        "gd": -3
+      },
+      "1C": {
+        "team": "Morocco",
+        "pts": 7,
+        "gf": 10,
+        "gd": 6
+      },
+      "2C": {
+        "team": "Brazil",
+        "pts": 7,
+        "gf": 9,
+        "gd": 5
+      },
+      "3C": {
+        "team": "Scotland",
+        "pts": 3,
+        "gf": 4,
+        "gd": -1
+      },
+      "4C": {
+        "team": "Haiti",
+        "pts": 0,
+        "gf": 0,
+        "gd": -10
+      },
+      "1D": {
+        "team": "Turkiye",
+        "pts": 7,
+        "gf": 6,
+        "gd": 3
+      },
+      "2D": {
+        "team": "USA",
+        "pts": 6,
+        "gf": 5,
+        "gd": 2
+      },
+      "3D": {
+        "team": "Paraguay",
+        "pts": 4,
+        "gf": 4,
+        "gd": 0
+      },
+      "4D": {
+        "team": "Australia",
+        "pts": 0,
+        "gf": 2,
+        "gd": -5
+      },
+      "1E": {
+        "team": "Germany",
+        "pts": 7,
+        "gf": 9,
+        "gd": 6
+      },
+      "2E": {
+        "team": "Ecuador",
+        "pts": 7,
+        "gf": 8,
+        "gd": 5
+      },
+      "3E": {
+        "team": "Ivory Coast",
+        "pts": 3,
+        "gf": 6,
+        "gd": 1
+      },
+      "4E": {
+        "team": "Curacao",
+        "pts": 0,
+        "gf": 1,
+        "gd": -12
+      },
+      "1F": {
+        "team": "Sweden",
+        "pts": 5,
+        "gf": 5,
+        "gd": 1
+      },
+      "2F": {
+        "team": "Japan",
+        "pts": 4,
+        "gf": 5,
+        "gd": 0
+      },
+      "3F": {
+        "team": "Netherlands",
+        "pts": 4,
+        "gf": 4,
+        "gd": 0
+      },
+      "4F": {
+        "team": "Tunisia",
+        "pts": 2,
+        "gf": 5,
+        "gd": -1
+      },
+      "1G": {
+        "team": "Egypt",
+        "pts": 9,
+        "gf": 7,
+        "gd": 5
+      },
+      "2G": {
+        "team": "Belgium",
+        "pts": 6,
+        "gf": 6,
+        "gd": 2
+      },
+      "3G": {
+        "team": "Iran",
+        "pts": 3,
+        "gf": 3,
+        "gd": -2
+      },
+      "4G": {
+        "team": "New Zealand",
+        "pts": 0,
+        "gf": 3,
+        "gd": -5
+      },
+      "1H": {
+        "team": "Spain",
+        "pts": 9,
+        "gf": 12,
+        "gd": 10
+      },
+      "2H": {
+        "team": "Uruguay",
+        "pts": 6,
+        "gf": 6,
+        "gd": 2
+      },
+      "3H": {
+        "team": "Saudi Arabia",
+        "pts": 3,
+        "gf": 5,
+        "gd": -2
+      },
+      "4H": {
+        "team": "Cape Verde",
+        "pts": 0,
+        "gf": 1,
+        "gd": -10
+      },
+      "1I": {
+        "team": "France",
+        "pts": 7,
+        "gf": 8,
+        "gd": 5
+      },
+      "2I": {
+        "team": "Norway",
+        "pts": 5,
+        "gf": 6,
+        "gd": 1
+      },
+      "3I": {
+        "team": "Senegal",
+        "pts": 4,
+        "gf": 6,
+        "gd": 1
+      },
+      "4I": {
+        "team": "Iraq",
+        "pts": 0,
+        "gf": 2,
+        "gd": -7
+      },
+      "1J": {
+        "team": "Argentina",
+        "pts": 9,
+        "gf": 9,
+        "gd": 8
+      },
+      "2J": {
+        "team": "Algeria",
+        "pts": 6,
+        "gf": 6,
+        "gd": 1
+      },
+      "3J": {
+        "team": "Austria",
+        "pts": 3,
+        "gf": 3,
+        "gd": -2
+      },
+      "4J": {
+        "team": "Jordan",
+        "pts": 0,
+        "gf": 2,
+        "gd": -7
+      },
+      "1K": {
+        "team": "Portugal",
+        "pts": 9,
+        "gf": 12,
+        "gd": 10
+      },
+      "2K": {
+        "team": "Colombia",
+        "pts": 6,
+        "gf": 7,
+        "gd": 3
+      },
+      "3K": {
+        "team": "DR Congo",
+        "pts": 3,
+        "gf": 3,
+        "gd": -5
+      },
+      "4K": {
+        "team": "Uzbekistan",
+        "pts": 0,
+        "gf": 0,
+        "gd": -8
+      },
+      "1L": {
+        "team": "England",
+        "pts": 9,
+        "gf": 9,
+        "gd": 6
+      },
+      "2L": {
+        "team": "Croatia",
+        "pts": 4,
+        "gf": 6,
+        "gd": 1
+      },
+      "3L": {
+        "team": "Ghana",
+        "pts": 4,
+        "gf": 5,
+        "gd": 0
+      },
+      "4L": {
+        "team": "Panama",
+        "pts": 0,
+        "gf": 2,
+        "gd": -7
+      }
+    },
+    "NEGREIRA": {
+      "1A": {
+        "team": "Mexico",
+        "pts": 7,
+        "gf": 5,
+        "gd": 3
+      },
+      "2A": {
+        "team": "South Korea",
+        "pts": 4,
+        "gf": 4,
+        "gd": -1
+      },
+      "3A": {
+        "team": "Czechia",
+        "pts": 3,
+        "gf": 4,
+        "gd": -1
+      },
+      "4A": {
+        "team": "South Africa",
+        "pts": 2,
+        "gf": 4,
+        "gd": -1
+      },
+      "1B": {
+        "team": "Switzerland",
+        "pts": 9,
+        "gf": 8,
+        "gd": 4
+      },
+      "2B": {
+        "team": "Canada",
+        "pts": 6,
+        "gf": 6,
+        "gd": 2
+      },
+      "3B": {
+        "team": "Qatar",
+        "pts": 1,
+        "gf": 4,
+        "gd": -3
+      },
+      "4B": {
+        "team": "Bosnia-Herzegovina",
+        "pts": 1,
+        "gf": 3,
+        "gd": -3
+      },
+      "1C": {
+        "team": "Brazil",
+        "pts": 7,
+        "gf": 9,
+        "gd": 6
+      },
+      "2C": {
+        "team": "Morocco",
+        "pts": 7,
+        "gf": 7,
+        "gd": 3
+      },
+      "3C": {
+        "team": "Scotland",
+        "pts": 3,
+        "gf": 4,
+        "gd": 0
+      },
+      "4C": {
+        "team": "Haiti",
+        "pts": 0,
+        "gf": 1,
+        "gd": -9
+      },
+      "1D": {
+        "team": "Turkiye",
+        "pts": 7,
+        "gf": 5,
+        "gd": 3
+      },
+      "2D": {
+        "team": "USA",
+        "pts": 5,
+        "gf": 5,
+        "gd": 2
+      },
+      "3D": {
+        "team": "Australia",
+        "pts": 4,
+        "gf": 4,
+        "gd": 0
+      },
+      "4D": {
+        "team": "Paraguay",
+        "pts": 0,
+        "gf": 2,
+        "gd": -5
+      },
+      "1E": {
+        "team": "Ecuador",
+        "pts": 7,
+        "gf": 7,
+        "gd": 4
+      },
+      "2E": {
+        "team": "Germany",
+        "pts": 7,
+        "gf": 6,
+        "gd": 3
+      },
+      "3E": {
+        "team": "Ivory Coast",
+        "pts": 1,
+        "gf": 2,
+        "gd": -3
+      },
+      "4E": {
+        "team": "Curacao",
+        "pts": 1,
+        "gf": 2,
+        "gd": -4
+      },
+      "1F": {
+        "team": "Japan",
+        "pts": 9,
+        "gf": 7,
+        "gd": 5
+      },
+      "2F": {
+        "team": "Netherlands",
+        "pts": 6,
+        "gf": 5,
+        "gd": 1
+      },
+      "3F": {
+        "team": "Sweden",
+        "pts": 1,
+        "gf": 3,
+        "gd": -2
+      },
+      "4F": {
+        "team": "Tunisia",
+        "pts": 1,
+        "gf": 2,
+        "gd": -4
+      },
+      "1G": {
+        "team": "Egypt",
+        "pts": 7,
+        "gf": 6,
+        "gd": 3
+      },
+      "2G": {
+        "team": "Belgium",
+        "pts": 5,
+        "gf": 5,
+        "gd": 2
+      },
+      "3G": {
+        "team": "Iran",
+        "pts": 4,
+        "gf": 4,
+        "gd": 1
+      },
+      "4G": {
+        "team": "New Zealand",
+        "pts": 0,
+        "gf": 0,
+        "gd": -6
+      },
+      "1H": {
+        "team": "Spain",
+        "pts": 9,
+        "gf": 9,
+        "gd": 7
+      },
+      "2H": {
+        "team": "Uruguay",
+        "pts": 6,
+        "gf": 6,
+        "gd": 1
+      },
+      "3H": {
+        "team": "Cape Verde",
+        "pts": 1,
+        "gf": 2,
+        "gd": -3
+      },
+      "4H": {
+        "team": "Saudi Arabia",
+        "pts": 1,
+        "gf": 1,
+        "gd": -5
+      },
+      "1I": {
+        "team": "France",
+        "pts": 9,
+        "gf": 8,
+        "gd": 4
+      },
+      "2I": {
+        "team": "Norway",
+        "pts": 4,
+        "gf": 6,
+        "gd": 0
+      },
+      "3I": {
+        "team": "Senegal",
+        "pts": 4,
+        "gf": 5,
+        "gd": 0
+      },
+      "4I": {
+        "team": "Iraq",
+        "pts": 0,
+        "gf": 3,
+        "gd": -4
+      },
+      "1J": {
+        "team": "Argentina",
+        "pts": 9,
+        "gf": 7,
+        "gd": 5
+      },
+      "2J": {
+        "team": "Algeria",
+        "pts": 4,
+        "gf": 4,
+        "gd": 1
+      },
+      "3J": {
+        "team": "Austria",
+        "pts": 4,
+        "gf": 4,
+        "gd": 1
+      },
+      "4J": {
+        "team": "Jordan",
+        "pts": 0,
+        "gf": 0,
+        "gd": -7
+      },
+      "1K": {
+        "team": "Portugal",
+        "pts": 9,
+        "gf": 8,
+        "gd": 5
+      },
+      "2K": {
+        "team": "Colombia",
+        "pts": 6,
+        "gf": 6,
+        "gd": 3
+      },
+      "3K": {
+        "team": "Uzbekistan",
+        "pts": 1,
+        "gf": 2,
+        "gd": -4
+      },
+      "4K": {
+        "team": "DR Congo",
+        "pts": 1,
+        "gf": 1,
+        "gd": -4
+      },
+      "1L": {
+        "team": "England",
+        "pts": 9,
+        "gf": 6,
+        "gd": 5
+      },
+      "2L": {
+        "team": "Croatia",
+        "pts": 6,
+        "gf": 5,
+        "gd": 1
+      },
+      "3L": {
+        "team": "Panama",
+        "pts": 3,
+        "gf": 2,
+        "gd": -2
+      },
+      "4L": {
+        "team": "Ghana",
+        "pts": 0,
+        "gf": 1,
+        "gd": -4
+      }
+    },
+    "PEP": {
+      "1A": {
+        "team": "South Korea",
+        "pts": 5,
+        "gf": 5,
+        "gd": 1
+      },
+      "2A": {
+        "team": "Mexico",
+        "pts": 5,
+        "gf": 4,
+        "gd": 2
+      },
+      "3A": {
+        "team": "Czechia",
+        "pts": 5,
+        "gf": 4,
+        "gd": 2
+      },
+      "4A": {
+        "team": "South Africa",
+        "pts": 0,
+        "gf": 2,
+        "gd": -5
+      },
+      "1B": {
+        "team": "Switzerland",
+        "pts": 9,
+        "gf": 6,
+        "gd": 5
+      },
+      "2B": {
+        "team": "Bosnia-Herzegovina",
+        "pts": 6,
+        "gf": 7,
+        "gd": 4
+      },
+      "3B": {
+        "team": "Canada",
+        "pts": 3,
+        "gf": 3,
+        "gd": -2
+      },
+      "4B": {
+        "team": "Qatar",
+        "pts": 0,
+        "gf": 1,
+        "gd": -7
+      },
+      "1C": {
+        "team": "Brazil",
+        "pts": 7,
+        "gf": 9,
+        "gd": 6
+      },
+      "2C": {
+        "team": "Morocco",
+        "pts": 6,
+        "gf": 6,
+        "gd": 3
+      },
+      "3C": {
+        "team": "Scotland",
+        "pts": 4,
+        "gf": 6,
+        "gd": 2
+      },
+      "4C": {
+        "team": "Haiti",
+        "pts": 0,
+        "gf": 0,
+        "gd": -11
+      },
+      "1D": {
+        "team": "Turkiye",
+        "pts": 6,
+        "gf": 4,
+        "gd": 1
+      },
+      "2D": {
+        "team": "Paraguay",
+        "pts": 5,
+        "gf": 5,
+        "gd": 2
+      },
+      "3D": {
+        "team": "USA",
+        "pts": 4,
+        "gf": 4,
+        "gd": 0
+      },
+      "4D": {
+        "team": "Australia",
+        "pts": 1,
+        "gf": 3,
+        "gd": -3
+      },
+      "1E": {
+        "team": "Ecuador",
+        "pts": 9,
+        "gf": 9,
+        "gd": 8
+      },
+      "2E": {
+        "team": "Germany",
+        "pts": 4,
+        "gf": 7,
+        "gd": 4
+      },
+      "3E": {
+        "team": "Ivory Coast",
+        "pts": 4,
+        "gf": 5,
+        "gd": 0
+      },
+      "4E": {
+        "team": "Curacao",
+        "pts": 0,
+        "gf": 1,
+        "gd": -12
+      },
+      "1F": {
+        "team": "Netherlands",
+        "pts": 7,
+        "gf": 8,
+        "gd": 5
+      },
+      "2F": {
+        "team": "Japan",
+        "pts": 5,
+        "gf": 6,
+        "gd": 2
+      },
+      "3F": {
+        "team": "Sweden",
+        "pts": 4,
+        "gf": 5,
+        "gd": -1
+      },
+      "4F": {
+        "team": "Tunisia",
+        "pts": 0,
+        "gf": 3,
+        "gd": -6
+      },
+      "1G": {
+        "team": "Belgium",
+        "pts": 7,
+        "gf": 6,
+        "gd": 5
+      },
+      "2G": {
+        "team": "Iran",
+        "pts": 5,
+        "gf": 4,
+        "gd": 1
+      },
+      "3G": {
+        "team": "Egypt",
+        "pts": 4,
+        "gf": 3,
+        "gd": -2
+      },
+      "4G": {
+        "team": "New Zealand",
+        "pts": 0,
+        "gf": 2,
+        "gd": -4
+      },
+      "1H": {
+        "team": "Spain",
+        "pts": 9,
+        "gf": 10,
+        "gd": 9
+      },
+      "2H": {
+        "team": "Uruguay",
+        "pts": 4,
+        "gf": 4,
+        "gd": 1
+      },
+      "3H": {
+        "team": "Saudi Arabia",
+        "pts": 2,
+        "gf": 3,
+        "gd": -2
+      },
+      "4H": {
+        "team": "Cape Verde",
+        "pts": 1,
+        "gf": 1,
+        "gd": -8
+      },
+      "1I": {
+        "team": "France",
+        "pts": 9,
+        "gf": 7,
+        "gd": 5
+      },
+      "2I": {
+        "team": "Norway",
+        "pts": 4,
+        "gf": 6,
+        "gd": 1
+      },
+      "3I": {
+        "team": "Senegal",
+        "pts": 4,
+        "gf": 6,
+        "gd": 0
+      },
+      "4I": {
+        "team": "Iraq",
+        "pts": 0,
+        "gf": 2,
+        "gd": -6
+      },
+      "1J": {
+        "team": "Argentina",
+        "pts": 7,
+        "gf": 7,
+        "gd": 5
+      },
+      "2J": {
+        "team": "Austria",
+        "pts": 7,
+        "gf": 7,
+        "gd": 4
+      },
+      "3J": {
+        "team": "Algeria",
+        "pts": 3,
+        "gf": 4,
+        "gd": -1
+      },
+      "4J": {
+        "team": "Jordan",
+        "pts": 0,
+        "gf": 1,
+        "gd": -8
+      },
+      "1K": {
+        "team": "Portugal",
+        "pts": 9,
+        "gf": 9,
+        "gd": 7
+      },
+      "2K": {
+        "team": "Colombia",
+        "pts": 6,
+        "gf": 7,
+        "gd": 3
+      },
+      "3K": {
+        "team": "Uzbekistan",
+        "pts": 3,
+        "gf": 4,
+        "gd": -1
+      },
+      "4K": {
+        "team": "DR Congo",
+        "pts": 0,
+        "gf": 2,
+        "gd": -9
+      },
+      "1L": {
+        "team": "England",
+        "pts": 7,
+        "gf": 8,
+        "gd": 7
+      },
+      "2L": {
+        "team": "Croatia",
+        "pts": 5,
+        "gf": 6,
+        "gd": 2
+      },
+      "3L": {
+        "team": "Ghana",
+        "pts": 4,
+        "gf": 5,
+        "gd": -1
+      },
+      "4L": {
+        "team": "Panama",
+        "pts": 0,
+        "gf": 2,
+        "gd": -8
+      }
+    }
   }
 }

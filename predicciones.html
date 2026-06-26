@@ -27,7 +27,7 @@
 <script>
 renderNav("predicciones");
 
-let view = 'calendario'; // 'calendario' | 'grupos'
+let view = 'calendario'; // 'calendario' | 'grupos' | 'fases'
 let DATA = null;
 
 // "2026-06-13 3:00" -> timestamp for chronological sorting
@@ -65,11 +65,17 @@ function matchCard(m, showGroupTag){
   </div>`;
 }
 
+const KO_POINTS = { R32: 30, R16: 50, QF: 80, SF: 120, Final: 170 };
+const GROUPS_LIST = ['A','B','C','D','E','F','G','H','I','J','K','L'];
+const ROUND_LABELS_KO = { R16: 'Octavos de final', QF: 'Cuartos de final', SF: 'Semifinales', Final: 'Final' };
+
 function render(){
   const matches = DATA.matches||[];
 
   let html;
-  if (view === 'calendario') {
+  if (view === 'fases') {
+    html = renderFases();
+  } else if (view === 'calendario') {
     const sorted = matches.slice().sort((a,b) => matchDateKey(a.date) - matchDateKey(b.date) || a.num - b.num);
     html = sorted.map(m => matchCard(m, true)).join('');
   } else {
@@ -84,10 +90,170 @@ function render(){
   document.getElementById('groups').innerHTML = html || '<div class="empty">No hay partidos para este filtro.</div>';
 }
 
+function renderFases() {
+  const advance     = DATA.advance || {};
+  const actual      = DATA.actual_advanced || {};
+  const finalSt     = DATA.final_standings || {};
+  const predSt      = DATA.pred_standings || {};
+  const groupsDone  = Object.keys(finalSt).length > 0;
+
+  let html = '';
+
+  // ── R32: organizado por grupo ──────────────────────────────────────────────
+  html += `<section class="group-section">
+    <div class="group-title">Dieciseisavos (R32)
+      <span style="font-size:13px;font-family:'DM Sans',sans-serif;color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0">
+        +30pts/equipo · +30pts bonus si aciertas la posición de grupo
+      </span>
+      <span class="bar"></span>
+    </div>`;
+
+  const actualR32 = actual.R32 || [];
+  const r32Known  = actualR32.length > 0;
+
+  for (const g of GROUPS_LIST) {
+    const row1 = finalSt[`1${g}`]; const row2 = finalSt[`2${g}`];
+    const team1 = row1 ? row1.team : null;
+    const team2 = row2 ? row2.team : null;
+
+    const posRows = [
+      { pos: `1${g}`, label: '1º', actualTeam: team1 },
+      { pos: `2${g}`, label: '2º', actualTeam: team2 },
+    ];
+
+    html += `<div class="match-card" style="margin-bottom:8px">
+      <div style="font-family:'Anton',sans-serif;font-size:16px;color:var(--gold);margin-bottom:10px">Grupo ${g}</div>`;
+
+    for (const { pos, label, actualTeam } of posRows) {
+      const playerCells = PLAYERS.map(p => {
+        const predTeam   = predSt[p] && predSt[p][pos] ? predSt[p][pos].team : null;
+        const inR32list  = actualTeam && (advance[p]?.R32 || []).includes(actualTeam);
+        const posMatch   = predTeam && actualTeam && predTeam === actualTeam;
+
+        let icon, cls, showTeam;
+        if (!groupsDone) {
+          // grupo aún sin resultado
+          showTeam = predTeam ? `${teamFlag(predTeam)} ${teamES(predTeam)}` : '—';
+          icon = ''; cls = 'pts-na';
+        } else if (r32Known) {
+          // R32 oficial confirmado
+          if (inR32list && posMatch)      { icon = '✔+b'; cls = 'pts-pos'; showTeam = `${teamFlag(actualTeam)} ${teamES(actualTeam)}`; }
+          else if (inR32list)             { icon = '✔';   cls = 'pts-pos'; showTeam = `${teamFlag(actualTeam)} ${teamES(actualTeam)}`; }
+          else { showTeam = predTeam ? `${teamFlag(predTeam)} ${teamES(predTeam)}` : '—'; icon = '✘'; cls = 'pts-neg'; }
+        } else {
+          // grupo terminado, R32 aún sin confirmar oficialmente → previsión
+          if (posMatch)      { icon = '✔+b?'; cls = 'pts-pos'; showTeam = `${teamFlag(actualTeam)} ${teamES(actualTeam)}`; }
+          else if (predTeam && actualTeam && (advance[p]?.R32 || []).includes(actualTeam)) {
+            icon = '✔?'; cls = 'pts-pos'; showTeam = `${teamFlag(actualTeam)} ${teamES(actualTeam)}`;
+          } else {
+            showTeam = predTeam ? `${teamFlag(predTeam)} ${teamES(predTeam)}` : '—';
+            icon = actualTeam ? '✘' : ''; cls = actualTeam ? 'pts-neg' : 'pts-na';
+          }
+        }
+
+        return `<div class="pred-cell">
+          <span class="player">${p}</span>
+          <span class="${cls}" style="font-size:11px;white-space:nowrap">${showTeam}${icon ? ' <b>'+icon+'</b>' : ''}</span>
+        </div>`;
+      }).join('');
+
+      const actualLabel = actualTeam
+        ? `${teamFlag(actualTeam)} <b>${teamES(actualTeam)}</b>`
+        : '<span style="color:var(--muted)">pendiente</span>';
+
+      html += `<div style="display:grid;grid-template-columns:auto 1fr;gap:6px 10px;align-items:start;margin-bottom:6px">
+        <div style="font-family:'Space Mono',monospace;font-size:11px;color:var(--gold);white-space:nowrap;padding-top:7px">${label} ${actualLabel}</div>
+        <div class="preds-grid">${playerCells}</div>
+      </div>`;
+    }
+
+    html += `</div>`;
+  }
+  html += `</section>`;
+
+  // ── R16, QF, SF, Final ────────────────────────────────────────────────────
+  for (const rnd of ['R16','QF','SF','Final']) {
+    const actualTeams = actual[rnd] || [];
+    const isKnown = actualTeams.length > 0;
+    const pts = KO_POINTS[rnd];
+
+    const allTeams = new Set(actualTeams);
+    for (const p of PLAYERS) for (const t of (advance[p]?.[rnd] || [])) allTeams.add(t);
+    if (!allTeams.size) continue;
+
+    const sorted = [...allTeams].sort((a,b) => {
+      const ah = actualTeams.includes(a), bh = actualTeams.includes(b);
+      return (ah===bh) ? teamES(a).localeCompare(teamES(b),'es') : (ah ? -1 : 1);
+    });
+
+    html += `<section class="group-section">
+      <div class="group-title">${ROUND_LABELS_KO[rnd]}
+        <span style="font-size:13px;font-family:'DM Sans',sans-serif;color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0">+${pts}pts/equipo</span>
+        <span class="bar"></span>
+      </div>`;
+
+    for (const team of sorted) {
+      const advanced = actualTeams.includes(team);
+      const fade = isKnown && !advanced ? 'opacity:.5' : '';
+      const resultBadge = !isKnown
+        ? `<span class="tag pending">Pendiente</span>`
+        : (advanced ? `<span class="pts-pos" style="font-family:'Space Mono',monospace;font-weight:700">✔ +${pts}pts</span>`
+                    : `<span class="pts-neg" style="font-family:'Space Mono',monospace;font-weight:700">✘</span>`);
+
+      const playerCells = PLAYERS.map(p => {
+        const picked = (advance[p]?.[rnd] || []).includes(team);
+        let val, cls;
+        if (!picked)        { val = '—';        cls = 'pts-na'; }
+        else if (!isKnown)  { val = '✓ pick';   cls = 'pts-na'; }
+        else if (advanced)  { val = `+${pts}pts`; cls = 'pts-pos'; }
+        else                { val = '✘';        cls = 'pts-neg'; }
+        return `<div class="pred-cell"><span class="player">${p}</span><span class="${cls}">${val}</span></div>`;
+      }).join('');
+
+      html += `<div class="match-card" style="margin-bottom:8px;${fade}">
+        <div class="match-head">
+          <div class="match-teams">${teamFlag(team)} ${teamES(team)}</div>
+          ${resultBadge}
+        </div>
+        <div class="preds-grid" style="margin-top:10px;padding-top:8px;border-top:1px dashed var(--line)">${playerCells}</div>
+      </div>`;
+    }
+    html += `</section>`;
+  }
+
+  // ── Campeón ───────────────────────────────────────────────────────────────
+  const actualChamp = (actual.Champion || [])[0];
+  const champKnown = !!actualChamp;
+  const champCells = PLAYERS.map(p => {
+    const pick = (advance[p]?.Champion || [])[0];
+    const hit = champKnown && pick === actualChamp;
+    const cls = !pick ? 'pts-na' : (!champKnown ? 'pts-na' : (hit ? 'pts-pos' : 'pts-neg'));
+    return `<div class="pred-cell" style="flex-direction:column;align-items:flex-start;gap:2px;padding:10px">
+      <span class="player">${p}</span>
+      <span style="font-size:14px">${pick ? teamFlag(pick)+' '+teamES(pick) : '—'}</span>
+      <span class="${cls} " style="font-size:12px">${!pick ? '—' : (!champKnown ? 'pendiente' : (hit ? '+250pts ✔' : '✘'))}</span>
+    </div>`;
+  }).join('');
+
+  html += `<section class="group-section">
+    <div class="group-title">Campeón
+      <span style="font-size:13px;font-family:'DM Sans',sans-serif;color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0">+250pts</span>
+      <span class="bar"></span>
+    </div>
+    <div class="match-card">
+      ${champKnown ? `<p style="margin-bottom:12px;font-family:'Space Mono',monospace;font-size:13px">Campeón: <b style="color:var(--gold)">${teamFlag(actualChamp)} ${teamES(actualChamp)}</b></p>` : '<p style="margin-bottom:12px;color:var(--muted);font-family:\'Space Mono\',monospace;font-size:12px">Campeón pendiente</p>'}
+      <div class="preds-grid" style="grid-template-columns:repeat(auto-fill,minmax(140px,1fr))">${champCells}</div>
+    </div>
+  </section>`;
+
+  return html;
+}
+
 function renderControls(){
   document.getElementById('viewToggle').innerHTML = `
     <button data-view="calendario" class="${view==='calendario'?'active':''}">📅 Calendario</button>
-    <button data-view="grupos" class="${view==='grupos'?'active':''}">Por grupos</button>`;
+    <button data-view="grupos" class="${view==='grupos'?'active':''}">Por grupos</button>
+    <button data-view="fases" class="${view==='fases'?'active':''}">🏆 Fases Finales</button>`;
   document.querySelectorAll('#viewToggle button').forEach(b =>
     b.addEventListener('click', () => { view = b.dataset.view; renderControls(); render(); }));
 }
