@@ -116,74 +116,97 @@ function renderFases() {
   return html;
 }
 
-const TH = 'style="font-family:\'Space Mono\',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:400;padding:6px 10px;border-bottom:1px solid var(--line)"';
+const TH_STYLE = `font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:400;padding:6px 10px;border-bottom:1px solid var(--line)`;
 
 function renderR32(advance, actual, finalSt, predSt) {
   const actualR32  = actual.R32 || [];
   const r32Known   = actualR32.length > 0;
   const groupsDone = Object.keys(finalSt).length > 0;
 
-  const playerThs = PLAYERS.map(p => `<th ${TH} style="text-align:center;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:400;padding:6px 10px;border-bottom:1px solid var(--line)">${p}</th>`).join('');
+  const playerThs = PLAYERS.map(p =>
+    `<th style="${TH_STYLE};text-align:center">${p}</th>`
+  ).join('');
 
+  // Acumula puntos por jugador para la fila resumen
+  const totalPts = Object.fromEntries(PLAYERS.map(p => [p, 0]));
   let rows = '';
+
   for (const g of GROUPS_LIST) {
     for (const rank of [1, 2]) {
       const posCode    = `${rank}${g}`;
-      const actualTeam = finalSt[posCode] ? finalSt[posCode].team : null;
-      const sepStyle   = rank === 2 ? 'border-bottom:2px solid var(--line)' : 'border-bottom:1px solid rgba(44,53,104,.35)';
+      const actualTeam = groupsDone && finalSt[posCode] ? finalSt[posCode].team : null;
+      const advances   = actualTeam && (r32Known ? actualR32.includes(actualTeam) : true);
+      const sepStyle   = rank === 2
+        ? 'border-bottom:2px solid var(--line)'
+        : 'border-bottom:1px solid rgba(44,53,104,.35)';
 
       const playerCells = PLAYERS.map(p => {
-        const predTeam = predSt[p] && predSt[p][posCode] ? predSt[p][posCode].team : null;
+        const predTeam = predSt[p]?.[posCode]?.team ?? null;
+        const display  = predTeam ? `${teamFlag(predTeam)} ${teamES(predTeam)}` : '—';
 
-        if (!groupsDone || !actualTeam) {
-          return `<td style="text-align:center;padding:6px 8px"><span class="pts-na">${predTeam ? teamFlag(predTeam)+' '+teamES(predTeam) : '—'}</span></td>`;
+        if (!actualTeam) {
+          // grupo aún sin jugar
+          return `<td style="text-align:center;padding:7px 8px;font-size:12px"><span class="pts-na">${display}</span></td>`;
         }
 
-        const hasPick = (advance[p]?.R32 || []).includes(actualTeam);
-        const posOk   = predTeam === actualTeam;
-        // avance asumido para 1º/2º mientras r32 no esté confirmado oficialmente
-        const advances = r32Known ? actualR32.includes(actualTeam) : true;
+        const posOk  = predTeam === actualTeam;        // acertó posición
+        const hasPick = (advance[p]?.R32 || []).includes(actualTeam); // acertó el avance
 
-        if (!advances) {
-          // equipo no pasó (sorpresa en R32 oficial)
-          const predLabel = predTeam ? teamFlag(predTeam)+' '+teamES(predTeam) : '—';
-          return `<td style="text-align:center;padding:6px 8px;opacity:.6"><span class="pts-neg" style="font-size:11px">${predLabel}<br>0pts</span></td>`;
+        let bg = '', textCls = 'pts-neg';
+        let pts = 0;
+
+        if (advances && hasPick) {
+          pts = KO_POINTS.R32 + (posOk ? 30 : 0);
+          bg = 'background:rgba(0,255,133,.06)';
+          textCls = 'pts-pos';
+          totalPts[p] += pts;
+        } else if (!advances) {
+          // equipo no pasó (3º inesperado)
+          bg = 'background:rgba(255,77,109,.05)';
         }
 
-        if (!hasPick) {
-          const predLabel = predTeam ? teamFlag(predTeam)+' '+teamES(predTeam) : '—';
-          return `<td style="text-align:center;padding:6px 8px"><span class="pts-neg" style="font-size:11px">${predLabel}<br>0pts</span></td>`;
-        }
+        const bonusBadge = (posOk && hasPick && advances)
+          ? `<br><span style="font-size:10px;color:var(--green)">pos ✔ +30</span>` : '';
 
-        const total = KO_POINTS.R32 + (posOk ? 30 : 0);
-        const bonus = posOk ? `<br><span style="font-size:10px;color:var(--muted)">pos ✔ +30b</span>` : '';
-        return `<td style="text-align:center;padding:6px 8px;line-height:1.5">${ptsHtml(total)}${bonus}</td>`;
+        return `<td style="text-align:center;padding:7px 8px;font-size:12px;line-height:1.5;${bg}">
+          <span class="${textCls}">${display}</span>${bonusBadge}
+        </td>`;
       }).join('');
 
       const actualLabel = actualTeam
         ? `${teamFlag(actualTeam)} ${teamES(actualTeam)}`
         : `<span style="color:var(--muted)">pendiente</span>`;
 
-      const groupLabel = rank === 1
-        ? `<span style="color:var(--gold);font-family:'Anton',sans-serif;font-size:13px">GRP ${g}</span><br>1º`
-        : '2º';
+      const groupCell = rank === 1
+        ? `<td rowspan="2" style="padding:7px 10px;font-family:'Anton',sans-serif;font-size:15px;color:var(--gold);text-align:center;vertical-align:middle;border-right:1px solid var(--line)">GRP<br>${g}</td>`
+        : '';
 
       rows += `<tr style="${sepStyle}">
-        <td style="padding:7px 10px;font-family:'Space Mono',monospace;font-size:11px;white-space:nowrap;text-align:center">${groupLabel}</td>
-        <td style="padding:7px 10px;white-space:nowrap">${actualLabel}</td>
+        ${groupCell}
+        <td style="padding:7px 10px;font-family:'Space Mono',monospace;font-size:11px;white-space:nowrap">
+          ${rank}º &nbsp;${actualLabel}
+        </td>
         ${playerCells}
       </tr>`;
     }
   }
 
+  // Fila resumen de puntos
+  const summaryRow = `<tr style="border-top:2px solid var(--line);background:rgba(255,255,255,.03)">
+    <td colspan="2" style="padding:8px 10px;font-family:'Space Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)">
+      Puntos R32
+    </td>
+    ${PLAYERS.map(p => `<td style="text-align:center;padding:8px 8px;font-weight:700">${ptsHtml(totalPts[p])}</td>`).join('')}
+  </tr>`;
+
   return `<div class="match-card" style="overflow-x:auto;padding:10px 4px">
     <table style="width:100%;border-collapse:collapse;font-size:13px">
       <thead><tr>
-        <th ${TH} style="text-align:center;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:400;padding:6px 10px;border-bottom:1px solid var(--line)">Grupo</th>
-        <th ${TH} style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:400;padding:6px 10px;border-bottom:1px solid var(--line)">Clasificado real</th>
+        <th style="${TH_STYLE};text-align:center">Grp</th>
+        <th style="${TH_STYLE}">Clasificado real</th>
         ${playerThs}
       </tr></thead>
-      <tbody>${rows}</tbody>
+      <tbody>${rows}${summaryRow}</tbody>
     </table>
   </div>`;
 }
