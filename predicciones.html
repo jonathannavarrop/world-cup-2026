@@ -27,7 +27,8 @@
 <script>
 renderNav("predicciones");
 
-let view = 'calendario'; // 'calendario' | 'grupos' | 'fases'
+let view = 'calendario'; // 'calendario' | 'fases'
+let fasesRound = 'R32'; // 'R32' | 'R16' | 'QF' | 'SF' | 'Final' | 'Champion'
 let DATA = null;
 
 // "2026-06-13 3:00" -> timestamp for chronological sorting
@@ -67,192 +68,215 @@ function matchCard(m, showGroupTag){
 
 const KO_POINTS = { R32: 30, R16: 50, QF: 80, SF: 120, Final: 170 };
 const GROUPS_LIST = ['A','B','C','D','E','F','G','H','I','J','K','L'];
-const ROUND_LABELS_KO = { R16: 'Octavos de final', QF: 'Cuartos de final', SF: 'Semifinales', Final: 'Final' };
+const ROUND_LABELS_KO = { R32: 'Dieciseisavos', R16: 'Octavos de final', QF: 'Cuartos de final', SF: 'Semifinales', Final: 'Final', Champion: 'Campeón' };
+const ROUND_PTS = { R32: '+30pts (+30 bonus posición)', R16: '+50pts/equipo', QF: '+80pts/equipo', SF: '+120pts/equipo', Final: '+170pts/equipo', Champion: '+250pts' };
 
 function render(){
   const matches = DATA.matches||[];
-
   let html;
   if (view === 'fases') {
     html = renderFases();
-  } else if (view === 'calendario') {
+  } else {
     const sorted = matches.slice().sort((a,b) => matchDateKey(a.date) - matchDateKey(b.date) || a.num - b.num);
     html = sorted.map(m => matchCard(m, true)).join('');
-  } else {
-    const byGroup = {};
-    for (const m of matches) (byGroup[m.group] = byGroup[m.group] || []).push(m);
-    const groups = Object.keys(byGroup).sort();
-    html = groups.map(g => `<section class="group-section">
-      <div class="group-title">Grupo ${g}<span class="bar"></span></div>
-      ${byGroup[g].map(m => matchCard(m, false)).join('')}
-    </section>`).join('');
   }
   document.getElementById('groups').innerHTML = html || '<div class="empty">No hay partidos para este filtro.</div>';
 }
 
+function renderFasesRoundFilter() {
+  const rounds = ['R32','R16','QF','SF','Final','Champion'];
+  const labels = { R32:'Dieciseisavos', R16:'Octavos', QF:'Cuartos', SF:'Semis', Final:'Final', Champion:'Campeón' };
+  return `<div class="group-filter" id="fasesFilter">
+    ${rounds.map(r => `<button data-round="${r}" class="${fasesRound===r?'active':''}">${labels[r]}</button>`).join('')}
+  </div>`;
+}
+
 function renderFases() {
-  const advance     = DATA.advance || {};
-  const actual      = DATA.actual_advanced || {};
-  const finalSt     = DATA.final_standings || {};
-  const predSt      = DATA.pred_standings || {};
-  const groupsDone  = Object.keys(finalSt).length > 0;
+  const advance  = DATA.advance || {};
+  const actual   = DATA.actual_advanced || {};
+  const finalSt  = DATA.final_standings || {};
+  const predSt   = DATA.pred_standings || {};
 
-  let html = '';
+  let html = renderFasesRoundFilter();
 
-  // ── R32: organizado por grupo ──────────────────────────────────────────────
-  html += `<section class="group-section">
-    <div class="group-title">Dieciseisavos (R32)
-      <span style="font-size:13px;font-family:'DM Sans',sans-serif;color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0">
-        +30pts/equipo · +30pts bonus si aciertas la posición de grupo
-      </span>
-      <span class="bar"></span>
-    </div>`;
-
-  const actualR32 = actual.R32 || [];
-  const r32Known  = actualR32.length > 0;
-
-  for (const g of GROUPS_LIST) {
-    const row1 = finalSt[`1${g}`]; const row2 = finalSt[`2${g}`];
-    const team1 = row1 ? row1.team : null;
-    const team2 = row2 ? row2.team : null;
-
-    const posRows = [
-      { pos: `1${g}`, label: '1º', actualTeam: team1 },
-      { pos: `2${g}`, label: '2º', actualTeam: team2 },
-    ];
-
-    html += `<div class="match-card" style="margin-bottom:8px">
-      <div style="font-family:'Anton',sans-serif;font-size:16px;color:var(--gold);margin-bottom:10px">Grupo ${g}</div>`;
-
-    for (const { pos, label, actualTeam } of posRows) {
-      const playerCells = PLAYERS.map(p => {
-        const predTeam   = predSt[p] && predSt[p][pos] ? predSt[p][pos].team : null;
-        const inR32list  = actualTeam && (advance[p]?.R32 || []).includes(actualTeam);
-        const posMatch   = predTeam && actualTeam && predTeam === actualTeam;
-
-        let icon, cls, showTeam;
-        if (!groupsDone) {
-          // grupo aún sin resultado
-          showTeam = predTeam ? `${teamFlag(predTeam)} ${teamES(predTeam)}` : '—';
-          icon = ''; cls = 'pts-na';
-        } else if (r32Known) {
-          // R32 oficial confirmado
-          if (inR32list && posMatch)      { icon = '✔+b'; cls = 'pts-pos'; showTeam = `${teamFlag(actualTeam)} ${teamES(actualTeam)}`; }
-          else if (inR32list)             { icon = '✔';   cls = 'pts-pos'; showTeam = `${teamFlag(actualTeam)} ${teamES(actualTeam)}`; }
-          else { showTeam = predTeam ? `${teamFlag(predTeam)} ${teamES(predTeam)}` : '—'; icon = '✘'; cls = 'pts-neg'; }
-        } else {
-          // grupo terminado, R32 aún sin confirmar oficialmente → previsión
-          if (posMatch)      { icon = '✔+b?'; cls = 'pts-pos'; showTeam = `${teamFlag(actualTeam)} ${teamES(actualTeam)}`; }
-          else if (predTeam && actualTeam && (advance[p]?.R32 || []).includes(actualTeam)) {
-            icon = '✔?'; cls = 'pts-pos'; showTeam = `${teamFlag(actualTeam)} ${teamES(actualTeam)}`;
-          } else {
-            showTeam = predTeam ? `${teamFlag(predTeam)} ${teamES(predTeam)}` : '—';
-            icon = actualTeam ? '✘' : ''; cls = actualTeam ? 'pts-neg' : 'pts-na';
-          }
-        }
-
-        return `<div class="pred-cell">
-          <span class="player">${p}</span>
-          <span class="${cls}" style="font-size:11px;white-space:nowrap">${showTeam}${icon ? ' <b>'+icon+'</b>' : ''}</span>
-        </div>`;
-      }).join('');
-
-      const actualLabel = actualTeam
-        ? `${teamFlag(actualTeam)} <b>${teamES(actualTeam)}</b>`
-        : '<span style="color:var(--muted)">pendiente</span>';
-
-      html += `<div style="display:grid;grid-template-columns:auto 1fr;gap:6px 10px;align-items:start;margin-bottom:6px">
-        <div style="font-family:'Space Mono',monospace;font-size:11px;color:var(--gold);white-space:nowrap;padding-top:7px">${label} ${actualLabel}</div>
-        <div class="preds-grid">${playerCells}</div>
-      </div>`;
-    }
-
-    html += `</div>`;
-  }
-  html += `</section>`;
-
-  // ── R16, QF, SF, Final ────────────────────────────────────────────────────
-  for (const rnd of ['R16','QF','SF','Final']) {
-    const actualTeams = actual[rnd] || [];
-    const isKnown = actualTeams.length > 0;
-    const pts = KO_POINTS[rnd];
-
-    const allTeams = new Set(actualTeams);
-    for (const p of PLAYERS) for (const t of (advance[p]?.[rnd] || [])) allTeams.add(t);
-    if (!allTeams.size) continue;
-
-    const sorted = [...allTeams].sort((a,b) => {
-      const ah = actualTeams.includes(a), bh = actualTeams.includes(b);
-      return (ah===bh) ? teamES(a).localeCompare(teamES(b),'es') : (ah ? -1 : 1);
-    });
-
-    html += `<section class="group-section">
-      <div class="group-title">${ROUND_LABELS_KO[rnd]}
-        <span style="font-size:13px;font-family:'DM Sans',sans-serif;color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0">+${pts}pts/equipo</span>
-        <span class="bar"></span>
-      </div>`;
-
-    for (const team of sorted) {
-      const advanced = actualTeams.includes(team);
-      const fade = isKnown && !advanced ? 'opacity:.5' : '';
-      const resultBadge = !isKnown
-        ? `<span class="tag pending">Pendiente</span>`
-        : (advanced ? `<span class="pts-pos" style="font-family:'Space Mono',monospace;font-weight:700">✔ +${pts}pts</span>`
-                    : `<span class="pts-neg" style="font-family:'Space Mono',monospace;font-weight:700">✘</span>`);
-
-      const playerCells = PLAYERS.map(p => {
-        const picked = (advance[p]?.[rnd] || []).includes(team);
-        let val, cls;
-        if (!picked)        { val = '—';        cls = 'pts-na'; }
-        else if (!isKnown)  { val = '✓ pick';   cls = 'pts-na'; }
-        else if (advanced)  { val = `+${pts}pts`; cls = 'pts-pos'; }
-        else                { val = '✘';        cls = 'pts-neg'; }
-        return `<div class="pred-cell"><span class="player">${p}</span><span class="${cls}">${val}</span></div>`;
-      }).join('');
-
-      html += `<div class="match-card" style="margin-bottom:8px;${fade}">
-        <div class="match-head">
-          <div class="match-teams">${teamFlag(team)} ${teamES(team)}</div>
-          ${resultBadge}
-        </div>
-        <div class="preds-grid" style="margin-top:10px;padding-top:8px;border-top:1px dashed var(--line)">${playerCells}</div>
-      </div>`;
-    }
-    html += `</section>`;
+  if (fasesRound === 'R32') {
+    html += renderR32(advance, actual, finalSt, predSt);
+  } else if (fasesRound === 'Champion') {
+    html += renderChampionSection(advance, actual);
+  } else {
+    html += renderKORound(fasesRound, advance, actual);
   }
 
-  // ── Campeón ───────────────────────────────────────────────────────────────
-  const actualChamp = (actual.Champion || [])[0];
-  const champKnown = !!actualChamp;
-  const champCells = PLAYERS.map(p => {
-    const pick = (advance[p]?.Champion || [])[0];
-    const hit = champKnown && pick === actualChamp;
-    const cls = !pick ? 'pts-na' : (!champKnown ? 'pts-na' : (hit ? 'pts-pos' : 'pts-neg'));
-    return `<div class="pred-cell" style="flex-direction:column;align-items:flex-start;gap:2px;padding:10px">
-      <span class="player">${p}</span>
-      <span style="font-size:14px">${pick ? teamFlag(pick)+' '+teamES(pick) : '—'}</span>
-      <span class="${cls} " style="font-size:12px">${!pick ? '—' : (!champKnown ? 'pendiente' : (hit ? '+250pts ✔' : '✘'))}</span>
-    </div>`;
-  }).join('');
-
-  html += `<section class="group-section">
-    <div class="group-title">Campeón
-      <span style="font-size:13px;font-family:'DM Sans',sans-serif;color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0">+250pts</span>
-      <span class="bar"></span>
-    </div>
-    <div class="match-card">
-      ${champKnown ? `<p style="margin-bottom:12px;font-family:'Space Mono',monospace;font-size:13px">Campeón: <b style="color:var(--gold)">${teamFlag(actualChamp)} ${teamES(actualChamp)}</b></p>` : '<p style="margin-bottom:12px;color:var(--muted);font-family:\'Space Mono\',monospace;font-size:12px">Campeón pendiente</p>'}
-      <div class="preds-grid" style="grid-template-columns:repeat(auto-fill,minmax(140px,1fr))">${champCells}</div>
-    </div>
-  </section>`;
+  // bind round filter clicks after DOM insert (setTimeout 0)
+  setTimeout(() => {
+    document.querySelectorAll('#fasesFilter button').forEach(b =>
+      b.addEventListener('click', () => { fasesRound = b.dataset.round; render(); }));
+  }, 0);
 
   return html;
 }
 
+const TH = 'style="font-family:\'Space Mono\',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:400;padding:6px 10px;border-bottom:1px solid var(--line)"';
+
+function renderR32(advance, actual, finalSt, predSt) {
+  const actualR32  = actual.R32 || [];
+  const r32Known   = actualR32.length > 0;
+  const groupsDone = Object.keys(finalSt).length > 0;
+
+  const playerThs = PLAYERS.map(p => `<th ${TH} style="text-align:center;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:400;padding:6px 10px;border-bottom:1px solid var(--line)">${p}</th>`).join('');
+
+  let rows = '';
+  for (const g of GROUPS_LIST) {
+    for (const rank of [1, 2]) {
+      const posCode    = `${rank}${g}`;
+      const actualTeam = finalSt[posCode] ? finalSt[posCode].team : null;
+      const sepStyle   = rank === 2 ? 'border-bottom:2px solid var(--line)' : 'border-bottom:1px solid rgba(44,53,104,.35)';
+
+      const playerCells = PLAYERS.map(p => {
+        const predTeam = predSt[p] && predSt[p][posCode] ? predSt[p][posCode].team : null;
+
+        if (!groupsDone || !actualTeam) {
+          return `<td style="text-align:center;padding:6px 8px"><span class="pts-na">${predTeam ? teamFlag(predTeam)+' '+teamES(predTeam) : '—'}</span></td>`;
+        }
+
+        const hasPick = (advance[p]?.R32 || []).includes(actualTeam);
+        const posOk   = predTeam === actualTeam;
+        // avance asumido para 1º/2º mientras r32 no esté confirmado oficialmente
+        const advances = r32Known ? actualR32.includes(actualTeam) : true;
+
+        if (!advances) {
+          // equipo no pasó (sorpresa en R32 oficial)
+          const predLabel = predTeam ? teamFlag(predTeam)+' '+teamES(predTeam) : '—';
+          return `<td style="text-align:center;padding:6px 8px;opacity:.6"><span class="pts-neg" style="font-size:11px">${predLabel}<br>0pts</span></td>`;
+        }
+
+        if (!hasPick) {
+          const predLabel = predTeam ? teamFlag(predTeam)+' '+teamES(predTeam) : '—';
+          return `<td style="text-align:center;padding:6px 8px"><span class="pts-neg" style="font-size:11px">${predLabel}<br>0pts</span></td>`;
+        }
+
+        const total = KO_POINTS.R32 + (posOk ? 30 : 0);
+        const bonus = posOk ? `<br><span style="font-size:10px;color:var(--muted)">pos ✔ +30b</span>` : '';
+        return `<td style="text-align:center;padding:6px 8px;line-height:1.5">${ptsHtml(total)}${bonus}</td>`;
+      }).join('');
+
+      const actualLabel = actualTeam
+        ? `${teamFlag(actualTeam)} ${teamES(actualTeam)}`
+        : `<span style="color:var(--muted)">pendiente</span>`;
+
+      const groupLabel = rank === 1
+        ? `<span style="color:var(--gold);font-family:'Anton',sans-serif;font-size:13px">GRP ${g}</span><br>1º`
+        : '2º';
+
+      rows += `<tr style="${sepStyle}">
+        <td style="padding:7px 10px;font-family:'Space Mono',monospace;font-size:11px;white-space:nowrap;text-align:center">${groupLabel}</td>
+        <td style="padding:7px 10px;white-space:nowrap">${actualLabel}</td>
+        ${playerCells}
+      </tr>`;
+    }
+  }
+
+  return `<div class="match-card" style="overflow-x:auto;padding:10px 4px">
+    <table style="width:100%;border-collapse:collapse;font-size:13px">
+      <thead><tr>
+        <th ${TH} style="text-align:center;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:400;padding:6px 10px;border-bottom:1px solid var(--line)">Grupo</th>
+        <th ${TH} style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:400;padding:6px 10px;border-bottom:1px solid var(--line)">Clasificado real</th>
+        ${playerThs}
+      </tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+  </div>`;
+}
+
+function renderKORound(rnd, advance, actual) {
+  const actualTeams = actual[rnd] || [];
+  const isKnown = actualTeams.length > 0;
+  const pts = KO_POINTS[rnd];
+
+  const allTeams = new Set(actualTeams);
+  for (const p of PLAYERS) for (const t of (advance[p]?.[rnd] || [])) allTeams.add(t);
+  if (!allTeams.size) return `<div class="empty">Aún no hay picks ni resultados para esta ronda.</div>`;
+
+  const sorted = [...allTeams].sort((a,b) => {
+    const ah = actualTeams.includes(a), bh = actualTeams.includes(b);
+    return (ah===bh) ? teamES(a).localeCompare(teamES(b),'es') : (ah ? -1 : 1);
+  });
+
+  const playerThs = PLAYERS.map(p =>
+    `<th style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:400;padding:6px 10px;border-bottom:1px solid var(--line);text-align:center">${p}</th>`
+  ).join('');
+
+  const rows = sorted.map(team => {
+    const advanced = actualTeams.includes(team);
+    const fade = isKnown && !advanced ? 'opacity:.5' : '';
+    const resultLabel = !isKnown
+      ? `<span class="tag pending">pdte</span>`
+      : (advanced ? `<span class="pts-pos">✔</span>` : `<span class="pts-neg">✘</span>`);
+
+    const playerCells = PLAYERS.map(p => {
+      const picked = (advance[p]?.[rnd] || []).includes(team);
+      let cell;
+      if (!picked)       cell = `<span class="pts-na">—</span>`;
+      else if (!isKnown) cell = `<span class="pts-na">pick</span>`;
+      else if (advanced) cell = ptsHtml(pts);
+      else               cell = `<span class="pts-neg">0pts</span>`;
+      return `<td style="text-align:center;padding:7px 8px;${fade}">${cell}</td>`;
+    }).join('');
+
+    return `<tr style="border-bottom:1px solid rgba(44,53,104,.4)">
+      <td style="padding:7px 10px;${fade}">${teamFlag(team)} ${teamES(team)}</td>
+      <td style="text-align:center;padding:7px 10px;${fade}">${resultLabel}</td>
+      ${playerCells}
+    </tr>`;
+  }).join('');
+
+  return `<div class="match-card" style="overflow-x:auto;padding:10px 4px">
+    <table style="width:100%;border-collapse:collapse;font-size:13px">
+      <thead><tr>
+        <th style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:400;padding:6px 10px;border-bottom:1px solid var(--line)">Equipo</th>
+        <th style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:400;padding:6px 10px;border-bottom:1px solid var(--line);text-align:center">Resultado</th>
+        ${playerThs}
+      </tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+  </div>`;
+}
+
+function renderChampionSection(advance, actual) {
+  const actualChamp = (actual.Champion || [])[0];
+  const champKnown = !!actualChamp;
+
+  const rows = PLAYERS.map(p => {
+    const pick = (advance[p]?.Champion || [])[0];
+    const hit = champKnown && pick === actualChamp;
+    let cell;
+    if (!pick)         cell = `<span class="pts-na">Sin pick</span>`;
+    else if (!champKnown) cell = `<span class="pts-na">pendiente</span>`;
+    else if (hit)      cell = ptsHtml(250);
+    else               cell = `<span class="pts-neg">0pts</span>`;
+    return `<tr style="border-bottom:1px solid rgba(44,53,104,.4)">
+      <td style="padding:8px 10px">${p}</td>
+      <td style="padding:8px 10px">${pick ? teamFlag(pick)+' '+teamES(pick) : '—'}</td>
+      <td style="text-align:center;padding:8px 10px">${cell}</td>
+    </tr>`;
+  }).join('');
+
+  return `<div class="match-card" style="overflow-x:auto;padding:10px 4px">
+    ${champKnown ? `<p style="margin-bottom:12px;font-family:'Space Mono',monospace;font-size:13px;padding:0 6px">Campeón: <b style="color:var(--gold)">${teamFlag(actualChamp)} ${teamES(actualChamp)}</b></p>` : ''}
+    <table style="width:100%;border-collapse:collapse;font-size:13px">
+      <thead><tr>
+        <th style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:400;padding:6px 10px;border-bottom:1px solid var(--line)">Jugador</th>
+        <th style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:400;padding:6px 10px;border-bottom:1px solid var(--line)">Pick</th>
+        <th style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:400;padding:6px 10px;border-bottom:1px solid var(--line);text-align:center">Puntos</th>
+      </tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+  </div>`;
+}
+
 function renderControls(){
   document.getElementById('viewToggle').innerHTML = `
-    <button data-view="calendario" class="${view==='calendario'?'active':''}">📅 Calendario</button>
-    <button data-view="grupos" class="${view==='grupos'?'active':''}">Por grupos</button>
+    <button data-view="calendario" class="${view==='calendario'?'active':''}">Fase de grupos</button>
     <button data-view="fases" class="${view==='fases'?'active':''}">🏆 Fases Finales</button>`;
   document.querySelectorAll('#viewToggle button').forEach(b =>
     b.addEventListener('click', () => { view = b.dataset.view; renderControls(); render(); }));
