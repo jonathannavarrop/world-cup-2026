@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-26T03:54:27Z",
+  "updated": "2026-06-26T06:59:08Z",
   "group_results": {
     "Mexico|South Africa": {
       "home": "Mexico",
@@ -324,6 +324,36 @@
       "away": "South Korea",
       "gh": 1,
       "ga": 0
+    },
+    "Ecuador|Germany": {
+      "home": "Ecuador",
+      "away": "Germany",
+      "gh": 2,
+      "ga": 1
+    },
+    "Japan|Sweden": {
+      "home": "Japan",
+      "away": "Sweden",
+      "gh": 1,
+      "ga": 1
+    },
+    "Tunisia|Netherlands": {
+      "home": "Tunisia",
+      "away": "Netherlands",
+      "gh": 1,
+      "ga": 3
+    },
+    "Turkiye|USA": {
+      "home": "Turkiye",
+      "away": "USA",
+      "gh": 3,
+      "ga": 2
+    },
+    "Paraguay|Australia": {
+      "home": "Paraguay",
+      "away": "Australia",
+      "gh": 0,
+      "ga": 0
     }
   },
   "final_standings": {
@@ -378,26 +408,26 @@
     "1D": {
       "team": "USA",
       "pts": 6,
-      "gf": 6,
-      "gd": 5
+      "gf": 8,
+      "gd": 4
     },
     "2D": {
       "team": "Australia",
-      "pts": 3,
+      "pts": 4,
       "gf": 2,
       "gd": 0
     },
     "3D": {
       "team": "Paraguay",
-      "pts": 3,
+      "pts": 4,
       "gf": 2,
       "gd": -2
     },
     "4D": {
       "team": "Turkiye",
-      "pts": 0,
-      "gf": 0,
-      "gd": -3
+      "pts": 3,
+      "gf": 3,
+      "gd": -2
     },
     "1C": {
       "team": "Brazil",
@@ -426,20 +456,20 @@
     "1E": {
       "team": "Germany",
       "pts": 6,
-      "gf": 9,
-      "gd": 7
+      "gf": 10,
+      "gd": 6
     },
     "2E": {
-      "team": "Ivory Coast",
-      "pts": 3,
+      "team": "Ecuador",
+      "pts": 4,
       "gf": 2,
       "gd": 0
     },
     "3E": {
-      "team": "Ecuador",
-      "pts": 1,
-      "gf": 0,
-      "gd": -1
+      "team": "Ivory Coast",
+      "pts": 3,
+      "gf": 2,
+      "gd": 0
     },
     "4E": {
       "team": "Curacao",
@@ -449,27 +479,27 @@
     },
     "1F": {
       "team": "Netherlands",
-      "pts": 4,
-      "gf": 7,
-      "gd": 4
+      "pts": 7,
+      "gf": 10,
+      "gd": 6
     },
     "2F": {
       "team": "Japan",
-      "pts": 4,
-      "gf": 6,
+      "pts": 5,
+      "gf": 7,
       "gd": 4
     },
     "3F": {
       "team": "Sweden",
-      "pts": 3,
-      "gf": 6,
+      "pts": 4,
+      "gf": 7,
       "gd": 0
     },
     "4F": {
       "team": "Tunisia",
       "pts": 0,
-      "gf": 1,
-      "gd": -8
+      "gf": 2,
+      "gd": -10
     },
     "1H": {
       "team": "Spain",
@@ -1172,9 +1202,9 @@
       "group": "E",
       "home": "Ecuador",
       "away": "Germany",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 2,
+      "ga": 1,
+      "played": true,
       "date": "2026-06-25 22:00"
     },
     {
@@ -1182,9 +1212,9 @@
       "group": "F",
       "home": "Japan",
       "away": "Sweden",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 1,
+      "ga": 1,
+      "played": true,
       "date": "2026-06-26 1:00"
     },
     {
@@ -1192,9 +1222,9 @@
       "group": "F",
       "home": "Tunisia",
       "away": "Netherlands",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 1,
+      "ga": 3,
+      "played": true,
       "date": "2026-06-26 1:00"
     },
     {
@@ -1202,9 +1232,9 @@
       "group": "D",
       "home": "Turkiye",
       "away": "USA",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 3,
+      "ga": 2,
+      "played": true,
       "date": "2026-06-26 4:00"
     },
     {
@@ -1212,9 +1242,9 @@
       "group": "D",
       "home": "Paraguay",
       "away": "Australia",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 0,
+      "ga": 0,
+      "played": true,
       "date": "2026-06-26 4:00"
     },
     {
