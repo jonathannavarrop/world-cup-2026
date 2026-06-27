@@ -801,7 +801,7 @@
         "home": "Mexico",
         "away": "South Korea",
         "gh": 1,
-        "ga": 1
+        "ga": 0
       },
       "53": {
         "home": "Czechia",
@@ -1178,8 +1178,8 @@
       "22": {
         "home": "England",
         "away": "Croatia",
-        "gh": 2,
-        "ga": 1
+        "gh": 1,
+        "ga": 0
       },
       "21": {
         "home": "Ghana",
