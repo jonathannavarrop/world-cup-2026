@@ -1,21 +1,21 @@
 {
-  "updated": "2026-06-27T08:55:05Z",
+  "updated": "2026-06-27T09:12:09Z",
   "matches_played": 66,
   "table": [
     {
-      "player": "PEP",
-      "total": 987,
+      "player": "JONY",
+      "total": 1020,
       "breakdown": {
-        "grupos": 987,
+        "grupos": 1020,
         "fases_finales": 0
       },
       "pos": 1
     },
     {
-      "player": "JONY",
-      "total": 963,
+      "player": "PEP",
+      "total": 987,
       "breakdown": {
-        "grupos": 963,
+        "grupos": 987,
         "fases_finales": 0
       },
       "pos": 2
@@ -842,9 +842,9 @@
           "points": -6
         },
         "JONY": {
-          "gh": 2,
-          "ga": 1,
-          "points": 21
+          "gh": 1,
+          "ga": 0,
+          "points": 15
         },
         "CHAMP": {
           "gh": 2,
@@ -1065,8 +1065,8 @@
         },
         "JONY": {
           "gh": 1,
-          "ga": 1,
-          "points": -3
+          "ga": 0,
+          "points": 60
         },
         "CHAMP": {
           "gh": 1,
