@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-27T08:51:13Z",
+  "updated": "2026-06-27T08:55:05Z",
   "matches_played": 66,
   "table": [
     {
@@ -50,7 +50,7 @@
   ],
   "matches": [
     {
-      "num": null,
+      "num": 1,
       "group": "A",
       "home": "Mexico",
       "away": "South Africa",
@@ -58,10 +58,36 @@
       "ga": 0,
       "played": true,
       "date": "2026-06-11 21:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 1,
+          "points": 27
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 0,
+          "points": 60
+        },
+        "CHAMP": {
+          "gh": 3,
+          "ga": 0,
+          "points": 27
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 1,
+          "points": -6
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 0,
+          "points": 60
+        }
+      }
     },
     {
-      "num": null,
+      "num": 2,
       "group": "A",
       "home": "South Korea",
       "away": "Czechia",
@@ -69,10 +95,36 @@
       "ga": 1,
       "played": true,
       "date": "2026-06-12 4:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": -3
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 0,
+          "points": 24
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 1,
+          "points": 60
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 1,
+          "points": 60
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 1,
+          "points": -3
+        }
+      }
     },
     {
-      "num": null,
+      "num": 3,
       "group": "B",
       "home": "Canada",
       "away": "Bosnia-Herzegovina",
@@ -80,10 +132,36 @@
       "ga": 1,
       "played": true,
       "date": "2026-06-12 21:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 0,
+          "points": -3
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 0,
+          "points": -3
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 0,
+          "points": -6
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 0,
+          "points": -6
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 3,
+          "points": -6
+        }
+      }
     },
     {
-      "num": null,
+      "num": 4,
       "group": "D",
       "home": "USA",
       "away": "Paraguay",
@@ -91,10 +169,36 @@
       "ga": 1,
       "played": true,
       "date": "2026-06-13 3:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 2,
+          "points": -9
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 0,
+          "points": 18
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 1,
+          "points": 24
+        },
+        "NEGREIRA": {
+          "gh": 3,
+          "ga": 1,
+          "points": 27
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 2,
+          "points": -9
+        }
+      }
     },
     {
-      "num": null,
+      "num": 8,
       "group": "B",
       "home": "Qatar",
       "away": "Switzerland",
@@ -102,10 +206,36 @@
       "ga": 1,
       "played": true,
       "date": "2026-06-13 21:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 0,
+          "ga": 1,
+          "points": -3
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 3,
+          "points": -9
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 1,
+          "points": -3
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 3,
+          "points": -6
+        },
+        "PEP": {
+          "gh": 0,
+          "ga": 3,
+          "points": -9
+        }
+      }
     },
     {
-      "num": null,
+      "num": 7,
       "group": "C",
       "home": "Brazil",
       "away": "Morocco",
@@ -113,10 +243,36 @@
       "ga": 1,
       "played": true,
       "date": "2026-06-14 0:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 1,
+          "points": -3
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 0,
+          "points": -3
+        },
+        "CHAMP": {
+          "gh": 3,
+          "ga": 3,
+          "points": 18
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 2,
+          "points": 24
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 1,
+          "points": -3
+        }
+      }
     },
     {
-      "num": null,
+      "num": 5,
       "group": "C",
       "home": "Haiti",
       "away": "Scotland",
@@ -124,10 +280,36 @@
       "ga": 1,
       "played": true,
       "date": "2026-06-14 3:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 0,
+          "ga": 3,
+          "points": 24
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 2,
+          "points": 27
+        },
+        "CHAMP": {
+          "gh": 0,
+          "ga": 2,
+          "points": 27
+        },
+        "NEGREIRA": {
+          "gh": 0,
+          "ga": 2,
+          "points": 27
+        },
+        "PEP": {
+          "gh": 0,
+          "ga": 3,
+          "points": 24
+        }
+      }
     },
     {
-      "num": null,
+      "num": 6,
       "group": "D",
       "home": "Australia",
       "away": "Turkiye",
@@ -135,10 +317,36 @@
       "ga": 0,
       "played": true,
       "date": "2026-06-14 6:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 3,
+          "points": -12
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 1,
+          "points": -9
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 3,
+          "points": -12
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 2,
+          "points": -9
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 3,
+          "points": -12
+        }
+      }
     },
     {
-      "num": null,
+      "num": 10,
       "group": "E",
       "home": "Germany",
       "away": "Curacao",
@@ -146,10 +354,36 @@
       "ga": 1,
       "played": true,
       "date": "2026-06-14 19:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 5,
+          "ga": 0,
+          "points": 21
+        },
+        "JONY": {
+          "gh": 5,
+          "ga": 0,
+          "points": 21
+        },
+        "CHAMP": {
+          "gh": 5,
+          "ga": 0,
+          "points": 21
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 0,
+          "points": 12
+        },
+        "PEP": {
+          "gh": 6,
+          "ga": 0,
+          "points": 24
+        }
+      }
     },
     {
-      "num": null,
+      "num": 11,
       "group": "F",
       "home": "Netherlands",
       "away": "Japan",
@@ -157,10 +391,36 @@
       "ga": 2,
       "played": true,
       "date": "2026-06-14 22:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 2,
+          "points": 60
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 0,
+          "points": -9
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 2,
+          "points": -3
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 2,
+          "points": -3
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 1,
+          "points": 24
+        }
+      }
     },
     {
-      "num": null,
+      "num": 9,
       "group": "E",
       "home": "Ivory Coast",
       "away": "Ecuador",
@@ -168,10 +428,36 @@
       "ga": 0,
       "played": true,
       "date": "2026-06-15 1:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": -3
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 1,
+          "points": -6
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 2,
+          "points": -6
+        },
+        "NEGREIRA": {
+          "gh": 0,
+          "ga": 2,
+          "points": -9
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 3,
+          "points": -9
+        }
+      }
     },
     {
-      "num": null,
+      "num": 12,
       "group": "F",
       "home": "Sweden",
       "away": "Tunisia",
@@ -179,10 +465,36 @@
       "ga": 1,
       "played": true,
       "date": "2026-06-15 4:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": -12
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 1,
+          "points": -12
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 2,
+          "points": -12
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 1,
+          "points": -12
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 1,
+          "points": 21
+        }
+      }
     },
     {
-      "num": null,
+      "num": 14,
       "group": "H",
       "home": "Spain",
       "away": "Cape Verde",
@@ -190,10 +502,36 @@
       "ga": 0,
       "played": true,
       "date": "2026-06-15 18:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 4,
+          "ga": 0,
+          "points": -12
+        },
+        "JONY": {
+          "gh": 5,
+          "ga": 0,
+          "points": -15
+        },
+        "CHAMP": {
+          "gh": 5,
+          "ga": 0,
+          "points": -15
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 0,
+          "points": -6
+        },
+        "PEP": {
+          "gh": 5,
+          "ga": 0,
+          "points": -15
+        }
+      }
     },
     {
-      "num": null,
+      "num": 16,
       "group": "G",
       "home": "Belgium",
       "away": "Egypt",
@@ -201,10 +539,36 @@
       "ga": 1,
       "played": true,
       "date": "2026-06-15 21:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 0,
+          "points": -6
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 0,
+          "points": -3
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 2,
+          "points": -3
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 2,
+          "points": 24
+        },
+        "PEP": {
+          "gh": 3,
+          "ga": 0,
+          "points": -9
+        }
+      }
     },
     {
-      "num": null,
+      "num": 13,
       "group": "H",
       "home": "Saudi Arabia",
       "away": "Uruguay",
@@ -212,10 +576,36 @@
       "ga": 1,
       "played": true,
       "date": "2026-06-16 0:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 2,
+          "points": -3
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 1,
+          "points": -3
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 2,
+          "points": -3
+        },
+        "NEGREIRA": {
+          "gh": 0,
+          "ga": 2,
+          "points": -6
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 1,
+          "points": 60
+        }
+      }
     },
     {
-      "num": null,
+      "num": 15,
       "group": "G",
       "home": "Iran",
       "away": "New Zealand",
@@ -223,10 +613,36 @@
       "ga": 2,
       "played": true,
       "date": "2026-06-16 3:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 0,
+          "ga": 1,
+          "points": -9
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 0,
+          "points": -6
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 1,
+          "points": -3
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 0,
+          "points": -6
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 1,
+          "points": -3
+        }
+      }
     },
     {
-      "num": null,
+      "num": 17,
       "group": "I",
       "home": "France",
       "away": "Senegal",
@@ -234,10 +650,36 @@
       "ga": 1,
       "played": true,
       "date": "2026-06-16 21:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 4,
+          "ga": 2,
+          "points": 24
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 0,
+          "points": 21
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 1,
+          "points": 27
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 1,
+          "points": 27
+        },
+        "PEP": {
+          "gh": 3,
+          "ga": 1,
+          "points": 60
+        }
+      }
     },
     {
-      "num": null,
+      "num": 18,
       "group": "I",
       "home": "Iraq",
       "away": "Norway",
@@ -245,10 +687,36 @@
       "ga": 4,
       "played": true,
       "date": "2026-06-17 0:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 3,
+          "points": 27
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 1,
+          "points": 18
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 2,
+          "points": 24
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 2,
+          "points": 24
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 3,
+          "points": 27
+        }
+      }
     },
     {
-      "num": null,
+      "num": 19,
       "group": "J",
       "home": "Argentina",
       "away": "Algeria",
@@ -256,10 +724,36 @@
       "ga": 0,
       "played": true,
       "date": "2026-06-17 3:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 0,
+          "points": 27
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 0,
+          "points": 27
+        },
+        "CHAMP": {
+          "gh": 3,
+          "ga": 1,
+          "points": 27
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 1,
+          "points": 24
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 0,
+          "points": 27
+        }
+      }
     },
     {
-      "num": null,
+      "num": 20,
       "group": "J",
       "home": "Austria",
       "away": "Jordan",
@@ -267,10 +761,36 @@
       "ga": 1,
       "played": true,
       "date": "2026-06-17 6:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": -6
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 0,
+          "points": 24
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 1,
+          "points": 27
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 0,
+          "points": 24
+        },
+        "PEP": {
+          "gh": 3,
+          "ga": 0,
+          "points": 27
+        }
+      }
     },
     {
-      "num": null,
+      "num": 23,
       "group": "K",
       "home": "Portugal",
       "away": "DR Congo",
@@ -278,10 +798,36 @@
       "ga": 1,
       "played": true,
       "date": "2026-06-17 19:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 3,
+          "ga": 0,
+          "points": -9
+        },
+        "JONY": {
+          "gh": 3,
+          "ga": 0,
+          "points": -9
+        },
+        "CHAMP": {
+          "gh": 5,
+          "ga": 1,
+          "points": -12
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 0,
+          "points": -6
+        },
+        "PEP": {
+          "gh": 5,
+          "ga": 0,
+          "points": -15
+        }
+      }
     },
     {
-      "num": null,
+      "num": 22,
       "group": "L",
       "home": "England",
       "away": "Croatia",
@@ -289,10 +835,36 @@
       "ga": 2,
       "played": true,
       "date": "2026-06-17 22:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 2,
+          "points": -6
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 1,
+          "points": 21
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 1,
+          "points": 21
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 1,
+          "points": 21
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 1,
+          "points": -12
+        }
+      }
     },
     {
-      "num": null,
+      "num": 21,
       "group": "L",
       "home": "Ghana",
       "away": "Panama",
@@ -300,10 +872,36 @@
       "ga": 0,
       "played": true,
       "date": "2026-06-18 1:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 3,
+          "ga": 1,
+          "points": 21
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 1,
+          "points": -3
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 0,
+          "points": 27
+        },
+        "NEGREIRA": {
+          "gh": 0,
+          "ga": 1,
+          "points": -6
+        },
+        "PEP": {
+          "gh": 3,
+          "ga": 1,
+          "points": 21
+        }
+      }
     },
     {
-      "num": null,
+      "num": 24,
       "group": "K",
       "home": "Uzbekistan",
       "away": "Colombia",
@@ -311,10 +909,36 @@
       "ga": 3,
       "played": true,
       "date": "2026-06-18 4:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 3,
+          "points": 60
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 2,
+          "points": 24
+        },
+        "CHAMP": {
+          "gh": 0,
+          "ga": 3,
+          "points": 27
+        },
+        "NEGREIRA": {
+          "gh": 0,
+          "ga": 2,
+          "points": 24
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 2,
+          "points": 27
+        }
+      }
     },
     {
-      "num": null,
+      "num": 25,
       "group": "A",
       "home": "Czechia",
       "away": "South Africa",
@@ -322,10 +946,36 @@
       "ga": 1,
       "played": true,
       "date": "2026-06-18 18:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 2,
+          "points": 24
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 0,
+          "points": -3
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 1,
+          "points": 60
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 1,
+          "points": -3
+        },
+        "PEP": {
+          "gh": 3,
+          "ga": 1,
+          "points": -6
+        }
+      }
     },
     {
-      "num": null,
+      "num": 26,
       "group": "B",
       "home": "Switzerland",
       "away": "Bosnia-Herzegovina",
@@ -333,10 +983,36 @@
       "ga": 1,
       "played": true,
       "date": "2026-06-18 21:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": -9
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 0,
+          "points": 21
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 2,
+          "points": -9
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 1,
+          "points": 24
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 1,
+          "points": 24
+        }
+      }
     },
     {
-      "num": null,
+      "num": 27,
       "group": "B",
       "home": "Canada",
       "away": "Qatar",
@@ -344,10 +1020,36 @@
       "ga": 0,
       "played": true,
       "date": "2026-06-19 0:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": -18
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 0,
+          "points": 18
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 1,
+          "points": 15
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 1,
+          "points": 15
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 1,
+          "points": 15
+        }
+      }
     },
     {
-      "num": null,
+      "num": 28,
       "group": "A",
       "home": "Mexico",
       "away": "South Korea",
@@ -355,10 +1057,36 @@
       "ga": 0,
       "played": true,
       "date": "2026-06-19 3:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 0,
+          "points": 27
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 1,
+          "points": -3
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 2,
+          "points": -6
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 0,
+          "points": 27
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 2,
+          "points": -9
+        }
+      }
     },
     {
-      "num": null,
+      "num": 32,
       "group": "D",
       "home": "USA",
       "away": "Australia",
@@ -366,10 +1094,36 @@
       "ga": 0,
       "played": true,
       "date": "2026-06-19 21:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": -6
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 0,
+          "points": 27
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 0,
+          "points": 60
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 1,
+          "points": -6
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 1,
+          "points": 27
+        }
+      }
     },
     {
-      "num": null,
+      "num": 30,
       "group": "C",
       "home": "Scotland",
       "away": "Morocco",
@@ -377,10 +1131,36 @@
       "ga": 1,
       "played": true,
       "date": "2026-06-20 0:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 2,
+          "points": 24
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 3,
+          "points": 24
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 3,
+          "points": 21
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 2,
+          "points": 24
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 2,
+          "points": 24
+        }
+      }
     },
     {
-      "num": null,
+      "num": 29,
       "group": "C",
       "home": "Brazil",
       "away": "Haiti",
@@ -388,10 +1168,36 @@
       "ga": 0,
       "played": true,
       "date": "2026-06-20 2:30",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 4,
+          "ga": 0,
+          "points": 27
+        },
+        "JONY": {
+          "gh": 4,
+          "ga": 0,
+          "points": 27
+        },
+        "CHAMP": {
+          "gh": 4,
+          "ga": 0,
+          "points": 27
+        },
+        "NEGREIRA": {
+          "gh": 5,
+          "ga": 0,
+          "points": 24
+        },
+        "PEP": {
+          "gh": 5,
+          "ga": 0,
+          "points": 24
+        }
+      }
     },
     {
-      "num": null,
+      "num": 31,
       "group": "D",
       "home": "Turkiye",
       "away": "Paraguay",
@@ -399,10 +1205,36 @@
       "ga": 1,
       "played": true,
       "date": "2026-06-20 5:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 1,
+          "points": -6
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 0,
+          "points": -6
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 1,
+          "points": -3
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 0,
+          "points": -9
+        },
+        "PEP": {
+          "gh": 0,
+          "ga": 2,
+          "points": 27
+        }
+      }
     },
     {
-      "num": null,
+      "num": 35,
       "group": "F",
       "home": "Netherlands",
       "away": "Sweden",
@@ -410,10 +1242,36 @@
       "ga": 1,
       "played": true,
       "date": "2026-06-20 19:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 3,
+          "ga": 1,
+          "points": 24
+        },
+        "JONY": {
+          "gh": 3,
+          "ga": 0,
+          "points": 21
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 1,
+          "points": -12
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 1,
+          "points": 21
+        },
+        "PEP": {
+          "gh": 3,
+          "ga": 1,
+          "points": 24
+        }
+      }
     },
     {
-      "num": null,
+      "num": 33,
       "group": "E",
       "home": "Germany",
       "away": "Ivory Coast",
@@ -421,10 +1279,36 @@
       "ga": 1,
       "played": true,
       "date": "2026-06-20 22:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 2,
+          "points": -3
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 0,
+          "points": 27
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 1,
+          "points": 60
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 1,
+          "points": 60
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 1,
+          "points": -3
+        }
+      }
     },
     {
-      "num": null,
+      "num": 34,
       "group": "E",
       "home": "Ecuador",
       "away": "Curacao",
@@ -432,10 +1316,36 @@
       "ga": 0,
       "played": true,
       "date": "2026-06-21 2:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 3,
+          "ga": 1,
+          "points": -12
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 0,
+          "points": -6
+        },
+        "CHAMP": {
+          "gh": 4,
+          "ga": 0,
+          "points": -12
+        },
+        "NEGREIRA": {
+          "gh": 3,
+          "ga": 1,
+          "points": -12
+        },
+        "PEP": {
+          "gh": 4,
+          "ga": 0,
+          "points": -12
+        }
+      }
     },
     {
-      "num": null,
+      "num": 36,
       "group": "F",
       "home": "Tunisia",
       "away": "Japan",
@@ -443,10 +1353,36 @@
       "ga": 4,
       "played": true,
       "date": "2026-06-21 6:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": -12
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 2,
+          "points": 24
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 2,
+          "points": -12
+        },
+        "NEGREIRA": {
+          "gh": 0,
+          "ga": 3,
+          "points": 27
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 3,
+          "points": 24
+        }
+      }
     },
     {
-      "num": null,
+      "num": 38,
       "group": "H",
       "home": "Spain",
       "away": "Saudi Arabia",
@@ -454,10 +1390,36 @@
       "ga": 0,
       "played": true,
       "date": "2026-06-21 18:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 0,
+          "points": 24
+        },
+        "JONY": {
+          "gh": 3,
+          "ga": 0,
+          "points": 27
+        },
+        "CHAMP": {
+          "gh": 4,
+          "ga": 1,
+          "points": 27
+        },
+        "NEGREIRA": {
+          "gh": 3,
+          "ga": 0,
+          "points": 27
+        },
+        "PEP": {
+          "gh": 3,
+          "ga": 1,
+          "points": 24
+        }
+      }
     },
     {
-      "num": null,
+      "num": 39,
       "group": "G",
       "home": "Belgium",
       "away": "Iran",
@@ -465,10 +1427,36 @@
       "ga": 0,
       "played": true,
       "date": "2026-06-21 21:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 3,
+          "ga": 1,
+          "points": -12
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 1,
+          "points": -9
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 1,
+          "points": -9
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 1,
+          "points": 24
+        },
+        "PEP": {
+          "gh": 0,
+          "ga": 0,
+          "points": 60
+        }
+      }
     },
     {
-      "num": null,
+      "num": 37,
       "group": "H",
       "home": "Uruguay",
       "away": "Cape Verde",
@@ -476,10 +1464,36 @@
       "ga": 2,
       "played": true,
       "date": "2026-06-22 0:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 3,
+          "ga": 0,
+          "points": -9
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 0,
+          "points": -6
+        },
+        "CHAMP": {
+          "gh": 3,
+          "ga": 0,
+          "points": -9
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 1,
+          "points": -3
+        },
+        "PEP": {
+          "gh": 3,
+          "ga": 0,
+          "points": -9
+        }
+      }
     },
     {
-      "num": null,
+      "num": 40,
       "group": "G",
       "home": "New Zealand",
       "away": "Egypt",
@@ -487,10 +1501,36 @@
       "ga": 3,
       "played": true,
       "date": "2026-06-22 3:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": -6
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 1,
+          "points": 21
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 3,
+          "points": 60
+        },
+        "NEGREIRA": {
+          "gh": 0,
+          "ga": 2,
+          "points": 24
+        },
+        "PEP": {
+          "gh": 0,
+          "ga": 1,
+          "points": 21
+        }
+      }
     },
     {
-      "num": null,
+      "num": 43,
       "group": "J",
       "home": "Argentina",
       "away": "Austria",
@@ -498,10 +1538,36 @@
       "ga": 0,
       "played": true,
       "date": "2026-06-22 19:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 0,
+          "points": 27
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 0,
+          "points": 60
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 0,
+          "points": 60
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 1,
+          "points": 27
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 2,
+          "points": -6
+        }
+      }
     },
     {
-      "num": null,
+      "num": 42,
       "group": "I",
       "home": "France",
       "away": "Iraq",
@@ -509,10 +1575,36 @@
       "ga": 0,
       "played": true,
       "date": "2026-06-22 23:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 3,
+          "ga": 1,
+          "points": 27
+        },
+        "JONY": {
+          "gh": 3,
+          "ga": 0,
+          "points": 60
+        },
+        "CHAMP": {
+          "gh": 4,
+          "ga": 0,
+          "points": 27
+        },
+        "NEGREIRA": {
+          "gh": 3,
+          "ga": 1,
+          "points": 27
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 0,
+          "points": 27
+        }
+      }
     },
     {
-      "num": null,
+      "num": 41,
       "group": "I",
       "home": "Norway",
       "away": "Senegal",
@@ -520,10 +1612,36 @@
       "ga": 2,
       "played": true,
       "date": "2026-06-23 2:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 3,
+          "ga": 1,
+          "points": 27
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 1,
+          "points": 24
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 2,
+          "points": -3
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 2,
+          "points": -3
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 2,
+          "points": -3
+        }
+      }
     },
     {
-      "num": null,
+      "num": 44,
       "group": "J",
       "home": "Jordan",
       "away": "Algeria",
@@ -531,10 +1649,36 @@
       "ga": 2,
       "played": true,
       "date": "2026-06-23 5:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 0,
+          "ga": 0,
+          "points": -9
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 2,
+          "points": 27
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 3,
+          "points": 27
+        },
+        "NEGREIRA": {
+          "gh": 0,
+          "ga": 2,
+          "points": 27
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 3,
+          "points": 27
+        }
+      }
     },
     {
-      "num": null,
+      "num": 47,
       "group": "K",
       "home": "Portugal",
       "away": "Uzbekistan",
@@ -542,10 +1686,36 @@
       "ga": 0,
       "played": true,
       "date": "2026-06-23 19:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 4,
+          "ga": 1,
+          "points": 24
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 0,
+          "points": 21
+        },
+        "CHAMP": {
+          "gh": 4,
+          "ga": 0,
+          "points": 27
+        },
+        "NEGREIRA": {
+          "gh": 3,
+          "ga": 1,
+          "points": 21
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 0,
+          "points": 18
+        }
+      }
     },
     {
-      "num": null,
+      "num": 45,
       "group": "L",
       "home": "England",
       "away": "Ghana",
@@ -553,10 +1723,36 @@
       "ga": 0,
       "played": true,
       "date": "2026-06-23 22:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 0,
+          "points": -3
+        },
+        "JONY": {
+          "gh": 3,
+          "ga": 0,
+          "points": -9
+        },
+        "CHAMP": {
+          "gh": 3,
+          "ga": 1,
+          "points": -12
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 0,
+          "points": -6
+        },
+        "PEP": {
+          "gh": 3,
+          "ga": 0,
+          "points": -9
+        }
+      }
     },
     {
-      "num": null,
+      "num": 46,
       "group": "L",
       "home": "Panama",
       "away": "Croatia",
@@ -564,10 +1760,36 @@
       "ga": 1,
       "played": true,
       "date": "2026-06-24 1:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 0,
+          "ga": 1,
+          "points": 60
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 3,
+          "points": 24
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 3,
+          "points": 21
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 2,
+          "points": 24
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 3,
+          "points": 21
+        }
+      }
     },
     {
-      "num": null,
+      "num": 48,
       "group": "K",
       "home": "Colombia",
       "away": "DR Congo",
@@ -575,10 +1797,36 @@
       "ga": 0,
       "played": true,
       "date": "2026-06-24 4:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 0,
+          "points": 27
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 0,
+          "points": 27
+        },
+        "CHAMP": {
+          "gh": 3,
+          "ga": 1,
+          "points": 21
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 0,
+          "points": 27
+        },
+        "PEP": {
+          "gh": 3,
+          "ga": 0,
+          "points": 24
+        }
+      }
     },
     {
-      "num": null,
+      "num": 51,
       "group": "B",
       "home": "Switzerland",
       "away": "Canada",
@@ -586,10 +1834,36 @@
       "ga": 1,
       "played": true,
       "date": "2026-06-24 21:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 1,
+          "points": 60
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 0,
+          "points": 24
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 3,
+          "points": -9
+        },
+        "NEGREIRA": {
+          "gh": 3,
+          "ga": 2,
+          "points": 24
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 0,
+          "points": 24
+        }
+      }
     },
     {
-      "num": null,
+      "num": 52,
       "group": "B",
       "home": "Bosnia-Herzegovina",
       "away": "Qatar",
@@ -597,10 +1871,36 @@
       "ga": 1,
       "played": true,
       "date": "2026-06-24 21:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": -6
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 0,
+          "points": 21
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 2,
+          "points": -9
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 2,
+          "points": -6
+        },
+        "PEP": {
+          "gh": 3,
+          "ga": 0,
+          "points": 27
+        }
+      }
     },
     {
-      "num": null,
+      "num": 49,
       "group": "C",
       "home": "Scotland",
       "away": "Brazil",
@@ -608,10 +1908,36 @@
       "ga": 3,
       "played": true,
       "date": "2026-06-25 0:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": -9
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 2,
+          "points": 27
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 2,
+          "points": 24
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 2,
+          "points": 24
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 2,
+          "points": -9
+        }
+      }
     },
     {
-      "num": null,
+      "num": 50,
       "group": "C",
       "home": "Morocco",
       "away": "Haiti",
@@ -619,10 +1945,36 @@
       "ga": 2,
       "played": true,
       "date": "2026-06-25 0:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 0,
+          "points": 18
+        },
+        "JONY": {
+          "gh": 4,
+          "ga": 0,
+          "points": 24
+        },
+        "CHAMP": {
+          "gh": 4,
+          "ga": 0,
+          "points": 24
+        },
+        "NEGREIRA": {
+          "gh": 3,
+          "ga": 1,
+          "points": 24
+        },
+        "PEP": {
+          "gh": 3,
+          "ga": 0,
+          "points": 21
+        }
+      }
     },
     {
-      "num": null,
+      "num": 53,
       "group": "A",
       "home": "Czechia",
       "away": "Mexico",
@@ -630,10 +1982,36 @@
       "ga": 3,
       "played": true,
       "date": "2026-06-25 3:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": -9
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 1,
+          "points": 24
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 3,
+          "points": 27
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 2,
+          "points": 24
+        },
+        "PEP": {
+          "gh": 0,
+          "ga": 0,
+          "points": -9
+        }
+      }
     },
     {
-      "num": null,
+      "num": 54,
       "group": "A",
       "home": "South Africa",
       "away": "South Korea",
@@ -641,10 +2019,36 @@
       "ga": 0,
       "played": true,
       "date": "2026-06-25 3:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 1,
+          "points": 24
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 1,
+          "points": -6
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 3,
+          "points": -9
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 2,
+          "points": -9
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 2,
+          "points": -6
+        }
+      }
     },
     {
-      "num": null,
+      "num": 55,
       "group": "E",
       "home": "Curacao",
       "away": "Ivory Coast",
@@ -652,10 +2056,36 @@
       "ga": 2,
       "played": true,
       "date": "2026-06-25 22:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 0,
+          "ga": 4,
+          "points": 24
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 1,
+          "points": 27
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 4,
+          "points": 21
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 1,
+          "points": -6
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 3,
+          "points": 24
+        }
+      }
     },
     {
-      "num": null,
+      "num": 56,
       "group": "E",
       "home": "Ecuador",
       "away": "Germany",
@@ -663,10 +2093,36 @@
       "ga": 1,
       "played": true,
       "date": "2026-06-25 22:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": -3
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 1,
+          "points": -6
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 2,
+          "points": -3
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 2,
+          "points": -3
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 0,
+          "points": 27
+        }
+      }
     },
     {
-      "num": null,
+      "num": 57,
       "group": "F",
       "home": "Japan",
       "away": "Sweden",
@@ -674,10 +2130,36 @@
       "ga": 1,
       "played": true,
       "date": "2026-06-26 1:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 0,
+          "points": -6
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 0,
+          "points": -6
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 2,
+          "points": -3
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 1,
+          "points": -3
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 2,
+          "points": 24
+        }
+      }
     },
     {
-      "num": null,
+      "num": 58,
       "group": "F",
       "home": "Tunisia",
       "away": "Netherlands",
@@ -685,10 +2167,36 @@
       "ga": 3,
       "played": true,
       "date": "2026-06-26 1:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 0,
+          "ga": 3,
+          "points": 27
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 2,
+          "points": 24
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 2,
+          "points": 27
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 2,
+          "points": 27
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 4,
+          "points": 27
+        }
+      }
     },
     {
-      "num": null,
+      "num": 59,
       "group": "D",
       "home": "Turkiye",
       "away": "USA",
@@ -696,10 +2204,36 @@
       "ga": 2,
       "played": true,
       "date": "2026-06-26 4:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 0,
+          "ga": 2,
+          "points": -9
+        },
+        "JONY": {
+          "gh": 1,
+          "ga": 2,
+          "points": -6
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 1,
+          "points": 24
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 1,
+          "points": -9
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 0,
+          "points": 18
+        }
+      }
     },
     {
-      "num": null,
+      "num": 60,
       "group": "D",
       "home": "Paraguay",
       "away": "Australia",
@@ -707,10 +2241,36 @@
       "ga": 0,
       "played": true,
       "date": "2026-06-26 4:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 1,
+          "points": -9
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 0,
+          "points": 60
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 1,
+          "points": -9
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 2,
+          "points": -9
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 1,
+          "points": 24
+        }
+      }
     },
     {
-      "num": null,
+      "num": 61,
       "group": "I",
       "home": "Norway",
       "away": "France",
@@ -718,10 +2278,36 @@
       "ga": 4,
       "played": true,
       "date": "2026-06-26 21:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 2,
+          "points": -9
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 3,
+          "points": 24
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 2,
+          "points": -9
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 3,
+          "points": 24
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 2,
+          "points": 24
+        }
+      }
     },
     {
-      "num": null,
+      "num": 62,
       "group": "I",
       "home": "Senegal",
       "away": "Iraq",
@@ -729,10 +2315,36 @@
       "ga": 0,
       "played": true,
       "date": "2026-06-26 21:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 3,
+          "ga": 2,
+          "points": 18
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 0,
+          "points": 21
+        },
+        "CHAMP": {
+          "gh": 3,
+          "ga": 1,
+          "points": 21
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 1,
+          "points": 18
+        },
+        "PEP": {
+          "gh": 3,
+          "ga": 1,
+          "points": 21
+        }
+      }
     },
     {
-      "num": null,
+      "num": 65,
       "group": "H",
       "home": "Cape Verde",
       "away": "Saudi Arabia",
@@ -740,10 +2352,36 @@
       "ga": 0,
       "played": true,
       "date": "2026-06-27 2:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 0,
+          "ga": 1,
+          "points": -3
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 1,
+          "points": -3
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 3,
+          "points": -12
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 1,
+          "points": 24
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 1,
+          "points": 24
+        }
+      }
     },
     {
-      "num": null,
+      "num": 66,
       "group": "H",
       "home": "Uruguay",
       "away": "Spain",
@@ -751,10 +2389,36 @@
       "ga": 1,
       "played": true,
       "date": "2026-06-27 2:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": -3
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 1,
+          "points": 60
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 3,
+          "points": 21
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 4,
+          "points": 15
+        },
+        "PEP": {
+          "gh": 0,
+          "ga": 2,
+          "points": 27
+        }
+      }
     },
     {
-      "num": null,
+      "num": 63,
       "group": "G",
       "home": "Egypt",
       "away": "Iran",
@@ -762,10 +2426,36 @@
       "ga": 1,
       "played": true,
       "date": "2026-06-27 5:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": 60
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 1,
+          "points": -3
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 0,
+          "points": -6
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 1,
+          "points": -3
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 2,
+          "points": 24
+        }
+      }
     },
     {
-      "num": null,
+      "num": 64,
       "group": "G",
       "home": "New Zealand",
       "away": "Belgium",
@@ -773,10 +2463,36 @@
       "ga": 5,
       "played": true,
       "date": "2026-06-27 5:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 0,
+          "ga": 0,
+          "points": -18
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 4,
+          "points": 24
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 3,
+          "points": 24
+        },
+        "NEGREIRA": {
+          "gh": 0,
+          "ga": 2,
+          "points": 18
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 3,
+          "points": 24
+        }
+      }
     },
     {
-      "num": null,
+      "num": 67,
       "group": "L",
       "home": "Panama",
       "away": "England",
@@ -784,10 +2500,36 @@
       "ga": null,
       "played": false,
       "date": "2026-06-27 23:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 0,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 3,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 4,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 0,
+          "ga": 2,
+          "points": null
+        },
+        "PEP": {
+          "gh": 0,
+          "ga": 4,
+          "points": null
+        }
+      }
     },
     {
-      "num": null,
+      "num": 68,
       "group": "L",
       "home": "Croatia",
       "away": "Ghana",
@@ -795,10 +2537,36 @@
       "ga": null,
       "played": false,
       "date": "2026-06-27 23:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 2,
+          "ga": 2,
+          "points": null
+        },
+        "JONY": {
+          "gh": 2,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 2,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 2,
+          "points": null
+        }
+      }
     },
     {
-      "num": null,
+      "num": 71,
       "group": "K",
       "home": "Colombia",
       "away": "Portugal",
@@ -806,10 +2574,36 @@
       "ga": null,
       "played": false,
       "date": "2026-06-28 1:30",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 3,
+          "ga": 2,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 1,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 3,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 2,
+          "ga": 3,
+          "points": null
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 3,
+          "points": null
+        }
+      }
     },
     {
-      "num": null,
+      "num": 72,
       "group": "K",
       "home": "DR Congo",
       "away": "Uzbekistan",
@@ -817,10 +2611,36 @@
       "ga": null,
       "played": false,
       "date": "2026-06-28 1:30",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 2,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 0,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 1,
+          "ga": 0,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        },
+        "PEP": {
+          "gh": 2,
+          "ga": 3,
+          "points": null
+        }
+      }
     },
     {
-      "num": null,
+      "num": 69,
       "group": "J",
       "home": "Algeria",
       "away": "Austria",
@@ -828,10 +2648,36 @@
       "ga": null,
       "played": false,
       "date": "2026-06-28 4:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 0,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 1,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 2,
+          "ga": 1,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        },
+        "PEP": {
+          "gh": 1,
+          "ga": 2,
+          "points": null
+        }
+      }
     },
     {
-      "num": null,
+      "num": 70,
       "group": "J",
       "home": "Jordan",
       "away": "Argentina",
@@ -839,7 +2685,33 @@
       "ga": null,
       "played": false,
       "date": "2026-06-28 4:00",
-      "predictions": {}
+      "predictions": {
+        "CHURU": {
+          "gh": 1,
+          "ga": 1,
+          "points": null
+        },
+        "JONY": {
+          "gh": 0,
+          "ga": 4,
+          "points": null
+        },
+        "CHAMP": {
+          "gh": 0,
+          "ga": 4,
+          "points": null
+        },
+        "NEGREIRA": {
+          "gh": 0,
+          "ga": 3,
+          "points": null
+        },
+        "PEP": {
+          "gh": 0,
+          "ga": 3,
+          "points": null
+        }
+      }
     }
   ],
   "advance": {
