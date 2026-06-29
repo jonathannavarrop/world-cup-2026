@@ -1,12 +1,12 @@
 {
-  "updated": "2026-06-29T21:19:40Z",
+  "updated": "2026-06-29T22:30:40Z",
   "matches_played": 72,
   "table": [
     {
       "player": "JONY",
-      "total": 1032,
+      "total": 1035,
       "breakdown": {
-        "grupos": 1032,
+        "grupos": 1035,
         "fases_finales": 0
       },
       "pos": 1
@@ -805,9 +805,9 @@
           "points": -9
         },
         "JONY": {
-          "gh": 3,
+          "gh": 2,
           "ga": 0,
-          "points": -9
+          "points": -6
         },
         "CHAMP": {
           "gh": 5,
@@ -1139,8 +1139,8 @@
         },
         "JONY": {
           "gh": 0,
-          "ga": 3,
-          "points": 24
+          "ga": 2,
+          "points": 27
         },
         "CHAMP": {
           "gh": 1,
@@ -1175,9 +1175,9 @@
           "points": 27
         },
         "JONY": {
-          "gh": 4,
+          "gh": 6,
           "ga": 0,
-          "points": 27
+          "points": 21
         },
         "CHAMP": {
           "gh": 4,
@@ -1361,8 +1361,8 @@
         },
         "JONY": {
           "gh": 0,
-          "ga": 2,
-          "points": 24
+          "ga": 1,
+          "points": 21
         },
         "CHAMP": {
           "gh": 2,
@@ -1434,9 +1434,9 @@
           "points": -12
         },
         "JONY": {
-          "gh": 2,
-          "ga": 1,
-          "points": -9
+          "gh": 1,
+          "ga": 0,
+          "points": -3
         },
         "CHAMP": {
           "gh": 2,
