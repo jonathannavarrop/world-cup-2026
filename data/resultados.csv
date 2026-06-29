@@ -59,12 +59,12 @@ num,ronda,local,visitante,gl,gv,clasifica,fecha
 58,F,Tunisia,Netherlands,1,3,,2026-06-26 1:00
 59,D,Turkiye,USA,3,2,,2026-06-26 4:00
 60,D,Paraguay,Australia,0,0,,2026-06-26 4:00
-61,I,Norway,France,,,,2026-06-26 21:00
-62,I,Senegal,Iraq,,,,2026-06-26 21:00
-65,H,Cape Verde,Saudi Arabia,,,,2026-06-27 2:00
-66,H,Uruguay,Spain,,,,2026-06-27 2:00
-63,G,Egypt,Iran,,,,2026-06-27 5:00
-64,G,New Zealand,Belgium,,,,2026-06-27 5:00
+61,I,Norway,France,1,4,,2026-06-26 21:00
+62,I,Senegal,Iraq,5,0,,2026-06-26 21:00
+65,H,Cape Verde,Saudi Arabia,0,0,,2026-06-27 2:00
+66,H,Uruguay,Spain,0,1,,2026-06-27 2:00
+63,G,Egypt,Iran,1,1,,2026-06-27 5:00
+64,G,New Zealand,Belgium,1,5,,2026-06-27 5:00
 67,L,Panama,England,,,,2026-06-27 23:00
 68,L,Croatia,Ghana,,,,2026-06-27 23:00
 71,K,Colombia,Portugal,,,,2026-06-28 1:30
