@@ -396,6 +396,42 @@
       "away": "Belgium",
       "gh": 1,
       "ga": 5
+    },
+    "Panama|England": {
+      "home": "Panama",
+      "away": "England",
+      "gh": 0,
+      "ga": 2
+    },
+    "Croatia|Ghana": {
+      "home": "Croatia",
+      "away": "Ghana",
+      "gh": 2,
+      "ga": 1
+    },
+    "Colombia|Portugal": {
+      "home": "Colombia",
+      "away": "Portugal",
+      "gh": 0,
+      "ga": 0
+    },
+    "DR Congo|Uzbekistan": {
+      "home": "DR Congo",
+      "away": "Uzbekistan",
+      "gh": 3,
+      "ga": 1
+    },
+    "Algeria|Austria": {
+      "home": "Algeria",
+      "away": "Austria",
+      "gh": 3,
+      "ga": 3
+    },
+    "Jordan|Argentina": {
+      "home": "Jordan",
+      "away": "Argentina",
+      "gh": 1,
+      "ga": 3
     }
   },
   "final_standings": {
@@ -617,75 +653,75 @@
     },
     "1J": {
       "team": "Argentina",
-      "pts": 6,
-      "gf": 5,
-      "gd": 5
+      "pts": 9,
+      "gf": 8,
+      "gd": 7
     },
     "2J": {
       "team": "Austria",
-      "pts": 3,
-      "gf": 3,
+      "pts": 4,
+      "gf": 6,
       "gd": 0
     },
     "3J": {
       "team": "Algeria",
-      "pts": 3,
-      "gf": 2,
+      "pts": 4,
+      "gf": 5,
       "gd": -2
     },
     "4J": {
       "team": "Jordan",
       "pts": 0,
-      "gf": 2,
-      "gd": -3
+      "gf": 3,
+      "gd": -5
     },
     "1K": {
       "team": "Colombia",
-      "pts": 6,
+      "pts": 7,
       "gf": 4,
       "gd": 3
     },
     "2K": {
       "team": "Portugal",
-      "pts": 4,
+      "pts": 5,
       "gf": 6,
       "gd": 5
     },
     "3K": {
       "team": "DR Congo",
-      "pts": 1,
-      "gf": 1,
-      "gd": -1
+      "pts": 4,
+      "gf": 4,
+      "gd": 1
     },
     "4K": {
       "team": "Uzbekistan",
       "pts": 0,
-      "gf": 1,
-      "gd": -7
+      "gf": 2,
+      "gd": -9
     },
     "1L": {
       "team": "England",
-      "pts": 4,
-      "gf": 4,
-      "gd": 2
+      "pts": 7,
+      "gf": 6,
+      "gd": 4
     },
     "2L": {
-      "team": "Ghana",
-      "pts": 4,
-      "gf": 1,
-      "gd": 1
+      "team": "Croatia",
+      "pts": 6,
+      "gf": 5,
+      "gd": 0
     },
     "3L": {
-      "team": "Croatia",
-      "pts": 3,
-      "gf": 3,
-      "gd": -1
+      "team": "Ghana",
+      "pts": 4,
+      "gf": 2,
+      "gd": 0
     },
     "4L": {
       "team": "Panama",
       "pts": 0,
       "gf": 0,
-      "gd": -2
+      "gd": -4
     }
   },
   "matches": [
@@ -1354,9 +1390,9 @@
       "group": "L",
       "home": "Panama",
       "away": "England",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 0,
+      "ga": 2,
+      "played": true,
       "date": "2026-06-27 23:00"
     },
     {
@@ -1364,9 +1400,9 @@
       "group": "L",
       "home": "Croatia",
       "away": "Ghana",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 2,
+      "ga": 1,
+      "played": true,
       "date": "2026-06-27 23:00"
     },
     {
@@ -1374,9 +1410,9 @@
       "group": "K",
       "home": "Colombia",
       "away": "Portugal",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 0,
+      "ga": 0,
+      "played": true,
       "date": "2026-06-28 1:30"
     },
     {
@@ -1384,9 +1420,9 @@
       "group": "K",
       "home": "DR Congo",
       "away": "Uzbekistan",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 3,
+      "ga": 1,
+      "played": true,
       "date": "2026-06-28 1:30"
     },
     {
@@ -1394,9 +1430,9 @@
       "group": "J",
       "home": "Algeria",
       "away": "Austria",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 3,
+      "ga": 3,
+      "played": true,
       "date": "2026-06-28 4:00"
     },
     {
@@ -1404,9 +1440,9 @@
       "group": "J",
       "home": "Jordan",
       "away": "Argentina",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 1,
+      "ga": 3,
+      "played": true,
       "date": "2026-06-28 4:00"
     }
   ],
