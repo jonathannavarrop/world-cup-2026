@@ -759,11 +759,47 @@
         "USA",
         "Uruguay"
       ],
-      "R16": [],
-      "QF": [],
-      "SF": [],
-      "Final": [],
-      "Champion": []
+      "R16": [
+        "Argentina",
+        "Belgium",
+        "Brazil",
+        "Canada",
+        "Colombia",
+        "Ecuador",
+        "England",
+        "France",
+        "Germany",
+        "Mexico",
+        "Morocco",
+        "Norway",
+        "Portugal",
+        "Spain",
+        "Switzerland",
+        "USA"
+      ],
+      "QF": [
+        "Argentina",
+        "Brazil",
+        "Colombia",
+        "Ecuador",
+        "Germany",
+        "Mexico",
+        "Morocco",
+        "Spain"
+      ],
+      "SF": [
+        "Argentina",
+        "Brazil",
+        "Germany",
+        "Spain"
+      ],
+      "Final": [
+        "Argentina",
+        "Germany"
+      ],
+      "Champion": [
+        "Germany"
+      ]
     },
     "prizes": {
       "roberswingger": null,
