@@ -1,48 +1,48 @@
 {
-  "updated": "2026-06-29T20:00:19Z",
-  "matches_played": 66,
+  "updated": "2026-06-29T21:19:40Z",
+  "matches_played": 72,
   "table": [
     {
-      "player": "PEP",
-      "total": 987,
+      "player": "JONY",
+      "total": 1032,
       "breakdown": {
-        "grupos": 987,
+        "grupos": 1032,
         "fases_finales": 0
       },
       "pos": 1
     },
     {
-      "player": "JONY",
-      "total": 984,
+      "player": "PEP",
+      "total": 1002,
       "breakdown": {
-        "grupos": 984,
+        "grupos": 1002,
         "fases_finales": 0
       },
       "pos": 2
     },
     {
-      "player": "CHAMP",
-      "total": 849,
+      "player": "NEGREIRA",
+      "total": 963,
       "breakdown": {
-        "grupos": 849,
+        "grupos": 963,
         "fases_finales": 0
       },
       "pos": 3
     },
     {
-      "player": "NEGREIRA",
-      "total": 819,
+      "player": "CHAMP",
+      "total": 891,
       "breakdown": {
-        "grupos": 819,
+        "grupos": 891,
         "fases_finales": 0
       },
       "pos": 4
     },
     {
       "player": "CHURU",
-      "total": 576,
+      "total": 555,
       "breakdown": {
-        "grupos": 576,
+        "grupos": 555,
         "fases_finales": 0
       },
       "pos": 5
@@ -2496,35 +2496,35 @@
       "group": "L",
       "home": "Panama",
       "away": "England",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 0,
+      "ga": 2,
+      "played": true,
       "date": "2026-06-27 23:00",
       "predictions": {
         "CHURU": {
           "gh": 0,
           "ga": 1,
-          "points": null
+          "points": 27
         },
         "JONY": {
           "gh": 0,
           "ga": 3,
-          "points": null
+          "points": 27
         },
         "CHAMP": {
           "gh": 1,
           "ga": 4,
-          "points": null
+          "points": 21
         },
         "NEGREIRA": {
           "gh": 0,
           "ga": 2,
-          "points": null
+          "points": 60
         },
         "PEP": {
           "gh": 0,
           "ga": 4,
-          "points": null
+          "points": 24
         }
       }
     },
@@ -2533,35 +2533,35 @@
       "group": "L",
       "home": "Croatia",
       "away": "Ghana",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 2,
+      "ga": 1,
+      "played": true,
       "date": "2026-06-27 23:00",
       "predictions": {
         "CHURU": {
           "gh": 2,
           "ga": 2,
-          "points": null
+          "points": -3
         },
         "JONY": {
           "gh": 2,
           "ga": 0,
-          "points": null
+          "points": 27
         },
         "CHAMP": {
           "gh": 2,
           "ga": 2,
-          "points": null
+          "points": -3
         },
         "NEGREIRA": {
           "gh": 2,
           "ga": 1,
-          "points": null
+          "points": 60
         },
         "PEP": {
           "gh": 2,
           "ga": 2,
-          "points": null
+          "points": -3
         }
       }
     },
@@ -2570,35 +2570,35 @@
       "group": "K",
       "home": "Colombia",
       "away": "Portugal",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 0,
+      "ga": 0,
+      "played": true,
       "date": "2026-06-28 1:30",
       "predictions": {
         "CHURU": {
           "gh": 3,
           "ga": 2,
-          "points": null
+          "points": -15
         },
         "JONY": {
           "gh": 0,
           "ga": 1,
-          "points": null
+          "points": -3
         },
         "CHAMP": {
           "gh": 1,
           "ga": 3,
-          "points": null
+          "points": -12
         },
         "NEGREIRA": {
           "gh": 2,
           "ga": 3,
-          "points": null
+          "points": -15
         },
         "PEP": {
           "gh": 2,
           "ga": 3,
-          "points": null
+          "points": -15
         }
       }
     },
@@ -2607,35 +2607,35 @@
       "group": "K",
       "home": "DR Congo",
       "away": "Uzbekistan",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 3,
+      "ga": 1,
+      "played": true,
       "date": "2026-06-28 1:30",
       "predictions": {
         "CHURU": {
           "gh": 1,
           "ga": 2,
-          "points": null
+          "points": -9
         },
         "JONY": {
           "gh": 0,
           "ga": 0,
-          "points": null
+          "points": -12
         },
         "CHAMP": {
           "gh": 1,
           "ga": 0,
-          "points": null
+          "points": 21
         },
         "NEGREIRA": {
           "gh": 1,
           "ga": 1,
-          "points": null
+          "points": -6
         },
         "PEP": {
           "gh": 2,
           "ga": 3,
-          "points": null
+          "points": -9
         }
       }
     },
@@ -2644,35 +2644,35 @@
       "group": "J",
       "home": "Algeria",
       "away": "Austria",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 3,
+      "ga": 3,
+      "played": true,
       "date": "2026-06-28 4:00",
       "predictions": {
         "CHURU": {
           "gh": 0,
           "ga": 1,
-          "points": null
+          "points": -15
         },
         "JONY": {
           "gh": 0,
           "ga": 1,
-          "points": null
+          "points": -15
         },
         "CHAMP": {
           "gh": 2,
           "ga": 1,
-          "points": null
+          "points": -9
         },
         "NEGREIRA": {
           "gh": 1,
           "ga": 1,
-          "points": null
+          "points": 18
         },
         "PEP": {
           "gh": 1,
           "ga": 2,
-          "points": null
+          "points": -9
         }
       }
     },
@@ -2681,35 +2681,35 @@
       "group": "J",
       "home": "Jordan",
       "away": "Argentina",
-      "gh": null,
-      "ga": null,
-      "played": false,
+      "gh": 1,
+      "ga": 3,
+      "played": true,
       "date": "2026-06-28 4:00",
       "predictions": {
         "CHURU": {
           "gh": 1,
           "ga": 1,
-          "points": null
+          "points": -6
         },
         "JONY": {
           "gh": 0,
           "ga": 4,
-          "points": null
+          "points": 24
         },
         "CHAMP": {
           "gh": 0,
           "ga": 4,
-          "points": null
+          "points": 24
         },
         "NEGREIRA": {
           "gh": 0,
           "ga": 3,
-          "points": null
+          "points": 27
         },
         "PEP": {
           "gh": 0,
           "ga": 3,
-          "points": null
+          "points": 27
         }
       }
     }
@@ -3328,75 +3328,75 @@
     },
     "1J": {
       "team": "Argentina",
-      "pts": 6,
-      "gf": 5,
-      "gd": 5
+      "pts": 9,
+      "gf": 8,
+      "gd": 7
     },
     "2J": {
       "team": "Austria",
-      "pts": 3,
-      "gf": 3,
+      "pts": 4,
+      "gf": 6,
       "gd": 0
     },
     "3J": {
       "team": "Algeria",
-      "pts": 3,
-      "gf": 2,
+      "pts": 4,
+      "gf": 5,
       "gd": -2
     },
     "4J": {
       "team": "Jordan",
       "pts": 0,
-      "gf": 2,
-      "gd": -3
+      "gf": 3,
+      "gd": -5
     },
     "1K": {
       "team": "Colombia",
-      "pts": 6,
+      "pts": 7,
       "gf": 4,
       "gd": 3
     },
     "2K": {
       "team": "Portugal",
-      "pts": 4,
+      "pts": 5,
       "gf": 6,
       "gd": 5
     },
     "3K": {
       "team": "DR Congo",
-      "pts": 1,
-      "gf": 1,
-      "gd": -1
+      "pts": 4,
+      "gf": 4,
+      "gd": 1
     },
     "4K": {
       "team": "Uzbekistan",
       "pts": 0,
-      "gf": 1,
-      "gd": -7
+      "gf": 2,
+      "gd": -9
     },
     "1L": {
       "team": "England",
-      "pts": 4,
-      "gf": 4,
-      "gd": 2
+      "pts": 7,
+      "gf": 6,
+      "gd": 4
     },
     "2L": {
-      "team": "Ghana",
-      "pts": 4,
-      "gf": 1,
-      "gd": 1
+      "team": "Croatia",
+      "pts": 6,
+      "gf": 5,
+      "gd": 0
     },
     "3L": {
-      "team": "Croatia",
-      "pts": 3,
-      "gf": 3,
-      "gd": -1
+      "team": "Ghana",
+      "pts": 4,
+      "gf": 2,
+      "gd": 0
     },
     "4L": {
       "team": "Panama",
       "pts": 0,
       "gf": 0,
-      "gd": -2
+      "gd": -4
     }
   },
   "pred_standings": {
