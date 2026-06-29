@@ -903,12 +903,12 @@
         "home": "Scotland",
         "away": "Morocco",
         "gh": 0,
-        "ga": 3
+        "ga": 2
       },
       "29": {
         "home": "Brazil",
         "away": "Haiti",
-        "gh": 4,
+        "gh": 6,
         "ga": 0
       },
       "49": {
@@ -1017,7 +1017,7 @@
         "home": "Tunisia",
         "away": "Japan",
         "gh": 0,
-        "ga": 2
+        "ga": 1
       },
       "57": {
         "home": "Japan",
@@ -1046,8 +1046,8 @@
       "39": {
         "home": "Belgium",
         "away": "Iran",
-        "gh": 2,
-        "ga": 1
+        "gh": 1,
+        "ga": 0
       },
       "40": {
         "home": "New Zealand",
@@ -1178,7 +1178,7 @@
       "23": {
         "home": "Portugal",
         "away": "DR Congo",
-        "gh": 3,
+        "gh": 2,
         "ga": 0
       },
       "24": {
