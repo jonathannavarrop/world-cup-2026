@@ -23,7 +23,7 @@ R32_POSITION_BONUS = 30
 # Ajustes manuales permanentes (se aplican después del cálculo automático).
 # Formato: {jugador: {bloque: delta_pts}}
 MANUAL_ADJUSTMENTS = {
-    "JONY": {"grupos": -12},
+    "JONY": {"grupos": -3},
 }
 
 
