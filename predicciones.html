@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
 <title>PORRA FANTASY - MUNDIAL DE LOS 2000 · Predicciones</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -162,6 +164,14 @@ function renderR32(advance, actual, finalSt, predSt) {
   const playerThs = PLAYERS.map(p =>
     `<th style="${TH_STYLE};text-align:center">${p}</th>`
   ).join('');
+
+  // Debug: log CHAMP data for group A to help diagnose display issues
+  console.log('[R32 debug] CHAMP advance.R32:', advance['CHAMP']?.R32?.slice(0,5), '...');
+  console.log('[R32 debug] actualR32 (first 5):', actualR32.slice(0,5));
+  console.log('[R32 debug] finalSt 1A:', finalSt['1A'], '| 2A:', finalSt['2A']);
+  console.log('[R32 debug] Mexico in CHAMP R32?', (advance['CHAMP']?.R32 || []).includes('Mexico'));
+  console.log('[R32 debug] South Korea in CHAMP R32?', (advance['CHAMP']?.R32 || []).includes('South Korea'));
+  console.log('[R32 debug] Mexico in actualR32?', actualR32.includes('Mexico'));
 
   // ── SECCIÓN 1: 1os y 2os ─────────────────────────────────────────────────
   // Filas = equipos reales que acabaron 1° o 2° en cada grupo (nunca 3os)
