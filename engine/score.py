@@ -62,11 +62,12 @@ def score_player(pred, res):
     actual_pos = {v["team"]: code for code, v in res.get("final_standings", {}).items() if isinstance(v, dict) and v.get("team")}
     pred_pos   = {v["team"]: code for code, v in pred.get("standings",      {}).items() if isinstance(v, dict) and v.get("team")}
 
-    # R32: 30 pts por equipo + 30 bonus si misma posición
+    # R32: 30 pts por equipo + 30 bonus si misma posición (solo 1os y 2os, nunca 3os)
     r32_teams = set(pred["advance"].get("R32", [])) & set(adv.get("R32", []))
     r32 = 30 * len(r32_teams)
     for team in r32_teams:
-        if pred_pos.get(team) and pred_pos.get(team) == actual_pos.get(team):
+        apos = actual_pos.get(team, "")
+        if pred_pos.get(team) == apos and apos and apos[0] in ("1", "2"):
             r32 += R32_POSITION_BONUS
     b["r32"] = r32
 

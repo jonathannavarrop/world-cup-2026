@@ -4,9 +4,9 @@
   "table": [
     {
       "player": "JONY",
-      "total": 2325,
+      "total": 2265,
       "grupos": 1035,
-      "r32": 1290,
+      "r32": 1230,
       "r16": 0,
       "qf": 0,
       "sf": 0,
@@ -15,9 +15,9 @@
     },
     {
       "player": "PEP",
-      "total": 2262,
+      "total": 2172,
       "grupos": 1002,
-      "r32": 1260,
+      "r32": 1170,
       "r16": 0,
       "qf": 0,
       "sf": 0,
@@ -26,9 +26,9 @@
     },
     {
       "player": "NEGREIRA",
-      "total": 2103,
+      "total": 2043,
       "grupos": 963,
-      "r32": 1140,
+      "r32": 1080,
       "r16": 0,
       "qf": 0,
       "sf": 0,
@@ -36,10 +36,10 @@
       "pos": 3
     },
     {
-      "player": "CHURU",
-      "total": 2025,
-      "grupos": 555,
-      "r32": 1470,
+      "player": "CHAMP",
+      "total": 1911,
+      "grupos": 891,
+      "r32": 1020,
       "r16": 0,
       "qf": 0,
       "sf": 0,
@@ -47,10 +47,10 @@
       "pos": 4
     },
     {
-      "player": "CHAMP",
-      "total": 2001,
-      "grupos": 891,
-      "r32": 1110,
+      "player": "CHURU",
+      "total": 1905,
+      "grupos": 555,
+      "r32": 1350,
       "r16": 0,
       "qf": 0,
       "sf": 0,
