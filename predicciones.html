@@ -124,112 +124,74 @@ function renderR32(advance, actual, finalSt, predSt) {
   const actualR32 = actual.R32 || [];
   const r32Known  = actualR32.length > 0;
 
-  // jugador → posCode → equipo predicho para esa posición (para bonus de pos exacta)
-  const predTeamAt = {};
+  // player → team → slot they predicted that team for (e.g. "Mexico" → "2A")
+  const playerTeamSlot = {};
   for (const p of PLAYERS) {
-    predTeamAt[p] = {};
-    for (const [code, v] of Object.entries(predSt[p] || {})) {
-      if (v && v.team) predTeamAt[p][code] = v.team;
+    playerTeamSlot[p] = {};
+    const ps = predSt[p] || {};
+    for (const slot of Object.keys(ps)) {
+      const v = ps[slot];
+      if (v && v.team) playerTeamSlot[p][v.team] = slot;
     }
   }
 
-  // Puntos sección 1: +30 por cada equipo real (1°/2°) que esté en advance.R32 del jugador
-  //                   +30 bonus si pred_standings[slot] == equipo real
-  // Puntos sección 2: +30 por cada 3° clasificado real que esté en advance.R32
-  // Esto reproduce exactamente la lógica de score.py
   const pts12  = Object.fromEntries(PLAYERS.map(p => [p, 0]));
   const pts3rd = Object.fromEntries(PLAYERS.map(p => [p, 0]));
-  if (r32Known) {
-    for (const g of GROUPS_LIST) {
-      for (const rank of [1, 2]) {
-        const code = `${rank}${g}`;
-        const v    = finalSt[code];
-        if (!v || !v.team || !actualR32.includes(v.team)) continue;
-        for (const p of PLAYERS) {
-          const playerR32 = advance[p]?.R32 || [];
-          if (!playerR32.includes(v.team)) continue;
-          pts12[p] += 30 + (predTeamAt[p][code] === v.team ? 30 : 0);
-        }
-      }
-      // 3er clasificado real que haya pasado
-      const v3 = finalSt[`3${g}`];
-      if (v3 && v3.team && actualR32.includes(v3.team)) {
-        for (const p of PLAYERS) {
-          if ((advance[p]?.R32 || []).includes(v3.team)) pts3rd[p] += 30;
-        }
-      }
-    }
-  }
 
+  const STH = `${TH_STYLE};background:var(--card);position:sticky;top:0;z-index:5;box-shadow:0 1px 0 var(--line)`;
   const playerThs = PLAYERS.map(p =>
     `<th style="${TH_STYLE};text-align:center">${p}</th>`
   ).join('');
-
-  // Debug: log CHAMP data for group A to help diagnose display issues
-  console.log('[R32 debug] CHAMP advance.R32:', advance['CHAMP']?.R32?.slice(0,5), '...');
-  console.log('[R32 debug] actualR32 (first 5):', actualR32.slice(0,5));
-  console.log('[R32 debug] finalSt 1A:', finalSt['1A'], '| 2A:', finalSt['2A']);
-  console.log('[R32 debug] Mexico in CHAMP R32?', (advance['CHAMP']?.R32 || []).includes('Mexico'));
-  console.log('[R32 debug] South Korea in CHAMP R32?', (advance['CHAMP']?.R32 || []).includes('South Korea'));
-  console.log('[R32 debug] Mexico in actualR32?', actualR32.includes('Mexico'));
+  const playerThsSticky = PLAYERS.map(p =>
+    `<th style="${STH};text-align:center">${p}</th>`
+  ).join('');
 
   // ── SECCIÓN 1: 1os y 2os ─────────────────────────────────────────────────
-  // Filas = equipos reales que acabaron 1° o 2° en cada grupo (nunca 3os)
   let rows1 = '';
   for (const g of GROUPS_LIST) {
     for (const rank of [1, 2]) {
-      const code       = `${rank}${g}`;
-      const v          = finalSt[code];
-      if (!v) continue;
-      const actualTeam = v.team;
+      const slot = `${rank}${g}`;
+      const entry = finalSt[slot] || {};
+      const team  = entry.team || null;
+      if (!team) continue;
+
+      const qualified = r32Known && actualR32.indexOf(team) !== -1;
+      const badge = r32Known
+        ? (qualified ? '<span class="pts-pos" style="font-size:10px"> ✔</span>' : '<span class="pts-neg" style="font-size:10px"> ✘</span>')
+        : '';
+      const realLabel = r32Known
+        ? `${rank}° ${teamFlag(team)} ${teamES(team)}${badge}`
+        : `${rank}° <span style="color:var(--muted)">pendiente</span>`;
 
       const grpCell = rank === 1
         ? `<td rowspan="2" style="text-align:center;vertical-align:middle;padding:6px 8px;font-family:'Anton',sans-serif;font-size:14px;color:var(--gold);border-right:1px solid var(--line)">${g}</td>`
         : '';
 
-      const inR32real = !r32Known || actualR32.includes(actualTeam);
-      const actualLabel = r32Known
-        ? `${rank}° ${teamFlag(actualTeam)} ${teamES(actualTeam)}${inR32real ? '<span class="pts-pos" style="font-size:10px"> ✔</span>' : '<span class="pts-neg" style="font-size:10px"> ✘</span>'}`
-        : `${rank}° <span style="color:var(--muted)">pendiente</span>`;
-
       const playerCells = PLAYERS.map(p => {
-        const predTeam  = predTeamAt[p][code];
-        const playerR32 = advance[p]?.R32 || [];
-        const inR32     = playerR32.includes(actualTeam);
-        const isExact   = predTeam === actualTeam;
+        const TD = `style="text-align:center;padding:6px 8px"`;
+        if (!r32Known) return `<td ${TD}><span class="pts-na">—</span></td>`;
+        if (!qualified) return `<td ${TD} style="text-align:center;padding:6px 8px;opacity:.5"><span class="pts-na">—</span></td>`;
 
-        // Nota secundaria con la predicción del jugador
-        const predNote = predTeam
-          ? `<span style="font-size:10px;color:var(--muted);display:block">${teamFlag(predTeam)} ${teamES(predTeam)}</span>`
-          : '';
+        const r32arr = (advance[p] && advance[p].R32) ? advance[p].R32 : [];
+        const inList = r32arr.indexOf(team) !== -1;
+        if (!inList) return `<td ${TD}><span class="pts-na">—</span></td>`;
 
-        if (!r32Known) {
-          return `<td style="text-align:center;padding:6px 8px">${predNote || '<span class="pts-na">—</span>'}</td>`;
-        }
-        if (!inR32real) {
-          // El equipo real no pasó → nadie puede sumar en esta fila
-          return `<td style="text-align:center;padding:6px 8px;opacity:.5">${predNote}<span class="pts-na" style="font-size:10px">—</span></td>`;
-        }
-        if (!inR32) {
-          return `<td style="text-align:center;padding:6px 8px;line-height:1.5">
-            ${predNote}
-            <span class="pts-neg" style="font-size:10px">✘ no en lista</span>
-          </td>`;
-        }
-        const posLine = isExact
-          ? `<span class="pts-pos" style="font-size:10px;display:block">+30 pos ✔</span>`
-          : `<span style="font-size:10px;color:var(--muted);display:block">pos ✗</span>`;
-        return `<td style="text-align:center;padding:6px 8px;line-height:1.5;background:rgba(0,255,133,.06)">
-          ${predNote}
-          <span class="pts-pos" style="font-size:10px;display:block">+30 avance ✔</span>
-          ${posLine}
-        </td>`;
+        // +60 si posición exacta (el jugador predijo este equipo para este slot)
+        // +30 si el equipo está en su lista pero en posición distinta
+        const predSlot = playerTeamSlot[p][team] || '';
+        const exactPos = predSlot === slot;
+        const pts = exactPos ? 60 : 30;
+        pts12[p] += pts;
+        const label = exactPos
+          ? `<span class="pts-pos" style="font-size:12px">+60 ✔✔</span>`
+          : `<span class="pts-pos" style="font-size:12px">+30 ✔</span>`;
+        return `<td style="text-align:center;padding:6px 8px;background:rgba(0,255,133,.06)">${label}</td>`;
       }).join('');
 
       const sep = rank === 2 ? 'border-bottom:2px solid var(--line)' : 'border-bottom:1px solid rgba(44,53,104,.2)';
       rows1 += `<tr style="${sep}">
         ${grpCell}
-        <td style="padding:6px 8px;font-size:12px;white-space:nowrap">${actualLabel}</td>
+        <td style="padding:6px 8px;font-size:12px;white-space:nowrap">${realLabel}</td>
         ${playerCells}
       </tr>`;
     }
@@ -240,14 +202,9 @@ function renderR32(advance, actual, finalSt, predSt) {
     ${PLAYERS.map(p => `<td style="text-align:center;padding:8px;font-weight:700">${r32Known ? ptsHtml(pts12[p]) : '—'}</td>`).join('')}
   </tr>`;
 
-  const STH = `${TH_STYLE};background:var(--card);position:sticky;top:0;z-index:5;box-shadow:0 1px 0 var(--line)`;
-  const playerThsSticky = PLAYERS.map(p =>
-    `<th style="${STH};text-align:center">${p}</th>`
-  ).join('');
-
   const section1 = `<div class="match-card" style="overflow-x:auto;padding:10px 4px">
     <p style="font-size:11px;color:var(--muted);padding:4px 8px 10px;font-family:'Space Mono',monospace">
-      1os y 2os de cada grupo · +30pts si el clasificado real estaba en tu lista R32 · +30pts extra si además coincide la posición exacta
+      1os y 2os · +60pts si coincide posición exacta · +30pts si está en tu lista R32
     </p>
     <table style="width:100%;border-collapse:collapse;font-size:13px">
       <thead><tr>
@@ -260,11 +217,10 @@ function renderR32(advance, actual, finalSt, predSt) {
   </div>`;
 
   // ── SECCIÓN 2: Los mejores 3os clasificados ───────────────────────────────
-  // Solo los equipos que acabaron 3os en su grupo Y clasificaron al R32
   const actual3rds = [];
   for (const g of GROUPS_LIST) {
-    const v = finalSt[`3${g}`];
-    if (v && v.team && (!r32Known || actualR32.includes(v.team))) {
+    const v = finalSt[`3${g}`] || {};
+    if (v.team && (!r32Known || actualR32.indexOf(v.team) !== -1)) {
       actual3rds.push({ team: v.team, code: `3${g}` });
     }
   }
@@ -273,11 +229,11 @@ function renderR32(advance, actual, finalSt, predSt) {
   if (!r32Known || actual3rds.length) {
     const thirdRows = actual3rds.map(({ team, code }) => {
       const playerCells = PLAYERS.map(p => {
-        const picked = (advance[p]?.R32 || []).includes(team);
+        const r32arr = (advance[p] && advance[p].R32) ? advance[p].R32 : [];
+        const picked = r32arr.indexOf(team) !== -1;
         if (!picked) return `<td style="text-align:center;padding:6px 8px"><span class="pts-na">—</span></td>`;
-        return `<td style="text-align:center;padding:6px 8px;background:rgba(0,255,133,.06)">
-          <span class="pts-pos" style="display:block">+30pts</span>
-        </td>`;
+        pts3rd[p] += 30;
+        return `<td style="text-align:center;padding:6px 8px;background:rgba(0,255,133,.06)"><span class="pts-pos" style="font-size:12px">+30 ✔</span></td>`;
       }).join('');
 
       return `<tr style="border-bottom:1px solid rgba(44,53,104,.3)">
@@ -298,7 +254,7 @@ function renderR32(advance, actual, finalSt, predSt) {
     section2 = `<div style="margin-top:12px">
       <div class="match-card" style="overflow-x:auto;padding:10px 4px">
         <p style="font-size:11px;color:var(--muted);padding:4px 8px 10px;font-family:'Space Mono',monospace">
-          Mejores 3os clasificados · +30pts si lo tenías en tu lista R32 · sin bonus de posición
+          Mejores 3os clasificados · +30pts si lo tenías en tu lista R32
         </p>
         <table style="width:100%;border-collapse:collapse;font-size:13px">
           <thead><tr>
