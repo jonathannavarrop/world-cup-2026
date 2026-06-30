@@ -196,17 +196,17 @@ function renderR32(advance, actual, finalSt, predSt) {
           return `<td style="text-align:center;padding:6px 8px"><span class="pts-na">—</span></td>`;
         }
 
-        // ¿Clasificó el equipo que puso?
-        const predQualified = actualR32.indexOf(predTeam) !== -1;
-        if (!predQualified) {
-          // Su equipo no clasificó → 0pts
+        // ¿Clasificó el equipo que puso como 1° o 2° (no como 3°)?
+        const actualSlotOfPred = actualTeamSlot[predTeam] || '';
+        const qualifiedAs12 = actualR32.indexOf(predTeam) !== -1 && actualSlotOfPred[0] !== '3';
+        if (!qualifiedAs12) {
+          // No clasificó, o clasificó como 3° (se cuenta en sección 2) → 0pts aquí
           return `<td style="text-align:center;padding:6px 8px;opacity:.75">
             <span style="font-size:11px">${label}</span>
           </td>`;
         }
 
-        // Clasificó: +60 si acertó posición exacta, +30 si clasificó pero en otra posición
-        const actualSlotOfPred = actualTeamSlot[predTeam] || '';
+        // Clasificó como 1° o 2°: +60 si posición exacta, +30 si no
         const exactPos = actualSlotOfPred === slot;
         const pts = exactPos ? 60 : 30;
         pts12[p] += pts;
