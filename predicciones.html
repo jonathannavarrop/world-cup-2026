@@ -124,14 +124,20 @@ function renderR32(advance, actual, finalSt, predSt) {
   const actualR32 = actual.R32 || [];
   const r32Known  = actualR32.length > 0;
 
-  // player → team → slot they predicted that team for (e.g. "Mexico" → "2A")
-  const playerTeamSlot = {};
+  // player → slot → predicted team  (para mostrar qué puso cada uno)
+  // player → team → predicted slot  (para calcular bonus posición exacta)
+  const predTeamAt   = {};  // [player][slot] = team
+  const playerTeamSlot = {};  // [player][team] = slot
   for (const p of PLAYERS) {
+    predTeamAt[p]    = {};
     playerTeamSlot[p] = {};
     const ps = predSt[p] || {};
     for (const slot of Object.keys(ps)) {
       const v = ps[slot];
-      if (v && v.team) playerTeamSlot[p][v.team] = slot;
+      if (v && v.team) {
+        predTeamAt[p][slot]      = v.team;
+        playerTeamSlot[p][v.team] = slot;
+      }
     }
   }
 
@@ -168,24 +174,31 @@ function renderR32(advance, actual, finalSt, predSt) {
         : '';
 
       const playerCells = PLAYERS.map(p => {
-        const TD = `style="text-align:center;padding:6px 8px"`;
-        if (!r32Known) return `<td ${TD}><span class="pts-na">—</span></td>`;
-        if (!qualified) return `<td ${TD} style="text-align:center;padding:6px 8px;opacity:.5"><span class="pts-na">—</span></td>`;
+        // Equipo que puso el jugador para ESTE slot (ej. 1A)
+        const predTeam = predTeamAt[p][slot] || null;
+        const predNote = predTeam
+          ? `<span style="font-size:10px;color:var(--muted);display:block">${teamFlag(predTeam)} ${teamES(predTeam)}</span>`
+          : `<span style="font-size:10px;color:var(--muted);display:block">—</span>`;
 
+        if (!r32Known) return `<td style="text-align:center;padding:6px 8px">${predNote}</td>`;
+        if (!qualified) return `<td style="text-align:center;padding:6px 8px;opacity:.5">${predNote}</td>`;
+
+        // ¿Tiene el equipo REAL en su lista R32?
         const r32arr = (advance[p] && advance[p].R32) ? advance[p].R32 : [];
         const inList = r32arr.indexOf(team) !== -1;
-        if (!inList) return `<td ${TD}><span class="pts-na">—</span></td>`;
+        if (!inList) {
+          return `<td style="text-align:center;padding:6px 8px;line-height:1.6">${predNote}<span class="pts-na" style="font-size:11px">—</span></td>`;
+        }
 
-        // +60 si posición exacta (el jugador predijo este equipo para este slot)
-        // +30 si el equipo está en su lista pero en posición distinta
+        // +60 si predijo este equipo para este slot exacto, +30 si está en lista
         const predSlot = playerTeamSlot[p][team] || '';
         const exactPos = predSlot === slot;
         const pts = exactPos ? 60 : 30;
         pts12[p] += pts;
-        const label = exactPos
-          ? `<span class="pts-pos" style="font-size:12px">+60 ✔✔</span>`
-          : `<span class="pts-pos" style="font-size:12px">+30 ✔</span>`;
-        return `<td style="text-align:center;padding:6px 8px;background:rgba(0,255,133,.06)">${label}</td>`;
+        const ptsLabel = exactPos
+          ? `<span class="pts-pos" style="font-size:11px">+60 ✔✔</span>`
+          : `<span class="pts-pos" style="font-size:11px">+30 ✔</span>`;
+        return `<td style="text-align:center;padding:6px 8px;line-height:1.6;background:rgba(0,255,133,.06)">${predNote}${ptsLabel}</td>`;
       }).join('');
 
       const sep = rank === 2 ? 'border-bottom:2px solid var(--line)' : 'border-bottom:1px solid rgba(44,53,104,.2)';
