@@ -20,6 +20,12 @@ KO_POINTS = {"R32": 30, "R16": 50, "QF": 80, "SF": 120, "Final": 170}
 CHAMPION_POINTS = 250
 R32_POSITION_BONUS = 30
 
+# Ajustes manuales permanentes (se aplican después del cálculo automático).
+# Formato: {jugador: {bloque: delta_pts}}
+MANUAL_ADJUSTMENTS = {
+    "JONY": {"grupos": -12},
+}
+
 
 def load(name, default):
     path = os.path.join(DATA, name)
@@ -85,6 +91,14 @@ def score_player(pred, res):
     return total, b
 
 
+def apply_adjustments(alias, total, breakdown):
+    adj = MANUAL_ADJUSTMENTS.get(alias, {})
+    for block, delta in adj.items():
+        breakdown[block] = breakdown.get(block, 0) + delta
+    total = sum(breakdown.values())
+    return total, breakdown
+
+
 def main():
     preds = load("predictions.json", {})
     res = load("results.json", {})
@@ -92,6 +106,7 @@ def main():
     table = []
     for alias, pred in preds.items():
         total, breakdown = score_player(pred, res)
+        total, breakdown = apply_adjustments(alias, total, breakdown)
         row = {"player": alias, "total": total}
         row.update(breakdown)          # aplana grupos, r32, r16, qf, sf, champion
         table.append(row)
