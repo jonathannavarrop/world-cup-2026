@@ -119,99 +119,118 @@ function renderFases() {
 const TH_STYLE = `font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:400;padding:6px 10px;border-bottom:1px solid var(--line)`;
 
 function renderR32(advance, actual, finalSt, predSt) {
-  const actualR32  = actual.R32 || [];
-  const r32Known   = actualR32.length > 0;
-  const groupsDone = Object.keys(finalSt).length > 0;
+  const actualR32 = actual.R32 || [];
+  const r32Known  = actualR32.length > 0;
 
-  const playerThs = PLAYERS.map(p =>
-    `<th style="${TH_STYLE};text-align:center">${p}</th>`
-  ).join('');
+  // equipo → código de posición real, p.ej. "Mexico" → "1A"
+  const actualPosOf = {};
+  for (const [code, v] of Object.entries(finalSt)) {
+    if (v && v.team) actualPosOf[v.team] = code;
+  }
 
-  // Acumula puntos por jugador para la fila resumen
+  // jugador → equipo → código de posición predicha
+  const predPosOf = {};
+  for (const p of PLAYERS) {
+    predPosOf[p] = {};
+    for (const [code, v] of Object.entries(predSt[p] || {})) {
+      if (v && v.team) predPosOf[p][v.team] = code;
+    }
+  }
+
   const totalPts = Object.fromEntries(PLAYERS.map(p => [p, 0]));
   let rows = '';
 
   for (const g of GROUPS_LIST) {
-    for (const rank of [1, 2]) {
-      const posCode    = `${rank}${g}`;
-      const actualTeam = groupsDone && finalSt[posCode] ? finalSt[posCode].team : null;
-      const advances   = actualTeam && (r32Known ? actualR32.includes(actualTeam) : true);
-      const sepStyle   = rank === 2
-        ? 'border-bottom:2px solid var(--line)'
-        : 'border-bottom:1px solid rgba(44,53,104,.35)';
+    // Recoge los equipos de este grupo que aparecen en la tabla
+    const slots = [];
+    for (const rank of [1, 2, 3]) {
+      const code = `${rank}${g}`;
+      const v    = finalSt[code];
+      if (!v) continue;
+      const team     = v.team;
+      const qualifies = r32Known ? actualR32.includes(team) : rank <= 2;
+      if (rank === 3 && !qualifies) continue; // 3os que no clasificaron: ocultar
+      slots.push({ rank, code, team, qualifies });
+    }
+    if (!slots.length) continue;
+
+    // Cabecera de grupo
+    rows += `<tr>
+      <td colspan="${2 + PLAYERS.length}" style="padding:5px 10px 3px;font-family:'Anton',sans-serif;font-size:13px;color:var(--gold);background:rgba(255,200,0,.05);border-top:2px solid rgba(255,200,0,.15)">
+        GRUPO ${g}
+      </td>
+    </tr>`;
+
+    for (const { rank, code, team, qualifies } of slots) {
+      const is3rd  = rank === 3;
+      const badge  = is3rd ? '3° ★' : `${rank}°`;
+      const rankStyle = is3rd ? 'color:var(--gold);font-weight:700' : 'color:var(--muted)';
+
+      const statusBadge = !r32Known
+        ? `<span class="tag pending" style="font-size:10px">pdte</span>`
+        : (qualifies
+            ? `<span class="pts-pos" style="font-size:11px">✔</span>`
+            : `<span class="pts-neg" style="font-size:11px">✘</span>`);
 
       const playerCells = PLAYERS.map(p => {
-        const predTeam = predSt[p]?.[posCode]?.team ?? null;
-        const display  = predTeam ? `${teamFlag(predTeam)} ${teamES(predTeam)}` : '—';
+        const picked = (advance[p]?.R32 || []).includes(team);
 
-        if (!actualTeam) {
-          // grupo aún sin jugar
-          return `<td style="text-align:center;padding:7px 8px;font-size:12px"><span class="pts-na">${display}</span></td>`;
+        // Grupo aún sin resultado conocido
+        if (!r32Known) {
+          return `<td style="text-align:center;padding:6px 8px">
+            ${picked ? '<span class="pts-na">pick</span>' : '<span class="pts-na">—</span>'}
+          </td>`;
         }
 
-        const posOk  = predTeam === actualTeam;        // acertó posición
-        const hasPick = (advance[p]?.R32 || []).includes(actualTeam); // acertó el avance
-
-        let bg = '', textCls = 'pts-neg';
-        let pts = 0;
-
-        if (advances && hasPick) {
-          pts = KO_POINTS.R32 + (posOk ? 30 : 0);
-          bg = 'background:rgba(0,255,133,.06)';
-          textCls = 'pts-pos';
-          totalPts[p] += pts;
-        } else if (!advances) {
-          // equipo no pasó (3º inesperado)
-          bg = 'background:rgba(255,77,109,.05)';
+        // Equipo no clasificó
+        if (!qualifies) {
+          return `<td style="text-align:center;padding:6px 8px;opacity:.5">
+            ${picked ? '<span class="pts-neg">0pts</span>' : '<span class="pts-na">—</span>'}
+          </td>`;
         }
 
-        let ptsDisplay;
-        if (advances && hasPick) {
-          if (posOk) {
-            ptsDisplay = `<span class="pts-pos">+30pts</span><br><span class="pts-pos">+30pts</span><br><span style="font-size:10px;color:var(--muted)">avance + pos</span>`;
-          } else {
-            ptsDisplay = `<span class="pts-pos">+30pts</span><br><span style="font-size:10px;color:var(--muted)">avance</span>`;
-          }
-        } else {
-          ptsDisplay = `<span class="pts-neg">0pts</span>`;
+        // Clasificó pero el jugador no lo tenía en su lista
+        if (!picked) {
+          return `<td style="text-align:center;padding:6px 8px"><span class="pts-na">—</span></td>`;
         }
 
-        return `<td style="text-align:center;padding:7px 8px;font-size:12px;line-height:1.6;${bg}">
-          <span style="font-size:11px;display:block;margin-bottom:2px">${display}</span>
-          ${ptsDisplay}
-        </td>`;
+        // Clasificó Y estaba en la lista del jugador → puntos
+        const posOk = predPosOf[p][team] === code; // además acertó la posición en el grupo
+        const pts   = 30 + (posOk ? 30 : 0);
+        totalPts[p] += pts;
+
+        const detail = posOk
+          ? `<span class="pts-pos" style="display:block">+30pts</span><span class="pts-pos" style="display:block">+30pts</span><span style="font-size:10px;color:var(--muted)">avance + pos</span>`
+          : `<span class="pts-pos" style="display:block">+30pts</span><span style="font-size:10px;color:var(--muted)">avance</span>`;
+
+        return `<td style="text-align:center;padding:6px 8px;line-height:1.5;background:rgba(0,255,133,.06)">${detail}</td>`;
       }).join('');
 
-      const actualLabel = actualTeam
-        ? `${teamFlag(actualTeam)} ${teamES(actualTeam)}`
-        : `<span style="color:var(--muted)">pendiente</span>`;
-
-      const groupCell = rank === 1
-        ? `<td rowspan="2" style="padding:7px 10px;font-family:'Anton',sans-serif;font-size:15px;color:var(--gold);text-align:center;vertical-align:middle;border-right:1px solid var(--line)">GRP<br>${g}</td>`
-        : '';
-
-      rows += `<tr style="${sepStyle}">
-        ${groupCell}
-        <td style="padding:7px 10px;font-family:'Space Mono',monospace;font-size:11px;white-space:nowrap">
-          ${rank}º &nbsp;${actualLabel}
-        </td>
+      rows += `<tr style="border-bottom:1px solid rgba(44,53,104,.3)">
+        <td style="padding:6px 10px;font-family:'Space Mono',monospace;font-size:11px;${rankStyle}">${badge}</td>
+        <td style="padding:6px 10px;white-space:nowrap">${teamFlag(team)} ${teamES(team)} ${statusBadge}</td>
         ${playerCells}
       </tr>`;
     }
   }
 
-  // Fila resumen de puntos
+  // Fila resumen
   const summaryRow = `<tr style="border-top:2px solid var(--line);background:rgba(255,255,255,.03)">
-    <td colspan="2" style="padding:8px 10px;font-family:'Space Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)">
-      Puntos R32
-    </td>
-    ${PLAYERS.map(p => `<td style="text-align:center;padding:8px 8px;font-weight:700">${ptsHtml(totalPts[p])}</td>`).join('')}
+    <td colspan="2" style="padding:8px 10px;font-family:'Space Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)">Puntos R32</td>
+    ${PLAYERS.map(p => `<td style="text-align:center;padding:8px;font-weight:700">${ptsHtml(totalPts[p])}</td>`).join('')}
   </tr>`;
 
+  const playerThs = PLAYERS.map(p =>
+    `<th style="${TH_STYLE};text-align:center">${p}</th>`
+  ).join('');
+
   return `<div class="match-card" style="overflow-x:auto;padding:10px 4px">
+    <p style="font-size:11px;color:var(--muted);padding:4px 8px 10px;font-family:'Space Mono',monospace">
+      +30pts por equipo en tu lista R32 · +30pts bonus si acertaste su posición en el grupo · ★ = mejor 3er clasificado
+    </p>
     <table style="width:100%;border-collapse:collapse;font-size:13px">
       <thead><tr>
-        <th style="${TH_STYLE};text-align:center">Grp</th>
+        <th style="${TH_STYLE}">Pos</th>
         <th style="${TH_STYLE}">Clasificado real</th>
         ${playerThs}
       </tr></thead>
