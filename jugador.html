@@ -80,8 +80,8 @@ async function load(){
     </tr>`;
   }).join('');
 
-  const groupTotal = (row.breakdown && row.breakdown.grupos) ?? 0;
-  const finalTotal = (row.breakdown && row.breakdown.fases_finales) ?? 0;
+  const groupTotal = row.grupos ?? 0;
+  const finalTotal = (row.r32 ?? 0) + (row.r16 ?? 0) + (row.qf ?? 0) + (row.sf ?? 0) + (row.champion ?? 0);
 
   // ---------- fases finales ----------
   const advance = (d.advance && d.advance[player]) || {};
