@@ -177,34 +177,33 @@ function renderR32(advance, actual, finalSt, predSt) {
 
       const playerCells = PLAYERS.map(p => {
         const predicted = predTeamAt[p][code]; // equipo que este jugador puso para este slot
-        const predLabel = predicted
-          ? `${teamFlag(predicted)} <span style="font-size:11px">${teamES(predicted)}</span>`
-          : '<span class="pts-na">—</span>';
 
         if (!r32Known) {
+          const predLabel = predicted
+            ? `${teamFlag(predicted)} <span style="font-size:11px">${teamES(predicted)}</span>`
+            : '<span class="pts-na">—</span>';
           return `<td style="text-align:center;padding:6px 8px;font-size:12px">${predLabel}</td>`;
         }
 
         const inR32 = (advance[p]?.R32 || []).includes(actualTeam);
-        const posOk = predicted === actualTeam; // acertó posición exacta Y equipo
+        const posOk = predicted === actualTeam;
 
         if (!inR32) {
-          // No tenía al clasificado real en su lista R32
+          // No tenía al clasificado real en su lista R32 → 0pts
+          const predNote = predicted
+            ? `<span style="font-size:10px;color:var(--muted);display:block">puso: ${teamES(predicted)}</span>`
+            : '';
           return `<td style="text-align:center;padding:6px 8px;font-size:12px">
-            <span style="display:block;margin-bottom:2px;opacity:.55">${predLabel}</span>
-            <span class="pts-na" style="font-size:10px">0pts</span>
+            <span class="pts-na" style="display:block">—</span>
+            ${predNote}
           </td>`;
         }
-        // Tenía el equipo real en su lista R32
-        const predMark = posOk
-          ? '<span class="pts-pos" style="font-size:10px"> ✔pos</span>'
-          : '<span class="pts-neg" style="font-size:10px"> ✗pos</span>';
+        // Tenía al clasificado real en su lista R32 → +30 avance
         const posLine = posOk
           ? `<span class="pts-pos" style="font-size:10px;display:block">+30 pos ✔</span>`
-          : `<span style="font-size:10px;color:var(--muted);display:block">pos ✗</span>`;
-        return `<td style="text-align:center;padding:6px 8px;font-size:12px;line-height:1.4;background:rgba(0,255,133,.06)">
-          <span style="display:block;margin-bottom:2px">${predLabel}${predMark}</span>
-          <span class="pts-pos" style="font-size:10px;display:block">+30 avance</span>
+          : `<span style="font-size:10px;color:var(--muted);display:block">pos ✗ · puso: ${predicted ? teamES(predicted) : '—'}</span>`;
+        return `<td style="text-align:center;padding:6px 8px;font-size:12px;line-height:1.6;background:rgba(0,255,133,.06)">
+          <span class="pts-pos" style="display:block">+30 avance ✔</span>
           ${posLine}
         </td>`;
       }).join('');
