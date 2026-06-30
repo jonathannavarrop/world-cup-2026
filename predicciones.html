@@ -122,7 +122,7 @@ function renderR32(advance, actual, finalSt, predSt) {
   const actualR32 = actual.R32 || [];
   const r32Known  = actualR32.length > 0;
 
-  // jugador → posCode → equipo predicho para esa posición
+  // jugador → posCode → equipo predicho para esa posición (para bonus de pos exacta)
   const predTeamAt = {};
   for (const p of PLAYERS) {
     predTeamAt[p] = {};
@@ -131,24 +131,10 @@ function renderR32(advance, actual, finalSt, predSt) {
     }
   }
 
-  // equipo → posición real ("Mexico" → "1A")
-  const actualPosOf = {};
-  for (const [code, v] of Object.entries(finalSt)) {
-    if (v && v.team) actualPosOf[v.team] = code;
-  }
-
-  // Picks de 3os por jugador = advance.R32 menos sus predicciones 1o/2o
-  // (así los totales cuadran aunque advance.R32 y pred_standings no sean idénticos)
-  const thirdPicks = {};
-  for (const p of PLAYERS) {
-    const pred12 = new Set(
-      GROUPS_LIST.flatMap(g => [predTeamAt[p][`1${g}`], predTeamAt[p][`2${g}`]]).filter(Boolean)
-    );
-    thirdPicks[p] = (advance[p]?.R32 || []).filter(t => !pred12.has(t));
-  }
-
-  // Puntos sección 1: +30 si el equipo predicho para ese slot pasó, +30 si es exacto
-  // Puntos sección 2: +30 por cada pick de 3o que pasó (por cualquier motivo)
+  // Puntos sección 1: +30 por cada equipo real (1°/2°) que esté en advance.R32 del jugador
+  //                   +30 bonus si pred_standings[slot] == equipo real
+  // Puntos sección 2: +30 por cada 3° clasificado real que esté en advance.R32
+  // Esto reproduce exactamente la lógica de score.py
   const pts12  = Object.fromEntries(PLAYERS.map(p => [p, 0]));
   const pts3rd = Object.fromEntries(PLAYERS.map(p => [p, 0]));
   if (r32Known) {
@@ -156,17 +142,19 @@ function renderR32(advance, actual, finalSt, predSt) {
       for (const rank of [1, 2]) {
         const code = `${rank}${g}`;
         const v    = finalSt[code];
-        if (!v || !v.team) continue;
+        if (!v || !v.team || !actualR32.includes(v.team)) continue;
         for (const p of PLAYERS) {
-          const predTeam = predTeamAt[p][code];
-          if (!predTeam || !actualR32.includes(predTeam)) continue;
-          pts12[p] += 30 + (predTeam === v.team ? 30 : 0);
+          const playerR32 = advance[p]?.R32 || [];
+          if (!playerR32.includes(v.team)) continue;
+          pts12[p] += 30 + (predTeamAt[p][code] === v.team ? 30 : 0);
         }
       }
-    }
-    for (const p of PLAYERS) {
-      for (const team of thirdPicks[p]) {
-        if (actualR32.includes(team)) pts3rd[p] += 30;
+      // 3er clasificado real que haya pasado
+      const v3 = finalSt[`3${g}`];
+      if (v3 && v3.team && actualR32.includes(v3.team)) {
+        for (const p of PLAYERS) {
+          if ((advance[p]?.R32 || []).includes(v3.team)) pts3rd[p] += 30;
+        }
       }
     }
   }
@@ -176,6 +164,7 @@ function renderR32(advance, actual, finalSt, predSt) {
   ).join('');
 
   // ── SECCIÓN 1: 1os y 2os ─────────────────────────────────────────────────
+  // Filas = equipos reales que acabaron 1° o 2° en cada grupo (nunca 3os)
   let rows1 = '';
   for (const g of GROUPS_LIST) {
     for (const rank of [1, 2]) {
@@ -188,38 +177,40 @@ function renderR32(advance, actual, finalSt, predSt) {
         ? `<td rowspan="2" style="text-align:center;vertical-align:middle;padding:6px 8px;font-family:'Anton',sans-serif;font-size:14px;color:var(--gold);border-right:1px solid var(--line)">${g}</td>`
         : '';
 
-      const advances = !r32Known || actualR32.includes(actualTeam);
+      const inR32real = !r32Known || actualR32.includes(actualTeam);
       const actualLabel = r32Known
-        ? `${rank}° ${teamFlag(actualTeam)} ${teamES(actualTeam)}${advances ? '<span class="pts-pos" style="font-size:10px"> ✔</span>' : '<span class="pts-neg" style="font-size:10px"> ✘</span>'}`
+        ? `${rank}° ${teamFlag(actualTeam)} ${teamES(actualTeam)}${inR32real ? '<span class="pts-pos" style="font-size:10px"> ✔</span>' : '<span class="pts-neg" style="font-size:10px"> ✘</span>'}`
         : `${rank}° <span style="color:var(--muted)">pendiente</span>`;
 
       const playerCells = PLAYERS.map(p => {
-        const predTeam = predTeamAt[p][code];
-        const predLabel = predTeam
-          ? `${teamFlag(predTeam)} <span style="font-size:12px">${teamES(predTeam)}</span>`
-          : '<span class="pts-na">—</span>';
+        const predTeam  = predTeamAt[p][code];
+        const playerR32 = advance[p]?.R32 || [];
+        const inR32     = playerR32.includes(actualTeam);
+        const isExact   = predTeam === actualTeam;
+
+        // Nota secundaria con la predicción del jugador
+        const predNote = predTeam
+          ? `<span style="font-size:10px;color:var(--muted);display:block">${teamFlag(predTeam)} ${teamES(predTeam)}</span>`
+          : '';
 
         if (!r32Known) {
-          return `<td style="text-align:center;padding:6px 8px">${predLabel}</td>`;
+          return `<td style="text-align:center;padding:6px 8px">${predNote || '<span class="pts-na">—</span>'}</td>`;
         }
-        if (!predTeam) {
-          return `<td style="text-align:center;padding:6px 8px"><span class="pts-na">—</span></td>`;
+        if (!inR32real) {
+          // El equipo real no pasó → nadie puede sumar en esta fila
+          return `<td style="text-align:center;padding:6px 8px;opacity:.5">${predNote}<span class="pts-na" style="font-size:10px">—</span></td>`;
         }
-
-        const predPassed = actualR32.includes(predTeam);
-        const isExact    = predTeam === actualTeam;
-
-        if (!predPassed) {
+        if (!inR32) {
           return `<td style="text-align:center;padding:6px 8px;line-height:1.5">
-            <span style="display:block">${predLabel}</span>
-            <span class="pts-neg" style="font-size:10px">✘ no pasó</span>
+            ${predNote}
+            <span class="pts-neg" style="font-size:10px">✘ no en lista</span>
           </td>`;
         }
         const posLine = isExact
           ? `<span class="pts-pos" style="font-size:10px;display:block">+30 pos ✔</span>`
-          : `<span style="font-size:10px;color:var(--muted);display:block">pos ✗ (pasó como ${actualPosOf[predTeam] || '?'})</span>`;
-        return `<td style="text-align:center;padding:6px 8px;line-height:1.6;background:rgba(0,255,133,.06)">
-          <span style="display:block">${predLabel}</span>
+          : `<span style="font-size:10px;color:var(--muted);display:block">pos ✗</span>`;
+        return `<td style="text-align:center;padding:6px 8px;line-height:1.5;background:rgba(0,255,133,.06)">
+          ${predNote}
           <span class="pts-pos" style="font-size:10px;display:block">+30 avance ✔</span>
           ${posLine}
         </td>`;
@@ -239,71 +230,72 @@ function renderR32(advance, actual, finalSt, predSt) {
     ${PLAYERS.map(p => `<td style="text-align:center;padding:8px;font-weight:700">${r32Known ? ptsHtml(pts12[p]) : '—'}</td>`).join('')}
   </tr>`;
 
+  const STH = `${TH_STYLE};background:var(--card);position:sticky;top:0;z-index:5;box-shadow:0 1px 0 var(--line)`;
+  const playerThsSticky = PLAYERS.map(p =>
+    `<th style="${STH};text-align:center">${p}</th>`
+  ).join('');
+
   const section1 = `<div class="match-card" style="overflow-x:auto;padding:10px 4px">
     <p style="font-size:11px;color:var(--muted);padding:4px 8px 10px;font-family:'Space Mono',monospace">
-      Tu predicción por slot · +30pts si ese equipo pasó al R32 · +30pts extra si es exacto (mismo equipo y misma posición)
+      1os y 2os de cada grupo · +30pts si el clasificado real estaba en tu lista R32 · +30pts extra si además coincide la posición exacta
     </p>
     <table style="width:100%;border-collapse:collapse;font-size:13px">
       <thead><tr>
-        <th style="${TH_STYLE};text-align:center">Grp</th>
-        <th style="${TH_STYLE}">Real</th>
-        ${playerThs}
+        <th style="${STH};text-align:center">Grp</th>
+        <th style="${STH}">Real</th>
+        ${playerThsSticky}
       </tr></thead>
       <tbody>${rows1}${summary12}</tbody>
     </table>
   </div>`;
 
-  // ── SECCIÓN 2: Picks de 3os de cada jugador ───────────────────────────────
-  // Unión de todos los picks de 3os, ordenados: primero los que pasaron, luego los que no
-  const allThirdTeams = [...new Set(PLAYERS.flatMap(p => thirdPicks[p]))].sort((a, b) => {
-    const aAdv = actualR32.includes(a) ? 0 : 1;
-    const bAdv = actualR32.includes(b) ? 0 : 1;
-    if (aAdv !== bAdv) return aAdv - bAdv;
-    return (actualPosOf[a] || 'zzz').localeCompare(actualPosOf[b] || 'zzz');
-  });
+  // ── SECCIÓN 2: Los mejores 3os clasificados ───────────────────────────────
+  // Solo los equipos que acabaron 3os en su grupo Y clasificaron al R32
+  const actual3rds = [];
+  for (const g of GROUPS_LIST) {
+    const v = finalSt[`3${g}`];
+    if (v && v.team && (!r32Known || actualR32.includes(v.team))) {
+      actual3rds.push({ team: v.team, code: `3${g}` });
+    }
+  }
 
   let section2 = '';
-  if (allThirdTeams.length) {
-    const thirdRows = allThirdTeams.map(team => {
-      const advanced = r32Known && actualR32.includes(team);
-      const posCode  = actualPosOf[team] || '';
-      const posLabel = !r32Known ? '' : (advanced
-        ? `<span style="font-size:10px;color:var(--muted)"> (${posCode})</span>`
-        : '<span class="pts-neg" style="font-size:10px"> ✘</span>');
-
+  if (!r32Known || actual3rds.length) {
+    const thirdRows = actual3rds.map(({ team, code }) => {
       const playerCells = PLAYERS.map(p => {
-        const picked = thirdPicks[p].includes(team);
+        const picked = (advance[p]?.R32 || []).includes(team);
         if (!picked) return `<td style="text-align:center;padding:6px 8px"><span class="pts-na">—</span></td>`;
-        if (!r32Known) return `<td style="text-align:center;padding:6px 8px"><span class="pts-na">pick</span></td>`;
-        if (!advanced) return `<td style="text-align:center;padding:6px 8px;opacity:.5"><span class="pts-neg" style="font-size:11px">✘ 0pts</span></td>`;
         return `<td style="text-align:center;padding:6px 8px;background:rgba(0,255,133,.06)">
           <span class="pts-pos" style="display:block">+30pts</span>
         </td>`;
       }).join('');
 
-      const dim = r32Known && !advanced ? 'opacity:.55;' : '';
-      return `<tr style="${dim}border-bottom:1px solid rgba(44,53,104,.3)">
-        <td style="padding:6px 10px;white-space:nowrap">${teamFlag(team)} ${teamES(team)}${posLabel}</td>
+      return `<tr style="border-bottom:1px solid rgba(44,53,104,.3)">
+        <td style="padding:6px 10px;white-space:nowrap">${teamFlag(team)} ${teamES(team)} <span style="font-size:10px;color:var(--muted)">(${code})</span></td>
         ${playerCells}
       </tr>`;
     }).join('');
 
-    const summary3rd = `<tr style="background:rgba(255,255,255,.03);border-top:2px solid var(--line)">
+    const pendingRow = !r32Known
+      ? `<tr><td colspan="${PLAYERS.length + 1}" style="text-align:center;padding:12px;color:var(--muted);font-size:12px">Pendiente — se conocerán al cierre de la fase de grupos</td></tr>`
+      : '';
+
+    const summary3rd = r32Known ? `<tr style="background:rgba(255,255,255,.03);border-top:2px solid var(--line)">
       <td style="padding:8px 10px;font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)">Subtotal 3os</td>
-      ${PLAYERS.map(p => `<td style="text-align:center;padding:8px;font-weight:700">${r32Known ? ptsHtml(pts3rd[p]) : '—'}</td>`).join('')}
-    </tr>`;
+      ${PLAYERS.map(p => `<td style="text-align:center;padding:8px;font-weight:700">${ptsHtml(pts3rd[p])}</td>`).join('')}
+    </tr>` : '';
 
     section2 = `<div style="margin-top:12px">
       <div class="match-card" style="overflow-x:auto;padding:10px 4px">
         <p style="font-size:11px;color:var(--muted);padding:4px 8px 10px;font-family:'Space Mono',monospace">
-          Picks de 3os · solo +30pts si pasó (por cualquier motivo: 1°, 2° o 3° del grupo) · sin bonus de posición
+          Mejores 3os clasificados · +30pts si lo tenías en tu lista R32 · sin bonus de posición
         </p>
         <table style="width:100%;border-collapse:collapse;font-size:13px">
           <thead><tr>
-            <th style="${TH_STYLE}">Equipo</th>
+            <th style="${TH_STYLE}">Equipo (3°)</th>
             ${playerThs}
           </tr></thead>
-          <tbody>${thirdRows}${summary3rd}</tbody>
+          <tbody>${thirdRows}${pendingRow}${summary3rd}</tbody>
         </table>
       </div>
     </div>`;
