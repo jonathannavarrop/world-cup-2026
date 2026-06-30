@@ -4,47 +4,57 @@
   "table": [
     {
       "player": "JONY",
-      "total": 1032,
-      "breakdown": {
-        "grupos": 1032,
-        "fases_finales": 0
-      },
+      "total": 2325,
+      "grupos": 1035,
+      "r32": 1290,
+      "r16": 0,
+      "qf": 0,
+      "sf": 0,
+      "champion": 0,
       "pos": 1
     },
     {
       "player": "PEP",
-      "total": 1002,
-      "breakdown": {
-        "grupos": 1002,
-        "fases_finales": 0
-      },
+      "total": 2262,
+      "grupos": 1002,
+      "r32": 1260,
+      "r16": 0,
+      "qf": 0,
+      "sf": 0,
+      "champion": 0,
       "pos": 2
     },
     {
       "player": "NEGREIRA",
-      "total": 963,
-      "breakdown": {
-        "grupos": 963,
-        "fases_finales": 0
-      },
+      "total": 2103,
+      "grupos": 963,
+      "r32": 1140,
+      "r16": 0,
+      "qf": 0,
+      "sf": 0,
+      "champion": 0,
       "pos": 3
     },
     {
-      "player": "CHAMP",
-      "total": 891,
-      "breakdown": {
-        "grupos": 891,
-        "fases_finales": 0
-      },
+      "player": "CHURU",
+      "total": 2025,
+      "grupos": 555,
+      "r32": 1470,
+      "r16": 0,
+      "qf": 0,
+      "sf": 0,
+      "champion": 0,
       "pos": 4
     },
     {
-      "player": "CHURU",
-      "total": 555,
-      "breakdown": {
-        "grupos": 555,
-        "fases_finales": 0
-      },
+      "player": "CHAMP",
+      "total": 2001,
+      "grupos": 891,
+      "r32": 1110,
+      "r16": 0,
+      "qf": 0,
+      "sf": 0,
+      "champion": 0,
       "pos": 5
     }
   ],
@@ -805,9 +815,9 @@
           "points": -9
         },
         "JONY": {
-          "gh": 3,
+          "gh": 2,
           "ga": 0,
-          "points": -9
+          "points": -6
         },
         "CHAMP": {
           "gh": 5,
@@ -1139,8 +1149,8 @@
         },
         "JONY": {
           "gh": 0,
-          "ga": 3,
-          "points": 24
+          "ga": 2,
+          "points": 27
         },
         "CHAMP": {
           "gh": 1,
@@ -1175,9 +1185,9 @@
           "points": 27
         },
         "JONY": {
-          "gh": 4,
+          "gh": 6,
           "ga": 0,
-          "points": 27
+          "points": 21
         },
         "CHAMP": {
           "gh": 4,
@@ -1361,8 +1371,8 @@
         },
         "JONY": {
           "gh": 0,
-          "ga": 2,
-          "points": 24
+          "ga": 1,
+          "points": 21
         },
         "CHAMP": {
           "gh": 2,
@@ -1434,9 +1444,9 @@
           "points": -12
         },
         "JONY": {
-          "gh": 2,
-          "ga": 1,
-          "points": -9
+          "gh": 1,
+          "ga": 0,
+          "points": -3
         },
         "CHAMP": {
           "gh": 2,
@@ -3102,7 +3112,40 @@
     }
   },
   "actual_advanced": {
-    "R32": [],
+    "R32": [
+      "Algeria",
+      "Argentina",
+      "Australia",
+      "Austria",
+      "Belgium",
+      "Bosnia-Herzegovina",
+      "Brazil",
+      "Canada",
+      "Cape Verde",
+      "Colombia",
+      "Croatia",
+      "DR Congo",
+      "Ecuador",
+      "Egypt",
+      "England",
+      "France",
+      "Germany",
+      "Ghana",
+      "Ivory Coast",
+      "Japan",
+      "Mexico",
+      "Morocco",
+      "Netherlands",
+      "Norway",
+      "Paraguay",
+      "Portugal",
+      "Senegal",
+      "South Africa",
+      "Spain",
+      "Sweden",
+      "Switzerland",
+      "USA"
+    ],
     "R16": [],
     "QF": [],
     "SF": [],

@@ -44,15 +44,38 @@ async function load(){
      <span>Actualizado: ${upd}</span>`;
   document.getElementById('refresh').textContent = 'Se actualiza solo al recargar la página.';
 
+  const bkCol = (val, label) => {
+    const cls = val > 0 ? '' : ' bk-zero';
+    return `<div class="bk-col${cls}">
+      <span class="bk-val">${val}</span>
+      <span class="bk-label">${label}</span>
+    </div>`;
+  };
+
   document.getElementById('board').innerHTML = d.table.map((r,i)=>{
+    const g  = r.grupos    ?? 0;
+    const r32= r.r32       ?? 0;
+    const r16= r.r16       ?? 0;
+    const qf = r.qf        ?? 0;
+    const sf = r.sf        ?? 0;
+    const ch = r.champion  ?? 0;
     return `<a class="row ${i===0?'lead':''}" href="jugador.html?j=${r.player}&from=clasificacion">
-       <div class="head-row">
-         <div class="pos">${r.pos}</div>
-         <div class="name">${r.player}</div>
-         <div class="pts-total">${r.total}<small>PUNTOS</small></div>
-         <div class="chev">▸</div>
-       </div>
-     </a>`;
+      <div class="head-row">
+        <div class="pos">${r.pos}</div>
+        <div class="name">${r.player}</div>
+        <div class="pts-total">${r.total}<small>TOTAL</small></div>
+        <div class="chev">▸</div>
+      </div>
+      <div class="breakdown-row">
+        ${bkCol(g,  'GRUPOS')}
+        <div class="bk-sep"></div>
+        ${bkCol(r32,'1/16')}
+        ${bkCol(r16,'1/8')}
+        ${bkCol(qf, '1/4')}
+        ${bkCol(sf, 'SEMI')}
+        ${bkCol(ch, 'CAMP')}
+      </div>
+    </a>`;
   }).join('');
 }
 load();

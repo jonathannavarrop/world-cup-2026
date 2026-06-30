@@ -59,20 +59,26 @@ def score_player(pred, res):
 
     # ---------- FASES FINALES (equipos que pasan de ronda) ----------
     adv = res.get("advanced", {})
-    kp = 0
-    for rnd, pts in KO_POINTS.items():
-        hit = set(pred["advance"].get(rnd, [])) & set(adv.get(rnd, []))
-        kp += pts * len(hit)
-    # bonus +30 por acertar la posición exacta del grupo (solo dieciseisavos)
     actual_pos = {v["team"]: code for code, v in res.get("final_standings", {}).items() if isinstance(v, dict) and v.get("team")}
-    pred_pos = {v["team"]: code for code, v in pred.get("standings", {}).items() if isinstance(v, dict) and v.get("team")}
-    for team in set(pred["advance"].get("R32", [])) & set(adv.get("R32", [])):
+    pred_pos   = {v["team"]: code for code, v in pred.get("standings",      {}).items() if isinstance(v, dict) and v.get("team")}
+
+    # R32: 30 pts por equipo + 30 bonus si misma posición
+    r32_teams = set(pred["advance"].get("R32", [])) & set(adv.get("R32", []))
+    r32 = 30 * len(r32_teams)
+    for team in r32_teams:
         if pred_pos.get(team) and pred_pos.get(team) == actual_pos.get(team):
-            kp += R32_POSITION_BONUS
-    # campeón
-    if pred["advance"].get("Champion") and pred["advance"]["Champion"][0] in adv.get("Champion", []):
-        kp += CHAMPION_POINTS
-    b["fases_finales"] = kp
+            r32 += R32_POSITION_BONUS
+    b["r32"] = r32
+
+    # R16, QF, SF, Final — puntos por ronda
+    for rnd, pts in [("R16", 50), ("QF", 80), ("SF", 120), ("Final", 170)]:
+        hit = set(pred["advance"].get(rnd, [])) & set(adv.get(rnd, []))
+        key = "sf" if rnd in ("SF", "Final") else rnd.lower()
+        b[key] = b.get(key, 0) + pts * len(hit)
+
+    # Campeón
+    champ = pred["advance"].get("Champion", [])
+    b["champion"] = CHAMPION_POINTS if champ and champ[0] in adv.get("Champion", []) else 0
 
     total = sum(b.values())
     return total, b
@@ -85,7 +91,9 @@ def main():
     table = []
     for alias, pred in preds.items():
         total, breakdown = score_player(pred, res)
-        table.append({"player": alias, "total": total, "breakdown": breakdown})
+        row = {"player": alias, "total": total}
+        row.update(breakdown)          # aplana grupos, r32, r16, qf, sf, champion
+        table.append(row)
     table.sort(key=lambda x: -x["total"])
     for i, row in enumerate(table, 1):
         row["pos"] = i
@@ -122,10 +130,9 @@ def main():
     with open(os.path.join(DATA, "standings.json"), "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=2)
 
-    print(f"{'#':>2}  {'JUGADOR':10} {'TOTAL':>6}   desglose")
+    print(f"{'#':>2}  {'JUGADOR':10} {'TOTAL':>6} {'GRUPOS':>7} {'1/16':>6} {'1/8':>6} {'1/4':>6} {'SEMI':>6} {'CAMP':>6}")
     for row in table:
-        bd = "  ".join(f"{k[:4]}={v}" for k, v in row["breakdown"].items() if v)
-        print(f"{row['pos']:>2}  {row['player']:10} {row['total']:>6}   {bd}")
+        print(f"{row['pos']:>2}  {row['player']:10} {row['total']:>6} {row.get('grupos',0):>7} {row.get('r32',0):>6} {row.get('r16',0):>6} {row.get('qf',0):>6} {row.get('sf',0):>6} {row.get('champion',0):>6}")
 
 
 if __name__ == "__main__":
