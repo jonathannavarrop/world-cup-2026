@@ -141,6 +141,14 @@ function renderR32(advance, actual, finalSt, predSt) {
     }
   }
 
+  // equipo real → slot real (ej. "Mexico" → "1A")
+  const actualTeamSlot = {};
+  for (const [s, v] of Object.entries(finalSt)) {
+    if (v && v.team) actualTeamSlot[v.team] = s;
+  }
+  // por jugador: qué equipos ya se contaron en sección 1
+  const countedSec1 = Object.fromEntries(PLAYERS.map(p => [p, new Set()]));
+
   const pts12  = Object.fromEntries(PLAYERS.map(p => [p, 0]));
   const pts3rd = Object.fromEntries(PLAYERS.map(p => [p, 0]));
 
@@ -174,32 +182,41 @@ function renderR32(advance, actual, finalSt, predSt) {
         : '';
 
       const playerCells = PLAYERS.map(p => {
-        // Lo que el jugador puso para ESTE slot (su predicción de posición)
+        // Lo que el jugador puso para ESTE slot
         const predTeam = predTeamAt[p][slot] || null;
-        const predNote = predTeam
-          ? `<span style="font-size:10px;color:var(--muted)">pred: ${teamFlag(predTeam)} ${teamES(predTeam)}</span>`
-          : `<span style="font-size:10px;color:var(--muted)">—</span>`;
+        const label = predTeam
+          ? `${teamFlag(predTeam)} ${teamES(predTeam)}`
+          : '—';
 
-        if (!r32Known) return `<td style="text-align:center;padding:6px 8px">${predNote}</td>`;
-        if (!qualified) return `<td style="text-align:center;padding:6px 8px;opacity:.5">${predNote}</td>`;
-
-        // Score basado en advance.R32: ¿tiene el equipo REAL en su lista de 32?
-        const r32arr = (advance[p] && advance[p].R32) ? advance[p].R32 : [];
-        const inList = r32arr.indexOf(team) !== -1;
-
-        if (!inList) {
-          // No tiene el equipo real → muestra lo que puso pero 0pts
-          return `<td style="text-align:center;padding:6px 8px;line-height:1.6">${predNote}<br><span class="pts-na" style="font-size:11px">—</span></td>`;
+        if (!r32Known) {
+          return `<td style="text-align:center;padding:6px 8px;font-size:11px">${label}</td>`;
         }
 
-        // Tiene el equipo real en su lista: +60 si predijo exactamente este equipo para este slot
-        const isExact = predTeam === team;
-        const pts = isExact ? 60 : 30;
+        if (!predTeam) {
+          return `<td style="text-align:center;padding:6px 8px"><span class="pts-na">—</span></td>`;
+        }
+
+        // ¿Clasificó el equipo que puso?
+        const predQualified = actualR32.indexOf(predTeam) !== -1;
+        if (!predQualified) {
+          // Su equipo no clasificó → 0pts
+          return `<td style="text-align:center;padding:6px 8px;opacity:.75">
+            <span style="font-size:11px">${label}</span>
+          </td>`;
+        }
+
+        // Clasificó: +60 si acertó posición exacta, +30 si clasificó pero en otra posición
+        const actualSlotOfPred = actualTeamSlot[predTeam] || '';
+        const exactPos = actualSlotOfPred === slot;
+        const pts = exactPos ? 60 : 30;
         pts12[p] += pts;
-        const ptsLabel = isExact
+        countedSec1[p].add(predTeam);
+        const ptsLabel = exactPos
           ? `<span class="pts-pos" style="font-size:11px">+60 ✔✔</span>`
           : `<span class="pts-pos" style="font-size:11px">+30 ✔</span>`;
-        return `<td style="text-align:center;padding:6px 8px;line-height:1.6;background:rgba(0,255,133,.06)">${predNote}<br>${ptsLabel}</td>`;
+        return `<td style="text-align:center;padding:6px 8px;background:rgba(0,255,133,.06)">
+          <span style="font-size:11px">${label}</span> ${ptsLabel}
+        </td>`;
       }).join('');
 
       const sep = rank === 2 ? 'border-bottom:2px solid var(--line)' : 'border-bottom:1px solid rgba(44,53,104,.2)';
