@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-30T09:39:42Z",
+  "updated": "2026-07-04T08:39:36Z",
   "matches_played": 72,
   "table": [
     {
@@ -7,7 +7,7 @@
       "total": 2812,
       "grupos": 1032,
       "r32": 1230,
-      "r16": 550,
+      "r16": 0,
       "qf": 0,
       "sf": 0,
       "champion": 0,
@@ -18,7 +18,7 @@
       "total": 2772,
       "grupos": 1002,
       "r32": 1170,
-      "r16": 600,
+      "r16": 0,
       "qf": 0,
       "sf": 0,
       "champion": 0,
@@ -3146,24 +3146,7 @@
       "Switzerland",
       "USA"
     ],
-    "R16": [
-      "Canada",
-      "Brazil",
-      "Paraguay",
-      "Morocco",
-      "Norway",
-      "France",
-      "Mexico",
-      "England",
-      "Belgium",
-      "USA",
-      "Spain",
-      "Portugal",
-      "Switzerland",
-      "Egypt",
-      "Argentina",
-      "Colombia"
-    ],
+    "R16": [],
     "QF": [],
     "SF": [],
     "Final": [],
