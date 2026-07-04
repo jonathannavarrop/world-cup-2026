@@ -88,14 +88,42 @@ async function load(){
   const actual = d.actual_advanced || {};
   const champion = (advance.Champion || [])[0];
   const championHit = champion && (actual.Champion||[]).includes(champion);
-  const r32 = advance.R32 || [];
 
-  const r32Pills = r32.map(team=>{
-    const hit = (actual.R32||[]).includes(team);
-    const pending = !(actual.R32||[]).length;
-    const cls = pending ? '' : (hit ? 'pts-pos' : 'pts-neg');
-    return `<div class="advance-pill"><span>${teamFlag(team)} ${teamES(team)}</span><span class="${cls}">${pending?'pendiente':(hit?'✔':'✘')}</span></div>`;
+  // Genera el bloque de píldoras para una ronda dada
+  function roundPills(roundKey, pts) {
+    const picks = advance[roundKey] || [];
+    const actualTeams = actual[roundKey] || [];
+    const known = actualTeams.length > 0;
+    return picks.map(team => {
+      const hit = actualTeams.includes(team);
+      const cls = !known ? '' : (hit ? 'pts-pos' : 'pts-neg');
+      const badge = !known ? '<span class="tag pending">Pendiente</span>'
+                           : (hit ? ptsHtml(pts) : '<span class="pts-neg">✘</span>');
+      return `<div class="advance-pill"><span>${teamFlag(team)} ${teamES(team)}</span>${badge}</div>`;
+    }).join('') || '<div class="empty">Sin selección.</div>';
+  }
+
+  const ROUNDS = [
+    { key: 'R32',   pts: 30,  label: 'Dieciseisavos (1/16) · 30 pts/equipo', rowKey: 'r32' },
+    { key: 'R16',   pts: 50,  label: 'Octavos (1/8) · 50 pts/equipo',        rowKey: 'r16' },
+    { key: 'QF',    pts: 80,  label: 'Cuartos (1/4) · 80 pts/equipo',        rowKey: 'qf'  },
+    { key: 'SF',    pts: 120, label: 'Semifinales · 120 pts/equipo',          rowKey: 'sf'  },
+    { key: 'Final', pts: 170, label: 'Final · 170 pts/equipo',                rowKey: 'sf'  },
+  ];
+
+  const roundsHTML = ROUNDS.map(r => {
+    const earned = row[r.rowKey] ?? 0;
+    const earnedLabel = actual[r.key] && actual[r.key].length
+      ? `<span style="margin-left:8px;font-size:12px;color:var(--muted)">${earned} pts</span>` : '';
+    return `
+      <div class="section-title" style="margin-top:18px">${r.label}${earnedLabel}</div>
+      <div class="advance-grid">${roundPills(r.key, r.pts)}</div>`;
   }).join('');
+
+  const championLabel = champion
+    ? `${teamFlag(champion)} ${teamES(champion)}&nbsp;&nbsp;`
+    + ((actual.Champion||[]).length ? ptsHtml(championHit ? 250 : 0) : '<span class="tag pending">Pendiente</span>')
+    : '—';
 
   document.getElementById('content').innerHTML = `
     <div class="player-header">
@@ -113,12 +141,11 @@ async function load(){
       <tbody>${tableRows}</tbody>
     </table>
 
-    <div class="section-title">Fases finales</div>
+    <div class="section-title" style="margin-top:24px">Fases finales</div>
     <p class="subtitle" style="margin-bottom:10px">
-      Campeón elegido: <b style="color:var(--ink)">${champion ? teamFlag(champion)+' '+teamES(champion) : '—'}</b>
-      ${champion ? ((actual.Champion||[]).length ? ptsHtml(championHit?250:0) : '<span class="tag pending">Pendiente</span>') : ''}
+      Campeón elegido: <b style="color:var(--ink)">${championLabel}</b>
     </p>
-    <div class="advance-grid">${r32Pills || '<div class="empty">Sin selección de dieciseisavos.</div>'}</div>
+    ${roundsHTML}
   `;
 }
 load();
