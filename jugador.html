@@ -89,18 +89,24 @@ async function load(){
   const champion = (advance.Champion || [])[0];
   const championHit = champion && (actual.Champion||[]).includes(champion);
 
-  // Genera el bloque de píldoras para una ronda dada
+  // Genera el bloque de píldoras + fila de total para una ronda dada
   function roundPills(roundKey, pts) {
     const picks = advance[roundKey] || [];
     const actualTeams = actual[roundKey] || [];
     const known = actualTeams.length > 0;
-    return picks.map(team => {
+    if (!picks.length) return '<div class="empty">Sin selección.</div>';
+    const hits = known ? picks.filter(t => actualTeams.includes(t)).length : null;
+    const earned = hits !== null ? hits * pts : null;
+    const pills = picks.map(team => {
       const hit = actualTeams.includes(team);
-      const cls = !known ? '' : (hit ? 'pts-pos' : 'pts-neg');
       const badge = !known ? '<span class="tag pending">Pendiente</span>'
                            : (hit ? ptsHtml(pts) : '<span class="pts-neg">✘</span>');
       return `<div class="advance-pill"><span>${teamFlag(team)} ${teamES(team)}</span>${badge}</div>`;
-    }).join('') || '<div class="empty">Sin selección.</div>';
+    }).join('');
+    const totalRow = known
+      ? `<div class="round-total"><span>${hits} de ${picks.length} acertados</span><span>${ptsHtml(earned)}</span></div>`
+      : `<div class="round-total"><span>${picks.length} seleccionados</span><span class="tag pending">Pendiente</span></div>`;
+    return pills + totalRow;
   }
 
   // Nota: score.py acumula SF+Final en el mismo campo "sf"
