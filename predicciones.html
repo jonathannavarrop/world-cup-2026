@@ -219,11 +219,6 @@ function renderR32(advance, actual, finalSt, predSt) {
     }
   }
 
-  const subtotalRow = `<tr style="background:rgba(255,255,255,.03);border-top:2px solid var(--line)">
-    <td colspan="2" style="padding:8px 10px;font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)">Subtotal clasificados</td>
-    ${PLAYERS.map(p => `<td style="text-align:center;padding:8px;font-weight:700">${r32Known ? ptsHtml(pts[p]) : '—'}</td>`).join('')}
-  </tr>`;
-
   const section = `<div class="match-card" style="overflow-x:auto;padding:10px 4px">
     <p style="font-size:11px;color:var(--muted);padding:4px 8px 10px;font-family:'Space Mono',monospace">
       1os/2os: +60pts posición exacta · +30pts clasifica y está en lista R32 &nbsp;|&nbsp; 3os: +30pts si pasa y está en lista
@@ -234,7 +229,7 @@ function renderR32(advance, actual, finalSt, predSt) {
         <th style="${STH}">Real</th>
         ${playerThsSticky}
       </tr></thead>
-      <tbody>${rows}${subtotalRow}</tbody>
+      <tbody>${rows}</tbody>
     </table>
   </div>`;
 
