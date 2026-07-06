@@ -1448,7 +1448,7 @@
   ],
   "advanced": {
     "R32": ["Algeria","Argentina","Australia","Austria","Belgium","Bosnia-Herzegovina","Brazil","Canada","Cape Verde","Colombia","Croatia","DR Congo","Ecuador","Egypt","England","France","Germany","Ghana","Ivory Coast","Japan","Mexico","Morocco","Netherlands","Norway","Paraguay","Portugal","Senegal","South Africa","Spain","Sweden","Switzerland","USA"],
-    "R16": [],
+    "R16": ["Canada", "Brazil", "Paraguay", "Morocco", "Norway", "France", "Mexico", "England", "Belgium", "USA", "Spain", "Portugal", "Switzerland", "Egypt", "Argentina", "Colombia"],
     "QF": [],
     "SF": [],
     "Final": [],
