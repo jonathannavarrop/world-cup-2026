@@ -4,55 +4,55 @@
   "table": [
     {
       "player": "JONY",
-      "total": 2812,
+      "total": 3212,
       "grupos": 1032,
       "r32": 1230,
       "r16": 550,
-      "qf": 0,
+      "qf": 400,
       "sf": 0,
       "champion": 0,
       "pos": 1
     },
     {
       "player": "PEP",
-      "total": 2772,
+      "total": 3172,
       "grupos": 1002,
       "r32": 1170,
       "r16": 600,
-      "qf": 0,
+      "qf": 400,
       "sf": 0,
       "champion": 0,
       "pos": 2
     },
     {
       "player": "NEGREIRA",
-      "total": 2693,
+      "total": 3093,
       "grupos": 963,
       "r32": 1080,
       "r16": 650,
-      "qf": 0,
+      "qf": 400,
       "sf": 0,
       "champion": 0,
       "pos": 3
     },
     {
       "player": "CHURU",
-      "total": 2605,
+      "total": 2845,
       "grupos": 555,
       "r32": 1350,
       "r16": 700,
-      "qf": 0,
+      "qf": 240,
       "sf": 0,
       "champion": 0,
       "pos": 4
     },
     {
       "player": "CHAMP",
-      "total": 2511,
+      "total": 2831,
       "grupos": 891,
       "r32": 1020,
       "r16": 600,
-      "qf": 0,
+      "qf": 320,
       "sf": 0,
       "champion": 0,
       "pos": 5
@@ -3164,7 +3164,16 @@
       "Argentina",
       "Colombia"
     ],
-    "QF": [],
+    "QF": [
+      "Morocco",
+      "Norway",
+      "France",
+      "England",
+      "Belgium",
+      "Spain",
+      "Switzerland",
+      "Argentina"
+    ],
     "SF": [],
     "Final": [],
     "Champion": []
