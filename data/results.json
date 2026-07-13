@@ -1509,7 +1509,7 @@
       "Switzerland",
       "Argentina"
     ],
-    "SF": [],
+    "SF": ["France", "Spain", "Argentina", "England"],
     "Final": [],
     "Champion": []
   }
