@@ -4,13 +4,14 @@ name: Actualizar porra
 # Vía MANUAL (por defecto): lee data/resultados.csv del repo.
 # Si prefieres un Google Sheet publicado, define la variable RESULTS_CSV_URL
 #   (repo > Settings > Secrets and variables > Actions > Variables).
+#
+# Desactivados los triggers automáticos (push/schedule): la fase de grupos
+# ya terminó y los resultados de eliminatorias se meten a mano en
+# data/results.json, así que el recálculo automático solo pisaba esos
+# cambios. Se deja solo el botón "Run workflow" para forzarlo si hace falta.
 
 on:
   workflow_dispatch: {}            # botón "Run workflow" para forzar a mano
-  push:
-    paths: ["data/resultados.csv", "data/manual.json", "data/predictions.json"]   # al guardar, recalcula
-  schedule:
-    - cron: "0 */6 * * *"          # y cada 6 h (por si usas Google Sheet)
 
 permissions:
   contents: write
