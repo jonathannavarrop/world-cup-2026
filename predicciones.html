@@ -76,11 +76,62 @@ function render(){
   let html;
   if (view === 'fases') {
     html = renderFases();
+  } else if (view === 'premios') {
+    html = renderPremios();
   } else {
     const sorted = matches.slice().sort((a,b) => matchDateKey(a.date) - matchDateKey(b.date) || a.num - b.num);
     html = sorted.map(m => matchCard(m, true)).join('');
   }
   document.getElementById('groups').innerHTML = html || '<div class="empty">No hay partidos para este filtro.</div>';
+}
+
+const PRIZES = [
+  { key: 'roberswingger',    label: 'Roberswingger',    type: 'player' },
+  { key: 'champ',            label: 'Champ',            type: 'player' },
+  { key: 'paraguaya_chupona',label: 'Paraguaya Chupona',type: 'team'   },
+  { key: 'pinwis',           label: 'Pinwis',           type: 'players2' },
+  { key: 'lobby',            label: 'Lobby',            type: 'team'   },
+  { key: 'columna_churu',    label: 'Columna Churu',    type: 'player' },
+];
+
+function prizePickHtml(type, value){
+  if (!value || (Array.isArray(value) && value.every(v => !v))) return '<span class="pts-na">—</span>';
+  if (type === 'team') return `${teamFlag(value)} ${teamES(value)}`;
+  if (type === 'players2') {
+    const [a, b] = value;
+    return [a, b].filter(Boolean).join(' · ') || '<span class="pts-na">—</span>';
+  }
+  return value;
+}
+
+function renderPremios(){
+  const prizes = DATA.prizes || {};
+  const playerThs = PLAYERS.map(p =>
+    `<th style="${TH_STYLE};text-align:center">${p}</th>`).join('');
+
+  const rows = PRIZES.map(pz => {
+    const cells = PLAYERS.map(p => {
+      const value = (prizes[p] || {})[pz.key];
+      return `<td style="text-align:center;padding:8px 10px">${prizePickHtml(pz.type, value)}</td>`;
+    }).join('');
+    return `<tr style="border-bottom:1px solid rgba(44,53,104,.4)">
+      <td style="padding:8px 10px;white-space:nowrap;font-weight:700">${pz.label}</td>
+      ${cells}
+    </tr>`;
+  }).join('');
+
+  return `<div class="match-card" style="overflow-x:auto;padding:10px 4px">
+    <p style="font-size:11px;color:var(--muted);padding:4px 8px 10px;font-family:'Space Mono',monospace">
+      Elección de cada jugador para los premios especiales. Puntuación pendiente de aplicar — ver <a href="reglas.html" style="color:var(--ink)">reglas</a>.
+    </p>
+    <table style="width:100%;border-collapse:collapse;font-size:13px">
+      <thead><tr>
+        <th style="${TH_STYLE}">Premio</th>
+        ${playerThs}
+      </tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+  </div>`;
 }
 
 function renderFasesRoundFilter() {
@@ -254,7 +305,7 @@ function renderKORound(rnd, advance, actual) {
   const actualTeams = actual[rnd] || [];
   const isKnown = actualTeams.length > 0;
   const pts = KO_POINTS[rnd];
-  const ROW_KEY = { R16: 'r16', QF: 'qf', SF: 'sf', Final: 'sf' };
+  const ROW_KEY = { R16: 'r16', QF: 'qf', SF: 'sf', Final: 'final' };
   const rowKey = ROW_KEY[rnd];
 
   const allTeams = new Set(actualTeams);
@@ -350,7 +401,8 @@ function renderChampionSection(advance, actual) {
 function renderControls(){
   document.getElementById('viewToggle').innerHTML = `
     <button data-view="fases" class="${view==='fases'?'active':''}">🏆 Fases Finales</button>
-    <button data-view="calendario" class="${view==='calendario'?'active':''}">Fase de grupos</button>`;
+    <button data-view="calendario" class="${view==='calendario'?'active':''}">Fase de grupos</button>
+    <button data-view="premios" class="${view==='premios'?'active':''}">⭐ Premios Especiales</button>`;
   document.querySelectorAll('#viewToggle button').forEach(b =>
     b.addEventListener('click', () => { view = b.dataset.view; renderControls(); render(); }));
 }

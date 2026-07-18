@@ -1510,7 +1510,7 @@
       "Argentina"
     ],
     "SF": ["France", "Spain", "Argentina", "England"],
-    "Final": [],
+    "Final": ["Argentina", "Spain"],
     "Champion": []
   }
 }

@@ -802,15 +802,15 @@
       ]
     },
     "prizes": {
-      "roberswingger": null,
-      "champ": null,
-      "paraguaya_chupona": null,
+      "roberswingger": "Kylian Mbappé",
+      "champ": "Pedri",
+      "paraguaya_chupona": "Ecuador",
       "pinwis": [
-        null,
-        null
+        "Cristian Romero",
+        "John Stones"
       ],
-      "lobby": null,
-      "columna_churu": null
+      "lobby": "Curacao",
+      "columna_churu": "Diogo Costa"
     }
   },
   "JONY": {
@@ -1616,15 +1616,15 @@
       ]
     },
     "prizes": {
-      "roberswingger": null,
-      "champ": null,
-      "paraguaya_chupona": null,
+      "roberswingger": "Kylian Mbappé",
+      "champ": "Lamine Yamal",
+      "paraguaya_chupona": "Uruguay",
       "pinwis": [
-        null,
-        null
+        "Nicolás Otamendi",
+        "José Giménez"
       ],
-      "lobby": null,
-      "columna_churu": null
+      "lobby": "Haiti",
+      "columna_churu": "Emiliano Martínez"
     }
   },
   "CHAMP": {
@@ -2430,15 +2430,15 @@
       ]
     },
     "prizes": {
-      "roberswingger": null,
-      "champ": null,
-      "paraguaya_chupona": null,
+      "roberswingger": "Harry Kane",
+      "champ": "Pedri",
+      "paraguaya_chupona": "Argentina",
       "pinwis": [
-        null,
-        null
+        "Nicolás Otamendi",
+        "William Pacho"
       ],
-      "lobby": null,
-      "columna_churu": null
+      "lobby": "Curacao",
+      "columna_churu": "Diogo Costa"
     }
   },
   "NEGREIRA": {
@@ -3244,15 +3244,15 @@
       ]
     },
     "prizes": {
-      "roberswingger": null,
-      "champ": null,
-      "paraguaya_chupona": null,
+      "roberswingger": "Kylian Mbappé",
+      "champ": "Lamine Yamal",
+      "paraguaya_chupona": "Argentina",
       "pinwis": [
-        null,
-        null
+        "Nicolás Otamendi",
+        "Cristiano Ronaldo"
       ],
-      "lobby": null,
-      "columna_churu": null
+      "lobby": "Haiti",
+      "columna_churu": "Unai Simón"
     }
   },
   "PEP": {
@@ -4058,15 +4058,15 @@
       ]
     },
     "prizes": {
-      "roberswingger": null,
-      "champ": null,
-      "paraguaya_chupona": null,
+      "roberswingger": "Harry Kane",
+      "champ": "Pedri",
+      "paraguaya_chupona": "Netherlands",
       "pinwis": [
-        null,
-        null
+        "Cristian Romero",
+        "José Giménez"
       ],
-      "lobby": null,
-      "columna_churu": null
+      "lobby": "Haiti",
+      "columna_churu": "Emiliano Martínez"
     }
   }
 }

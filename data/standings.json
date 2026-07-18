@@ -4,56 +4,61 @@
   "table": [
     {
       "player": "JONY",
-      "total": 3692,
+      "total": 4032,
       "grupos": 1032,
       "r32": 1230,
       "r16": 550,
       "qf": 400,
       "sf": 480,
+      "final": 340,
       "champion": 0,
       "pos": 1
     },
     {
       "player": "PEP",
-      "total": 3652,
+      "total": 3822,
       "grupos": 1002,
       "r32": 1170,
       "r16": 600,
       "qf": 400,
       "sf": 480,
+      "final": 170,
       "champion": 0,
       "pos": 2
     },
     {
       "player": "NEGREIRA",
-      "total": 3453,
+      "total": 3793,
       "grupos": 963,
       "r32": 1080,
       "r16": 650,
       "qf": 400,
       "sf": 360,
+      "final": 340,
       "champion": 0,
       "pos": 3
     },
     {
       "player": "CHURU",
-      "total": 3085,
+      "total": 3255,
       "grupos": 555,
       "r32": 1350,
       "r16": 700,
       "qf": 240,
       "sf": 240,
+      "final": 170,
       "champion": 0,
       "pos": 4
     },
     {
       "player": "CHAMP",
-      "total": 3071,
+      "total": 3241,
       "grupos": 891,
       "r32": 1020,
       "r16": 600,
       "qf": 320,
       "sf": 240,
+      "final": 170,
       "champion": 0,
       "pos": 5
     }
@@ -3111,6 +3116,63 @@
       ]
     }
   },
+  "prizes": {
+    "CHURU": {
+      "roberswingger": "Kylian Mbappé",
+      "champ": "Pedri",
+      "paraguaya_chupona": "Ecuador",
+      "pinwis": [
+        "Cristian Romero",
+        "John Stones"
+      ],
+      "lobby": "Curacao",
+      "columna_churu": "Diogo Costa"
+    },
+    "JONY": {
+      "roberswingger": "Kylian Mbappé",
+      "champ": "Lamine Yamal",
+      "paraguaya_chupona": "Uruguay",
+      "pinwis": [
+        "Nicolás Otamendi",
+        "José Giménez"
+      ],
+      "lobby": "Haiti",
+      "columna_churu": "Emiliano Martínez"
+    },
+    "CHAMP": {
+      "roberswingger": "Harry Kane",
+      "champ": "Pedri",
+      "paraguaya_chupona": "Argentina",
+      "pinwis": [
+        "Nicolás Otamendi",
+        "William Pacho"
+      ],
+      "lobby": "Curacao",
+      "columna_churu": "Diogo Costa"
+    },
+    "NEGREIRA": {
+      "roberswingger": "Kylian Mbappé",
+      "champ": "Lamine Yamal",
+      "paraguaya_chupona": "Argentina",
+      "pinwis": [
+        "Nicolás Otamendi",
+        "Cristiano Ronaldo"
+      ],
+      "lobby": "Haiti",
+      "columna_churu": "Unai Simón"
+    },
+    "PEP": {
+      "roberswingger": "Harry Kane",
+      "champ": "Pedri",
+      "paraguaya_chupona": "Netherlands",
+      "pinwis": [
+        "Cristian Romero",
+        "José Giménez"
+      ],
+      "lobby": "Haiti",
+      "columna_churu": "Emiliano Martínez"
+    }
+  },
   "actual_advanced": {
     "R32": [
       "Algeria",
@@ -3180,7 +3242,10 @@
       "Argentina",
       "England"
     ],
-    "Final": [],
+    "Final": [
+      "Argentina",
+      "Spain"
+    ],
     "Champion": []
   },
   "final_standings": {

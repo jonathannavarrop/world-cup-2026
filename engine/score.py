@@ -80,7 +80,7 @@ def score_player(pred, res):
     # R16, QF, SF, Final — puntos por ronda
     for rnd, pts in [("R16", 50), ("QF", 80), ("SF", 120), ("Final", 170)]:
         hit = set(pred["advance"].get(rnd, [])) & set(adv.get(rnd, []))
-        key = "sf" if rnd in ("SF", "Final") else rnd.lower()
+        key = rnd.lower()
         b[key] = b.get(key, 0) + pts * len(hit)
 
     # Campeón
@@ -133,12 +133,18 @@ def main():
     for alias, pred in preds.items():
         advance[alias] = pred.get("advance", {})
 
+    # ---------- picks de premios especiales por jugador ----------
+    prizes = {}
+    for alias, pred in preds.items():
+        prizes[alias] = pred.get("prizes", {})
+
     out = {
         "updated": res.get("updated"),
         "matches_played": len(res.get("group_results", {})),
         "table": table,
         "matches": matches,
         "advance": advance,
+        "prizes": prizes,
         "actual_advanced": res.get("advanced", {}),
         "final_standings": res.get("final_standings", {}),
         "pred_standings": {alias: pred.get("standings", {}) for alias, pred in preds.items()},
@@ -146,9 +152,9 @@ def main():
     with open(os.path.join(DATA, "standings.json"), "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=2)
 
-    print(f"{'#':>2}  {'JUGADOR':10} {'TOTAL':>6} {'GRUPOS':>7} {'1/16':>6} {'1/8':>6} {'1/4':>6} {'SEMI':>6} {'CAMP':>6}")
+    print(f"{'#':>2}  {'JUGADOR':10} {'TOTAL':>6} {'GRUPOS':>7} {'1/16':>6} {'1/8':>6} {'1/4':>6} {'SEMI':>6} {'FINAL':>6} {'CAMP':>6}")
     for row in table:
-        print(f"{row['pos']:>2}  {row['player']:10} {row['total']:>6} {row.get('grupos',0):>7} {row.get('r32',0):>6} {row.get('r16',0):>6} {row.get('qf',0):>6} {row.get('sf',0):>6} {row.get('champion',0):>6}")
+        print(f"{row['pos']:>2}  {row['player']:10} {row['total']:>6} {row.get('grupos',0):>7} {row.get('r32',0):>6} {row.get('r16',0):>6} {row.get('qf',0):>6} {row.get('sf',0):>6} {row.get('final',0):>6} {row.get('champion',0):>6}")
 
 
 if __name__ == "__main__":

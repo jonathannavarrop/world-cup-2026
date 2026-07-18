@@ -15,7 +15,7 @@
   <header class="hero">
     <div class="eyebrow"><span class="flags">🇲🇽🇺🇸🇨🇦</span> Cómo se puntúa</div>
     <h1 class="title">REGLAS <span class="accent">DE LA PORRA</span></h1>
-    <div class="subtitle">Resumen de la puntuación que se aplica en automático. De momento los premios especiales quedan excluidos.</div>
+    <div class="subtitle">Resumen de la puntuación que se aplica en automático, además de los premios especiales.</div>
   </header>
 
   <div class="section-title">Fase de grupos</div>
@@ -59,10 +59,82 @@
   </div>
 
   <div class="section-title">Premios especiales</div>
+
   <div class="match-card">
-    <p class="subtitle">Los premios extra (Roberswingger, Champ, Paraguaya Chupona, Pinwis,
-      Lobby, Columna Churu) <b style="color:var(--ink)">todavía no están añadidos</b> a la
-      clasificación, pero próximamente se incorporarán con su puntuación.</p>
+    <h3 style="margin-top:0">🦵 Premio ROBERSWINGGER</h3>
+    <p class="subtitle">Elige un único jugador para todo el torneo. Sumará puntos cada vez que
+      anote (según el tipo de gol) y restará puntos si falla algún penalti.</p>
+    <div class="advance-grid" style="margin-top:12px">
+      <div class="advance-pill"><span>Gol normal <span class="subtitle">(cualquier gol que no sea de falta, penalti u olímpico)</span></span><span class="pts-pos">+20pts</span></div>
+      <div class="advance-pill"><span>Gol de falta</span><span class="pts-pos">+30pts</span></div>
+      <div class="advance-pill"><span>Gol olímpico</span><span class="pts-pos">+50pts</span></div>
+      <div class="advance-pill"><span>Gol de penalti</span><span class="pts-pos">+10pts</span></div>
+      <div class="advance-pill"><span>Penalti fallado</span><span class="pts-neg">-10pts</span></div>
+      <div class="advance-pill"><span>Bota de oro</span><span class="pts-pos">+60pts</span></div>
+    </div>
+    <p class="subtitle" style="margin-top:12px">Si hay varios jugadores empatados con los mismos
+      goles como Bota de Oro, se dan +60 puntos a cada participante que haya acertado a
+      alguno de ellos.</p>
+  </div>
+
+  <div class="match-card">
+    <h3 style="margin-top:0">⭐ Premio CHAMP</h3>
+    <p class="subtitle">Elige un único jugador. Sumará puntos si es elegido Mejor Jugador del
+      Torneo, o Mejor Jugador del Partido en alguno de los encuentros que juegue con su
+      selección.</p>
+    <div class="advance-grid" style="margin-top:12px">
+      <div class="advance-pill"><span>Nombrado Mejor Jugador del Torneo</span><span class="pts-pos">+100pts</span></div>
+      <div class="advance-pill"><span>Nombrado Mejor Jugador del Partido (por cada partido)</span><span class="pts-pos">+25pts</span></div>
+    </div>
+  </div>
+
+  <div class="match-card">
+    <h3 style="margin-top:0">🟨 Premio PARAGUAYA CHUPONA</h3>
+    <p class="subtitle">Elige una selección. Sumará puntos positivos por cada tarjeta que le
+      saquen a cada uno de sus jugadores, y también por los posibles goles en propia puerta y
+      penaltis cometidos durante el tiempo de juego.</p>
+    <div class="advance-grid" style="margin-top:12px">
+      <div class="advance-pill"><span>Cada amarilla</span><span class="pts-pos">+15pts</span></div>
+      <div class="advance-pill"><span>Cada roja directa</span><span class="pts-pos">+60pts</span></div>
+      <div class="advance-pill"><span>Cada gol en propia puerta</span><span class="pts-pos">+100pts</span></div>
+      <div class="advance-pill"><span>Cada penalti cometido</span><span class="pts-pos">+50pts</span></div>
+    </div>
+    <p class="subtitle" style="margin-top:12px">Solo cuentan las tarjetas a futbolistas, tanto
+      si están jugando como si son amonestados en el banquillo. No cuentan las tarjetas a
+      entrenadores o cuerpo técnico.</p>
+  </div>
+
+  <div class="match-card">
+    <h3 style="margin-top:0">🟥 Premio PINWIS</h3>
+    <p class="subtitle">Elige dos jugadores de cualquier selección. Sumarán puntos por cada
+      tarjeta que les saquen.</p>
+    <div class="advance-grid" style="margin-top:12px">
+      <div class="advance-pill"><span>Amarilla</span><span class="pts-pos">+15pts</span></div>
+      <div class="advance-pill"><span>Doble amarilla</span><span class="pts-pos">+50pts</span></div>
+      <div class="advance-pill"><span>Roja directa</span><span class="pts-pos">+100pts</span></div>
+    </div>
+  </div>
+
+  <div class="match-card">
+    <h3 style="margin-top:0">📉 Premio LOBBY</h3>
+    <p class="subtitle">Elige la selección que creas que va a ser la peor del mundial. No tiene
+      por qué coincidir con la que os salga en la clasificación del Excel. El que acierte dicha
+      selección gana:</p>
+    <div class="advance-grid" style="margin-top:12px">
+      <div class="advance-pill"><span>Acertar la peor selección</span><span class="pts-pos">+100pts</span></div>
+    </div>
+    <p class="subtitle" style="margin-top:12px">El criterio para decidir qué selección es la
+      peor sigue este orden: 1) menos puntos, 2) peor diferencia de goles (+/-), 3) menos goles
+      a favor.</p>
+  </div>
+
+  <div class="match-card">
+    <h3 style="margin-top:0">🧤 Premio Columna Churu</h3>
+    <p class="subtitle">Elige un portero de cualquier selección.</p>
+    <div class="advance-grid" style="margin-top:12px">
+      <div class="advance-pill"><span>Nombrado Jugador del Partido en un encuentro</span><span class="pts-pos">+80pts</span></div>
+      <div class="advance-pill"><span>Cada penalti parado <span class="subtitle">(también cuenta si el equipo contrario lo tira fuera o falla)</span></span><span class="pts-pos">+50pts</span></div>
+    </div>
   </div>
 </div>
 
