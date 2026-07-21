@@ -106,13 +106,17 @@ function prizePickHtml(type, value){
 
 function renderPremios(){
   const prizes = DATA.prizes || {};
+  const prizeScores = DATA.prize_scores || {};
   const playerThs = PLAYERS.map(p =>
     `<th style="${TH_STYLE};text-align:center">${p}</th>`).join('');
 
   const rows = PRIZES.map(pz => {
     const cells = PLAYERS.map(p => {
       const value = (prizes[p] || {})[pz.key];
-      return `<td style="text-align:center;padding:8px 10px">${prizePickHtml(pz.type, value)}</td>`;
+      const pick = prizePickHtml(pz.type, value);
+      const pts = (prizeScores[p] || {})[pz.key];
+      const ptsSpan = (value && pts !== undefined) ? `<div>${ptsHtml(pts)}</div>` : '';
+      return `<td style="text-align:center;padding:8px 10px">${pick}${ptsSpan}</td>`;
     }).join('');
     return `<tr style="border-bottom:1px solid rgba(44,53,104,.4)">
       <td style="padding:8px 10px;white-space:nowrap;font-weight:700">${pz.label}</td>
@@ -122,7 +126,7 @@ function renderPremios(){
 
   return `<div class="match-card" style="overflow-x:auto;padding:10px 4px">
     <p style="font-size:11px;color:var(--muted);padding:4px 8px 10px;font-family:'Space Mono',monospace">
-      Elección de cada jugador para los premios especiales. Puntuación pendiente de aplicar — ver <a href="reglas.html" style="color:var(--ink)">reglas</a>.
+      Elección de cada jugador para los premios especiales y puntos conseguidos. Se van cerrando premio a premio — ver <a href="reglas.html" style="color:var(--ink)">reglas</a>.
     </p>
     <table style="width:100%;border-collapse:collapse;font-size:13px">
       <thead><tr>

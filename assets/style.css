@@ -127,12 +127,12 @@ h1.title .accent{color:var(--blue);text-shadow:0 0 24px rgba(47,125,255,.45)}
 
 /* ---------- BREAKDOWN ROW (clasificación) ---------- */
 .breakdown-row{
-  display:flex;align-items:center;gap:0;
+  display:flex;align-items:center;flex-wrap:wrap;gap:8px 0;row-gap:10px;
   padding:10px 18px 14px;
   border-top:1px solid var(--line);
 }
 .bk-col{
-  flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;
+  flex:1 1 56px;min-width:56px;display:flex;flex-direction:column;align-items:center;gap:3px;
 }
 .bk-sep{
   width:1px;min-height:32px;background:var(--line);margin:0 8px;flex-shrink:0;

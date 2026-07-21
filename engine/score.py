@@ -50,7 +50,25 @@ def score_match(p, a):
     return pts
 
 
-def score_player(pred, res):
+def score_prizes(pred, prize_points):
+    """Puntos de premios especiales a partir de data/manual.json['prize_points']."""
+    picks = pred.get("prizes", {})
+    breakdown = {}
+    total = 0
+    for key, value in picks.items():
+        table = prize_points.get(key, {})
+        if isinstance(value, list):
+            pts = sum(table.get(v, 0) for v in value if v)
+        elif value:
+            pts = table.get(value, 0)
+        else:
+            pts = 0
+        breakdown[key] = pts
+        total += pts
+    return total, breakdown
+
+
+def score_player(pred, res, prize_points):
     b = collections.OrderedDict()  # desglose por bloque
 
     # ---------- FASE DE GRUPOS ----------
@@ -87,8 +105,12 @@ def score_player(pred, res):
     champ = pred["advance"].get("Champion", [])
     b["champion"] = CHAMPION_POINTS if champ and champ[0] in adv.get("Champion", []) else 0
 
+    # ---------- PREMIOS ESPECIALES ----------
+    prize_total, prize_breakdown = score_prizes(pred, prize_points)
+    b["premios"] = prize_total
+
     total = sum(b.values())
-    return total, b
+    return total, b, prize_breakdown
 
 
 def apply_adjustments(alias, total, breakdown):
@@ -102,14 +124,19 @@ def apply_adjustments(alias, total, breakdown):
 def main():
     preds = load("predictions.json", {})
     res = load("results.json", {})
+    manual = load("manual.json", {})
+    prize_points = manual.get("prize_points", {})
 
     table = []
+    prize_scores = {}
     for alias, pred in preds.items():
-        total, breakdown = score_player(pred, res)
+        total, breakdown, prize_breakdown = score_player(pred, res, prize_points)
         total, breakdown = apply_adjustments(alias, total, breakdown)
         row = {"player": alias, "total": total}
-        row.update(breakdown)          # aplana grupos, r32, r16, qf, sf, champion
+        row.update(breakdown)          # aplana grupos, r32, r16, qf, sf, champion, premios
+        row.update(prize_breakdown)    # aplana cada premio especial como columna propia
         table.append(row)
+        prize_scores[alias] = prize_breakdown
     table.sort(key=lambda x: -x["total"])
     for i, row in enumerate(table, 1):
         row["pos"] = i
@@ -145,6 +172,7 @@ def main():
         "matches": matches,
         "advance": advance,
         "prizes": prizes,
+        "prize_scores": prize_scores,
         "actual_advanced": res.get("advanced", {}),
         "final_standings": res.get("final_standings", {}),
         "pred_standings": {alias: pred.get("standings", {}) for alias, pred in preds.items()},
@@ -152,9 +180,9 @@ def main():
     with open(os.path.join(DATA, "standings.json"), "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=2)
 
-    print(f"{'#':>2}  {'JUGADOR':10} {'TOTAL':>6} {'GRUPOS':>7} {'1/16':>6} {'1/8':>6} {'1/4':>6} {'SEMI':>6} {'FINAL':>6} {'CAMP':>6}")
+    print(f"{'#':>2}  {'JUGADOR':10} {'TOTAL':>6} {'GRUPOS':>7} {'1/16':>6} {'1/8':>6} {'1/4':>6} {'SEMI':>6} {'FINAL':>6} {'CAMP':>6} {'PREMIOS':>8}")
     for row in table:
-        print(f"{row['pos']:>2}  {row['player']:10} {row['total']:>6} {row.get('grupos',0):>7} {row.get('r32',0):>6} {row.get('r16',0):>6} {row.get('qf',0):>6} {row.get('sf',0):>6} {row.get('final',0):>6} {row.get('champion',0):>6}")
+        print(f"{row['pos']:>2}  {row['player']:10} {row['total']:>6} {row.get('grupos',0):>7} {row.get('r32',0):>6} {row.get('r16',0):>6} {row.get('qf',0):>6} {row.get('sf',0):>6} {row.get('final',0):>6} {row.get('champion',0):>6} {row.get('premios',0):>8}")
 
 
 if __name__ == "__main__":

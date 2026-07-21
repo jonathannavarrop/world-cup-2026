@@ -11,5 +11,41 @@
   "penalties_saved": {},
 
   "_goal_type_fixups_": "La API no distingue gol de falta vs olímpico (los marca como 'normal'). Si tu goleador (Roberswingger) mete uno, corrígelo añadiendo aquí goles con type 'freekick' (+3 puntos) u 'owngoal' (-1).",
-  "goals": []
+  "goals": [],
+
+  "_prize_points_": "Puntos ya cerrados a mano para cada opción de cada premio especial (ver reglas.html), calculados a partir de fuentes fiables tras el torneo. Las claves deben coincidir EXACTAMENTE con los valores usados en predictions.json. Para premios de dos jugadores (pinwis) se suman los puntos de cada jugador elegido.",
+  "prize_points": {
+    "roberswingger": {
+      "Kylian Mbappé": 240,
+      "Harry Kane": 100
+    },
+    "champ": {
+      "Pedri": 0,
+      "Lamine Yamal": 50
+    },
+    "paraguaya_chupona": {
+      "Ecuador": 180,
+      "Uruguay": 135,
+      "Argentina": 195,
+      "Netherlands": 45
+    },
+    "pinwis": {
+      "Cristian Romero": 30,
+      "John Stones": 0,
+      "Nicolás Otamendi": 0,
+      "José Giménez": 0,
+      "William Pacho": 0,
+      "Cristiano Ronaldo": 0
+    },
+    "lobby": {
+      "Iraq": 100,
+      "Curacao": 0,
+      "Haiti": 0
+    },
+    "columna_churu": {
+      "Diogo Costa": 80,
+      "Emiliano Martínez": 0,
+      "Unai Simón": 0
+    }
+  }
 }

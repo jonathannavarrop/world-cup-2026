@@ -4,43 +4,83 @@
   "table": [
     {
       "player": "JONY",
-      "total": 4032,
+      "total": 4707,
       "grupos": 1032,
       "r32": 1230,
       "r16": 550,
       "qf": 400,
       "sf": 480,
       "final": 340,
-      "champion": 0,
+      "champion": 250,
+      "premios": 425,
+      "roberswingger": 240,
+      "champ": 50,
+      "paraguaya_chupona": 135,
+      "pinwis": 0,
+      "lobby": 0,
+      "columna_churu": 0,
       "pos": 1
     },
     {
-      "player": "PEP",
-      "total": 3822,
-      "grupos": 1002,
-      "r32": 1170,
-      "r16": 600,
-      "qf": 400,
-      "sf": 480,
-      "final": 170,
-      "champion": 0,
-      "pos": 2
-    },
-    {
       "player": "NEGREIRA",
-      "total": 3793,
+      "total": 4528,
       "grupos": 963,
       "r32": 1080,
       "r16": 650,
       "qf": 400,
       "sf": 360,
       "final": 340,
-      "champion": 0,
+      "champion": 250,
+      "premios": 485,
+      "roberswingger": 240,
+      "champ": 50,
+      "paraguaya_chupona": 195,
+      "pinwis": 0,
+      "lobby": 0,
+      "columna_churu": 0,
+      "pos": 2
+    },
+    {
+      "player": "PEP",
+      "total": 4247,
+      "grupos": 1002,
+      "r32": 1170,
+      "r16": 600,
+      "qf": 400,
+      "sf": 480,
+      "final": 170,
+      "champion": 250,
+      "premios": 175,
+      "roberswingger": 100,
+      "champ": 0,
+      "paraguaya_chupona": 45,
+      "pinwis": 30,
+      "lobby": 0,
+      "columna_churu": 0,
       "pos": 3
     },
     {
+      "player": "CHAMP",
+      "total": 3866,
+      "grupos": 891,
+      "r32": 1020,
+      "r16": 600,
+      "qf": 320,
+      "sf": 240,
+      "final": 170,
+      "champion": 250,
+      "premios": 375,
+      "roberswingger": 100,
+      "champ": 0,
+      "paraguaya_chupona": 195,
+      "pinwis": 0,
+      "lobby": 0,
+      "columna_churu": 80,
+      "pos": 4
+    },
+    {
       "player": "CHURU",
-      "total": 3255,
+      "total": 3785,
       "grupos": 555,
       "r32": 1350,
       "r16": 700,
@@ -48,18 +88,13 @@
       "sf": 240,
       "final": 170,
       "champion": 0,
-      "pos": 4
-    },
-    {
-      "player": "CHAMP",
-      "total": 3241,
-      "grupos": 891,
-      "r32": 1020,
-      "r16": 600,
-      "qf": 320,
-      "sf": 240,
-      "final": 170,
-      "champion": 0,
+      "premios": 530,
+      "roberswingger": 240,
+      "champ": 0,
+      "paraguaya_chupona": 180,
+      "pinwis": 30,
+      "lobby": 0,
+      "columna_churu": 80,
       "pos": 5
     }
   ],
@@ -3173,6 +3208,48 @@
       "columna_churu": "Emiliano Martínez"
     }
   },
+  "prize_scores": {
+    "CHURU": {
+      "roberswingger": 240,
+      "champ": 0,
+      "paraguaya_chupona": 180,
+      "pinwis": 30,
+      "lobby": 0,
+      "columna_churu": 80
+    },
+    "JONY": {
+      "roberswingger": 240,
+      "champ": 50,
+      "paraguaya_chupona": 135,
+      "pinwis": 0,
+      "lobby": 0,
+      "columna_churu": 0
+    },
+    "CHAMP": {
+      "roberswingger": 100,
+      "champ": 0,
+      "paraguaya_chupona": 195,
+      "pinwis": 0,
+      "lobby": 0,
+      "columna_churu": 80
+    },
+    "NEGREIRA": {
+      "roberswingger": 240,
+      "champ": 50,
+      "paraguaya_chupona": 195,
+      "pinwis": 0,
+      "lobby": 0,
+      "columna_churu": 0
+    },
+    "PEP": {
+      "roberswingger": 100,
+      "champ": 0,
+      "paraguaya_chupona": 45,
+      "pinwis": 30,
+      "lobby": 0,
+      "columna_churu": 0
+    }
+  },
   "actual_advanced": {
     "R32": [
       "Algeria",
@@ -3246,7 +3323,9 @@
       "Argentina",
       "Spain"
     ],
-    "Champion": []
+    "Champion": [
+      "Spain"
+    ]
   },
   "final_standings": {
     "1A": {
