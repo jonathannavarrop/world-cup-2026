@@ -124,6 +124,16 @@ function renderPremios(){
     </tr>`;
   }).join('');
 
+  const totalCells = PLAYERS.map(p => {
+    const tableRow = (DATA.table||[]).find(r => r.player === p);
+    const total = tableRow ? (tableRow.premios ?? 0) : 0;
+    return `<td style="text-align:center;padding:8px 10px;font-weight:700">${ptsHtml(total)}</td>`;
+  }).join('');
+  const totalRow = `<tr style="border-top:2px solid var(--line)">
+    <td style="padding:8px 10px;white-space:nowrap;font-weight:700">Total</td>
+    ${totalCells}
+  </tr>`;
+
   return `<div class="match-card" style="overflow-x:auto;padding:10px 4px">
     <p style="font-size:11px;color:var(--muted);padding:4px 8px 10px;font-family:'Space Mono',monospace">
       Elección de cada jugador para los premios especiales y puntos conseguidos. Se van cerrando premio a premio — ver <a href="reglas.html" style="color:var(--ink)">reglas</a>.
@@ -133,7 +143,7 @@ function renderPremios(){
         <th style="${TH_STYLE}">Premio</th>
         ${playerThs}
       </tr></thead>
-      <tbody>${rows}</tbody>
+      <tbody>${rows}${totalRow}</tbody>
     </table>
   </div>`;
 }

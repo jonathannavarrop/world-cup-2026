@@ -59,12 +59,7 @@ async function load(){
     const qf = r.qf        ?? 0;
     const sf = r.sf        ?? 0;
     const ch = r.champion  ?? 0;
-    const pzRober = r.roberswingger      ?? 0;
-    const pzChamp = r.champ              ?? 0;
-    const pzChup  = r.paraguaya_chupona  ?? 0;
-    const pzPinwis= r.pinwis             ?? 0;
-    const pzLobby = r.lobby              ?? 0;
-    const pzChuru = r.columna_churu      ?? 0;
+    const pe = r.premios   ?? 0;
     return `<a class="row ${i===0?'lead':''}" href="jugador.html?j=${r.player}&from=clasificacion">
       <div class="head-row">
         <div class="pos">${r.pos}</div>
@@ -80,13 +75,7 @@ async function load(){
         ${bkCol(qf, '1/4')}
         ${bkCol(sf, 'SEMI')}
         ${bkCol(ch, 'CAMP')}
-        <div class="bk-sep"></div>
-        ${bkCol(pzRober, 'ROBER')}
-        ${bkCol(pzChamp, 'CHAMP')}
-        ${bkCol(pzChup,  'CHUPONA')}
-        ${bkCol(pzPinwis,'PINWIS')}
-        ${bkCol(pzLobby, 'LOBBY')}
-        ${bkCol(pzChuru, 'CHURU')}
+        ${bkCol(pe, 'P.ESPECIALES')}
       </div>
     </a>`;
   }).join('');
