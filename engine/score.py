@@ -22,9 +22,7 @@ R32_POSITION_BONUS = 30
 
 # Ajustes manuales permanentes (se aplican después del cálculo automático).
 # Formato: {jugador: {bloque: delta_pts}}
-MANUAL_ADJUSTMENTS = {
-    "JONY": {"grupos": -3},
-}
+MANUAL_ADJUSTMENTS = {}
 
 
 def load(name, default):
@@ -50,6 +48,14 @@ def score_match(p, a):
     return pts
 
 
+def match_points(alias, num, p, a, match_overrides):
+    """Puntos de un pronóstico de partido, con posible ajuste manual puntual
+    (data/manual.json['match_point_overrides']) sin tocar el resultado ni el pronóstico guardado."""
+    pts = score_match(p, a)
+    override = match_overrides.get(str(num), {})
+    return override.get(alias, pts)
+
+
 def score_prizes(pred, prize_points):
     """Puntos de premios especiales a partir de data/manual.json['prize_points']."""
     picks = pred.get("prizes", {})
@@ -68,7 +74,7 @@ def score_prizes(pred, prize_points):
     return total, breakdown
 
 
-def score_player(pred, res, prize_points):
+def score_player(alias, pred, res, prize_points, match_overrides):
     b = collections.OrderedDict()  # desglose por bloque
 
     # ---------- FASE DE GRUPOS ----------
@@ -78,7 +84,7 @@ def score_player(pred, res, prize_points):
         a = gres.get(f"{p['home']}|{p['away']}") or gres.get(str(num))
         if not a or p["gh"] is None:
             continue
-        gp += score_match(p, a)
+        gp += match_points(alias, num, p, a, match_overrides)
     b["grupos"] = gp
 
     # ---------- FASES FINALES (equipos que pasan de ronda) ----------
@@ -126,11 +132,12 @@ def main():
     res = load("results.json", {})
     manual = load("manual.json", {})
     prize_points = manual.get("prize_points", {})
+    match_overrides = manual.get("match_point_overrides", {})
 
     table = []
     prize_scores = {}
     for alias, pred in preds.items():
-        total, breakdown, prize_breakdown = score_player(pred, res, prize_points)
+        total, breakdown, prize_breakdown = score_player(alias, pred, res, prize_points, match_overrides)
         total, breakdown = apply_adjustments(alias, total, breakdown)
         row = {"player": alias, "total": total}
         row.update(breakdown)          # aplana grupos, r32, r16, qf, sf, champion, premios
@@ -149,7 +156,7 @@ def main():
         for alias, pred in preds.items():
             p = pred["group"].get(str(m["num"]))
             if p and m["played"]:
-                predictions[alias] = {"gh": p["gh"], "ga": p["ga"], "points": score_match(p, m)}
+                predictions[alias] = {"gh": p["gh"], "ga": p["ga"], "points": match_points(alias, m["num"], p, m, match_overrides)}
             elif p:
                 predictions[alias] = {"gh": p["gh"], "ga": p["ga"], "points": None}
         entry["predictions"] = predictions
